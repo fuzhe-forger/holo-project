@@ -23,6 +23,22 @@ CHECKS = [
             "Reviewer",
             "Coordinator",
             "Token",
+            "docs/roadmap_task_breakdown.md",
+        ],
+    },
+    {
+        "name": "路线任务拆分文档存在",
+        "file": "docs/roadmap_task_breakdown.md",
+        "must_contain": [
+            "H-010",
+            "H-011",
+            "H-012",
+            "H-013",
+            "H-014",
+            "H-015",
+            "H-040",
+            "并行策略",
+            "Ponytail-CN",
         ],
     },
     {

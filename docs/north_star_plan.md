@@ -191,7 +191,7 @@ V1.0 验收：
 
 ## 下一步最小切片
 
-下一轮应优先创建四个 Agent role profiles，而不是继续扩写理论文档。
+后续执行顺序以 `docs/roadmap_task_breakdown.md` 为准。下一轮应先创建 profile 模板和 gate，再填充四个 Agent role profiles。
 
 建议路径：
 

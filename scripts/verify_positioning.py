@@ -71,6 +71,20 @@ CHECKS = [
         ],
     },
     {
+        "name": "Builder profile 存在",
+        "file": "docs/agent_profiles/builder.md",
+        "must_contain": [
+            "Builder",
+            "Ponytail-CN",
+            "sinan-ponytail-route.sh",
+            "最小可交付",
+            "禁止事项",
+            "验收问题",
+            "Loop 交接方式",
+            "Side-effect Gate",
+        ],
+    },
+    {
         "name": "产品定位文档存在",
         "file": "docs/product_positioning.md",
         "must_contain": [

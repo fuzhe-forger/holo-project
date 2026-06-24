@@ -71,6 +71,20 @@ CHECKS = [
         ],
     },
     {
+        "name": "Investigator profile 存在",
+        "file": "docs/agent_profiles/investigator.md",
+        "must_contain": [
+            "Investigator",
+            "事实、推断、假设",
+            "真实问题",
+            "证据路径",
+            "禁止事项",
+            "验收问题",
+            "Loop 交接方式",
+            "Side-effect Gate",
+        ],
+    },
+    {
         "name": "Builder profile 存在",
         "file": "docs/agent_profiles/builder.md",
         "must_contain": [

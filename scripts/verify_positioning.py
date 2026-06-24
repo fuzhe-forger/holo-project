@@ -99,6 +99,21 @@ CHECKS = [
         ],
     },
     {
+        "name": "Reviewer profile 存在",
+        "file": "docs/agent_profiles/reviewer.md",
+        "must_contain": [
+            "Reviewer",
+            "失败模式",
+            "阻断问题",
+            "建议问题",
+            "客服化、表演化、补尾化、迎合化、上下文污染",
+            "禁止事项",
+            "验收问题",
+            "Loop 交接方式",
+            "Side-effect Gate",
+        ],
+    },
+    {
         "name": "产品定位文档存在",
         "file": "docs/product_positioning.md",
         "must_contain": [

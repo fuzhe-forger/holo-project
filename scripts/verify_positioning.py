@@ -42,6 +42,35 @@ CHECKS = [
         ],
     },
     {
+        "name": "Agent profile 模板存在",
+        "file": "docs/agent_profiles/README.md",
+        "must_contain": [
+            "H-010",
+            "_template.md",
+            "Profile 不是角色扮演人设",
+            "Ponytail-CN handoff",
+            "Side-effect gate",
+        ],
+    },
+    {
+        "name": "Agent profile 统一模板存在",
+        "file": "docs/agent_profiles/_template.md",
+        "must_contain": [
+            "定位",
+            "适用场景",
+            "不适用场景",
+            "输入",
+            "输出",
+            "必须做到",
+            "禁止事项",
+            "验收问题",
+            "退化信号",
+            "Loop 交接方式",
+            "Token 策略",
+            "Side-effect Gate",
+        ],
+    },
+    {
         "name": "产品定位文档存在",
         "file": "docs/product_positioning.md",
         "must_contain": [

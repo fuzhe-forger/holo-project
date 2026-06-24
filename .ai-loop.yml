@@ -1,0 +1,51 @@
+version: 1
+
+workspace:
+  provider: git-worktree
+  root: /tmp/ai-loop/workspaces
+  cleanup: keep-on-failure
+  branch_prefix: ai-loop/
+
+agent:
+  executor: claude
+  command: claude
+  args:
+    - --print
+    - --dangerously-skip-permissions
+  timeout_sec: 3600
+  max_iterations: 5
+
+verify:
+  commands:
+    - name: build check
+      command: python3 scripts/build_context.py
+      shell: true
+      cwd: .
+      timeout_sec: 30
+      required: true
+    - name: static audit
+      command: python3 scripts/audit_static.py
+      shell: true
+      cwd: .
+      timeout_sec: 30
+      required: true
+    - name: deliverable check
+      command: python3 scripts/verify_deliverable.py
+      shell: true
+      cwd: .
+      timeout_sec: 30
+      required: true
+
+safety:
+  forbid_paths:
+    - .env
+    - secrets/
+  max_changed_files: 100
+  max_diff_lines: 10000
+  allow_network: false
+  allow_push: false
+
+artifacts:
+  root: runs
+  log_tail_lines_for_retry: 200
+  max_log_bytes: 10485760

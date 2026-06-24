@@ -15,6 +15,7 @@
 
 ```
 fusion/
+├── XP_PROFILE.md                 # 用户偏好画像与融合参考
 ├── FUSION_ENGINE.md              # 融合引擎（流程、规则、生成逻辑）
 ├── traits/
 │   ├── TRAIT_CATALOG.md          # 特质目录（8个维度、45个位点）

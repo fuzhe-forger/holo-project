@@ -1,12 +1,17 @@
 # Holo Character Engine
 
-基于 ccqqiu 的角色人格工程研究的本地复现框架。
+面向司南 / Loop 多 Agent 协作的品味层、人格稳定层与人机交互风格引擎。
+
+它不是单纯的角色扮演项目，也不是只服务某一个虚拟角色的提示词集合；它用于让后续参与 Loop 的不同 Agent 在能力、形式风格、判断品味和人与人交互上拥有稳定差异，并能在真实协作中保持可靠。
+
+详细定位见：`docs/product_positioning.md`。北极星路线见：`docs/north_star_plan.md`。
 
 ## 架构概览
 
 ```
 project/
 ├── CLAUDE.md              # 全局入口 + 启动闸门
+├── docs/                  # 北极星规划、产品定位、多 Agent 验收、使用手册、项目报告
 ├── runtime/               # 运行核心（必读）
 │   ├── 00_BOOT_CORE.md    # 启动核心：法源、预算、隔离
 │   ├── 01_HOLO_CONSTITUTION.md      # 人格宪法（不可变）

@@ -35,6 +35,12 @@ verify:
       cwd: .
       timeout_sec: 30
       required: true
+    - name: positioning gate
+      command: python3 scripts/verify_positioning.py
+      shell: true
+      cwd: .
+      timeout_sec: 30
+      required: true
 
 safety:
   forbid_paths:

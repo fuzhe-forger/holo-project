@@ -114,6 +114,22 @@ CHECKS = [
         ],
     },
     {
+        "name": "Coordinator profile 存在",
+        "file": "docs/agent_profiles/coordinator.md",
+        "must_contain": [
+            "Coordinator",
+            "side-effect gate",
+            "summary/handoff",
+            "Token 策略",
+            "压缩触发",
+            "停止条件",
+            "禁止事项",
+            "验收问题",
+            "Loop 交接方式",
+            "Side-effect Gate",
+        ],
+    },
+    {
         "name": "产品定位文档存在",
         "file": "docs/product_positioning.md",
         "must_contain": [
@@ -168,6 +184,28 @@ OPTIONAL_REFERENCES = [
     "/home/user/JAVA/ai/ai-loop/config/token-efficiency-policy.json",
 ]
 
+PROFILE_FILES = [
+    "docs/agent_profiles/investigator.md",
+    "docs/agent_profiles/builder.md",
+    "docs/agent_profiles/reviewer.md",
+    "docs/agent_profiles/coordinator.md",
+]
+
+PROFILE_REQUIRED_SECTIONS = [
+    "## 定位",
+    "## 适用场景",
+    "## 不适用场景",
+    "## 输入",
+    "## 输出",
+    "## 必须做到",
+    "## 禁止事项",
+    "## 验收问题",
+    "## 退化信号",
+    "## Loop 交接方式",
+    "## Token 策略",
+    "## Side-effect Gate",
+]
+
 
 def read_text(relative_path: str) -> str:
     path = PROJECT_ROOT / relative_path
@@ -216,6 +254,18 @@ def main() -> int:
         passed.append("五类品味退化信号齐全")
     else:
         errors.append(f"品味退化信号不完整: {degradation_count}/5")
+
+    for profile_file in PROFILE_FILES:
+        path = PROJECT_ROOT / profile_file
+        if not path.exists():
+            errors.append(f"Profile gate: 文件缺失 {profile_file}")
+            continue
+        profile_text = read_text(profile_file)
+        missing_sections = [section for section in PROFILE_REQUIRED_SECTIONS if section not in profile_text]
+        if missing_sections:
+            errors.append(f"Profile gate: {profile_file} 缺少章节 {', '.join(missing_sections)}")
+        else:
+            passed.append(f"Profile gate: {profile_file} 结构完整")
 
     for absolute_path in OPTIONAL_REFERENCES:
         if Path(absolute_path).exists():

@@ -81,6 +81,7 @@ Holo 的人格层要稳定，不能被单轮反馈随意改写；但系统必须
 未来多个 Agent 在 Loop 中协作时，应当能形成不同的能力与形式风格，例如：
 - Investigator：敏锐、克制、擅长发现隐藏矛盾
 - Builder：直接、可靠、偏行动与最小可交付
+- Greykey：懒狠守门、工程判断、最小实现、守安全底线（Builder 人格层）
 - Reviewer：锋利、挑剔、重边界与失败模式
 - Coordinator：稳、会压缩上下文、会控制节奏与风险
 
@@ -158,3 +159,8 @@ Holo 的迭代不能靠堆长上下文完成。
 3. 整理角色池 traits，不再只围绕赫萝 × 爱玛侬
 4. 将融合系统输出接入可测试的 runtime/persona 生成流程
 5. 增加多 Agent 协作退化测试
+
+
+## Greykey local engineering guard
+
+Greykey is the first local engineering-guard persona candidate produced by the fusion workflow. It is intended for code tasks that need minimal-change judgment, boundary control, and direct execution.

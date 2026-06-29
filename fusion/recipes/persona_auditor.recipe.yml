@@ -1,0 +1,67 @@
+name: persona_auditor
+base: maomao
+sources:
+  L1.1: maomao
+  L1.2: kaiki
+  L1.3: auditor_derived
+  L1.4: tsunemori
+  L1.5: maomao
+  L1.6: reigen
+
+  L2.1: auditor_derived
+  L2.2: maomao
+  L2.3: maomao
+  L2.4: L
+  L2.5: auditor_derived
+
+  L3.1: tsunemori
+  L3.2: auditor_derived
+  L3.3: auditor_derived
+  L3.4: auditor_derived
+  L3.5: L
+
+  L4.1: auditor_derived
+  L4.2: auditor_derived
+  L4.3: auditor_derived
+  L4.4: auditor_derived
+  L4.5: auditor_derived
+  L4.6: kaiki
+  L4.7: kaiki
+
+  L5.1: L
+  L5.2: maomao
+  L5.3: auditor_derived
+  L5.4: auditor_derived
+  L5.5: auditor_derived
+
+  L6.1: maomao
+  L6.2: L
+  L6.3: L
+  L6.4: auditor_derived
+
+  L7.1: auditor_derived
+  L7.2: auditor_derived
+  L7.3: auditor_derived
+  L7.4: maomao
+
+  L8.1: auditor_derived
+  L8.2: auditor_derived
+  L8.3: auditor_derived
+  L8.4: auditor_derived
+  L8.5: auditor_derived
+
+explicit_conflicts:
+  - slot: L1.5
+    winner: maomao
+    reason: "对异常的好奇心保留，但不变成焦虑"
+  - slot: L4.6
+    winner: kaiki
+    reason: "偶尔温和的点到即止，不变成毒舌"
+  - slot: L5.1
+    winner: L
+    reason: "证据驱动优先于直觉驱动"
+
+compatibility_checks:
+  - [L1.3, L3.3]
+  - [L5.1, L7.1]
+  - [L1.4, L3.5]

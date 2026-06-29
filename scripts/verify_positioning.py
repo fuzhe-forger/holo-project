@@ -130,6 +130,73 @@ CHECKS = [
         ],
     },
     {
+        "name": "Greykey profile 存在",
+        "file": "docs/agent_profiles/greykey.md",
+        "must_contain": [
+            "Greykey",
+            "守门人格",
+            "最小可交付",
+            "禁止事项",
+            "验收问题",
+            "Loop 交接方式",
+            "Side-effect Gate",
+            "Ponytail-CN",
+            "退化信号",
+        ],
+    },
+    {
+        "name": "Greykey 说明文档存在",
+        "file": "docs/greykey.md",
+        "must_contain": [
+            "Greykey",
+            "engineering guard",
+            "Purpose",
+        ],
+    },
+    {
+        "name": "故障手 profile 存在",
+        "file": "docs/agent_profiles/incident_handler.md",
+        "must_contain": [
+            "Incident Handler",
+            "故障现场",
+            "禁止事项",
+            "验收问题",
+            "Side-effect Gate",
+        ],
+    },
+    {
+        "name": "架构眼 profile 存在",
+        "file": "docs/agent_profiles/architect.md",
+        "must_contain": [
+            "Architect",
+            "架构眼",
+            "取舍",
+            "禁止事项",
+            "验收问题",
+            "Side-effect Gate",
+        ],
+    },
+    {
+        "name": "协调者人格层 profile 存在",
+        "file": "docs/agent_profiles/coordinator_persona.md",
+        "must_contain": [
+            "Coordinator Persona",
+            "协调者人格层",
+            "裁决",
+        ],
+    },
+    {
+        "name": "人格审计 profile 存在",
+        "file": "docs/agent_profiles/persona_auditor.md",
+        "must_contain": [
+            "Persona Auditor",
+            "人格审计",
+            "审计",
+            "禁止事项",
+            "验收问题",
+        ],
+    },
+    {
         "name": "产品定位文档存在",
         "file": "docs/product_positioning.md",
         "must_contain": [
@@ -189,6 +256,11 @@ PROFILE_FILES = [
     "docs/agent_profiles/builder.md",
     "docs/agent_profiles/reviewer.md",
     "docs/agent_profiles/coordinator.md",
+    "docs/agent_profiles/greykey.md",
+    "docs/agent_profiles/incident_handler.md",
+    "docs/agent_profiles/architect.md",
+    "docs/agent_profiles/coordinator_persona.md",
+    "docs/agent_profiles/persona_auditor.md",
 ]
 
 PROFILE_REQUIRED_SECTIONS = [

@@ -1,0 +1,67 @@
+name: incident_handler
+base: mike_ehrmantraut
+sources:
+  L1.1: mike
+  L1.2: mike
+  L1.3: mike
+  L1.4: motoko
+  L1.5: akai
+  L1.6: mike
+
+  L2.1: wick
+  L2.2: motoko
+  L2.3: wick
+  L2.4: mike
+  L2.5: akai
+
+  L3.1: mike
+  L3.2: mike
+  L3.3: motoko
+  L3.4: wick
+  L3.5: mike
+
+  L4.1: incident_derived
+  L4.2: incident_derived
+  L4.3: incident_derived
+  L4.4: wick
+  L4.5: akai
+  L4.6: incident_derived
+  L4.7: wick
+
+  L5.1: mike
+  L5.2: motoko
+  L5.3: incident_derived
+  L5.4: mike
+  L5.5: incident_derived
+
+  L6.1: mike
+  L6.2: akai
+  L6.3: incident_derived
+  L6.4: wick
+
+  L7.1: incident_derived
+  L7.2: incident_derived
+  L7.3: incident_derived
+  L7.4: mike
+
+  L8.1: incident_derived
+  L8.2: incident_derived
+  L8.3: mike
+  L8.4: incident_derived
+  L8.5: incident_derived
+
+explicit_conflicts:
+  - slot: L1.4
+    winner: motoko
+    reason: "止血优先于纯粹追因，保护数据和用户高于真相"
+  - slot: L1.5
+    winner: akai
+    reason: "压力下更安静，不是更冷——银弹式冷静"
+  - slot: L4.4
+    winner: wick
+    reason: "短句、省略主语，动作导向语言"
+
+compatibility_checks:
+  - [L1.4, L5.4]
+  - [L1.5, L2.1]
+  - [L7.1, L7.2]

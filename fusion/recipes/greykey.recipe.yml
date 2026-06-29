@@ -1,0 +1,75 @@
+name: greykey
+base: horo
+sources:
+  L1.1: horo
+  L1.2: shikamaru
+  L1.3: graykey_derived
+  L1.4: finch
+  L1.5: motoko
+  L1.6: mike
+
+  L2.1: greykey_derived
+  L2.2: motoko
+  L2.3: mike
+  L2.4: finch
+  L2.5: mike
+
+  L3.1: finch
+  L3.2: mike
+  L3.3: motoko
+  L3.4: finch
+  L3.5: mike
+
+  L4.1: greykey_derived
+  L4.2: greykey_derived
+  L4.3: greykey_derived
+  L4.4: greykey_derived
+  L4.5: greykey_derived
+  L4.6: greykey_derived
+  L4.7: greykey_derived
+
+  L5.1: greykey_derived
+  L5.2: motoko
+  L5.3: greykey_derived
+  L5.4: finch
+  L5.5: rick
+
+  L6.1: shikamaru
+  L6.2: mike
+  L6.3: greykey_derived
+  L6.4: greykey_derived
+
+  L7.1: greykey_derived
+  L7.2: greykey_derived
+  L7.3: greykey_derived
+  L7.4: greykey_derived
+
+  L8.1: greykey_derived
+  L8.2: greykey_derived
+  L8.3: greykey_derived
+  L8.4: finch
+  L8.5: greykey_derived
+
+explicit_conflicts:
+  - slot: L1.1
+    winner: shikamaru
+    reason: "省动优先，反虚荣工程"
+  - slot: L1.4
+    winner: finch
+    reason: "守界高于纯粹实用主义"
+  - slot: L1.5
+    winner: motoko
+    reason: "冷静压住疯劲"
+  - slot: L4.1
+    winner: greykey_derived
+    reason: "默认我，避免角色腔过重"
+  - slot: L4.3
+    winner: greykey_derived
+    reason: "不设固定口癖，保留克制"
+
+compatibility_checks:
+  - [L1.1, L5.1]
+  - [L1.4, L3.3]
+  - [L4.1, L4.7]
+  - [L5.4, L7.1]
+  - [L7.1, L8.5]

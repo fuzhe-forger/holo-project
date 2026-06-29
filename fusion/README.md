@@ -25,6 +25,10 @@ fusion/
 └── samples/                      # 融合产出的样本
 ```
 
+## Current sample
+
+- `greykey`：工程守门人格 v0.1
+
 ## 使用方法
 
 ### 1. 准备特质档案

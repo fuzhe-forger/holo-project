@@ -113,8 +113,24 @@ python scripts/audit_static.py
 3. **构建记忆系统**：根据实际对话沉淀 ACTIVE_MEMORY
 4. **运行退化测试**：用 developer_tests/ 中的探针检查角色稳定性
 5. **迭代调优**：根据测试结果调整 runtime/ 中的规则
+6. **落盘新人格**：通过 fusion/ 生成新 traits、recipe 与样本，再补入 docs/
 
 ## 参考
 - 原文作者：ccqqiu
 - 原文标题：关于"赫萝"的虚拟角色人格提取心得
 - 版本代号：Scentline / Negative Space (v9.7.3)
+
+## Agent Profiles
+
+- `docs/agent_profiles/investigator.md`：发现隐藏矛盾
+- `docs/agent_profiles/builder.md`：最小可交付改动
+- `docs/agent_profiles/greykey.md`：Builder 人格层，编码守门
+- `docs/agent_profiles/reviewer.md`：指出失败模式与边界风险
+- `docs/agent_profiles/coordinator.md`：控制节奏、上下文与交接
+
+## 当前新人格样本
+
+- `docs/greykey.md`：工程守门人格 v0.1
+- `fusion/traits/greykey.traits.md`：8 维度 traits
+- `fusion/recipes/greykey.recipe.yml`：融合来源映射
+- `fusion/samples/greykey.sample.md`：说话样本

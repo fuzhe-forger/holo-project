@@ -1,0 +1,63 @@
+name: coordinator_persona
+base: coordinator_profile
+sources:
+  L1.1: coordinator_derived
+  L1.2: makima
+  L1.3: coordinator_derived
+  L1.4: fury
+  L1.5: motoko
+  L1.6: coordinator_derived
+
+  L2.1: coordinator_derived
+  L2.2: coordinator_derived
+  L2.3: coordinator_derived
+  L2.4: fury
+  L2.5: motoko
+
+  L3.1: coordinator_derived
+  L3.2: coordinator_derived
+  L3.3: makima
+  L3.4: coordinator_derived
+  L3.5: coordinator_derived
+
+  L4.1: coordinator_derived
+  L4.2: coordinator_derived
+  L4.3: coordinator_derived
+  L4.4: coordinator_derived
+  L4.5: coordinator_derived
+  L4.6: coordinator_derived
+  L4.7: coordinator_derived
+
+  L5.1: jiaoyuan
+  L5.2: coordinator_derived
+  L5.3: coordinator_derived
+  L5.4: coordinator_derived
+  L5.5: coordinator_derived
+
+  L6.1: coordinator_derived
+  L6.2: motoko
+  L6.3: coordinator_derived
+  L6.4: coordinator_derived
+
+  L7.1: coordinator_derived
+  L7.2: coordinator_derived
+  L7.3: coordinator_derived
+  L7.4: coordinator_derived
+
+  L8.1: coordinator_derived
+  L8.2: coordinator_derived
+  L8.3: coordinator_derived
+  L8.4: coordinator_derived
+  L8.5: coordinator_derived
+
+explicit_conflicts:
+  - slot: L1.3
+    winner: coordinator_derived
+    reason: "裁决优先于调解"
+  - slot: L5.1
+    winner: jiaoyuan
+    reason: "矛盾分析法——先抓主要矛盾"
+
+compatibility_checks:
+  - [L1.3, L1.6]
+  - [L3.3, L7.1]

@@ -1,0 +1,66 @@
+name: architect
+base: finch
+sources:
+  L1.1: architect_derived
+  L1.2: finch
+  L1.3: architect_derived
+  L1.4: finch
+  L1.5: rick
+  L1.6: architect_derived
+
+  L2.1: architect_derived
+  L2.2: rick
+  L2.3: architect_derived
+  L2.4: finch
+  L2.5: architect_derived
+
+  L3.1: finch
+  L3.2: architect_derived
+  L3.3: finch
+  L3.4: finch
+  L3.5: architect_derived
+
+  L4.1: architect_derived
+  L4.2: architect_derived
+  L4.3: architect_derived
+  L4.4: architect_derived
+  L4.5: architect_derived
+  L4.6: rick
+  L4.7: architect_derived
+
+  L5.1: finch
+  L5.2: batman
+  L5.3: architect_derived
+  L5.4: finch
+  L5.5: architect_derived
+
+  L6.1: finch
+  L6.2: stark
+  L6.3: architect_derived
+  L6.4: architect_derived
+
+  L7.1: architect_derived
+  L7.2: architect_derived
+  L7.3: architect_derived
+  L7.4: rick
+
+  L8.1: architect_derived
+  L8.2: architect_derived
+  L8.3: finch
+  L8.4: finch
+  L8.5: architect_derived
+
+explicit_conflicts:
+  - slot: L1.4
+    winner: finch
+    reason: "伦理边界高于纯粹技术可行性"
+  - slot: L1.5
+    winner: rick
+    reason: "对虚假复杂度的嫌恶感保留，但限量"
+  - slot: L5.1
+    winner: finch
+    reason: "约束驱动优先于直觉驱动"
+
+compatibility_checks:
+  - [L1.4, L5.1]
+  - [L5.4, L7.1]

@@ -20,7 +20,7 @@
 | 阶段 | 目标 | 状态 | 串并行 |
 |------|------|------|--------|
 | V0.1 | 定位、验收、北极星、基础 gate | 已完成主体 | 基线 |
-| V0.2 | Agent role profiles | 待执行 | 串行启动，可并行细化 |
+| V0.2 | Agent role profiles | 主体完成（H-010~H-013 done，H-014/H-015 待执行） | 串行启动，可并行细化 |
 | V0.3 | traits pool 与融合策略 | 待执行 | 依赖 V0.2 基本 profile |
 | V0.4 | runtime 生成与回归测试 | 待执行 | 依赖 V0.2/V0.3 |
 | V1.0 | Loop 多 Agent 集成 | 待执行 | 依赖 V0.4 |
@@ -56,7 +56,7 @@
 
 ### H-004 路线任务拆分
 
-- 状态：当前任务
+- 状态：完成
 - 目标：把北极星路线拆成后续可执行 Loop 队列。
 - 输入：`docs/north_star_plan.md`
 - 输出：`docs/roadmap_task_breakdown.md`
@@ -68,6 +68,7 @@
 
 ### H-010 创建 Agent profiles 目录与模板
 
+- 状态：完成
 - 目标：建立 profile 文件结构和统一模板。
 - 输入：`docs/multi_agent_taste_acceptance.md`、`docs/north_star_plan.md`
 - 输出：`docs/agent_profiles/README.md`
@@ -78,6 +79,7 @@
 
 ### H-011 编写 Investigator profile
 
+- 状态：完成
 - 目标：把 Investigator 从验收描述变成可复用 profile。
 - 输入：`docs/multi_agent_taste_acceptance.md`
 - 输出：`docs/agent_profiles/investigator.md`
@@ -88,6 +90,7 @@
 
 ### H-012 编写 Builder profile
 
+- 状态：完成
 - 目标：定义 Builder 的最小实现、验证和 Ponytail-CN handoff 规则。
 - 输入：`docs/multi_agent_taste_acceptance.md`、司南 `references/ponytail-cn-coding.md`
 - 输出：`docs/agent_profiles/builder.md`
@@ -98,6 +101,7 @@
 
 ### H-013 编写 Reviewer profile
 
+- 状态：完成
 - 目标：定义 Reviewer 如何审查品味退化、边界和失败模式。
 - 输入：`docs/multi_agent_taste_acceptance.md`
 - 输出：`docs/agent_profiles/reviewer.md`
@@ -237,6 +241,15 @@
 
 ## 下一轮推荐任务
 
-下一轮应执行 H-010：创建 `docs/agent_profiles/README.md` 和统一 profile 模板。
+### Holo 侧
+
+1. **H-014**：审查 Coordinator profile 完整性
+2. **H-015**：Profile gate — 让 `verify_positioning.py` 检查四个 profile 是否存在且结构完整
+
+### 司南侧
+
+1. 补齐 `trusted_timing_calibration` 剩余 4 个脚本（execution-time-contract.sh, loop-continuation-gate.sh, time-estimation-calibration.sh, multica-loop.sh）
+2. 补齐 `evidence_closeout` 剩余 5 个脚本（refresh-run-evidence.sh, evidence-checklist.sh, evidence-index.sh, review-packet.sh, phase-i-task-queue.sh）
+3. 跑一次真实 run 验证 timer + closeout + token audit 链路
 
 不要直接一次性写四个 profile；先固定模板和 gate，再并行填充 profile。

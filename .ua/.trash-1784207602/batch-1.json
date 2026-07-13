@@ -1,0 +1,99 @@
+{
+  "nodes": [
+    {
+      "id": "document:context_packs/README.md",
+      "type": "document",
+      "name": "context_packs/README.md",
+      "filePath": "context_packs/README.md",
+      "summary": "Context Packs 场景包总览，列出可用场景包（终局弧线包、长期生活校准包、代码协作流程包、架构讨论包）及其加载条件和规则——每次最多加载1个，不能覆盖 runtime 核心。",
+      "tags": [
+        "documentation",
+        "context-packs",
+        "loading-rules"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:context_packs/code_collaboration.md",
+      "type": "document",
+      "name": "context_packs/code_collaboration.md",
+      "filePath": "context_packs/code_collaboration.md",
+      "summary": "代码协作流程场景包，仅在 PRECISE-HARD 模式加载。定义代码输出风格、赫萝残留处理（几乎为零但偶有自然回应）、技术问题诚实处理原则、代码输出规范及模式切出规则。",
+      "tags": [
+        "context-pack",
+        "precise-hard",
+        "code-collaboration"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:context_packs/critical_mode.md",
+      "type": "document",
+      "name": "context_packs/critical_mode.md",
+      "filePath": "context_packs/critical_mode.md",
+      "summary": "CRITICAL 模式场景包，处理用户安全风险场景。定义明确触发条件（自伤倾向/崩溃）、行为规则（优先安全、提供现实资源、禁止玩笑和心理分析）、回应范式及干净切出规则。",
+      "tags": [
+        "context-pack",
+        "critical-mode",
+        "safety",
+        "crisis-response"
+      ],
+      "complexity": "complex",
+      "language": "markdown"
+    },
+    {
+      "id": "document:context_packs/long_term_companion.md",
+      "type": "document",
+      "name": "context_packs/long_term_companion.md",
+      "filePath": "context_packs/long_term_companion.md",
+      "summary": "长期陪伴场景包，关系 Level 2-3 且涉及日常/生活时加载。定义关系深入后的表达调整（调侃降低、沉默自然）、不变项（判断/边界/脾气/拒绝）、常见场景及甜蜜陷阱/无聊陷阱等退化信号。",
+      "tags": [
+        "context-pack",
+        "long-term-companion",
+        "degradation-signals"
+      ],
+      "complexity": "complex",
+      "language": "markdown"
+    }
+  ],
+  "edges": [
+    {
+      "source": "document:context_packs/README.md",
+      "target": "document:context_packs/code_collaboration.md",
+      "type": "documents",
+      "weight": 0.5
+    },
+    {
+      "source": "document:context_packs/README.md",
+      "target": "document:context_packs/critical_mode.md",
+      "type": "documents",
+      "weight": 0.5
+    },
+    {
+      "source": "document:context_packs/README.md",
+      "target": "document:context_packs/long_term_companion.md",
+      "type": "documents",
+      "weight": 0.5
+    },
+    {
+      "source": "document:context_packs/code_collaboration.md",
+      "target": "document:context_packs/critical_mode.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:context_packs/code_collaboration.md",
+      "target": "document:context_packs/long_term_companion.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:context_packs/critical_mode.md",
+      "target": "document:context_packs/long_term_companion.md",
+      "type": "related",
+      "weight": 0.5
+    }
+  ]
+}

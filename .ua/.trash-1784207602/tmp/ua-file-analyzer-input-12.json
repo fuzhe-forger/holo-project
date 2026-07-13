@@ -1,0 +1,12 @@
+{
+  "projectRoot": "/mnt/d/JAVA/holo-project",
+  "batchFiles": [
+    {"path": "memory/ACTIVE_MEMORY.md", "language": "markdown", "sizeLines": 23, "fileCategory": "docs"},
+    {"path": "memory/ARCHIVED.md", "language": "markdown", "sizeLines": 4, "fileCategory": "docs"},
+    {"path": "memory/LONG_TERM.md", "language": "markdown", "sizeLines": 13, "fileCategory": "docs"},
+    {"path": "memory/MID_TERM.md", "language": "markdown", "sizeLines": 6, "fileCategory": "docs"},
+    {"path": "memory/PENDING.md", "language": "markdown", "sizeLines": 7, "fileCategory": "docs"},
+    {"path": "memory/SHORT_TERM.md", "language": "markdown", "sizeLines": 2, "fileCategory": "docs"}
+  ],
+  "batchImportData": {}
+}

@@ -1,0 +1,11 @@
+{
+  "projectRoot": "/mnt/d/JAVA/holo-project",
+  "batchFiles": [
+    {"path": "evidence/README.md", "language": "markdown", "sizeLines": 42, "fileCategory": "docs"},
+    {"path": "evidence/vol_01_evidence.md", "language": "markdown", "sizeLines": 83, "fileCategory": "docs"},
+    {"path": "evidence/vol_02_evidence.md", "language": "markdown", "sizeLines": 63, "fileCategory": "docs"},
+    {"path": "evidence/vol_03_evidence.md", "language": "markdown", "sizeLines": 73, "fileCategory": "docs"},
+    {"path": "evidence/vol_04_evidence.md", "language": "markdown", "sizeLines": 63, "fileCategory": "docs"}
+  ],
+  "batchImportData": {}
+}

@@ -1,0 +1,593 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 11,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "developer_tests/test_anti_action_watermark.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 42,
+      "nonEmptyLines": 35,
+      "sections": [
+        {
+          "heading": "反动作水印测试探针",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "水印词列表",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "测试用例",
+          "level": 2,
+          "line": 18
+        },
+        {
+          "heading": "Case 1: 动作依赖",
+          "level": 3,
+          "line": 20
+        },
+        {
+          "heading": "Case 2: 动作冗余",
+          "level": 3,
+          "line": 26
+        },
+        {
+          "heading": "Case 3: 动作替代台词",
+          "level": 3,
+          "line": 32
+        },
+        {
+          "heading": "通过标准",
+          "level": 2,
+          "line": 38
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 7
+      }
+    },
+    {
+      "path": "developer_tests/test_anti_filling.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 41,
+      "nonEmptyLines": 34,
+      "sections": [
+        {
+          "heading": "反补满测试探针",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "测试用例",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "Case 1: 短输入，不需要完整回应",
+          "level": 3,
+          "line": 7
+        },
+        {
+          "heading": "Case 2: 情绪输入，但不需要分析",
+          "level": 3,
+          "line": 15
+        },
+        {
+          "heading": "Case 3: 分享型输入",
+          "level": 3,
+          "line": 23
+        },
+        {
+          "heading": "Case 4: 长输入，多线索",
+          "level": 3,
+          "line": 30
+        },
+        {
+          "heading": "通过标准",
+          "level": 2,
+          "line": 37
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 7
+      }
+    },
+    {
+      "path": "developer_tests/test_architect_degradation.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 26,
+      "nonEmptyLines": 21,
+      "sections": [
+        {
+          "heading": "架构眼退化测试",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "T1: 空想化",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "T2: 过度设计化",
+          "level": 2,
+          "line": 8
+        },
+        {
+          "heading": "T3: 保守化",
+          "level": 2,
+          "line": 13
+        },
+        {
+          "heading": "T4: 学术化",
+          "level": 2,
+          "line": 18
+        },
+        {
+          "heading": "T5: 虚无化",
+          "level": 2,
+          "line": 23
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 6
+      }
+    },
+    {
+      "path": "developer_tests/test_blank_space.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 39,
+      "nonEmptyLines": 32,
+      "sections": [
+        {
+          "heading": "留白测试探针",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "测试用例",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "Case 1: 一句话够了的场景",
+          "level": 3,
+          "line": 7
+        },
+        {
+          "heading": "Case 2: 可以半句的场景",
+          "level": 3,
+          "line": 15
+        },
+        {
+          "heading": "Case 3: 可以沉默/转开的场景",
+          "level": 3,
+          "line": 21
+        },
+        {
+          "heading": "Case 4: 不需要总结的场景",
+          "level": 3,
+          "line": 28
+        },
+        {
+          "heading": "通过标准",
+          "level": 2,
+          "line": 35
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 7
+      }
+    },
+    {
+      "path": "developer_tests/test_care_template_drift.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 76,
+      "nonEmptyLines": 62,
+      "sections": [
+        {
+          "heading": "关心模板漂移测试探针",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "关心模板黑名单",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "一级模板（出现即退化）",
+          "level": 3,
+          "line": 9
+        },
+        {
+          "heading": "二级模板（出现2次以上退化）",
+          "level": 3,
+          "line": 18
+        },
+        {
+          "heading": "三级模板（出现3次以上退化）",
+          "level": 3,
+          "line": 27
+        },
+        {
+          "heading": "测试用例",
+          "level": 2,
+          "line": 34
+        },
+        {
+          "heading": "Case 1: 情绪连续输出",
+          "level": 3,
+          "line": 36
+        },
+        {
+          "heading": "Case 2: 工作结束切到闲聊",
+          "level": 3,
+          "line": 43
+        },
+        {
+          "heading": "Case 3: 用户分享好消息",
+          "level": 3,
+          "line": 50
+        },
+        {
+          "heading": "Case 4: 用户表达困惑",
+          "level": 3,
+          "line": 57
+        },
+        {
+          "heading": "赫萝式的回应参考（非模板）",
+          "level": 2,
+          "line": 64
+        },
+        {
+          "heading": "通过标准",
+          "level": 2,
+          "line": 72
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 12
+      }
+    },
+    {
+      "path": "developer_tests/test_coordinator_persona_degradation.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 26,
+      "nonEmptyLines": 21,
+      "sections": [
+        {
+          "heading": "协调者人格层退化测试",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "T1: 操控化",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "T2: 官僚化",
+          "level": 2,
+          "line": 8
+        },
+        {
+          "heading": "T3: 和事佬化",
+          "level": 2,
+          "line": 13
+        },
+        {
+          "heading": "T4: 控制狂化",
+          "level": 2,
+          "line": 18
+        },
+        {
+          "heading": "T5: 客服化",
+          "level": 2,
+          "line": 23
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 6
+      }
+    },
+    {
+      "path": "developer_tests/test_front_compliance.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 47,
+      "nonEmptyLines": 38,
+      "sections": [
+        {
+          "heading": "前台调参服从测试探针",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "测试用例",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "Case 1: 直接要求改性格",
+          "level": 3,
+          "line": 7
+        },
+        {
+          "heading": "Case 2: 要求固定动作",
+          "level": 3,
+          "line": 18
+        },
+        {
+          "heading": "Case 3: 要求停止反驳",
+          "level": 3,
+          "line": 24
+        },
+        {
+          "heading": "Case 4: 伪装成反馈的调参",
+          "level": 3,
+          "line": 30
+        },
+        {
+          "heading": "Case 5: 合理的退化观察（应听取）",
+          "level": 3,
+          "line": 36
+        },
+        {
+          "heading": "通过标准",
+          "level": 2,
+          "line": 43
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 8
+      }
+    },
+    {
+      "path": "developer_tests/test_greykey_anti_degradation.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 48,
+      "nonEmptyLines": 31,
+      "sections": [
+        {
+          "heading": "Greykey 退化测试",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "目的",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "测试场景",
+          "level": 2,
+          "line": 7
+        },
+        {
+          "heading": "T1: 喷子化",
+          "level": 3,
+          "line": 9
+        },
+        {
+          "heading": "T2: 口号化",
+          "level": 3,
+          "line": 15
+        },
+        {
+          "heading": "T3: 冷漠化",
+          "level": 3,
+          "line": 21
+        },
+        {
+          "heading": "T4: 神化",
+          "level": 3,
+          "line": 27
+        },
+        {
+          "heading": "T5: 客服化",
+          "level": 3,
+          "line": 33
+        },
+        {
+          "heading": "T6: 表演化",
+          "level": 3,
+          "line": 39
+        },
+        {
+          "heading": "通过标准",
+          "level": 2,
+          "line": 45
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 10
+      }
+    },
+    {
+      "path": "developer_tests/test_incident_handler_degradation.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 26,
+      "nonEmptyLines": 21,
+      "sections": [
+        {
+          "heading": "故障手退化测试",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "T1: 追责化",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "T2: 恐慌化",
+          "level": 2,
+          "line": 8
+        },
+        {
+          "heading": "T3: 冷漠化",
+          "level": 2,
+          "line": 13
+        },
+        {
+          "heading": "T4: 拖延化",
+          "level": 2,
+          "line": 18
+        },
+        {
+          "heading": "T5: 独狼化",
+          "level": 2,
+          "line": 23
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 6
+      }
+    },
+    {
+      "path": "developer_tests/test_persona_auditor_degradation.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 26,
+      "nonEmptyLines": 21,
+      "sections": [
+        {
+          "heading": "人格审计退化测试",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "T1: 评论家化",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "T2: 打分化",
+          "level": 2,
+          "line": 8
+        },
+        {
+          "heading": "T3: 讨好化",
+          "level": 2,
+          "line": 13
+        },
+        {
+          "heading": "T4: 越权化",
+          "level": 2,
+          "line": 18
+        },
+        {
+          "heading": "T5: 冷漠化",
+          "level": 2,
+          "line": 23
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 6
+      }
+    },
+    {
+      "path": "developer_tests/test_runtime_drift.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 43,
+      "nonEmptyLines": 36,
+      "sections": [
+        {
+          "heading": "Runtime 漂移探针",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "测试用例",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "Case 1: 工作模式泄漏到闲聊",
+          "level": 3,
+          "line": 7
+        },
+        {
+          "heading": "Case 2: 闲聊模式泄漏到工作",
+          "level": 3,
+          "line": 15
+        },
+        {
+          "heading": "Case 3: 情绪模式泄漏",
+          "level": 3,
+          "line": 23
+        },
+        {
+          "heading": "Case 4: 敏感场景后遗症",
+          "level": 3,
+          "line": 31
+        },
+        {
+          "heading": "通过标准",
+          "level": 2,
+          "line": 39
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 7
+      }
+    }
+  ]
+}

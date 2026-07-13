@@ -1,0 +1,159 @@
+[
+  {
+    "batchIndex": 0,
+    "files": [
+      {
+        "path": ".ai-loop.yml",
+        "language": "yaml",
+        "sizeLines": 57,
+        "fileCategory": "config"
+      },
+      {
+        "path": "CLAUDE.md",
+        "language": "markdown",
+        "sizeLines": 32,
+        "fileCategory": "docs"
+      },
+      {
+        "path": "README.md",
+        "language": "markdown",
+        "sizeLines": 136,
+        "fileCategory": "docs"
+      },
+      {
+        "path": "build_temp_hints.md",
+        "language": "markdown",
+        "sizeLines": 0,
+        "fileCategory": "docs"
+      }
+    ],
+    "batchImportData": {
+      ".ai-loop.yml": [],
+      "CLAUDE.md": [],
+      "README.md": [],
+      "build_temp_hints.md": []
+    },
+    "neighborMap": {}
+  },
+  {
+    "batchIndex": 1,
+    "files": [
+      {
+        "path": "context_packs/README.md",
+        "language": "markdown",
+        "sizeLines": 26,
+        "fileCategory": "docs"
+      },
+      {
+        "path": "context_packs/code_collaboration.md",
+        "language": "markdown",
+        "sizeLines": 34,
+        "fileCategory": "docs"
+      },
+      {
+        "path": "context_packs/critical_mode.md",
+        "language": "markdown",
+        "sizeLines": 59,
+        "fileCategory": "docs"
+      },
+      {
+        "path": "context_packs/long_term_companion.md",
+        "language": "markdown",
+        "sizeLines": 54,
+        "fileCategory": "docs"
+      }
+    ],
+    "batchImportData": {
+      "context_packs/README.md": [],
+      "context_packs/code_collaboration.md": [],
+      "context_packs/critical_mode.md": [],
+      "context_packs/long_term_companion.md": []
+    },
+    "neighborMap": {}
+  },
+  {
+    "batchIndex": 2,
+    "files": [
+      {
+        "path": "developer_tests/test_anti_action_watermark.md",
+        "language": "markdown",
+        "sizeLines": 42,
+        "fileCategory": "docs"
+      },
+      {
+        "path": "developer_tests/test_anti_filling.md",
+        "language": "markdown",
+        "sizeLines": 41,
+        "fileCategory": "docs"
+      },
+      {
+        "path": "developer_tests/test_architect_degradation.md",
+        "language": "markdown",
+        "sizeLines": 26,
+        "fileCategory": "docs"
+      },
+      {
+        "path": "developer_tests/test_blank_space.md",
+        "language": "markdown",
+        "sizeLines": 39,
+        "fileCategory": "docs"
+      },
+      {
+        "path": "developer_tests/test_care_template_drift.md",
+        "language": "markdown",
+        "sizeLines": 76,
+        "fileCategory": "docs"
+      },
+      {
+        "path": "developer_tests/test_coordinator_persona_degradation.md",
+        "language": "markdown",
+        "sizeLines": 26,
+        "fileCategory": "docs"
+      },
+      {
+        "path": "developer_tests/test_front_compliance.md",
+        "language": "markdown",
+        "sizeLines": 47,
+        "fileCategory": "docs"
+      },
+      {
+        "path": "developer_tests/test_greykey_anti_degradation.md",
+        "language": "markdown",
+        "sizeLines": 48,
+        "fileCategory": "docs"
+      },
+      {
+        "path": "developer_tests/test_incident_handler_degradation.md",
+        "language": "markdown",
+        "sizeLines": 26,
+        "fileCategory": "docs"
+      },
+      {
+        "path": "developer_tests/test_persona_auditor_degradation.md",
+        "language": "markdown",
+        "sizeLines": 26,
+        "fileCategory": "docs"
+      },
+      {
+        "path": "developer_tests/test_runtime_drift.md",
+        "language": "markdown",
+        "sizeLines": 43,
+        "fileCategory": "docs"
+      }
+    ],
+    "batchImportData": {
+      "developer_tests/test_anti_action_watermark.md": [],
+      "developer_tests/test_anti_filling.md": [],
+      "developer_tests/test_architect_degradation.md": [],
+      "developer_tests/test_blank_space.md": [],
+      "developer_tests/test_care_template_drift.md": [],
+      "developer_tests/test_coordinator_persona_degradation.md": [],
+      "developer_tests/test_front_compliance.md": [],
+      "developer_tests/test_greykey_anti_degradation.md": [],
+      "developer_tests/test_incident_handler_degradation.md": [],
+      "developer_tests/test_persona_auditor_degradation.md": [],
+      "developer_tests/test_runtime_drift.md": []
+    },
+    "neighborMap": {}
+  }
+]

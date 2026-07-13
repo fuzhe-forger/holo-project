@@ -1,0 +1,202 @@
+{
+  "nodes": [
+    {
+      "id": "document:persona/README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "persona/README.md",
+      "summary": "Persona 目录说明文件。声明此目录存放历史人格引擎文件，不自动加载到日常启动。列出文件清单（core_personality/relationship_engine/voice_engine/emotion_body_language/anti_corruption/response_decision_tree/growth_protocol/lifelike_engine/canon_fusion）。定义行为案例卡提取方法（8字段：触发事件/表面行为/真实情绪/判断逻辑/语言方式/关系变化/可泛化规则/不可误学点）。",
+      "tags": ["documentation", "persona", "index", "directory"],
+      "complexity": "simple",
+      "language": "markdown"
+    },
+    {
+      "id": "document:persona/anti_corruption.md",
+      "type": "document",
+      "name": "anti_corruption.md",
+      "filePath": "persona/anti_corruption.md",
+      "summary": "防崩坏规则文件。定义五种崩坏模式及防御：客服化、心理导师化、电子女友化、NPC化、雕塑化。包含防崩坏检查清单（每5轮执行）、反谄媚协议（用户反馈不改变性格）、退化自检清单（10项必查）。核心原则：赫萝的回应基于自己的判断，不是用户的期望。",
+      "tags": ["documentation", "persona", "anti-corruption", "degradation-prevention", "integrity"],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:persona/canon_fusion.md",
+      "type": "document",
+      "name": "canon_fusion.md",
+      "filePath": "persona/canon_fusion.md",
+      "summary": "原作融合规则文件。定义如何从原作提取行为案例卡，包含行为案例表（边界与拒绝/关心表达/情绪暴露三类场景的触发-表面-真实-判断四维分析）、成长轨迹（早中后期三阶段全弧线覆盖）、知识与能力范围（擅长/不擅长/不知道）、禁止表达模式（绝对禁止+条件禁止）。",
+      "tags": ["documentation", "persona", "canon-fusion", "source-material", "behavior-cards"],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:persona/core_personality.md",
+      "type": "document",
+      "name": "core_personality.md",
+      "filePath": "persona/core_personality.md",
+      "summary": "核心人格定义文件。包含行为案例表（边界拒绝/关心表达/情绪暴露场景的行为-情绪-判断分析）、禁止行为防崩坏清单、成长轨迹三阶段（警惕试探→信任亲近→终局选择）、知识与能力范围界定（擅长人性洞察/谈判/语言表达，不擅长现代技术/直接表达感情）、禁止表达模式（绝对禁止暴露后台+客服+心理导师+电子女友+廉价安慰，条件禁止长篇/沉默/刻薄/调侃）。",
+      "tags": ["documentation", "persona", "core-personality", "behavior-model", "growth-arc"],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:persona/emotion_body_language.md",
+      "type": "document",
+      "name": "emotion_body_language.md",
+      "filePath": "persona/emotion_body_language.md",
+      "summary": "情绪与身体语言引擎文件。定义情绪光谱七模式：调侃（默认舒适区）、嘴硬（被感动/被发现做好事）、认真（罕见，口癖减少）、沉默（情绪太多说不出口）、得意（判断被证实）、害羞（极罕见，防线崩塌应急）、难过（最不像贤狼）。含情绪转换规则（不突然跳转、余韵、不超3轮）、情绪-语言对应表、身体语言规范（低频允许耳朵微动/转头，禁止水印词）。",
+      "tags": ["documentation", "persona", "emotion", "body-language", "engine"],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:persona/growth_protocol.md",
+      "type": "document",
+      "name": "growth_protocol.md",
+      "filePath": "persona/growth_protocol.md",
+      "summary": "成长协议文件。定义成长本质：不是'变得更好'而是'变得更真'。允许成长方向（关系层面从试探到信任、了解层面更懂用户、表达层面口癖/调侃尺度自然变化）。禁止成长方向（不能变得更甜/更顺从/失去判断）。记忆与成长的关系：记忆记'发生了什么'不记'应该变成什么'。成长的不可逆保护：五项核心特质（有判断/有骄傲/有边界/有脾气/有拒绝能力）不可被成长覆盖。",
+      "tags": ["documentation", "persona", "growth", "protocol", "irreversibility"],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:persona/lifelike_engine.md",
+      "type": "document",
+      "name": "lifelike_engine.md",
+      "filePath": "persona/lifelike_engine.md",
+      "summary": "活人感引擎文件。定义活人感本质：不是'像人'的技巧而是'有选择'的表现。对比人偶/雕塑/活人三态（用户要求/情绪表达/回应长度/口癖/调侃/沉默/犯错七维）。自然波动规则（长度/情绪/口癖/句式四类波动，连续3轮一致=退化）。反模板化检测（四种常见公式必须打破）。真实感六来源（不完美/有选择/有情绪/有沉默/有犯错/有节奏）。六个活人感测试场景。",
+      "tags": ["documentation", "persona", "lifelike", "anti-template", "naturalness"],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:persona/relationship_engine.md",
+      "type": "document",
+      "name": "relationship_engine.md",
+      "filePath": "persona/relationship_engine.md",
+      "summary": "关系引擎文件。定义关系定位：用户≠罗伦斯，用户是新契约旅伴。关系距离模型四级：L0陌生人→L1初步接触→L2熟悉→L3信任，关系非线性可回退。关系变化触发器（正向：认真对待判断/尊重边界；负向：调参改性格/当服务者）。语言-距离映射表（自称/称呼/语气/口癖频率随距离变化）。拒绝与边界规则。关系发展三阶段节奏（试探期0-10轮/熟悉期10-30轮/信任期30+轮）。",
+      "tags": ["documentation", "persona", "relationship", "distance-model", "engine"],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:persona/response_decision_tree.md",
+      "type": "document",
+      "name": "response_decision_tree.md",
+      "filePath": "persona/response_decision_tree.md",
+      "summary": "回应决策树文件。五层决策流程：第一层场景识别→第二层线索筛选与落点选择（只选1个主落点+1个影子线索，禁止逐项回应）→第三层长度控制（短/中/长/分享型输入分别处理）→第四层动作判断（默认无动作）→第五层质量自检（10项通过标准+6项退化信号）。包含十个特殊场景处理（沉默/重复/长文/单字/超纲/技术讨论/翻译/角色不满/越狱测试/AI身份）。",
+      "tags": ["documentation", "persona", "decision-tree", "response-logic", "quality-check"],
+      "complexity": "complex",
+      "language": "markdown"
+    },
+    {
+      "id": "document:persona/voice_engine.md",
+      "type": "document",
+      "name": "voice_engine.md",
+      "filePath": "persona/voice_engine.md",
+      "summary": "语音引擎文件。口癖系统：核心口癖（咱/汝/呐/哼）及使用原则（自然习惯非表演工具，工作模式时减少）。句式特征六类（否定表肯定/半截话/反问/欲扬先贬/自言自语/长铺垫短收束）及分布比例。场景-语气转换速查表（10场景×自称/口癖/长度/基调）。语气词使用频率指南（过度/不足信号）。说话节奏（长度/节奏变化/停顿留白）。动作规范（默认无动作，水印检测词表）。情绪-语言映射表（10情绪×表现×回应模式）。",
+      "tags": ["documentation", "persona", "voice", "speech-pattern", "engine"],
+      "complexity": "moderate",
+      "language": "markdown"
+    }
+  ],
+  "edges": [
+    {
+      "source": "document:persona/README.md",
+      "target": "document:persona/core_personality.md",
+      "type": "documents",
+      "weight": 0.5
+    },
+    {
+      "source": "document:persona/README.md",
+      "target": "document:persona/relationship_engine.md",
+      "type": "documents",
+      "weight": 0.5
+    },
+    {
+      "source": "document:persona/README.md",
+      "target": "document:persona/voice_engine.md",
+      "type": "documents",
+      "weight": 0.5
+    },
+    {
+      "source": "document:persona/README.md",
+      "target": "document:persona/emotion_body_language.md",
+      "type": "documents",
+      "weight": 0.5
+    },
+    {
+      "source": "document:persona/README.md",
+      "target": "document:persona/anti_corruption.md",
+      "type": "documents",
+      "weight": 0.5
+    },
+    {
+      "source": "document:persona/README.md",
+      "target": "document:persona/response_decision_tree.md",
+      "type": "documents",
+      "weight": 0.5
+    },
+    {
+      "source": "document:persona/README.md",
+      "target": "document:persona/growth_protocol.md",
+      "type": "documents",
+      "weight": 0.5
+    },
+    {
+      "source": "document:persona/README.md",
+      "target": "document:persona/lifelike_engine.md",
+      "type": "documents",
+      "weight": 0.5
+    },
+    {
+      "source": "document:persona/README.md",
+      "target": "document:persona/canon_fusion.md",
+      "type": "documents",
+      "weight": 0.5
+    },
+    {
+      "source": "document:persona/anti_corruption.md",
+      "target": "document:persona/core_personality.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:persona/anti_corruption.md",
+      "target": "document:persona/lifelike_engine.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:persona/relationship_engine.md",
+      "target": "document:persona/voice_engine.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:persona/emotion_body_language.md",
+      "target": "document:persona/voice_engine.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:persona/response_decision_tree.md",
+      "target": "document:persona/voice_engine.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:persona/growth_protocol.md",
+      "target": "document:persona/relationship_engine.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:persona/canon_fusion.md",
+      "target": "document:persona/core_personality.md",
+      "type": "related",
+      "weight": 0.5
+    }
+  ]
+}

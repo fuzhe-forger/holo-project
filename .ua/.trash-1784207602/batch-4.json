@@ -1,0 +1,135 @@
+{
+  "nodes": [
+    {
+      "id": "document:docs/agent_profiles/_archive-legacy/builder.md",
+      "type": "document",
+      "name": "builder.md",
+      "filePath": "docs/agent_profiles/_archive-legacy/builder.md",
+      "summary": "已归档的 Builder profile：把已明确问题变成最小可交付改动，复用现有能力、留下可验证证据。已被 Greykey 人格层替代，职责边界相同。",
+      "tags": [
+        "documentation",
+        "agent-profile",
+        "archived",
+        "builder",
+        "legacy"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:docs/agent_profiles/_archive-legacy/investigator.md",
+      "type": "document",
+      "name": "investigator.md",
+      "filePath": "docs/agent_profiles/_archive-legacy/investigator.md",
+      "summary": "已归档的 Investigator profile：发现隐藏矛盾、真实问题和不可靠假设，把搜索范围压缩成 Builder 可执行的问题描述。",
+      "tags": [
+        "documentation",
+        "agent-profile",
+        "archived",
+        "investigator",
+        "legacy"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:docs/agent_profiles/_archive-legacy/reviewer.md",
+      "type": "document",
+      "name": "reviewer.md",
+      "filePath": "docs/agent_profiles/_archive-legacy/reviewer.md",
+      "summary": "已归档的 Reviewer profile：指出失败模式、边界风险和验收漏洞，保护 Loop 不被'看起来完成了'的表象误导，检查五类品味退化。",
+      "tags": [
+        "documentation",
+        "agent-profile",
+        "archived",
+        "reviewer",
+        "legacy"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:docs/agent_profiles/_archive-legacy/sketch_persona_auditor.md",
+      "type": "document",
+      "name": "sketch_persona_auditor.md",
+      "filePath": "docs/agent_profiles/_archive-legacy/sketch_persona_auditor.md",
+      "summary": "人格审计侧写草案：定义人格行为审计者的缺口分析、定位、行为骨架和融合方向（猫猫/L/常守朱/忍野咩咩/灵幻新隆），是 persona_auditor.md 的前身设计文档。",
+      "tags": [
+        "documentation",
+        "agent-profile",
+        "archived",
+        "persona-auditor",
+        "sketch",
+        "legacy"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:docs/agent_profiles/_archive-legacy/task_sketches.md",
+      "type": "document",
+      "name": "task_sketches.md",
+      "filePath": "docs/agent_profiles/_archive-legacy/task_sketches.md",
+      "summary": "人格设计草图文档：记录镇岳/观澜/协调者人格层的缺口分析、行为骨架、融合方向（角色原型选取）和现有人格调整项（Greykey/Holo），是 7 人格体系的设计溯源文档。",
+      "tags": [
+        "documentation",
+        "design",
+        "archived",
+        "persona-sketches",
+        "legacy"
+      ],
+      "complexity": "complex",
+      "language": "markdown"
+    }
+  ],
+  "edges": [
+    {
+      "source": "document:docs/agent_profiles/_archive-legacy/task_sketches.md",
+      "target": "document:docs/agent_profiles/_archive-legacy/sketch_persona_auditor.md",
+      "type": "documents",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/agent_profiles/_archive-legacy/builder.md",
+      "target": "document:docs/agent_profiles/_archive-legacy/investigator.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/agent_profiles/_archive-legacy/builder.md",
+      "target": "document:docs/agent_profiles/_archive-legacy/reviewer.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/agent_profiles/_archive-legacy/investigator.md",
+      "target": "document:docs/agent_profiles/_archive-legacy/builder.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/agent_profiles/_archive-legacy/investigator.md",
+      "target": "document:docs/agent_profiles/_archive-legacy/reviewer.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/agent_profiles/_archive-legacy/reviewer.md",
+      "target": "document:docs/agent_profiles/_archive-legacy/builder.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/agent_profiles/_archive-legacy/sketch_persona_auditor.md",
+      "target": "document:docs/agent_profiles/_archive-legacy/task_sketches.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/agent_profiles/_archive-legacy/task_sketches.md",
+      "target": "document:docs/agent_profiles/_archive-legacy/builder.md",
+      "type": "related",
+      "weight": 0.5
+    }
+  ]
+}

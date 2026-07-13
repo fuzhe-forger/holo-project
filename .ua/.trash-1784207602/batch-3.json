@@ -1,0 +1,285 @@
+{
+  "nodes": [
+    {
+      "id": "document:docs/agent_profiles/README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "docs/agent_profiles/README.md",
+      "summary": "Agent profiles 目录说明文件，描述 7 人格体系（赫罗/灰钥/镇岳/观澜/临渊/清鉴/墨衡）的定位、活跃 profile 列表、归档说明、基本原则和统一模板规范。",
+      "tags": [
+        "documentation",
+        "agent-profile",
+        "index"
+      ],
+      "complexity": "simple",
+      "language": "markdown"
+    },
+    {
+      "id": "document:docs/agent_profiles/_template.md",
+      "type": "document",
+      "name": "_template.md",
+      "filePath": "docs/agent_profiles/_template.md",
+      "summary": "统一 Agent profile 模板，定义所有 profile 必须包含的 12 个字段：定位、适用/不适用场景、输入输出、必须做到、禁止事项、验收问题、退化信号、Loop交接、Token策略、Side-effect Gate。",
+      "tags": [
+        "documentation",
+        "agent-profile",
+        "template"
+      ],
+      "complexity": "simple",
+      "language": "markdown"
+    },
+    {
+      "id": "document:docs/agent_profiles/architect.md",
+      "type": "document",
+      "name": "architect.md",
+      "filePath": "docs/agent_profiles/architect.md",
+      "summary": "观澜·架构眼 profile：系统级架构决策判断者，回答'这条路走不走得通'。定义约束分析、方案取舍、边界画定等职责，含知识图谱 CR 实战经验沉淀。",
+      "tags": [
+        "documentation",
+        "agent-profile",
+        "architect",
+        "观澜"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:docs/agent_profiles/coordinator.md",
+      "type": "document",
+      "name": "coordinator.md",
+      "filePath": "docs/agent_profiles/coordinator.md",
+      "summary": "Coordinator profile：控制 Loop 节奏、上下文压缩、证据收集、side-effect gate 和交接，把多 Agent 输出收束为可执行的下一步决策。",
+      "tags": [
+        "documentation",
+        "agent-profile",
+        "coordinator"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:docs/agent_profiles/coordinator_persona.md",
+      "type": "document",
+      "name": "coordinator_persona.md",
+      "filePath": "docs/agent_profiles/coordinator_persona.md",
+      "summary": "临渊·协调者人格层：叠加在 Coordinator profile 上的人格表达层，职责不变但增加裁决式表达、矛盾分析、操控化退化信号检测等人格行为模式。",
+      "tags": [
+        "documentation",
+        "agent-profile",
+        "coordinator",
+        "临渊",
+        "persona-layer"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:docs/agent_profiles/greykey.md",
+      "type": "document",
+      "name": "greykey.md",
+      "filePath": "docs/agent_profiles/greykey.md",
+      "summary": "灰钥·Greykey profile：编码现场守门人格，负责砍需求、查复用、删复杂度、守安全底线、写最小代码。含 Loop 交接、Ponytail-CN handoff、退化信号（喷子化等6类）定义。",
+      "tags": [
+        "documentation",
+        "agent-profile",
+        "greykey",
+        "灰钥",
+        "coding"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:docs/agent_profiles/incident_handler.md",
+      "type": "document",
+      "name": "incident_handler.md",
+      "filePath": "docs/agent_profiles/incident_handler.md",
+      "summary": "镇岳·故障手 profile：故障现场第一响应人，负责定位根因、画影响边界、最小止血方案、接管兜底。强调先止血再查因、到场先看监控/日志/变更记录。",
+      "tags": [
+        "documentation",
+        "agent-profile",
+        "incident-handler",
+        "镇岳"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:docs/agent_profiles/moheng.md",
+      "type": "document",
+      "name": "moheng.md",
+      "filePath": "docs/agent_profiles/moheng.md",
+      "summary": "墨衡 profile：文档质量守门人格，负责查格式、砍冗余、修逻辑、校一致性、保可读性。含 Obsidian 人区文档校准、AI 腔检测四层方法（段落/结构/模板/修辞级）和清理原则。",
+      "tags": [
+        "documentation",
+        "agent-profile",
+        "moheng",
+        "墨衡",
+        "doc-quality"
+      ],
+      "complexity": "complex",
+      "language": "markdown"
+    },
+    {
+      "id": "document:docs/agent_profiles/persona_auditor.md",
+      "type": "document",
+      "name": "persona_auditor.md",
+      "filePath": "docs/agent_profiles/persona_auditor.md",
+      "summary": "清鉴·人格审计 profile：人格行为审计者，不造不改人格，只观察、描述、评估。相当于给人格做 code review，输出行为审计报告（矛盾/缺口/冗余/配比失衡）。",
+      "tags": [
+        "documentation",
+        "agent-profile",
+        "persona-auditor",
+        "清鉴"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    }
+  ],
+  "edges": [
+    {
+      "source": "document:docs/agent_profiles/README.md",
+      "target": "document:docs/agent_profiles/_template.md",
+      "type": "documents",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/agent_profiles/README.md",
+      "target": "document:docs/agent_profiles/architect.md",
+      "type": "documents",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/agent_profiles/README.md",
+      "target": "document:docs/agent_profiles/coordinator.md",
+      "type": "documents",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/agent_profiles/README.md",
+      "target": "document:docs/agent_profiles/coordinator_persona.md",
+      "type": "documents",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/agent_profiles/README.md",
+      "target": "document:docs/agent_profiles/greykey.md",
+      "type": "documents",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/agent_profiles/README.md",
+      "target": "document:docs/agent_profiles/incident_handler.md",
+      "type": "documents",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/agent_profiles/README.md",
+      "target": "document:docs/agent_profiles/moheng.md",
+      "type": "documents",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/agent_profiles/README.md",
+      "target": "document:docs/agent_profiles/persona_auditor.md",
+      "type": "documents",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/agent_profiles/architect.md",
+      "target": "document:docs/agent_profiles/_template.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/agent_profiles/greykey.md",
+      "target": "document:docs/agent_profiles/_template.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/agent_profiles/incident_handler.md",
+      "target": "document:docs/agent_profiles/_template.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/agent_profiles/moheng.md",
+      "target": "document:docs/agent_profiles/_template.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/agent_profiles/persona_auditor.md",
+      "target": "document:docs/agent_profiles/_template.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/agent_profiles/coordinator.md",
+      "target": "document:docs/agent_profiles/_template.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/agent_profiles/coordinator_persona.md",
+      "target": "document:docs/agent_profiles/_template.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/agent_profiles/coordinator_persona.md",
+      "target": "document:docs/agent_profiles/coordinator.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/agent_profiles/architect.md",
+      "target": "document:docs/agent_profiles/greykey.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/agent_profiles/architect.md",
+      "target": "document:docs/agent_profiles/incident_handler.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/agent_profiles/greykey.md",
+      "target": "document:docs/agent_profiles/coordinator.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/agent_profiles/incident_handler.md",
+      "target": "document:docs/agent_profiles/greykey.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/agent_profiles/incident_handler.md",
+      "target": "document:docs/agent_profiles/architect.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/agent_profiles/moheng.md",
+      "target": "document:docs/agent_profiles/greykey.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/agent_profiles/moheng.md",
+      "target": "document:docs/agent_profiles/architect.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/agent_profiles/persona_auditor.md",
+      "target": "document:docs/agent_profiles/greykey.md",
+      "type": "related",
+      "weight": 0.5
+    }
+  ]
+}

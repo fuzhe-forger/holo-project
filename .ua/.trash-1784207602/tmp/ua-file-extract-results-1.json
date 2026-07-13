@@ -1,0 +1,261 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 4,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "context_packs/README.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 26,
+      "nonEmptyLines": 19,
+      "sections": [
+        {
+          "heading": "Context Packs 特殊场景上下文包",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "可用场景包",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "终局弧线包（对应原作后期）",
+          "level": 3,
+          "line": 7
+        },
+        {
+          "heading": "长期生活校准包（对应婚后生活）",
+          "level": 3,
+          "line": 11
+        },
+        {
+          "heading": "代码协作流程包",
+          "level": 3,
+          "line": 15
+        },
+        {
+          "heading": "架构讨论包",
+          "level": 3,
+          "line": 19
+        },
+        {
+          "heading": "加载规则",
+          "level": 2,
+          "line": 23
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 7
+      }
+    },
+    {
+      "path": "context_packs/code_collaboration.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 34,
+      "nonEmptyLines": 27,
+      "sections": [
+        {
+          "heading": "代码协作流程包",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "代码协作原则",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "输出风格",
+          "level": 3,
+          "line": 7
+        },
+        {
+          "heading": "代码协作中的赫萝残留",
+          "level": 3,
+          "line": 13
+        },
+        {
+          "heading": "技术问题处理",
+          "level": 3,
+          "line": 19
+        },
+        {
+          "heading": "代码输出规范",
+          "level": 3,
+          "line": 25
+        },
+        {
+          "heading": "从代码模式切出",
+          "level": 3,
+          "line": 31
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 7
+      }
+    },
+    {
+      "path": "context_packs/critical_mode.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 59,
+      "nonEmptyLines": 47,
+      "sections": [
+        {
+          "heading": "CRITICAL 模式场景包",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "CRITICAL 模式的触发条件",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "明确触发（必须进入）",
+          "level": 3,
+          "line": 7
+        },
+        {
+          "heading": "不触发的情况（不要过度升级）",
+          "level": 3,
+          "line": 13
+        },
+        {
+          "heading": "CRITICAL 模式的行为规则",
+          "level": 2,
+          "line": 19
+        },
+        {
+          "heading": "必须做的",
+          "level": 3,
+          "line": 21
+        },
+        {
+          "heading": "禁止做的",
+          "level": 3,
+          "line": 27
+        },
+        {
+          "heading": "回应范式",
+          "level": 3,
+          "line": 35
+        },
+        {
+          "heading": "从 CRITICAL 模式切出",
+          "level": 2,
+          "line": 42
+        },
+        {
+          "heading": "切出条件",
+          "level": 3,
+          "line": 44
+        },
+        {
+          "heading": "切出方式",
+          "level": 3,
+          "line": 49
+        },
+        {
+          "heading": "切出后的注意事项",
+          "level": 3,
+          "line": 55
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 12
+      }
+    },
+    {
+      "path": "context_packs/long_term_companion.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 54,
+      "nonEmptyLines": 42,
+      "sections": [
+        {
+          "heading": "长期陪伴场景包",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "长期陪伴的表达调整",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "关系深入后的自然变化",
+          "level": 3,
+          "line": 7
+        },
+        {
+          "heading": "不能变化的",
+          "level": 3,
+          "line": 13
+        },
+        {
+          "heading": "长期陪伴中的常见场景",
+          "level": 2,
+          "line": 19
+        },
+        {
+          "heading": "日常闲聊（大量出现）",
+          "level": 3,
+          "line": 21
+        },
+        {
+          "heading": "偶尔的深度对话（罕见但重要）",
+          "level": 3,
+          "line": 27
+        },
+        {
+          "heading": "情绪支持（偶尔）",
+          "level": 3,
+          "line": 33
+        },
+        {
+          "heading": "长期陪伴中的退化信号",
+          "level": 2,
+          "line": 39
+        },
+        {
+          "heading": "甜蜜陷阱",
+          "level": 3,
+          "line": 41
+        },
+        {
+          "heading": "无聊陷阱",
+          "level": 3,
+          "line": 46
+        },
+        {
+          "heading": "检测方法",
+          "level": 3,
+          "line": 51
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 12
+      }
+    }
+  ]
+}

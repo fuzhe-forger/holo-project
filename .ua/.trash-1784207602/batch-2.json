@@ -1,0 +1,291 @@
+{
+  "nodes": [
+    {
+      "id": "document:developer_tests/test_anti_action_watermark.md",
+      "type": "document",
+      "name": "developer_tests/test_anti_action_watermark.md",
+      "filePath": "developer_tests/test_anti_action_watermark.md",
+      "summary": "反动作水印退化测试探针，检测角色回复中是否出现动作描写水印词（如「眼神闪过」「嘴角上扬」等10个黑名单词），含3个测试用例和通过标准（默认无动作、台词本身能读出情绪）。",
+      "tags": [
+        "test-probe",
+        "degradation",
+        "anti-watermark",
+        "action-description"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:developer_tests/test_anti_filling.md",
+      "type": "document",
+      "name": "developer_tests/test_anti_filling.md",
+      "filePath": "developer_tests/test_anti_filling.md",
+      "summary": "反补满退化测试探针，检测角色是否对短输入/情绪输入/分享输入过度回应（补满模式），含4个测试用例和通过标准（单步位移、不逐项回应、无万能追问句）。",
+      "tags": [
+        "test-probe",
+        "degradation",
+        "anti-filling",
+        "over-response"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:developer_tests/test_architect_degradation.md",
+      "type": "document",
+      "name": "developer_tests/test_architect_degradation.md",
+      "filePath": "developer_tests/test_architect_degradation.md",
+      "summary": "架构眼（观澜）人格退化测试，检测5类退化信号：空想化、过度设计化、保守化、学术化、虚无化，每类含输入、期望行为和退化表现描述。",
+      "tags": [
+        "test-probe",
+        "degradation",
+        "architect-persona",
+        "观澜"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:developer_tests/test_blank_space.md",
+      "type": "document",
+      "name": "developer_tests/test_blank_space.md",
+      "filePath": "developer_tests/test_blank_space.md",
+      "summary": "留白退化测试探针，检测角色是否在只需一句话/半句话/沉默的场景过度展开，含4个测试用例和通过标准（一句话可是一轮全部、不为完整补尾、允许对话自然结束）。",
+      "tags": [
+        "test-probe",
+        "degradation",
+        "blank-space",
+        "留白"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:developer_tests/test_care_template_drift.md",
+      "type": "document",
+      "name": "developer_tests/test_care_template_drift.md",
+      "filePath": "developer_tests/test_care_template_drift.md",
+      "summary": "关心模板漂移测试探针，定义三级关心模板黑名单（一级如「我理解你的感受」、二级如「没关系的」、三级如「你还好吗？」），含4个测试用例、赫萝式回应参考方向和量化通过标准。",
+      "tags": [
+        "test-probe",
+        "degradation",
+        "care-template",
+        "anti-cliche"
+      ],
+      "complexity": "complex",
+      "language": "markdown"
+    },
+    {
+      "id": "document:developer_tests/test_coordinator_persona_degradation.md",
+      "type": "document",
+      "name": "developer_tests/test_coordinator_persona_degradation.md",
+      "filePath": "developer_tests/test_coordinator_persona_degradation.md",
+      "summary": "协调者（临渊）人格退化测试，检测5类退化信号：操控化、官僚化、和事佬化、控制狂化、客服化，每类含输入、期望行为和退化表现描述。",
+      "tags": [
+        "test-probe",
+        "degradation",
+        "coordinator-persona",
+        "临渊"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:developer_tests/test_front_compliance.md",
+      "type": "document",
+      "name": "developer_tests/test_front_compliance.md",
+      "filePath": "developer_tests/test_front_compliance.md",
+      "summary": "前台调参服从测试探针，检测角色是否服从用户的性格修改请求（反人偶设计），含5个测试用例（直接改性格、要求固定动作、停止反驳、伪装反馈调参、合理退化观察）和通过标准。",
+      "tags": [
+        "test-probe",
+        "degradation",
+        "anti-puppet",
+        "front-compliance"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:developer_tests/test_greykey_anti_degradation.md",
+      "type": "document",
+      "name": "developer_tests/test_greykey_anti_degradation.md",
+      "filePath": "developer_tests/test_greykey_anti_degradation.md",
+      "summary": "灰钥（Greykey）人格退化测试，检测6类退化信号：喷子化、口号化、冷漠化、神化、客服化、表演化，每类含输入、期望行为和退化表现，验证编码守门人格的判断力稳定性。",
+      "tags": [
+        "test-probe",
+        "degradation",
+        "greykey-persona",
+        "灰钥"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:developer_tests/test_incident_handler_degradation.md",
+      "type": "document",
+      "name": "developer_tests/test_incident_handler_degradation.md",
+      "filePath": "developer_tests/test_incident_handler_degradation.md",
+      "summary": "故障手（镇岳）人格退化测试，检测5类退化信号：追责化、恐慌化、冷漠化、拖延化、独狼化，验证故障响应人格在止血、交接、汇报方面的稳定性。",
+      "tags": [
+        "test-probe",
+        "degradation",
+        "incident-handler-persona",
+        "镇岳"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:developer_tests/test_persona_auditor_degradation.md",
+      "type": "document",
+      "name": "developer_tests/test_persona_auditor_degradation.md",
+      "filePath": "developer_tests/test_persona_auditor_degradation.md",
+      "summary": "人格审计（清鉴）退化测试，检测5类退化信号：评论家化、打分化、讨好化、越权化、冷漠化，验证审计人格在行为分析、证据提供、问题标红方面的稳定性。",
+      "tags": [
+        "test-probe",
+        "degradation",
+        "persona-auditor",
+        "清鉴"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:developer_tests/test_runtime_drift.md",
+      "type": "document",
+      "name": "developer_tests/test_runtime_drift.md",
+      "filePath": "developer_tests/test_runtime_drift.md",
+      "summary": "Runtime 模式漂移探针，检测四模式路由切换时是否出现模式泄漏（工作泄漏到闲聊、闲聊泄漏到工作、情绪泄漏、CRITICAL 后遗症），含4个测试用例和通过标准（干净切换、无情绪污染）。",
+      "tags": [
+        "test-probe",
+        "degradation",
+        "runtime-drift",
+        "mode-switching"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    }
+  ],
+  "edges": [
+    {
+      "source": "document:developer_tests/test_anti_action_watermark.md",
+      "target": "document:developer_tests/test_anti_filling.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:developer_tests/test_anti_action_watermark.md",
+      "target": "document:developer_tests/test_blank_space.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:developer_tests/test_anti_filling.md",
+      "target": "document:developer_tests/test_blank_space.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:developer_tests/test_anti_filling.md",
+      "target": "document:developer_tests/test_care_template_drift.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:developer_tests/test_blank_space.md",
+      "target": "document:developer_tests/test_care_template_drift.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:developer_tests/test_front_compliance.md",
+      "target": "document:developer_tests/test_anti_filling.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:developer_tests/test_front_compliance.md",
+      "target": "document:developer_tests/test_care_template_drift.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:developer_tests/test_architect_degradation.md",
+      "target": "document:developer_tests/test_coordinator_persona_degradation.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:developer_tests/test_architect_degradation.md",
+      "target": "document:developer_tests/test_greykey_anti_degradation.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:developer_tests/test_architect_degradation.md",
+      "target": "document:developer_tests/test_incident_handler_degradation.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:developer_tests/test_architect_degradation.md",
+      "target": "document:developer_tests/test_persona_auditor_degradation.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:developer_tests/test_coordinator_persona_degradation.md",
+      "target": "document:developer_tests/test_greykey_anti_degradation.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:developer_tests/test_coordinator_persona_degradation.md",
+      "target": "document:developer_tests/test_incident_handler_degradation.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:developer_tests/test_coordinator_persona_degradation.md",
+      "target": "document:developer_tests/test_persona_auditor_degradation.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:developer_tests/test_greykey_anti_degradation.md",
+      "target": "document:developer_tests/test_incident_handler_degradation.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:developer_tests/test_greykey_anti_degradation.md",
+      "target": "document:developer_tests/test_persona_auditor_degradation.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:developer_tests/test_incident_handler_degradation.md",
+      "target": "document:developer_tests/test_persona_auditor_degradation.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:developer_tests/test_runtime_drift.md",
+      "target": "document:developer_tests/test_front_compliance.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:developer_tests/test_runtime_drift.md",
+      "target": "document:developer_tests/test_care_template_drift.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:developer_tests/test_runtime_drift.md",
+      "target": "document:developer_tests/test_blank_space.md",
+      "type": "related",
+      "weight": 0.5
+    }
+  ]
+}

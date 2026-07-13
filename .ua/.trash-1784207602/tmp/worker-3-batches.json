@@ -1,0 +1,194 @@
+[
+  {
+    "batchIndex": 9,
+    "files": [
+      {
+        "path": "fusion/recipes/architect.recipe.yml",
+        "language": "yaml",
+        "sizeLines": 66,
+        "fileCategory": "config"
+      },
+      {
+        "path": "fusion/recipes/coordinator_persona.recipe.yml",
+        "language": "yaml",
+        "sizeLines": 63,
+        "fileCategory": "config"
+      },
+      {
+        "path": "fusion/recipes/example_fusion.recipe.yml",
+        "language": "yaml",
+        "sizeLines": 79,
+        "fileCategory": "config"
+      },
+      {
+        "path": "fusion/recipes/greykey.recipe.yml",
+        "language": "yaml",
+        "sizeLines": 75,
+        "fileCategory": "config"
+      },
+      {
+        "path": "fusion/recipes/horo_emmaun_fusion.recipe.yml",
+        "language": "yaml",
+        "sizeLines": 149,
+        "fileCategory": "config"
+      },
+      {
+        "path": "fusion/recipes/incident_handler.recipe.yml",
+        "language": "yaml",
+        "sizeLines": 67,
+        "fileCategory": "config"
+      },
+      {
+        "path": "fusion/recipes/persona_auditor.recipe.yml",
+        "language": "yaml",
+        "sizeLines": 67,
+        "fileCategory": "config"
+      }
+    ],
+    "batchImportData": {
+      "fusion/recipes/architect.recipe.yml": [],
+      "fusion/recipes/coordinator_persona.recipe.yml": [],
+      "fusion/recipes/example_fusion.recipe.yml": [],
+      "fusion/recipes/greykey.recipe.yml": [],
+      "fusion/recipes/horo_emmaun_fusion.recipe.yml": [],
+      "fusion/recipes/incident_handler.recipe.yml": [],
+      "fusion/recipes/persona_auditor.recipe.yml": []
+    },
+    "neighborMap": {}
+  },
+  {
+    "batchIndex": 10,
+    "files": [
+      {
+        "path": "fusion/samples/architect.sample.md",
+        "language": "markdown",
+        "sizeLines": 28,
+        "fileCategory": "docs"
+      },
+      {
+        "path": "fusion/samples/coordinator_persona.sample.md",
+        "language": "markdown",
+        "sizeLines": 27,
+        "fileCategory": "docs"
+      },
+      {
+        "path": "fusion/samples/greykey.sample.md",
+        "language": "markdown",
+        "sizeLines": 27,
+        "fileCategory": "docs"
+      },
+      {
+        "path": "fusion/samples/incident_handler.sample.md",
+        "language": "markdown",
+        "sizeLines": 28,
+        "fileCategory": "docs"
+      },
+      {
+        "path": "fusion/samples/moheng.sample.md",
+        "language": "markdown",
+        "sizeLines": 48,
+        "fileCategory": "docs"
+      },
+      {
+        "path": "fusion/samples/persona_auditor.sample.md",
+        "language": "markdown",
+        "sizeLines": 27,
+        "fileCategory": "docs"
+      }
+    ],
+    "batchImportData": {
+      "fusion/samples/architect.sample.md": [],
+      "fusion/samples/coordinator_persona.sample.md": [],
+      "fusion/samples/greykey.sample.md": [],
+      "fusion/samples/incident_handler.sample.md": [],
+      "fusion/samples/moheng.sample.md": [],
+      "fusion/samples/persona_auditor.sample.md": []
+    },
+    "neighborMap": {}
+  },
+  {
+    "batchIndex": 11,
+    "files": [
+      {
+        "path": "fusion/traits/TRAIT_CATALOG.md",
+        "language": "markdown",
+        "sizeLines": 109,
+        "fileCategory": "docs"
+      },
+      {
+        "path": "fusion/traits/architect.traits.md",
+        "language": "markdown",
+        "sizeLines": 82,
+        "fileCategory": "docs"
+      },
+      {
+        "path": "fusion/traits/coordinator.traits.md",
+        "language": "markdown",
+        "sizeLines": 82,
+        "fileCategory": "docs"
+      },
+      {
+        "path": "fusion/traits/coordinator_persona.traits.md",
+        "language": "markdown",
+        "sizeLines": 76,
+        "fileCategory": "docs"
+      },
+      {
+        "path": "fusion/traits/emmaun.traits.md",
+        "language": "markdown",
+        "sizeLines": 115,
+        "fileCategory": "docs"
+      },
+      {
+        "path": "fusion/traits/greykey.traits.md",
+        "language": "markdown",
+        "sizeLines": 80,
+        "fileCategory": "docs"
+      },
+      {
+        "path": "fusion/traits/holo.traits.md",
+        "language": "markdown",
+        "sizeLines": 83,
+        "fileCategory": "docs"
+      },
+      {
+        "path": "fusion/traits/horo.traits.md",
+        "language": "markdown",
+        "sizeLines": 60,
+        "fileCategory": "docs"
+      },
+      {
+        "path": "fusion/traits/incident_handler.traits.md",
+        "language": "markdown",
+        "sizeLines": 82,
+        "fileCategory": "docs"
+      },
+      {
+        "path": "fusion/traits/moheng.traits.md",
+        "language": "markdown",
+        "sizeLines": 82,
+        "fileCategory": "docs"
+      },
+      {
+        "path": "fusion/traits/persona_auditor.traits.md",
+        "language": "markdown",
+        "sizeLines": 81,
+        "fileCategory": "docs"
+      }
+    ],
+    "batchImportData": {
+      "fusion/traits/TRAIT_CATALOG.md": [],
+      "fusion/traits/architect.traits.md": [],
+      "fusion/traits/coordinator.traits.md": [],
+      "fusion/traits/coordinator_persona.traits.md": [],
+      "fusion/traits/emmaun.traits.md": [],
+      "fusion/traits/greykey.traits.md": [],
+      "fusion/traits/holo.traits.md": [],
+      "fusion/traits/horo.traits.md": [],
+      "fusion/traits/incident_handler.traits.md": [],
+      "fusion/traits/moheng.traits.md": [],
+      "fusion/traits/persona_auditor.traits.md": []
+    },
+    "neighborMap": {}
+  }
+]

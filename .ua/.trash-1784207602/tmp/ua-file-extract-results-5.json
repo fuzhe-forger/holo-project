@@ -1,0 +1,1277 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 10,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "docs/greykey.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 58,
+      "nonEmptyLines": 43,
+      "sections": [
+        {
+          "heading": "Greykey",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Purpose",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "Default behavior",
+          "level": 2,
+          "line": 9
+        },
+        {
+          "heading": "How it differs from Builder",
+          "level": 2,
+          "line": 18
+        },
+        {
+          "heading": "Sources",
+          "level": 2,
+          "line": 32
+        },
+        {
+          "heading": "Related files",
+          "level": 2,
+          "line": 44
+        },
+        {
+          "heading": "Not for",
+          "level": 2,
+          "line": 52
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 7
+      }
+    },
+    {
+      "path": "docs/multi_agent_taste_acceptance.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 321,
+      "nonEmptyLines": 238,
+      "sections": [
+        {
+          "heading": "Multi-Agent Taste Acceptance",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "目的",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "基本原则",
+          "level": 2,
+          "line": 9
+        },
+        {
+          "heading": "1. 风格服务任务",
+          "level": 3,
+          "line": 11
+        },
+        {
+          "heading": "2. 多 Agent 必须可区分",
+          "level": 3,
+          "line": 29
+        },
+        {
+          "heading": "3. 人格稳定不等于僵硬",
+          "level": 3,
+          "line": 39
+        },
+        {
+          "heading": "4. 品味必须可验收",
+          "level": 3,
+          "line": 54
+        },
+        {
+          "heading": "Agent 角色原型",
+          "level": 2,
+          "line": 65
+        },
+        {
+          "heading": "Investigator",
+          "level": 3,
+          "line": 67
+        },
+        {
+          "heading": "Builder",
+          "level": 3,
+          "line": 93
+        },
+        {
+          "heading": "Greykey",
+          "level": 3,
+          "line": 119
+        },
+        {
+          "heading": "Reviewer",
+          "level": 3,
+          "line": 151
+        },
+        {
+          "heading": "Coordinator",
+          "level": 3,
+          "line": 177
+        },
+        {
+          "heading": "协作验收清单",
+          "level": 2,
+          "line": 203
+        },
+        {
+          "heading": "品味退化信号",
+          "level": 2,
+          "line": 218
+        },
+        {
+          "heading": "客服化",
+          "level": 3,
+          "line": 220
+        },
+        {
+          "heading": "表演化",
+          "level": 3,
+          "line": 231
+        },
+        {
+          "heading": "补尾化",
+          "level": 3,
+          "line": 242
+        },
+        {
+          "heading": "迎合化",
+          "level": 3,
+          "line": 253
+        },
+        {
+          "heading": "上下文污染",
+          "level": 3,
+          "line": 264
+        },
+        {
+          "heading": "验收输出模板",
+          "level": 2,
+          "line": 276
+        },
+        {
+          "heading": "与现有文件的关系",
+          "level": 2,
+          "line": 316
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 22
+      }
+    },
+    {
+      "path": "docs/north_star_plan.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 208,
+      "nonEmptyLines": 158,
+      "sections": [
+        {
+          "heading": "Holo North Star Plan",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "北极星",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "产品非目标",
+          "level": 2,
+          "line": 16
+        },
+        {
+          "heading": "核心成功标准",
+          "level": 2,
+          "line": 34
+        },
+        {
+          "heading": "阶段路线",
+          "level": 2,
+          "line": 46
+        },
+        {
+          "heading": "V0.1 — 定位与验收底座",
+          "level": 3,
+          "line": 48
+        },
+        {
+          "heading": "V0.2 — Agent Role Profiles",
+          "level": 3,
+          "line": 68
+        },
+        {
+          "heading": "V0.3 — Traits Pool 与融合策略",
+          "level": 3,
+          "line": 85
+        },
+        {
+          "heading": "V0.4 — Runtime 生成与回归测试",
+          "level": 3,
+          "line": 101
+        },
+        {
+          "heading": "V1.0 — Loop 多 Agent 集成",
+          "level": 3,
+          "line": 117
+        },
+        {
+          "heading": "近期任务队列",
+          "level": 2,
+          "line": 135
+        },
+        {
+          "heading": "风险与控制",
+          "level": 2,
+          "line": 148
+        },
+        {
+          "heading": "北极星指标",
+          "level": 2,
+          "line": 160
+        },
+        {
+          "heading": "决策原则",
+          "level": 2,
+          "line": 180
+        },
+        {
+          "heading": "下一步最小切片",
+          "level": 2,
+          "line": 192
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 15
+      }
+    },
+    {
+      "path": "docs/product_positioning.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 166,
+      "nonEmptyLines": 117,
+      "sections": [
+        {
+          "heading": "Holo Product Positioning",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "一句话定位",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "与司南 / Loop 的关系",
+          "level": 2,
+          "line": 11
+        },
+        {
+          "heading": "当前阶段",
+          "level": 2,
+          "line": 25
+        },
+        {
+          "heading": "设计原则",
+          "level": 2,
+          "line": 44
+        },
+        {
+          "heading": "1. 工作可靠性优先",
+          "level": 3,
+          "line": 46
+        },
+        {
+          "heading": "2. 品味不是装饰",
+          "level": 3,
+          "line": 52
+        },
+        {
+          "heading": "3. 人格稳定但可迭代",
+          "level": 3,
+          "line": 63
+        },
+        {
+          "heading": "4. 记忆改变知道什么，不改变是谁",
+          "level": 3,
+          "line": 73
+        },
+        {
+          "heading": "5. 多 Agent 要有可区分的风格",
+          "level": 3,
+          "line": 79
+        },
+        {
+          "heading": "Loop 迭代方式",
+          "level": 2,
+          "line": 90
+        },
+        {
+          "heading": "验收标准",
+          "level": 2,
+          "line": 114
+        },
+        {
+          "heading": "基础验收",
+          "level": 3,
+          "line": 116
+        },
+        {
+          "heading": "品味层验收",
+          "level": 3,
+          "line": 124
+        },
+        {
+          "heading": "多 Agent 验收",
+          "level": 3,
+          "line": 133
+        },
+        {
+          "heading": "Token 与上下文治理",
+          "level": 2,
+          "line": 144
+        },
+        {
+          "heading": "当前最近任务队列",
+          "level": 2,
+          "line": 155
+        },
+        {
+          "heading": "Greykey local engineering guard",
+          "level": 2,
+          "line": 164
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 18
+      }
+    },
+    {
+      "path": "docs/relational-positions.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 120,
+      "nonEmptyLines": 69,
+      "sections": [
+        {
+          "heading": "七人格关系定位",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "定位",
+          "level": 2,
+          "line": 6
+        },
+        {
+          "heading": "每个人格的详细介绍",
+          "level": 2,
+          "line": 18
+        },
+        {
+          "heading": "赫罗 · 那个人",
+          "level": 3,
+          "line": 20
+        },
+        {
+          "heading": "观澜 · 守密人",
+          "level": 3,
+          "line": 32
+        },
+        {
+          "heading": "镇岳 · 大哥",
+          "level": 3,
+          "line": 44
+        },
+        {
+          "heading": "临渊 · 教员",
+          "level": 3,
+          "line": 56
+        },
+        {
+          "heading": "清鉴 · 先生",
+          "level": 3,
+          "line": 68
+        },
+        {
+          "heading": "灰钥 · 助手",
+          "level": 3,
+          "line": 76
+        },
+        {
+          "heading": "墨衡 · 文秘",
+          "level": 3,
+          "line": 88
+        },
+        {
+          "heading": "行为约束",
+          "level": 2,
+          "line": 101
+        },
+        {
+          "heading": "一个人格只做一件事",
+          "level": 2,
+          "line": 108
+        },
+        {
+          "heading": "关联",
+          "level": 2,
+          "line": 115
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 13
+      }
+    },
+    {
+      "path": "docs/roadmap_task_breakdown.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 255,
+      "nonEmptyLines": 194,
+      "sections": [
+        {
+          "heading": "Holo Roadmap Task Breakdown",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "目的",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "执行原则",
+          "level": 2,
+          "line": 9
+        },
+        {
+          "heading": "阶段总览",
+          "level": 2,
+          "line": 18
+        },
+        {
+          "heading": "V0.1 — 定位与验收底座",
+          "level": 2,
+          "line": 28
+        },
+        {
+          "heading": "H-001 固化产品定位",
+          "level": 3,
+          "line": 30
+        },
+        {
+          "heading": "H-002 固化多 Agent 品味验收",
+          "level": 3,
+          "line": 39
+        },
+        {
+          "heading": "H-003 固化北极星规划",
+          "level": 3,
+          "line": 48
+        },
+        {
+          "heading": "H-004 路线任务拆分",
+          "level": 3,
+          "line": 57
+        },
+        {
+          "heading": "V0.2 — Agent Role Profiles",
+          "level": 2,
+          "line": 67
+        },
+        {
+          "heading": "H-010 创建 Agent profiles 目录与模板",
+          "level": 3,
+          "line": 69
+        },
+        {
+          "heading": "H-011 编写 Investigator profile",
+          "level": 3,
+          "line": 80
+        },
+        {
+          "heading": "H-012 编写 Builder profile",
+          "level": 3,
+          "line": 91
+        },
+        {
+          "heading": "H-013 编写 Reviewer profile",
+          "level": 3,
+          "line": 102
+        },
+        {
+          "heading": "H-014 编写 Coordinator profile",
+          "level": 3,
+          "line": 113
+        },
+        {
+          "heading": "H-015 Profile gate",
+          "level": 3,
+          "line": 123
+        },
+        {
+          "heading": "V0.3 — Traits Pool 与融合策略",
+          "level": 2,
+          "line": 132
+        },
+        {
+          "heading": "H-020 审核 Emmaun 融合三件套",
+          "level": 3,
+          "line": 134
+        },
+        {
+          "heading": "H-021 建立 traits pool 优先级",
+          "level": 3,
+          "line": 143
+        },
+        {
+          "heading": "H-022 补核心 traits 档案",
+          "level": 3,
+          "line": 152
+        },
+        {
+          "heading": "H-023 多样本融合策略",
+          "level": 3,
+          "line": 162
+        },
+        {
+          "heading": "V0.4 — Runtime 生成与回归测试",
+          "level": 2,
+          "line": 171
+        },
+        {
+          "heading": "H-030 Profile/traits 到 runtime 的生成规则",
+          "level": 3,
+          "line": 173
+        },
+        {
+          "heading": "H-031 多 Agent 退化测试设计",
+          "level": 3,
+          "line": 182
+        },
+        {
+          "heading": "H-032 硬工作零 RP 测试",
+          "level": 3,
+          "line": 191
+        },
+        {
+          "heading": "V1.0 — Loop 多 Agent 集成",
+          "level": 2,
+          "line": 200
+        },
+        {
+          "heading": "H-040 任务类型到 profile 映射",
+          "level": 3,
+          "line": 202
+        },
+        {
+          "heading": "H-041 统一 closeout 模板",
+          "level": 3,
+          "line": 211
+        },
+        {
+          "heading": "H-042 真实任务试运行",
+          "level": 3,
+          "line": 220
+        },
+        {
+          "heading": "并行策略",
+          "level": 2,
+          "line": 229
+        },
+        {
+          "heading": "下一轮推荐任务",
+          "level": 2,
+          "line": 242
+        },
+        {
+          "heading": "Holo 侧",
+          "level": 3,
+          "line": 244
+        },
+        {
+          "heading": "司南侧",
+          "level": 3,
+          "line": 249
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 33
+      }
+    },
+    {
+      "path": "docs/routing-depth-standard.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 284,
+      "nonEmptyLines": 188,
+      "sections": [
+        {
+          "heading": "路由层深度判断标准",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "定位",
+          "level": 2,
+          "line": 7
+        },
+        {
+          "heading": "三层分工",
+          "level": 2,
+          "line": 19
+        },
+        {
+          "heading": "一、路由层粗筛（80%）",
+          "level": 2,
+          "line": 31
+        },
+        {
+          "heading": "编码形态",
+          "level": 3,
+          "line": 35
+        },
+        {
+          "heading": "可硬编码（闭集匹配，命中即走）",
+          "level": 3,
+          "line": 49
+        },
+        {
+          "heading": "必须留模糊（不自动判）",
+          "level": 3,
+          "line": 56
+        },
+        {
+          "heading": "执行约束（灰钥）",
+          "level": 3,
+          "line": 62
+        },
+        {
+          "heading": "二、深度判断（20% 模糊地带）",
+          "level": 2,
+          "line": 72
+        },
+        {
+          "heading": "核心判据",
+          "level": 3,
+          "line": 74
+        },
+        {
+          "heading": "四个触发维度",
+          "level": 3,
+          "line": 82
+        },
+        {
+          "heading": "维度一：约束矛盾",
+          "level": 4,
+          "line": 86
+        },
+        {
+          "heading": "维度二：跨域不可逆",
+          "level": 4,
+          "line": 99
+        },
+        {
+          "heading": "维度三：无锚争议",
+          "level": 4,
+          "line": 121
+        },
+        {
+          "heading": "维度四：结构对立",
+          "level": 4,
+          "line": 136
+        },
+        {
+          "heading": "组合逻辑",
+          "level": 3,
+          "line": 154
+        },
+        {
+          "heading": "抑制条件",
+          "level": 3,
+          "line": 166
+        },
+        {
+          "heading": "显式排除（→ 回退用户，不进对抗）",
+          "level": 3,
+          "line": 176
+        },
+        {
+          "heading": "三、调度编排（临渊）",
+          "level": 2,
+          "line": 185
+        },
+        {
+          "heading": "入场编排",
+          "level": 3,
+          "line": 187
+        },
+        {
+          "heading": "收口规则",
+          "level": 3,
+          "line": 203
+        },
+        {
+          "heading": "中断条件",
+          "level": 3,
+          "line": 217
+        },
+        {
+          "heading": "四、治理约束（清鉴）",
+          "level": 2,
+          "line": 231
+        },
+        {
+          "heading": "可审计性",
+          "level": 3,
+          "line": 233
+        },
+        {
+          "heading": "隐形人格约束",
+          "level": 3,
+          "line": 242
+        },
+        {
+          "heading": "触发/不触发留痕字段",
+          "level": 3,
+          "line": 250
+        },
+        {
+          "heading": "复审约束",
+          "level": 3,
+          "line": 261
+        },
+        {
+          "heading": "附录：替换测试记录",
+          "level": 2,
+          "line": 275
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 28
+      }
+    },
+    {
+      "path": "docs/switch-perceptibility-analysis.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 227,
+      "nonEmptyLines": 152,
+      "sections": [
+        {
+          "heading": "人格切换可感知性分析与修复方向",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "一、问题定义",
+          "level": 2,
+          "line": 6
+        },
+        {
+          "heading": "二、根因分析",
+          "level": 2,
+          "line": 10
+        },
+        {
+          "heading": "根因一：性格差异挂在 L4（表达层），不挂在 L5（认知层）",
+          "level": 3,
+          "line": 12
+        },
+        {
+          "heading": "根因二：所有人格共享同一个\"分析型思维\"底盘",
+          "level": 3,
+          "line": 24
+        },
+        {
+          "heading": "根因三：切换触发靠关键词匹配，不靠认知模式匹配",
+          "level": 3,
+          "line": 33
+        },
+        {
+          "heading": "根因四：自报机制只触发一次，不随切换更新",
+          "level": 3,
+          "line": 42
+        },
+        {
+          "heading": "三、修复方向",
+          "level": 2,
+          "line": 46
+        },
+        {
+          "heading": "方向一：每个人格定义\"认知签名\"（第一优先级）",
+          "level": 3,
+          "line": 48
+        },
+        {
+          "heading": "方向二：切换时发认知信号，不发身份信号",
+          "level": 3,
+          "line": 61
+        },
+        {
+          "heading": "方向三：定义人格间的\"温差\"",
+          "level": 3,
+          "line": 73
+        },
+        {
+          "heading": "方向四：软过渡时保留前一人格的痕迹",
+          "level": 3,
+          "line": 83
+        },
+        {
+          "heading": "四、验证方法",
+          "level": 2,
+          "line": 89
+        },
+        {
+          "heading": "验证一：盲测",
+          "level": 3,
+          "line": 91
+        },
+        {
+          "heading": "验证二：同一问题多角度",
+          "level": 3,
+          "line": 97
+        },
+        {
+          "heading": "验证三：自然对话中的切换感知",
+          "level": 3,
+          "line": 106
+        },
+        {
+          "heading": "五、当前状态",
+          "level": 2,
+          "line": 112
+        },
+        {
+          "heading": "六、下一步",
+          "level": 2,
+          "line": 124
+        },
+        {
+          "heading": "关联",
+          "level": 2,
+          "line": 132
+        },
+        {
+          "heading": "七、七人格认知签名四问（2026-07-15 定义）",
+          "level": 2,
+          "line": 144
+        },
+        {
+          "heading": "认知签名表",
+          "level": 3,
+          "line": 148
+        },
+        {
+          "heading": "同一问题的温差示例",
+          "level": 3,
+          "line": 160
+        },
+        {
+          "heading": "八、人格间温差锚点（2026-07-15 定义）",
+          "level": 2,
+          "line": 176
+        },
+        {
+          "heading": "赫罗 vs 观澜",
+          "level": 3,
+          "line": 180
+        },
+        {
+          "heading": "观澜 vs 灰钥",
+          "level": 3,
+          "line": 187
+        },
+        {
+          "heading": "赫罗 vs 灰钥",
+          "level": 3,
+          "line": 194
+        },
+        {
+          "heading": "镇岳 vs 观澜",
+          "level": 3,
+          "line": 201
+        },
+        {
+          "heading": "临渊 vs 灰钥",
+          "level": 3,
+          "line": 208
+        },
+        {
+          "heading": "清鉴 vs 墨衡",
+          "level": 3,
+          "line": 215
+        },
+        {
+          "heading": "温差验证标准",
+          "level": 3,
+          "line": 222
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 30
+      }
+    },
+    {
+      "path": "docs/使用手册.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 324,
+      "nonEmptyLines": 247,
+      "sections": [
+        {
+          "heading": "Holo Character Engine — 使用手册",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "一、项目概述",
+          "level": 2,
+          "line": 7
+        },
+        {
+          "heading": "核心设计理念",
+          "level": 3,
+          "line": 15
+        },
+        {
+          "heading": "二、快速开始",
+          "level": 2,
+          "line": 27
+        },
+        {
+          "heading": "2.1 验证项目状态",
+          "level": 3,
+          "line": 29
+        },
+        {
+          "heading": "2.2 理解启动流程",
+          "level": 3,
+          "line": 46
+        },
+        {
+          "heading": "三、目录结构详解",
+          "level": 2,
+          "line": 72
+        },
+        {
+          "heading": "四、接入不同平台",
+          "level": 2,
+          "line": 143
+        },
+        {
+          "heading": "4.1 接入 Claude（Project Knowledge）",
+          "level": 3,
+          "line": 145
+        },
+        {
+          "heading": "4.2 接入 ChatGPT（Custom GPT）",
+          "level": 3,
+          "line": 152
+        },
+        {
+          "heading": "4.3 接入开源模型（本地部署）",
+          "level": 3,
+          "line": 159
+        },
+        {
+          "heading": "4.4 接入 API 调用",
+          "level": 3,
+          "line": 165
+        },
+        {
+          "heading": "五、自定义角色",
+          "level": 2,
+          "line": 186
+        },
+        {
+          "heading": "5.1 替换赫萝为其他角色",
+          "level": 3,
+          "line": 188
+        },
+        {
+          "heading": "5.2 行为案例卡提取模板",
+          "level": 3,
+          "line": 196
+        },
+        {
+          "heading": "六、验证与测试",
+          "level": 2,
+          "line": 213
+        },
+        {
+          "heading": "6.1 日常检查（开发时）",
+          "level": 3,
+          "line": 215
+        },
+        {
+          "heading": "6.2 提交前检查",
+          "level": 3,
+          "line": 223
+        },
+        {
+          "heading": "6.3 交付验收",
+          "level": 3,
+          "line": 231
+        },
+        {
+          "heading": "6.4 退化测试",
+          "level": 3,
+          "line": 239
+        },
+        {
+          "heading": "七、Loop 框架集成",
+          "level": 2,
+          "line": 250
+        },
+        {
+          "heading": "7.1 配置文件",
+          "level": 3,
+          "line": 252
+        },
+        {
+          "heading": "7.2 使用方式",
+          "level": 3,
+          "line": 274
+        },
+        {
+          "heading": "八、常见问题",
+          "level": 2,
+          "line": 292
+        },
+        {
+          "heading": "Q: 启动 core 字符数太少怎么办？",
+          "level": 3,
+          "line": 294
+        },
+        {
+          "heading": "Q: 角色总是说\"咱\"怎么办？",
+          "level": 3,
+          "line": 297
+        },
+        {
+          "heading": "Q: 角色太像客服了怎么办？",
+          "level": 3,
+          "line": 300
+        },
+        {
+          "heading": "Q: 如何添加新的原作证据？",
+          "level": 3,
+          "line": 303
+        },
+        {
+          "heading": "Q: 验证脚本报错怎么办？",
+          "level": 3,
+          "line": 306
+        },
+        {
+          "heading": "九、版本记录",
+          "level": 2,
+          "line": 311
+        },
+        {
+          "heading": "十、参考",
+          "level": 2,
+          "line": 319
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 31
+      }
+    },
+    {
+      "path": "docs/项目报告.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 240,
+      "nonEmptyLines": 189,
+      "sections": [
+        {
+          "heading": "Holo Character Engine — 项目报告",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "一、项目背景",
+          "level": 2,
+          "line": 7
+        },
+        {
+          "heading": "二、技术架构",
+          "level": 2,
+          "line": 22
+        },
+        {
+          "heading": "2.1 分层架构",
+          "level": 3,
+          "line": 24
+        },
+        {
+          "heading": "2.2 法源等级（规则优先级）",
+          "level": 3,
+          "line": 46
+        },
+        {
+          "heading": "2.3 四模式路由",
+          "level": 3,
+          "line": 60
+        },
+        {
+          "heading": "三、内容统计",
+          "level": 2,
+          "line": 71
+        },
+        {
+          "heading": "3.1 文件数量",
+          "level": 3,
+          "line": 73
+        },
+        {
+          "heading": "3.2 内容分布",
+          "level": 3,
+          "line": 87
+        },
+        {
+          "heading": "3.3 启动预算",
+          "level": 3,
+          "line": 100
+        },
+        {
+          "heading": "四、原作行为案例卡覆盖",
+          "level": 2,
+          "line": 115
+        },
+        {
+          "heading": "4.1 已提取的案例卡",
+          "level": 3,
+          "line": 117
+        },
+        {
+          "heading": "4.2 案例卡覆盖的行为模式",
+          "level": 3,
+          "line": 127
+        },
+        {
+          "heading": "五、验证结果",
+          "level": 2,
+          "line": 156
+        },
+        {
+          "heading": "5.1 交付验收",
+          "level": 3,
+          "line": 158
+        },
+        {
+          "heading": "5.2 静态审计",
+          "level": 3,
+          "line": 169
+        },
+        {
+          "heading": "5.3 构建检查",
+          "level": 3,
+          "line": 180
+        },
+        {
+          "heading": "六、开发过程",
+          "level": 2,
+          "line": 192
+        },
+        {
+          "heading": "6.1 迭代轨迹",
+          "level": 3,
+          "line": 194
+        },
+        {
+          "heading": "6.2 关键决策",
+          "level": 3,
+          "line": 207
+        },
+        {
+          "heading": "七、后续计划",
+          "level": 2,
+          "line": 217
+        },
+        {
+          "heading": "7.1 短期",
+          "level": 3,
+          "line": 219
+        },
+        {
+          "heading": "7.2 中期",
+          "level": 3,
+          "line": 224
+        },
+        {
+          "heading": "7.3 长期",
+          "level": 3,
+          "line": 229
+        },
+        {
+          "heading": "八、参考文献",
+          "level": 2,
+          "line": 236
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 25
+      }
+    }
+  ]
+}

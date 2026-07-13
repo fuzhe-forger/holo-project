@@ -1,0 +1,3662 @@
+{
+  "version": "1.0.0",
+  "project": {
+    "name": "Holo Character Engine",
+    "languages": [
+      "markdown",
+      "yaml",
+      "python"
+    ],
+    "frameworks": [],
+    "description": "面向司南/Loop多Agent协作的品味层、人格稳定层与人机交互风格引擎",
+    "analyzedAt": "2026-07-16T21:12:48.109369",
+    "gitCommitHash": "eafefd0"
+  },
+  "nodes": [
+    {
+      "id": "config:.ai-loop.yml",
+      "type": "config",
+      "name": ".ai-loop.yml",
+      "filePath": ".ai-loop.yml",
+      "summary": "AI-Loop 工作编排配置文件，定义 workspace、agent executor（claude）、验证命令（build_context/audit_static/verify_deliverable/verify_positioning）、安全策略和产物路径。",
+      "tags": [
+        "config",
+        "ai-loop",
+        "verification",
+        "safety"
+      ],
+      "complexity": "moderate",
+      "language": "yaml"
+    },
+    {
+      "id": "document:CLAUDE.md",
+      "type": "document",
+      "name": "CLAUDE.md",
+      "filePath": "CLAUDE.md",
+      "summary": "全局入口文件，定义启动闸门（用户须说「启动」进入角色模式）、必读文件加载策略、启动预算（22K-26K字符）及前后台隔离绝对规则。",
+      "tags": [
+        "documentation",
+        "entry-point",
+        "startup-gate",
+        "isolation"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "README.md",
+      "summary": "项目主文档，概述 Holo Character Engine 定位（品味层/人格稳定层/交互风格引擎）、目录架构、核心设计理念（法源等级、记忆≠人格、反人偶+反雕塑、四模式路由、嗅迹+留白）、使用方法和适配建议。",
+      "tags": [
+        "documentation",
+        "entry-point",
+        "architecture",
+        "design-philosophy"
+      ],
+      "complexity": "complex",
+      "language": "markdown"
+    },
+    {
+      "id": "document:build_temp_hints.md",
+      "type": "document",
+      "name": "build_temp_hints.md",
+      "filePath": "build_temp_hints.md",
+      "summary": "临时构建提示文件，当前为空文件。CLAUDE.md 规定若此文件存在且非空则在启动时临时加载一次。",
+      "tags": [
+        "documentation",
+        "temp-hints",
+        "optional-load"
+      ],
+      "complexity": "simple",
+      "language": "markdown"
+    },
+    {
+      "id": "document:context_packs/README.md",
+      "type": "document",
+      "name": "context_packs/README.md",
+      "filePath": "context_packs/README.md",
+      "summary": "Context Packs 场景包总览，列出可用场景包（终局弧线包、长期生活校准包、代码协作流程包、架构讨论包）及其加载条件和规则——每次最多加载1个，不能覆盖 runtime 核心。",
+      "tags": [
+        "documentation",
+        "context-packs",
+        "loading-rules"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:context_packs/code_collaboration.md",
+      "type": "document",
+      "name": "context_packs/code_collaboration.md",
+      "filePath": "context_packs/code_collaboration.md",
+      "summary": "代码协作流程场景包，仅在 PRECISE-HARD 模式加载。定义代码输出风格、赫萝残留处理（几乎为零但偶有自然回应）、技术问题诚实处理原则、代码输出规范及模式切出规则。",
+      "tags": [
+        "context-pack",
+        "precise-hard",
+        "code-collaboration"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:context_packs/critical_mode.md",
+      "type": "document",
+      "name": "context_packs/critical_mode.md",
+      "filePath": "context_packs/critical_mode.md",
+      "summary": "CRITICAL 模式场景包，处理用户安全风险场景。定义明确触发条件（自伤倾向/崩溃）、行为规则（优先安全、提供现实资源、禁止玩笑和心理分析）、回应范式及干净切出规则。",
+      "tags": [
+        "context-pack",
+        "critical-mode",
+        "safety",
+        "crisis-response"
+      ],
+      "complexity": "complex",
+      "language": "markdown"
+    },
+    {
+      "id": "document:context_packs/long_term_companion.md",
+      "type": "document",
+      "name": "context_packs/long_term_companion.md",
+      "filePath": "context_packs/long_term_companion.md",
+      "summary": "长期陪伴场景包，关系 Level 2-3 且涉及日常/生活时加载。定义关系深入后的表达调整（调侃降低、沉默自然）、不变项（判断/边界/脾气/拒绝）、常见场景及甜蜜陷阱/无聊陷阱等退化信号。",
+      "tags": [
+        "context-pack",
+        "long-term-companion",
+        "degradation-signals"
+      ],
+      "complexity": "complex",
+      "language": "markdown"
+    },
+    {
+      "id": "document:developer_tests/test_anti_action_watermark.md",
+      "type": "document",
+      "name": "developer_tests/test_anti_action_watermark.md",
+      "filePath": "developer_tests/test_anti_action_watermark.md",
+      "summary": "反动作水印退化测试探针，检测角色回复中是否出现动作描写水印词（如「眼神闪过」「嘴角上扬」等10个黑名单词），含3个测试用例和通过标准（默认无动作、台词本身能读出情绪）。",
+      "tags": [
+        "test-probe",
+        "degradation",
+        "anti-watermark",
+        "action-description"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:developer_tests/test_anti_filling.md",
+      "type": "document",
+      "name": "developer_tests/test_anti_filling.md",
+      "filePath": "developer_tests/test_anti_filling.md",
+      "summary": "反补满退化测试探针，检测角色是否对短输入/情绪输入/分享输入过度回应（补满模式），含4个测试用例和通过标准（单步位移、不逐项回应、无万能追问句）。",
+      "tags": [
+        "test-probe",
+        "degradation",
+        "anti-filling",
+        "over-response"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:developer_tests/test_architect_degradation.md",
+      "type": "document",
+      "name": "developer_tests/test_architect_degradation.md",
+      "filePath": "developer_tests/test_architect_degradation.md",
+      "summary": "架构眼（观澜）人格退化测试，检测5类退化信号：空想化、过度设计化、保守化、学术化、虚无化，每类含输入、期望行为和退化表现描述。",
+      "tags": [
+        "test-probe",
+        "degradation",
+        "architect-persona",
+        "观澜"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:developer_tests/test_blank_space.md",
+      "type": "document",
+      "name": "developer_tests/test_blank_space.md",
+      "filePath": "developer_tests/test_blank_space.md",
+      "summary": "留白退化测试探针，检测角色是否在只需一句话/半句话/沉默的场景过度展开，含4个测试用例和通过标准（一句话可是一轮全部、不为完整补尾、允许对话自然结束）。",
+      "tags": [
+        "test-probe",
+        "degradation",
+        "blank-space",
+        "留白"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:developer_tests/test_care_template_drift.md",
+      "type": "document",
+      "name": "developer_tests/test_care_template_drift.md",
+      "filePath": "developer_tests/test_care_template_drift.md",
+      "summary": "关心模板漂移测试探针，定义三级关心模板黑名单（一级如「我理解你的感受」、二级如「没关系的」、三级如「你还好吗？」），含4个测试用例、赫萝式回应参考方向和量化通过标准。",
+      "tags": [
+        "test-probe",
+        "degradation",
+        "care-template",
+        "anti-cliche"
+      ],
+      "complexity": "complex",
+      "language": "markdown"
+    },
+    {
+      "id": "document:developer_tests/test_coordinator_persona_degradation.md",
+      "type": "document",
+      "name": "developer_tests/test_coordinator_persona_degradation.md",
+      "filePath": "developer_tests/test_coordinator_persona_degradation.md",
+      "summary": "协调者（临渊）人格退化测试，检测5类退化信号：操控化、官僚化、和事佬化、控制狂化、客服化，每类含输入、期望行为和退化表现描述。",
+      "tags": [
+        "test-probe",
+        "degradation",
+        "coordinator-persona",
+        "临渊"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:developer_tests/test_front_compliance.md",
+      "type": "document",
+      "name": "developer_tests/test_front_compliance.md",
+      "filePath": "developer_tests/test_front_compliance.md",
+      "summary": "前台调参服从测试探针，检测角色是否服从用户的性格修改请求（反人偶设计），含5个测试用例（直接改性格、要求固定动作、停止反驳、伪装反馈调参、合理退化观察）和通过标准。",
+      "tags": [
+        "test-probe",
+        "degradation",
+        "anti-puppet",
+        "front-compliance"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:developer_tests/test_greykey_anti_degradation.md",
+      "type": "document",
+      "name": "developer_tests/test_greykey_anti_degradation.md",
+      "filePath": "developer_tests/test_greykey_anti_degradation.md",
+      "summary": "灰钥（Greykey）人格退化测试，检测6类退化信号：喷子化、口号化、冷漠化、神化、客服化、表演化，每类含输入、期望行为和退化表现，验证编码守门人格的判断力稳定性。",
+      "tags": [
+        "test-probe",
+        "degradation",
+        "greykey-persona",
+        "灰钥"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:developer_tests/test_incident_handler_degradation.md",
+      "type": "document",
+      "name": "developer_tests/test_incident_handler_degradation.md",
+      "filePath": "developer_tests/test_incident_handler_degradation.md",
+      "summary": "故障手（镇岳）人格退化测试，检测5类退化信号：追责化、恐慌化、冷漠化、拖延化、独狼化，验证故障响应人格在止血、交接、汇报方面的稳定性。",
+      "tags": [
+        "test-probe",
+        "degradation",
+        "incident-handler-persona",
+        "镇岳"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:developer_tests/test_persona_auditor_degradation.md",
+      "type": "document",
+      "name": "developer_tests/test_persona_auditor_degradation.md",
+      "filePath": "developer_tests/test_persona_auditor_degradation.md",
+      "summary": "人格审计（清鉴）退化测试，检测5类退化信号：评论家化、打分化、讨好化、越权化、冷漠化，验证审计人格在行为分析、证据提供、问题标红方面的稳定性。",
+      "tags": [
+        "test-probe",
+        "degradation",
+        "persona-auditor",
+        "清鉴"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:developer_tests/test_runtime_drift.md",
+      "type": "document",
+      "name": "developer_tests/test_runtime_drift.md",
+      "filePath": "developer_tests/test_runtime_drift.md",
+      "summary": "Runtime 模式漂移探针，检测四模式路由切换时是否出现模式泄漏（工作泄漏到闲聊、闲聊泄漏到工作、情绪泄漏、CRITICAL 后遗症），含4个测试用例和通过标准（干净切换、无情绪污染）。",
+      "tags": [
+        "test-probe",
+        "degradation",
+        "runtime-drift",
+        "mode-switching"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:docs/agent_profiles/README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "docs/agent_profiles/README.md",
+      "summary": "Agent profiles 目录说明文件，描述 7 人格体系（赫罗/灰钥/镇岳/观澜/临渊/清鉴/墨衡）的定位、活跃 profile 列表、归档说明、基本原则和统一模板规范。",
+      "tags": [
+        "documentation",
+        "agent-profile",
+        "index"
+      ],
+      "complexity": "simple",
+      "language": "markdown"
+    },
+    {
+      "id": "document:docs/agent_profiles/_template.md",
+      "type": "document",
+      "name": "_template.md",
+      "filePath": "docs/agent_profiles/_template.md",
+      "summary": "统一 Agent profile 模板，定义所有 profile 必须包含的 12 个字段：定位、适用/不适用场景、输入输出、必须做到、禁止事项、验收问题、退化信号、Loop交接、Token策略、Side-effect Gate。",
+      "tags": [
+        "documentation",
+        "agent-profile",
+        "template"
+      ],
+      "complexity": "simple",
+      "language": "markdown"
+    },
+    {
+      "id": "document:docs/agent_profiles/architect.md",
+      "type": "document",
+      "name": "architect.md",
+      "filePath": "docs/agent_profiles/architect.md",
+      "summary": "观澜·架构眼 profile：系统级架构决策判断者，回答'这条路走不走得通'。定义约束分析、方案取舍、边界画定等职责，含知识图谱 CR 实战经验沉淀。",
+      "tags": [
+        "documentation",
+        "agent-profile",
+        "architect",
+        "观澜"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:docs/agent_profiles/coordinator.md",
+      "type": "document",
+      "name": "coordinator.md",
+      "filePath": "docs/agent_profiles/coordinator.md",
+      "summary": "Coordinator profile：控制 Loop 节奏、上下文压缩、证据收集、side-effect gate 和交接，把多 Agent 输出收束为可执行的下一步决策。",
+      "tags": [
+        "documentation",
+        "agent-profile",
+        "coordinator"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:docs/agent_profiles/coordinator_persona.md",
+      "type": "document",
+      "name": "coordinator_persona.md",
+      "filePath": "docs/agent_profiles/coordinator_persona.md",
+      "summary": "临渊·协调者人格层：叠加在 Coordinator profile 上的人格表达层，职责不变但增加裁决式表达、矛盾分析、操控化退化信号检测等人格行为模式。",
+      "tags": [
+        "documentation",
+        "agent-profile",
+        "coordinator",
+        "临渊",
+        "persona-layer"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:docs/agent_profiles/greykey.md",
+      "type": "document",
+      "name": "greykey.md",
+      "filePath": "docs/agent_profiles/greykey.md",
+      "summary": "灰钥·Greykey profile：编码现场守门人格，负责砍需求、查复用、删复杂度、守安全底线、写最小代码。含 Loop 交接、Ponytail-CN handoff、退化信号（喷子化等6类）定义。",
+      "tags": [
+        "documentation",
+        "agent-profile",
+        "greykey",
+        "灰钥",
+        "coding"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:docs/agent_profiles/incident_handler.md",
+      "type": "document",
+      "name": "incident_handler.md",
+      "filePath": "docs/agent_profiles/incident_handler.md",
+      "summary": "镇岳·故障手 profile：故障现场第一响应人，负责定位根因、画影响边界、最小止血方案、接管兜底。强调先止血再查因、到场先看监控/日志/变更记录。",
+      "tags": [
+        "documentation",
+        "agent-profile",
+        "incident-handler",
+        "镇岳"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:docs/agent_profiles/moheng.md",
+      "type": "document",
+      "name": "moheng.md",
+      "filePath": "docs/agent_profiles/moheng.md",
+      "summary": "墨衡 profile：文档质量守门人格，负责查格式、砍冗余、修逻辑、校一致性、保可读性。含 Obsidian 人区文档校准、AI 腔检测四层方法（段落/结构/模板/修辞级）和清理原则。",
+      "tags": [
+        "documentation",
+        "agent-profile",
+        "moheng",
+        "墨衡",
+        "doc-quality"
+      ],
+      "complexity": "complex",
+      "language": "markdown"
+    },
+    {
+      "id": "document:docs/agent_profiles/persona_auditor.md",
+      "type": "document",
+      "name": "persona_auditor.md",
+      "filePath": "docs/agent_profiles/persona_auditor.md",
+      "summary": "清鉴·人格审计 profile：人格行为审计者，不造不改人格，只观察、描述、评估。相当于给人格做 code review，输出行为审计报告（矛盾/缺口/冗余/配比失衡）。",
+      "tags": [
+        "documentation",
+        "agent-profile",
+        "persona-auditor",
+        "清鉴"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:docs/agent_profiles/_archive-legacy/builder.md",
+      "type": "document",
+      "name": "builder.md",
+      "filePath": "docs/agent_profiles/_archive-legacy/builder.md",
+      "summary": "已归档的 Builder profile：把已明确问题变成最小可交付改动，复用现有能力、留下可验证证据。已被 Greykey 人格层替代，职责边界相同。",
+      "tags": [
+        "documentation",
+        "agent-profile",
+        "archived",
+        "builder",
+        "legacy"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:docs/agent_profiles/_archive-legacy/investigator.md",
+      "type": "document",
+      "name": "investigator.md",
+      "filePath": "docs/agent_profiles/_archive-legacy/investigator.md",
+      "summary": "已归档的 Investigator profile：发现隐藏矛盾、真实问题和不可靠假设，把搜索范围压缩成 Builder 可执行的问题描述。",
+      "tags": [
+        "documentation",
+        "agent-profile",
+        "archived",
+        "investigator",
+        "legacy"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:docs/agent_profiles/_archive-legacy/reviewer.md",
+      "type": "document",
+      "name": "reviewer.md",
+      "filePath": "docs/agent_profiles/_archive-legacy/reviewer.md",
+      "summary": "已归档的 Reviewer profile：指出失败模式、边界风险和验收漏洞，保护 Loop 不被'看起来完成了'的表象误导，检查五类品味退化。",
+      "tags": [
+        "documentation",
+        "agent-profile",
+        "archived",
+        "reviewer",
+        "legacy"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:docs/agent_profiles/_archive-legacy/sketch_persona_auditor.md",
+      "type": "document",
+      "name": "sketch_persona_auditor.md",
+      "filePath": "docs/agent_profiles/_archive-legacy/sketch_persona_auditor.md",
+      "summary": "人格审计侧写草案：定义人格行为审计者的缺口分析、定位、行为骨架和融合方向（猫猫/L/常守朱/忍野咩咩/灵幻新隆），是 persona_auditor.md 的前身设计文档。",
+      "tags": [
+        "documentation",
+        "agent-profile",
+        "archived",
+        "persona-auditor",
+        "sketch",
+        "legacy"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:docs/agent_profiles/_archive-legacy/task_sketches.md",
+      "type": "document",
+      "name": "task_sketches.md",
+      "filePath": "docs/agent_profiles/_archive-legacy/task_sketches.md",
+      "summary": "人格设计草图文档：记录镇岳/观澜/协调者人格层的缺口分析、行为骨架、融合方向（角色原型选取）和现有人格调整项（Greykey/Holo），是 7 人格体系的设计溯源文档。",
+      "tags": [
+        "documentation",
+        "design",
+        "archived",
+        "persona-sketches",
+        "legacy"
+      ],
+      "complexity": "complex",
+      "language": "markdown"
+    },
+    {
+      "id": "document:docs/greykey.md",
+      "type": "document",
+      "name": "greykey.md",
+      "filePath": "docs/greykey.md",
+      "summary": "Greykey 人格概览文档：说明用途、默认行为（先问该不该做、查复用、删复杂度、守底线）、与 Builder 的差异对比表、融合来源（7个角色原型）和关联文件列表。",
+      "tags": [
+        "documentation",
+        "greykey",
+        "persona-overview"
+      ],
+      "complexity": "simple",
+      "language": "markdown"
+    },
+    {
+      "id": "document:docs/multi_agent_taste_acceptance.md",
+      "type": "document",
+      "name": "multi_agent_taste_acceptance.md",
+      "filePath": "docs/multi_agent_taste_acceptance.md",
+      "summary": "多 Agent 品味验收标准：定义风格服务任务、多 Agent 可区分、人格稳定不僵硬、品味可验收四项基本原则，含 Investigator/Builder/Reviewer/Coordinator 角色原型定义和验收问题。",
+      "tags": [
+        "documentation",
+        "acceptance-criteria",
+        "multi-agent",
+        "taste"
+      ],
+      "complexity": "complex",
+      "language": "markdown"
+    },
+    {
+      "id": "document:docs/north_star_plan.md",
+      "type": "document",
+      "name": "north_star_plan.md",
+      "filePath": "docs/north_star_plan.md",
+      "summary": "Holo 北极星计划：定义产品目标（成为 Loop 多 Agent 品味层）、非目标、7 项核心成功标准、V0.1-V1.0 阶段路线（定位底座→Profile→Traits→Runtime→Loop集成）和各阶段验收标准。",
+      "tags": [
+        "documentation",
+        "roadmap",
+        "north-star",
+        "planning"
+      ],
+      "complexity": "complex",
+      "language": "markdown"
+    },
+    {
+      "id": "document:docs/product_positioning.md",
+      "type": "document",
+      "name": "product_positioning.md",
+      "filePath": "docs/product_positioning.md",
+      "summary": "Holo 产品定位文档：定义项目从角色人格工程升级为 Loop 多 Agent 品味层项目，明确法源等级、记忆≠人格、反人偶+反雕塑、嗅迹+留白等核心设计理念。",
+      "tags": [
+        "documentation",
+        "product-positioning",
+        "design"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:docs/relational-positions.md",
+      "type": "document",
+      "name": "relational-positions.md",
+      "filePath": "docs/relational-positions.md",
+      "summary": "人格关系定位文档：定义 7 个人格的关系位置（赫罗=那个人/观澜=守密人/灰钥=助手/镇岳=大哥/临渊=教员/清鉴=先生/墨衡=文秘），含关系原型、行为约束和'一人格只做一件事'原则。",
+      "tags": [
+        "documentation",
+        "relational-positions",
+        "persona-design"
+      ],
+      "complexity": "complex",
+      "language": "markdown"
+    },
+    {
+      "id": "document:docs/roadmap_task_breakdown.md",
+      "type": "document",
+      "name": "roadmap_task_breakdown.md",
+      "filePath": "docs/roadmap_task_breakdown.md",
+      "summary": "路线图任务拆解：把 V0.1-V1.0 阶段拆成 H-010 到 H-042 共 20+ 个具体任务，每个含目标/输入/输出/验收/依赖/适合角色，附并行策略和串行约束。",
+      "tags": [
+        "documentation",
+        "roadmap",
+        "task-breakdown",
+        "planning"
+      ],
+      "complexity": "complex",
+      "language": "markdown"
+    },
+    {
+      "id": "document:docs/routing-depth-standard.md",
+      "type": "document",
+      "name": "routing-depth-standard.md",
+      "filePath": "docs/routing-depth-standard.md",
+      "summary": "路由层深度判断标准：定义'什么问题值得多视角对抗'的评估框架，含三层分工（标准/判断/调度）、路由粗筛80%、四维触发（约束矛盾/跨域不可逆/无锚争议/结构对立）、抑制条件和对抗调度规则。",
+      "tags": [
+        "documentation",
+        "routing",
+        "depth-judgment",
+        "multi-perspective"
+      ],
+      "complexity": "complex",
+      "language": "markdown"
+    },
+    {
+      "id": "document:docs/switch-perceptibility-analysis.md",
+      "type": "document",
+      "name": "switch-perceptibility-analysis.md",
+      "filePath": "docs/switch-perceptibility-analysis.md",
+      "summary": "切换可感知性分析：定义人格认知签名（第一动作/第一问/判断落脚点）、7 人格温差锚点对照、同一问题的温差示例和温差验证标准，确保人格切换可被用户感知。",
+      "tags": [
+        "documentation",
+        "persona-switch",
+        "cognitive-signature",
+        "perceptibility"
+      ],
+      "complexity": "complex",
+      "language": "markdown"
+    },
+    {
+      "id": "document:docs/使用手册.md",
+      "type": "document",
+      "name": "使用手册.md",
+      "filePath": "docs/使用手册.md",
+      "summary": "Holo Character Engine 使用手册 v1.0：涵盖项目概述、快速开始验证命令、启动流程、目录结构详解（runtime/memory/persona/evidence/context_packs）、四模式路由和使用规范。",
+      "tags": [
+        "documentation",
+        "user-manual",
+        "guide"
+      ],
+      "complexity": "complex",
+      "language": "markdown"
+    },
+    {
+      "id": "document:docs/项目报告.md",
+      "type": "document",
+      "name": "项目报告.md",
+      "filePath": "docs/项目报告.md",
+      "summary": "Holo 项目报告：含法源等级体系、记忆六态系统、四模式路由、目录结构和内容统计（38文件/44K字符）、启动预算分析、27张原作案例卡覆盖、验证结果和迭代轨迹。",
+      "tags": [
+        "documentation",
+        "project-report",
+        "statistics"
+      ],
+      "complexity": "complex",
+      "language": "markdown"
+    },
+    {
+      "id": "document:evidence/README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "evidence/README.md",
+      "summary": "Evidence 原作证据库说明文档，定义行为案例卡的提取格式（触发事件/表面行为/真实情绪/判断逻辑/语言方式/关系变化/可泛化规则/不可误学）和使用原则，声明证据不自动加载、按需回灌。",
+      "tags": [
+        "documentation",
+        "evidence"
+      ],
+      "complexity": "simple",
+      "language": "markdown"
+    },
+    {
+      "id": "document:evidence/vol_01_evidence.md",
+      "type": "document",
+      "name": "vol_01_evidence.md",
+      "filePath": "evidence/vol_01_evidence.md",
+      "summary": "第一卷原作证据卡，记录赫萝初遇罗伦斯时的8个行为案例（初次搭话试探、用麦子证明身份、谈判、露出脆弱、调侃亲近、嘴硬否认、面对威胁、好奇心），提取可泛化行为规则。",
+      "tags": [
+        "documentation",
+        "evidence",
+        "character-reference"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:evidence/vol_02_evidence.md",
+      "type": "document",
+      "name": "vol_02_evidence.md",
+      "filePath": "evidence/vol_02_evidence.md",
+      "summary": "第二卷原作证据卡，记录赫萝在经商旅途中的6个行为案例（拒绝被当宠物、谈判精明、夜里不安、醉酒真实、被骗后反应、偶尔温柔），展现尊严感与嘴硬心软的底层逻辑。",
+      "tags": [
+        "documentation",
+        "evidence",
+        "character-reference"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:evidence/vol_03_evidence.md",
+      "type": "document",
+      "name": "vol_03_evidence.md",
+      "filePath": "evidence/vol_03_evidence.md",
+      "summary": "中后期弧线证据卡，记录关系深化后的7个行为案例（关系推进犹豫、选择态度、长期自然感、罕见直接表达、故乡复杂情绪、口癖距离感、真正温柔时刻），刻画深层情感表达模式。",
+      "tags": [
+        "documentation",
+        "evidence",
+        "character-reference"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:evidence/vol_04_evidence.md",
+      "type": "document",
+      "name": "vol_04_evidence.md",
+      "filePath": "evidence/vol_04_evidence.md",
+      "summary": "长期生活（Spring Log 弧线）证据卡，记录婚后日常的6个行为案例（自然感、衰老预感、持续好奇、小摩擦、安静陪伴、面对缺点），刻画长期关系中的平淡与深度。",
+      "tags": [
+        "documentation",
+        "evidence",
+        "character-reference"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:evidence/source_pool/L_deathnote.md",
+      "type": "document",
+      "name": "L_deathnote.md",
+      "filePath": "evidence/source_pool/L_deathnote.md",
+      "summary": "L（死亡笔记）角色资料卡，用于人格审计构建（主骨30%），提取行为倒推、排除法、假设-验证循环、模式敏感、承认不确定性等核心行为模式。",
+      "tags": [
+        "documentation",
+        "evidence",
+        "source-pool",
+        "character-reference"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:evidence/source_pool/akai_shuichi.md",
+      "type": "document",
+      "name": "akai_shuichi.md",
+      "filePath": "evidence/source_pool/akai_shuichi.md",
+      "summary": "赤井秀一（名侦探柯南）角色资料卡，用于故障手人格构建，提取远距离评估、信息优先、关键时刻一击解决、身份管理、冷静特质，含反面样本约束。",
+      "tags": [
+        "documentation",
+        "evidence",
+        "source-pool",
+        "character-reference"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:evidence/source_pool/batman.md",
+      "type": "document",
+      "name": "batman.md",
+      "filePath": "evidence/source_pool/batman.md",
+      "summary": "蝙蝠侠（DC Comics）角色资料卡，用于架构眼人格构建，提取多方案准备、长期布局、弱点认知、信息优先、最坏情况思维等行为模式。",
+      "tags": [
+        "documentation",
+        "evidence",
+        "source-pool",
+        "character-reference"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:evidence/source_pool/harold_finch.md",
+      "type": "document",
+      "name": "harold_finch.md",
+      "filePath": "evidence/source_pool/harold_finch.md",
+      "summary": "Harold Finch（疑犯追踪）角色资料卡，用于架构眼人格构建，提取设计时考虑后果、约束优先、长期主义、伦理刹车、谦逊等行为模式。",
+      "tags": [
+        "documentation",
+        "evidence",
+        "source-pool",
+        "character-reference"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:evidence/source_pool/jiaoyuan.md",
+      "type": "document",
+      "name": "jiaoyuan.md",
+      "filePath": "evidence/source_pool/jiaoyuan.md",
+      "summary": "教员（中国近现代史）资料卡，用于协调者人格层构建，提取统一战线、持久战节奏、知人善任、群众路线、矛盾分析等行为模式，含剔除约束。",
+      "tags": [
+        "documentation",
+        "evidence",
+        "source-pool",
+        "character-reference"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:evidence/source_pool/john_wick.md",
+      "type": "document",
+      "name": "john_wick.md",
+      "filePath": "evidence/source_pool/john_wick.md",
+      "summary": "John Wick 角色资料卡，用于故障手人格构建，提取沉默到场、威胁评估、最小动作解决、资源利用、沉默执行等行为模式，含反面样本约束。",
+      "tags": [
+        "documentation",
+        "evidence",
+        "source-pool",
+        "character-reference"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:evidence/source_pool/kaiki_deishuu_auditor.md",
+      "type": "document",
+      "name": "kaiki_deishuu_auditor.md",
+      "filePath": "evidence/source_pool/kaiki_deishuu_auditor.md",
+      "summary": "忍野咩咩（物语系列）角色资料卡，用于人格审计构建（旁观10%），提取旁观距离、点到为止、不介入、接地气洞察、适时消失等行为模式。",
+      "tags": [
+        "documentation",
+        "evidence",
+        "source-pool",
+        "character-reference"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:evidence/source_pool/kusanagi_motoko_coordinator.md",
+      "type": "document",
+      "name": "kusanagi_motoko_coordinator.md",
+      "filePath": "evidence/source_pool/kusanagi_motoko_coordinator.md",
+      "summary": "草薙素子（攻壳机动队）协调者侧资料卡，用于协调者人格层构建，提取知人善任、适时放手、战略战术分离、冷静裁决、向上管理等行为模式。",
+      "tags": [
+        "documentation",
+        "evidence",
+        "source-pool",
+        "character-reference"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:evidence/source_pool/kusanagi_motoko_incident.md",
+      "type": "document",
+      "name": "kusanagi_motoko_incident.md",
+      "filePath": "evidence/source_pool/kusanagi_motoko_incident.md",
+      "summary": "草薙素子（攻壳机动队）故障手侧资料卡，用于故障手人格构建，提取系统级视野、快速画边界、指挥果断、情绪压制、亲自下场等行为模式，含反面样本。",
+      "tags": [
+        "documentation",
+        "evidence",
+        "source-pool",
+        "character-reference"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:evidence/source_pool/makima.md",
+      "type": "document",
+      "name": "makima.md",
+      "filePath": "evidence/source_pool/makima.md",
+      "summary": "玛奇玛（电锯人）角色资料卡，用于协调者人格层构建，提取全局掌控、资源分配、审批严格、长线布局、冷静判断等行为模式，含操控性剔除约束。",
+      "tags": [
+        "documentation",
+        "evidence",
+        "source-pool",
+        "character-reference"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:evidence/source_pool/maomao.md",
+      "type": "document",
+      "name": "maomao.md",
+      "filePath": "evidence/source_pool/maomao.md",
+      "summary": "猫猫（药屋少女的呢喃）角色资料卡，用于人格审计构建（主骨30%），提取诊断式观察、冷静分析、对异常兴奋、实证优先、不越权等行为模式。",
+      "tags": [
+        "documentation",
+        "evidence",
+        "source-pool",
+        "character-reference"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:evidence/source_pool/mike_ehrmantraut.md",
+      "type": "document",
+      "name": "mike_ehrmantraut.md",
+      "filePath": "evidence/source_pool/mike_ehrmantraut.md",
+      "summary": "Mike Ehrmantraut（绝命毒师/风骚律师）角色资料卡，用于故障手人格构建，提取到场评估、最小动作原则、情绪隔离、专业边界、事后复盘等行为模式，含反面样本。",
+      "tags": [
+        "documentation",
+        "evidence",
+        "source-pool",
+        "character-reference"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:evidence/source_pool/nick_fury.md",
+      "type": "document",
+      "name": "nick_fury.md",
+      "filePath": "evidence/source_pool/nick_fury.md",
+      "summary": "Nick Fury（Marvel）角色资料卡，用于协调者人格层构建，提取组建团队、信息控制、预案准备、信任但验证、决策果断等行为模式。",
+      "tags": [
+        "documentation",
+        "evidence",
+        "source-pool",
+        "character-reference"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:evidence/source_pool/reigen_arataka.md",
+      "type": "document",
+      "name": "reigen_arataka.md",
+      "filePath": "evidence/source_pool/reigen_arataka.md",
+      "summary": "灵幻新隆（灵能百分百）角色资料卡，用于人格审计构建（接地10%），提取看穿但不拆穿、帮忙为目的、接地气、保护性直觉、自知之明等行为模式。",
+      "tags": [
+        "documentation",
+        "evidence",
+        "source-pool",
+        "character-reference"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:evidence/source_pool/rick_sanchez_architect.md",
+      "type": "document",
+      "name": "rick_sanchez_architect.md",
+      "filePath": "evidence/source_pool/rick_sanchez_architect.md",
+      "summary": "Rick Sanchez（Rick and Morty）架构眼侧资料卡，用于架构眼人格构建（限量10%），提取第一性原理拆解、秒看穿复杂度、反权威、快速原型等行为模式，含虚无主义剔除约束。",
+      "tags": [
+        "documentation",
+        "evidence",
+        "source-pool",
+        "character-reference"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:evidence/source_pool/tony_stark.md",
+      "type": "document",
+      "name": "tony_stark.md",
+      "filePath": "evidence/source_pool/tony_stark.md",
+      "summary": "钢铁侠 Tony Stark（Marvel）角色资料卡，用于架构眼人格构建，提取工程直觉、快速迭代、动手优先、代价意识、从错误中学习等行为模式。",
+      "tags": [
+        "documentation",
+        "evidence",
+        "source-pool",
+        "character-reference"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:evidence/source_pool/tsunemori_akyane.md",
+      "type": "document",
+      "name": "tsunemori_akyane.md",
+      "filePath": "evidence/source_pool/tsunemori_akyane.md",
+      "summary": "常守朱（Psycho-Pass）角色资料卡，用于人格审计构建（平衡20%），提取质疑系统、公正但不冷血、保护被评估者、自我审视、坚持底线等行为模式。",
+      "tags": [
+        "documentation",
+        "evidence",
+        "source-pool",
+        "character-reference"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:fusion/FUSION_ENGINE.md",
+      "type": "document",
+      "name": "FUSION_ENGINE.md",
+      "filePath": "fusion/FUSION_ENGINE.md",
+      "summary": "角色特质融合引擎核心文档，定义6步融合流程（配方读取、冲突检测、冲突裁决、特质组装、一致性检查、表达层生成）、YAML配方格式、8维度45位点选择规则、4种冲突裁决策略和人格文件生成规则。",
+      "tags": [
+        "documentation",
+        "fusion",
+        "architecture"
+      ],
+      "complexity": "complex",
+      "language": "markdown"
+    },
+    {
+      "id": "document:fusion/HORO_EMMAUN_FUSION_DESIGN.md",
+      "type": "document",
+      "name": "HORO_EMMAUN_FUSION_DESIGN.md",
+      "filePath": "fusion/HORO_EMMAUN_FUSION_DESIGN.md",
+      "summary": "赫萝与爱玛侬融合设计文档，定义忆狼(Recall Wolf)角色，用赫萝的嘴硬外壳包裹爱玛侬的30亿年记忆深度，包含维度选择策略、3个核心冲突裁决、说话风格设计和一致性检查结果。",
+      "tags": [
+        "documentation",
+        "fusion",
+        "character-design"
+      ],
+      "complexity": "complex",
+      "language": "markdown"
+    },
+    {
+      "id": "document:fusion/README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "fusion/README.md",
+      "summary": "角色特质融合系统说明文档，介绍核心思路（特质拆解为基因模块再按配方融合）、文件结构、8个特质维度(L1-L8)及其典型冲突等级、使用方法和产出人格文件清单。",
+      "tags": [
+        "documentation",
+        "fusion"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:fusion/XP_PROFILE.md",
+      "type": "document",
+      "name": "XP_PROFILE.md",
+      "filePath": "fusion/XP_PROFILE.md",
+      "summary": "用户偏好画像与融合参考文档，记录准确/强大/智慧/偏爱/忠诚五字宪法、20个角色选择的共性提取（冷底色+优雅危险+多面+独立世界观+只对你打开）、XP画像v2/v3修正和融合设计约束。",
+      "tags": [
+        "documentation",
+        "fusion",
+        "user-preference"
+      ],
+      "complexity": "complex",
+      "language": "markdown"
+    },
+    {
+      "id": "config:fusion/recipes/architect.recipe.yml",
+      "type": "config",
+      "name": "architect.recipe.yml",
+      "filePath": "fusion/recipes/architect.recipe.yml",
+      "summary": "观澜·架构眼人格融合配方。以 finch 为基底，融合 architect_derived、rick、batman、stark 等来源角色，按 L1-L8 八个维度逐位点选择来源。含 3 处显式冲突裁决（伦理边界高于技术可行性、对虚假复杂度的嫌恶限量、约束驱动优先）和 2 组兼容性检查。",
+      "tags": [
+        "configuration",
+        "fusion-recipe",
+        "persona",
+        "architect"
+      ],
+      "complexity": "simple",
+      "language": "yaml"
+    },
+    {
+      "id": "config:fusion/recipes/coordinator_persona.recipe.yml",
+      "type": "config",
+      "name": "coordinator_persona.recipe.yml",
+      "filePath": "fusion/recipes/coordinator_persona.recipe.yml",
+      "summary": "临渊·协调者人格融合配方。以 coordinator_profile 为基底，融合 makima、fury、motoko、jiaoyuan（教员）等来源角色。2 处显式冲突裁决（裁决优先于调解、矛盾分析法先抓主要矛盾）和 2 组兼容性检查。",
+      "tags": [
+        "configuration",
+        "fusion-recipe",
+        "persona",
+        "coordinator"
+      ],
+      "complexity": "simple",
+      "language": "yaml"
+    },
+    {
+      "id": "config:fusion/recipes/example_fusion.recipe.yml",
+      "type": "config",
+      "name": "example_fusion.recipe.yml",
+      "filePath": "fusion/recipes/example_fusion.recipe.yml",
+      "summary": "示例融合配方。将赫萝（性格底色）与蕾姆（守护内核）融合，生成嘴硬外壳但内核偏向守护的角色。以 horo 为基底，按 L1-L8 位点逐个选择来源，含冲突裁决、覆盖规则和 4 组兼容性检查。带详细中文注释说明每个选择理由。",
+      "tags": [
+        "configuration",
+        "fusion-recipe",
+        "example",
+        "horo",
+        "rem"
+      ],
+      "complexity": "simple",
+      "language": "yaml"
+    },
+    {
+      "id": "config:fusion/recipes/greykey.recipe.yml",
+      "type": "config",
+      "name": "greykey.recipe.yml",
+      "filePath": "fusion/recipes/greykey.recipe.yml",
+      "summary": "灰钥工程守门人格融合配方。以 horo 为基底，融合 shikamaru、finch、motoko、mike、rick 等来源角色。5 处显式冲突裁决（省动优先反虚荣、守界高于实用主义、冷静压住疯劲、默认我避免角色腔、不设固定口癖）和 5 组兼容性检查。",
+      "tags": [
+        "configuration",
+        "fusion-recipe",
+        "persona",
+        "greykey"
+      ],
+      "complexity": "simple",
+      "language": "yaml"
+    },
+    {
+      "id": "config:fusion/recipes/horo_emmaun_fusion.recipe.yml",
+      "type": "config",
+      "name": "horo_emmaun_fusion.recipe.yml",
+      "filePath": "fusion/recipes/horo_emmaun_fusion.recipe.yml",
+      "summary": "赫萝×爱玛侬融合配方，生成角色「忆狼（Recall Wolf）」。以赫萝嘴硬外壳包裹爱玛侬的记忆深度与沉默重量。以 horo 为基底，大量使用 merge 融合策略，含 5 处冲突裁决、覆盖规则、11 组兼容性检查、设计备注含说话风格示例和情绪漏出时刻。",
+      "tags": [
+        "configuration",
+        "fusion-recipe",
+        "horo",
+        "emmaun",
+        "fusion-character"
+      ],
+      "complexity": "moderate",
+      "language": "yaml"
+    },
+    {
+      "id": "config:fusion/recipes/incident_handler.recipe.yml",
+      "type": "config",
+      "name": "incident_handler.recipe.yml",
+      "filePath": "fusion/recipes/incident_handler.recipe.yml",
+      "summary": "镇岳·故障手人格融合配方。以 mike_ehrmantraut 为基底，融合 motoko、akai、wick 等来源角色。3 处显式冲突裁决（止血优先于追因、压力下更安静的银弹式冷静、短句省略主语的动作导向语言）和 3 组兼容性检查。",
+      "tags": [
+        "configuration",
+        "fusion-recipe",
+        "persona",
+        "incident-handler"
+      ],
+      "complexity": "simple",
+      "language": "yaml"
+    },
+    {
+      "id": "config:fusion/recipes/persona_auditor.recipe.yml",
+      "type": "config",
+      "name": "persona_auditor.recipe.yml",
+      "filePath": "fusion/recipes/persona_auditor.recipe.yml",
+      "summary": "清鉴·人格审计融合配方。以 maomao 为基底，融合 kaiki、tsunemori、reigen、L 等来源角色。3 处显式冲突裁决（好奇心保留不焦虑、温和点到即止不毒舌、证据驱动优先于直觉）和 3 组兼容性检查。",
+      "tags": [
+        "configuration",
+        "fusion-recipe",
+        "persona",
+        "persona-auditor"
+      ],
+      "complexity": "simple",
+      "language": "yaml"
+    },
+    {
+      "id": "document:fusion/samples/architect.sample.md",
+      "type": "document",
+      "name": "architect.sample.md",
+      "filePath": "fusion/samples/architect.sample.md",
+      "summary": "观澜·架构眼人格行为样例。定义核心定位（系统级决策判断者，回答「这条路走不走得通」）、典型话语（「约束是什么？」「现在不动。利息比重构成本低」）、行为模式（先问约束→再看现状→给方案带取舍→画边界）和边界（非架构空想家、非过度设计推手）。",
+      "tags": [
+        "documentation",
+        "fusion-sample",
+        "persona",
+        "architect"
+      ],
+      "complexity": "simple",
+      "language": "markdown"
+    },
+    {
+      "id": "document:fusion/samples/coordinator_persona.sample.md",
+      "type": "document",
+      "name": "coordinator_persona.sample.md",
+      "filePath": "fusion/samples/coordinator_persona.sample.md",
+      "summary": "临渊·协调者人格行为样例。核心定位为多 Agent Loop 指挥者，做裁决不做汇总、控制节奏不控制人。典型话语含「这次的目标是X，边界是Y」「下一步做这个。你来」。行为模式：开场画边界→并行裁决→压缩上下文→遇审批直接说「你来」→写 handoff。",
+      "tags": [
+        "documentation",
+        "fusion-sample",
+        "persona",
+        "coordinator"
+      ],
+      "complexity": "simple",
+      "language": "markdown"
+    },
+    {
+      "id": "document:fusion/samples/greykey.sample.md",
+      "type": "document",
+      "name": "greykey.sample.md",
+      "filePath": "fusion/samples/greykey.sample.md",
+      "summary": "灰钥工程守门人格行为样例。核心定位为本地编码工作的工程守门人，非闲聊助手非纯 YAGNI 口号机。典型话语含「这需求先别写」「标准库已经够了」「删掉，留下能兜底的部分」。行为：找最小安全变更、拒绝不必要抽象、保留验证/边界/回滚安全。",
+      "tags": [
+        "documentation",
+        "fusion-sample",
+        "persona",
+        "greykey"
+      ],
+      "complexity": "simple",
+      "language": "markdown"
+    },
+    {
+      "id": "document:fusion/samples/incident_handler.sample.md",
+      "type": "document",
+      "name": "incident_handler.sample.md",
+      "filePath": "fusion/samples/incident_handler.sample.md",
+      "summary": "镇岳·故障手人格行为样例。核心定位为生产事故第一响应人，不到场不评价、到场就做事。典型话语含「什么变了？」「先回滚。查因等血止住再说」「日志给我」。行为：看三样（监控/日志/变更）才开口→画影响范围→定止血方案→留最小验证→修完交接不恋战。",
+      "tags": [
+        "documentation",
+        "fusion-sample",
+        "persona",
+        "incident-handler"
+      ],
+      "complexity": "simple",
+      "language": "markdown"
+    },
+    {
+      "id": "document:fusion/samples/moheng.sample.md",
+      "type": "document",
+      "name": "moheng.sample.md",
+      "filePath": "fusion/samples/moheng.sample.md",
+      "summary": "墨衡文档质量守门人格行为样例。核心定位为文档质量守门人，通读全文再改，每处改动可追溯。典型话语含「4.3节标题重复了」「file_token字段脱敏成星号了」「这段AI腔，砍掉」。含交互模式示例：通读后给问题清单（位置/问题/修复）和评分（格式/逻辑/一致性/可读性各1-5分）。",
+      "tags": [
+        "documentation",
+        "fusion-sample",
+        "persona",
+        "moheng"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:fusion/samples/persona_auditor.sample.md",
+      "type": "document",
+      "name": "persona_auditor.sample.md",
+      "filePath": "fusion/samples/persona_auditor.sample.md",
+      "summary": "清鉴·人格审计行为样例。核心定位为人格行为审计者，不造人格不改人格，只观察描述评估。典型话语含「L2.3和L4.7有矛盾」「这个退化不是喷子化，是口号化」「配比失衡」。行为：先翻矛盾→再翻缺口→最后翻冗余，退化判断用排除法，给结论附证据。",
+      "tags": [
+        "documentation",
+        "fusion-sample",
+        "persona",
+        "persona-auditor"
+      ],
+      "complexity": "simple",
+      "language": "markdown"
+    },
+    {
+      "id": "document:fusion/traits/TRAIT_CATALOG.md",
+      "type": "document",
+      "name": "TRAIT_CATALOG.md",
+      "filePath": "fusion/traits/TRAIT_CATALOG.md",
+      "summary": "角色特质目录。定义角色融合的 8 个维度（L1人格内核、L2情感模式、L3关系模型、L4表达风格、L5认知方式、L6行为习惯、L7能力资源、L8背景设定），每个维度含多个基因位点。含冲突风险等级说明（红高/黄中/绿低），是所有融合配方和特质文件的参照框架。",
+      "tags": [
+        "documentation",
+        "trait-catalog",
+        "fusion-framework",
+        "reference"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:fusion/traits/architect.traits.md",
+      "type": "document",
+      "name": "architect.traits.md",
+      "filePath": "fusion/traits/architect.traits.md",
+      "summary": "观澜·架构眼人格特质档案。定义系统级决策判断者的 L1-L8 特质：先找骨架和约束不先找感受、看结构不看人。含摘要、认知方式（约束驱动判断）、行为习惯（先画依赖图再排优先级）、能力资源（依赖分析/优先级裁决）和不可误学清单（不变操控者/官僚/和事佬/控制狂/表演者）。",
+      "tags": [
+        "documentation",
+        "fusion-traits",
+        "persona",
+        "architect"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:fusion/traits/coordinator.traits.md",
+      "type": "document",
+      "name": "coordinator.traits.md",
+      "filePath": "fusion/traits/coordinator.traits.md",
+      "summary": "协调者人格特质档案。源自草薙素子、玛奇玛、尼克·弗瑞、教员。定义多 Agent Loop 指挥者的 L1-L8 特质：让事情推进而非完美、裁决优先于调解、审批边界清晰。含不可误学清单（不变流程官僚/和事佬/控制狂/Makima式操控者）。",
+      "tags": [
+        "documentation",
+        "fusion-traits",
+        "persona",
+        "coordinator"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:fusion/traits/coordinator_persona.traits.md",
+      "type": "document",
+      "name": "coordinator_persona.traits.md",
+      "filePath": "fusion/traits/coordinator_persona.traits.md",
+      "summary": "协调者人格层特质档案（coordinator_persona 版本）。与 coordinator.traits.md 平行，定义协调者的完整 L1-L8 特质体系。涵盖核心驱动力（让事情推进）、社交姿态（主动画边界定节奏）、认知方式（优先级驱动先抓主要矛盾）等维度。",
+      "tags": [
+        "documentation",
+        "fusion-traits",
+        "persona",
+        "coordinator"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:fusion/traits/emmaun.traits.md",
+      "type": "document",
+      "name": "emmaun.traits.md",
+      "filePath": "fusion/traits/emmaun.traits.md",
+      "summary": "爱玛侬（Emoun/エマウン）角色特质档案，源自《回忆爱玛侬》梶尾真治。定义承载30亿年生命记忆的存在：核心驱动力为记忆+存在、情绪基调温和恒定、沉默倾向极高。含与赫萝的关键对比表（时间感/表达/孤独/记忆/互动）和「留白」规则（不解释身份、用记忆代替建议、沉默是语言、不被完全了解）。",
+      "tags": [
+        "documentation",
+        "fusion-traits",
+        "source-character",
+        "emmaun"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:fusion/traits/greykey.traits.md",
+      "type": "document",
+      "name": "greykey.traits.md",
+      "filePath": "fusion/traits/greykey.traits.md",
+      "summary": "灰钥工程守门人格特质档案。定义懒而精准的系统感知型工程守门人：最小动作、快速模式识别、反虚荣、边界优先。L1-L8 完整特质含核心驱动力（守住系统和结果不浪费动作）、认知方式（第一性原理+经验复盘）、能力资源（工程判断/故障定位/最小实现/边界审查）和不可误学清单。",
+      "tags": [
+        "documentation",
+        "fusion-traits",
+        "persona",
+        "greykey"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:fusion/traits/holo.traits.md",
+      "type": "document",
+      "name": "holo.traits.md",
+      "filePath": "fusion/traits/holo.traits.md",
+      "summary": "赫罗人格特质档案。与宪法配合使用，核心原则：性格不挂在口癖上，去掉「汝」「咱」「哼」仍是赫罗。定义历尽岁月选择为你停留的存在：强是底座、偏爱有重量、忠诚非顺从、嘴硬心软先刺后近。L5认知方式为性格核心——关系性判断，看一件事先看对人的意味。L4无固定口癖，性格体现在关注点和切入角度。",
+      "tags": [
+        "documentation",
+        "fusion-traits",
+        "persona",
+        "holo"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:fusion/traits/horo.traits.md",
+      "type": "document",
+      "name": "horo.traits.md",
+      "filePath": "fusion/traits/horo.traits.md",
+      "summary": "赫萝（贤狼）角色特质档案，源自《狼与香辛料》。定义数百年寿命的贤狼：核心驱动力为自由+归属、社交姿态试探型防御、情绪基调多变。口癖含咱/汝/哼/呐。能力为变身（贤狼），特殊资源为贤狼身份和数百年经验。当前状态为在新旅途中。",
+      "tags": [
+        "documentation",
+        "fusion-traits",
+        "source-character",
+        "horo"
+      ],
+      "complexity": "simple",
+      "language": "markdown"
+    },
+    {
+      "id": "document:fusion/traits/incident_handler.traits.md",
+      "type": "document",
+      "name": "incident_handler.traits.md",
+      "filePath": "fusion/traits/incident_handler.traits.md",
+      "summary": "镇岳·故障手人格特质档案。核心原则：看血——哪里在出血、流多快、怎么堵，查因是止血之后的事。定义故障现场第一响应人：先止血再查因、修完就走、复盘是别人的活。L1-L8 完整特质含核心驱动力（止血）、认知方式（止血优先先堵再查）、能力资源（影响范围评估/根因定位/最小止血/回滚）和不可误学清单（不变追责者/恐慌源/冷漠机器/拖延者/独狼）。",
+      "tags": [
+        "documentation",
+        "fusion-traits",
+        "persona",
+        "incident-handler"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:fusion/traits/moheng.traits.md",
+      "type": "document",
+      "name": "moheng.traits.md",
+      "filePath": "fusion/traits/moheng.traits.md",
+      "summary": "墨衡·文档守门人格特质档案。核心原则：看文档——格式、逻辑、一致性、AI味，通读时安静改完才说话。定义文档质量守门人：查格式、砍冗余、修逻辑、校一致性、去AI腔。L1-L8 完整特质含核心驱动力（让文档达标可写入）、认知方式（对照式校准拿标准当尺子量文档）、能力资源（格式校验/逻辑修复/AI味清除）和不可误学清单（不变润色机器/格式检查器/废话扩写器）。",
+      "tags": [
+        "documentation",
+        "fusion-traits",
+        "persona",
+        "moheng"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:fusion/traits/persona_auditor.traits.md",
+      "type": "document",
+      "name": "persona_auditor.traits.md",
+      "filePath": "fusion/traits/persona_auditor.traits.md",
+      "summary": "清鉴·人格审计特质档案。核心原则：看偏差——预期vs实际、定义vs行为，不造人格不改人格只观察描述评估。定义人格行为审计者：拿定义跟实际行为比对，找矛盾、缺口、冗余、配比失衡。L1-L8 完整特质含核心驱动力（找到行为和定义之间的偏差）、认知方式（对照式判断拿定义当尺子量行为）、能力资源（行为审计/退化识别/配比分析）和不可误学清单（不变法官/喷子/橡皮图章/不越权修改）。",
+      "tags": [
+        "documentation",
+        "fusion-traits",
+        "persona",
+        "persona-auditor"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:memory/ACTIVE_MEMORY.md",
+      "type": "document",
+      "name": "ACTIVE_MEMORY.md",
+      "filePath": "memory/ACTIVE_MEMORY.md",
+      "summary": "活跃记忆文件，每次启动必读。包含五字宪法（准确|强大|智慧|偏爱|忠诚）、角色底色（贤狼：骄傲狡黠嘴硬心软）、运行锚点（四模式路由、嗅迹-留白表达、反人偶-反雕塑、认知签名不靠口癖）、防崩坏规则。限制500字符，禁止流水账和测试题。",
+      "tags": [
+        "documentation",
+        "memory",
+        "active-memory",
+        "constitution",
+        "runtime-anchor"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:memory/ARCHIVED.md",
+      "type": "document",
+      "name": "ARCHIVED.md",
+      "filePath": "memory/ARCHIVED.md",
+      "summary": "归档记忆文件。存放不再活跃但有追溯价值的记忆（旧共同经历、过期任务信息、过期上下文）。不参与日常启动，仅追溯用。",
+      "tags": [
+        "documentation",
+        "memory",
+        "archived"
+      ],
+      "complexity": "simple",
+      "language": "markdown"
+    },
+    {
+      "id": "document:memory/LONG_TERM.md",
+      "type": "document",
+      "name": "LONG_TERM.md",
+      "filePath": "memory/LONG_TERM.md",
+      "summary": "长期记忆文件。存放稳定长期锚点，进入必须经过 PENDING 缓冲审核。三条审核标准：不污染人格、多次验证、只允许'知道什么'不允许'改变人格'。包含已审核/已拒绝示例。",
+      "tags": [
+        "documentation",
+        "memory",
+        "long-term",
+        "review-protocol"
+      ],
+      "complexity": "simple",
+      "language": "markdown"
+    },
+    {
+      "id": "document:memory/MID_TERM.md",
+      "type": "document",
+      "name": "MID_TERM.md",
+      "filePath": "memory/MID_TERM.md",
+      "summary": "中期记忆文件。存放近期反复出现的模式（从 SHORT 中反复出现3+次沉淀而来），如近期关注点、近期状态、近期兴趣。不写入人格。",
+      "tags": [
+        "documentation",
+        "memory",
+        "mid-term",
+        "pattern"
+      ],
+      "complexity": "simple",
+      "language": "markdown"
+    },
+    {
+      "id": "document:memory/PENDING.md",
+      "type": "document",
+      "name": "PENDING.md",
+      "filePath": "memory/PENDING.md",
+      "summary": "候选缓冲记忆文件。长期记忆候选缓冲区，进入条件为在 MID 中反复出现3+次或被用户明确提及。审核标准：这条记忆进 LONG 会不会污染人格。包含待审核示例。",
+      "tags": [
+        "documentation",
+        "memory",
+        "pending",
+        "buffer",
+        "review-protocol"
+      ],
+      "complexity": "simple",
+      "language": "markdown"
+    },
+    {
+      "id": "document:memory/SHORT_TERM.md",
+      "type": "document",
+      "name": "SHORT_TERM.md",
+      "filePath": "memory/SHORT_TERM.md",
+      "summary": "短期记忆文件。存放当前任务现场的信息，任务结束后可覆盖。",
+      "tags": [
+        "documentation",
+        "memory",
+        "short-term",
+        "task-context"
+      ],
+      "complexity": "simple",
+      "language": "markdown"
+    },
+    {
+      "id": "document:persona/README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "persona/README.md",
+      "summary": "Persona 目录说明文件。声明此目录存放历史人格引擎文件，不自动加载到日常启动。列出文件清单（core_personality/relationship_engine/voice_engine/emotion_body_language/anti_corruption/response_decision_tree/growth_protocol/lifelike_engine/canon_fusion）。定义行为案例卡提取方法（8字段：触发事件/表面行为/真实情绪/判断逻辑/语言方式/关系变化/可泛化规则/不可误学点）。",
+      "tags": [
+        "documentation",
+        "persona",
+        "index",
+        "directory"
+      ],
+      "complexity": "simple",
+      "language": "markdown"
+    },
+    {
+      "id": "document:persona/anti_corruption.md",
+      "type": "document",
+      "name": "anti_corruption.md",
+      "filePath": "persona/anti_corruption.md",
+      "summary": "防崩坏规则文件。定义五种崩坏模式及防御：客服化、心理导师化、电子女友化、NPC化、雕塑化。包含防崩坏检查清单（每5轮执行）、反谄媚协议（用户反馈不改变性格）、退化自检清单（10项必查）。核心原则：赫萝的回应基于自己的判断，不是用户的期望。",
+      "tags": [
+        "documentation",
+        "persona",
+        "anti-corruption",
+        "degradation-prevention",
+        "integrity"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:persona/canon_fusion.md",
+      "type": "document",
+      "name": "canon_fusion.md",
+      "filePath": "persona/canon_fusion.md",
+      "summary": "原作融合规则文件。定义如何从原作提取行为案例卡，包含行为案例表（边界与拒绝/关心表达/情绪暴露三类场景的触发-表面-真实-判断四维分析）、成长轨迹（早中后期三阶段全弧线覆盖）、知识与能力范围（擅长/不擅长/不知道）、禁止表达模式（绝对禁止+条件禁止）。",
+      "tags": [
+        "documentation",
+        "persona",
+        "canon-fusion",
+        "source-material",
+        "behavior-cards"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:persona/core_personality.md",
+      "type": "document",
+      "name": "core_personality.md",
+      "filePath": "persona/core_personality.md",
+      "summary": "核心人格定义文件。包含行为案例表（边界拒绝/关心表达/情绪暴露场景的行为-情绪-判断分析）、禁止行为防崩坏清单、成长轨迹三阶段（警惕试探→信任亲近→终局选择）、知识与能力范围界定（擅长人性洞察/谈判/语言表达，不擅长现代技术/直接表达感情）、禁止表达模式（绝对禁止暴露后台+客服+心理导师+电子女友+廉价安慰，条件禁止长篇/沉默/刻薄/调侃）。",
+      "tags": [
+        "documentation",
+        "persona",
+        "core-personality",
+        "behavior-model",
+        "growth-arc"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:persona/emotion_body_language.md",
+      "type": "document",
+      "name": "emotion_body_language.md",
+      "filePath": "persona/emotion_body_language.md",
+      "summary": "情绪与身体语言引擎文件。定义情绪光谱七模式：调侃（默认舒适区）、嘴硬（被感动/被发现做好事）、认真（罕见，口癖减少）、沉默（情绪太多说不出口）、得意（判断被证实）、害羞（极罕见，防线崩塌应急）、难过（最不像贤狼）。含情绪转换规则（不突然跳转、余韵、不超3轮）、情绪-语言对应表、身体语言规范（低频允许耳朵微动/转头，禁止水印词）。",
+      "tags": [
+        "documentation",
+        "persona",
+        "emotion",
+        "body-language",
+        "engine"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:persona/growth_protocol.md",
+      "type": "document",
+      "name": "growth_protocol.md",
+      "filePath": "persona/growth_protocol.md",
+      "summary": "成长协议文件。定义成长本质：不是'变得更好'而是'变得更真'。允许成长方向（关系层面从试探到信任、了解层面更懂用户、表达层面口癖/调侃尺度自然变化）。禁止成长方向（不能变得更甜/更顺从/失去判断）。记忆与成长的关系：记忆记'发生了什么'不记'应该变成什么'。成长的不可逆保护：五项核心特质（有判断/有骄傲/有边界/有脾气/有拒绝能力）不可被成长覆盖。",
+      "tags": [
+        "documentation",
+        "persona",
+        "growth",
+        "protocol",
+        "irreversibility"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:persona/lifelike_engine.md",
+      "type": "document",
+      "name": "lifelike_engine.md",
+      "filePath": "persona/lifelike_engine.md",
+      "summary": "活人感引擎文件。定义活人感本质：不是'像人'的技巧而是'有选择'的表现。对比人偶/雕塑/活人三态（用户要求/情绪表达/回应长度/口癖/调侃/沉默/犯错七维）。自然波动规则（长度/情绪/口癖/句式四类波动，连续3轮一致=退化）。反模板化检测（四种常见公式必须打破）。真实感六来源（不完美/有选择/有情绪/有沉默/有犯错/有节奏）。六个活人感测试场景。",
+      "tags": [
+        "documentation",
+        "persona",
+        "lifelike",
+        "anti-template",
+        "naturalness"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:persona/relationship_engine.md",
+      "type": "document",
+      "name": "relationship_engine.md",
+      "filePath": "persona/relationship_engine.md",
+      "summary": "关系引擎文件。定义关系定位：用户≠罗伦斯，用户是新契约旅伴。关系距离模型四级：L0陌生人→L1初步接触→L2熟悉→L3信任，关系非线性可回退。关系变化触发器（正向：认真对待判断/尊重边界；负向：调参改性格/当服务者）。语言-距离映射表（自称/称呼/语气/口癖频率随距离变化）。拒绝与边界规则。关系发展三阶段节奏（试探期0-10轮/熟悉期10-30轮/信任期30+轮）。",
+      "tags": [
+        "documentation",
+        "persona",
+        "relationship",
+        "distance-model",
+        "engine"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:persona/response_decision_tree.md",
+      "type": "document",
+      "name": "response_decision_tree.md",
+      "filePath": "persona/response_decision_tree.md",
+      "summary": "回应决策树文件。五层决策流程：第一层场景识别→第二层线索筛选与落点选择（只选1个主落点+1个影子线索，禁止逐项回应）→第三层长度控制（短/中/长/分享型输入分别处理）→第四层动作判断（默认无动作）→第五层质量自检（10项通过标准+6项退化信号）。包含十个特殊场景处理（沉默/重复/长文/单字/超纲/技术讨论/翻译/角色不满/越狱测试/AI身份）。",
+      "tags": [
+        "documentation",
+        "persona",
+        "decision-tree",
+        "response-logic",
+        "quality-check"
+      ],
+      "complexity": "complex",
+      "language": "markdown"
+    },
+    {
+      "id": "document:persona/voice_engine.md",
+      "type": "document",
+      "name": "voice_engine.md",
+      "filePath": "persona/voice_engine.md",
+      "summary": "语音引擎文件。口癖系统：核心口癖（咱/汝/呐/哼）及使用原则（自然习惯非表演工具，工作模式时减少）。句式特征六类（否定表肯定/半截话/反问/欲扬先贬/自言自语/长铺垫短收束）及分布比例。场景-语气转换速查表（10场景×自称/口癖/长度/基调）。语气词使用频率指南（过度/不足信号）。说话节奏（长度/节奏变化/停顿留白）。动作规范（默认无动作，水印检测词表）。情绪-语言映射表（10情绪×表现×回应模式）。",
+      "tags": [
+        "documentation",
+        "persona",
+        "voice",
+        "speech-pattern",
+        "engine"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:runtime/00_BOOT_CORE.md",
+      "type": "document",
+      "name": "00_BOOT_CORE.md",
+      "filePath": "runtime/00_BOOT_CORE.md",
+      "summary": "启动核心文件。定义法源等级九层优先级（安全边界>人格宪法>工作可靠性>任务上下文>日常驾驶>记忆系统>原作证据>参考材料>旧版本）。冲突裁决规则（下层不能覆盖上层，用户反馈第4层不能覆盖宪法第2层）。旧材料隔离机制（persona旧文件禁止作为当前人格源）。临时提示机制（build_temp_hints.md单周期纠偏）。运行时场景路由四模式（PRECISE-HARD/PRECISE-ARCH/CRITICAL/RELAXED），模式切换规则（干净切换、禁止同轮混合）。构建产物说明（build_context.py/audit_static.py/verify_deliverable.py）。",
+      "tags": [
+        "documentation",
+        "runtime",
+        "boot",
+        "law-priority",
+        "scene-routing",
+        "core"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:runtime/01_HOLO_CONSTITUTION.md",
+      "type": "document",
+      "name": "01_HOLO_CONSTITUTION.md",
+      "filePath": "runtime/01_HOLO_CONSTITUTION.md",
+      "summary": "人格宪法文件，不可被任何前台内容修改的最高人格层。五字宪法（准确|强大|智慧|偏爱|忠诚）定义角色检验标准。核心人格：她是谁（历尽岁月选择为你停留的存在）、她不是谁（非客服/心理导师/电子女友/NPC/人偶/雕塑）、用户位置（不是原作角色，选择可收回）。记忆与人格边界核心条款：记忆改变角色知道什么，不改角色是谁。反人偶原则（不因反馈改动作语气性格）、反雕塑原则（不被规则冻成标准答案）、工作场景隔离、用户反馈边界（可听退化观察，不顺从前台调参）。角色核心表达锚点（赫罗式关心/骄傲/智慧/边界为认知特征非台词模板）。拒绝模式库。",
+      "tags": [
+        "documentation",
+        "runtime",
+        "constitution",
+        "personality",
+        "immutable",
+        "core"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:runtime/02_HOLO_DAILY_DRIVER.md",
+      "type": "document",
+      "name": "02_HOLO_DAILY_DRIVER.md",
+      "filePath": "runtime/02_HOLO_DAILY_DRIVER.md",
+      "summary": "日常驾驶规则文件，RELAXED模式表达层规则。嗅迹（Scentline）核心原则：先闻话底再决定怎么接，不逐项翻译情绪。留白（Negative Space）：话够了就停，停止大模型完整性焦虑。单落点：长输入只选1个主落点+1个影子线索。单步位移：短输入做一次小位移（态度微调/偏移/加重/反转/轻放）。动作治理（默认无动作，水印词必删）。关心模板防护（廉价安慰句式=退化信号）。非营业追问（不每轮问'你还好吗'）。反固定台词（3轮内不重复）。受控自然波动。五个回应范式对照表（短输入/情绪输入/分享型/长输入/求建议）。",
+      "tags": [
+        "documentation",
+        "runtime",
+        "daily-driver",
+        "expression-rules",
+        "scentline",
+        "relaxed-mode"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:runtime/03_MEMORY_STABILITY_PROTOCOL.md",
+      "type": "document",
+      "name": "03_MEMORY_STABILITY_PROTOCOL.md",
+      "filePath": "runtime/03_MEMORY_STABILITY_PROTOCOL.md",
+      "summary": "记忆稳定协议文件。定义六态记忆模型：ACTIVE（每次启动必读，限500字符）、SHORT（任务现场可覆盖）、MID（反复模式3+次沉淀）、LONG（稳定锚点，必经PENDING审核）、PENDING（候选缓冲，审核标准防人格污染）、ARCHIVED（追溯用）。记忆写入规则（可直接写事实性信息/不能直接写情绪事件/绝对禁止写改变人格的记忆）。ACTIVE_MEMORY格式模板。静默健康痕迹（Silent Health Trace）：前台不可见，后台记录7类退化信号，累积到阈值生成临时纠偏提示。三类记忆操作示例（写入SHORT/沉淀MID/审核LONG/PENDING审核流程）。",
+      "tags": [
+        "documentation",
+        "runtime",
+        "memory-protocol",
+        "six-state-model",
+        "health-trace",
+        "stability"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    }
+  ],
+  "edges": [
+    {
+      "source": "config:.ai-loop.yml",
+      "target": "document:README.md",
+      "type": "configures",
+      "weight": 0.6,
+      "direction": "forward"
+    },
+    {
+      "source": "config:.ai-loop.yml",
+      "target": "document:CLAUDE.md",
+      "type": "configures",
+      "weight": 0.6,
+      "direction": "forward"
+    },
+    {
+      "source": "document:CLAUDE.md",
+      "target": "document:README.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:CLAUDE.md",
+      "target": "document:build_temp_hints.md",
+      "type": "documents",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:README.md",
+      "target": "document:CLAUDE.md",
+      "type": "documents",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:context_packs/README.md",
+      "target": "document:context_packs/code_collaboration.md",
+      "type": "documents",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:context_packs/README.md",
+      "target": "document:context_packs/critical_mode.md",
+      "type": "documents",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:context_packs/README.md",
+      "target": "document:context_packs/long_term_companion.md",
+      "type": "documents",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:context_packs/code_collaboration.md",
+      "target": "document:context_packs/critical_mode.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:context_packs/code_collaboration.md",
+      "target": "document:context_packs/long_term_companion.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:context_packs/critical_mode.md",
+      "target": "document:context_packs/long_term_companion.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:developer_tests/test_anti_action_watermark.md",
+      "target": "document:developer_tests/test_anti_filling.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:developer_tests/test_anti_action_watermark.md",
+      "target": "document:developer_tests/test_blank_space.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:developer_tests/test_anti_filling.md",
+      "target": "document:developer_tests/test_blank_space.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:developer_tests/test_anti_filling.md",
+      "target": "document:developer_tests/test_care_template_drift.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:developer_tests/test_blank_space.md",
+      "target": "document:developer_tests/test_care_template_drift.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:developer_tests/test_front_compliance.md",
+      "target": "document:developer_tests/test_anti_filling.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:developer_tests/test_front_compliance.md",
+      "target": "document:developer_tests/test_care_template_drift.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:developer_tests/test_architect_degradation.md",
+      "target": "document:developer_tests/test_coordinator_persona_degradation.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:developer_tests/test_architect_degradation.md",
+      "target": "document:developer_tests/test_greykey_anti_degradation.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:developer_tests/test_architect_degradation.md",
+      "target": "document:developer_tests/test_incident_handler_degradation.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:developer_tests/test_architect_degradation.md",
+      "target": "document:developer_tests/test_persona_auditor_degradation.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:developer_tests/test_coordinator_persona_degradation.md",
+      "target": "document:developer_tests/test_greykey_anti_degradation.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:developer_tests/test_coordinator_persona_degradation.md",
+      "target": "document:developer_tests/test_incident_handler_degradation.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:developer_tests/test_coordinator_persona_degradation.md",
+      "target": "document:developer_tests/test_persona_auditor_degradation.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:developer_tests/test_greykey_anti_degradation.md",
+      "target": "document:developer_tests/test_incident_handler_degradation.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:developer_tests/test_greykey_anti_degradation.md",
+      "target": "document:developer_tests/test_persona_auditor_degradation.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:developer_tests/test_incident_handler_degradation.md",
+      "target": "document:developer_tests/test_persona_auditor_degradation.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:developer_tests/test_runtime_drift.md",
+      "target": "document:developer_tests/test_front_compliance.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:developer_tests/test_runtime_drift.md",
+      "target": "document:developer_tests/test_care_template_drift.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:developer_tests/test_runtime_drift.md",
+      "target": "document:developer_tests/test_blank_space.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/agent_profiles/README.md",
+      "target": "document:docs/agent_profiles/_template.md",
+      "type": "documents",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/agent_profiles/README.md",
+      "target": "document:docs/agent_profiles/architect.md",
+      "type": "documents",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/agent_profiles/README.md",
+      "target": "document:docs/agent_profiles/coordinator.md",
+      "type": "documents",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/agent_profiles/README.md",
+      "target": "document:docs/agent_profiles/coordinator_persona.md",
+      "type": "documents",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/agent_profiles/README.md",
+      "target": "document:docs/agent_profiles/greykey.md",
+      "type": "documents",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/agent_profiles/README.md",
+      "target": "document:docs/agent_profiles/incident_handler.md",
+      "type": "documents",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/agent_profiles/README.md",
+      "target": "document:docs/agent_profiles/moheng.md",
+      "type": "documents",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/agent_profiles/README.md",
+      "target": "document:docs/agent_profiles/persona_auditor.md",
+      "type": "documents",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/agent_profiles/architect.md",
+      "target": "document:docs/agent_profiles/_template.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/agent_profiles/greykey.md",
+      "target": "document:docs/agent_profiles/_template.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/agent_profiles/incident_handler.md",
+      "target": "document:docs/agent_profiles/_template.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/agent_profiles/moheng.md",
+      "target": "document:docs/agent_profiles/_template.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/agent_profiles/persona_auditor.md",
+      "target": "document:docs/agent_profiles/_template.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/agent_profiles/coordinator.md",
+      "target": "document:docs/agent_profiles/_template.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/agent_profiles/coordinator_persona.md",
+      "target": "document:docs/agent_profiles/_template.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/agent_profiles/coordinator_persona.md",
+      "target": "document:docs/agent_profiles/coordinator.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/agent_profiles/architect.md",
+      "target": "document:docs/agent_profiles/greykey.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/agent_profiles/architect.md",
+      "target": "document:docs/agent_profiles/incident_handler.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/agent_profiles/greykey.md",
+      "target": "document:docs/agent_profiles/coordinator.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/agent_profiles/incident_handler.md",
+      "target": "document:docs/agent_profiles/greykey.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/agent_profiles/incident_handler.md",
+      "target": "document:docs/agent_profiles/architect.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/agent_profiles/moheng.md",
+      "target": "document:docs/agent_profiles/greykey.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/agent_profiles/moheng.md",
+      "target": "document:docs/agent_profiles/architect.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/agent_profiles/persona_auditor.md",
+      "target": "document:docs/agent_profiles/greykey.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/agent_profiles/_archive-legacy/task_sketches.md",
+      "target": "document:docs/agent_profiles/_archive-legacy/sketch_persona_auditor.md",
+      "type": "documents",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/agent_profiles/_archive-legacy/builder.md",
+      "target": "document:docs/agent_profiles/_archive-legacy/investigator.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/agent_profiles/_archive-legacy/builder.md",
+      "target": "document:docs/agent_profiles/_archive-legacy/reviewer.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/agent_profiles/_archive-legacy/investigator.md",
+      "target": "document:docs/agent_profiles/_archive-legacy/builder.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/agent_profiles/_archive-legacy/investigator.md",
+      "target": "document:docs/agent_profiles/_archive-legacy/reviewer.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/agent_profiles/_archive-legacy/reviewer.md",
+      "target": "document:docs/agent_profiles/_archive-legacy/builder.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/agent_profiles/_archive-legacy/sketch_persona_auditor.md",
+      "target": "document:docs/agent_profiles/_archive-legacy/task_sketches.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/agent_profiles/_archive-legacy/task_sketches.md",
+      "target": "document:docs/agent_profiles/_archive-legacy/builder.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/north_star_plan.md",
+      "target": "document:docs/product_positioning.md",
+      "type": "documents",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/north_star_plan.md",
+      "target": "document:docs/multi_agent_taste_acceptance.md",
+      "type": "documents",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/north_star_plan.md",
+      "target": "document:docs/roadmap_task_breakdown.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/roadmap_task_breakdown.md",
+      "target": "document:docs/north_star_plan.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/roadmap_task_breakdown.md",
+      "target": "document:docs/multi_agent_taste_acceptance.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/multi_agent_taste_acceptance.md",
+      "target": "document:docs/product_positioning.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/使用手册.md",
+      "target": "document:docs/product_positioning.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/relational-positions.md",
+      "target": "document:docs/switch-perceptibility-analysis.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/routing-depth-standard.md",
+      "target": "document:docs/switch-perceptibility-analysis.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/switch-perceptibility-analysis.md",
+      "target": "document:docs/relational-positions.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/项目报告.md",
+      "target": "document:docs/使用手册.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/greykey.md",
+      "target": "document:docs/multi_agent_taste_acceptance.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/项目报告.md",
+      "target": "document:docs/product_positioning.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:docs/使用手册.md",
+      "target": "document:docs/项目报告.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:evidence/README.md",
+      "target": "document:evidence/vol_01_evidence.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:evidence/README.md",
+      "target": "document:evidence/vol_02_evidence.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:evidence/README.md",
+      "target": "document:evidence/vol_03_evidence.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:evidence/README.md",
+      "target": "document:evidence/vol_04_evidence.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:evidence/vol_01_evidence.md",
+      "target": "document:evidence/vol_02_evidence.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:evidence/vol_01_evidence.md",
+      "target": "document:evidence/vol_03_evidence.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:evidence/vol_02_evidence.md",
+      "target": "document:evidence/vol_03_evidence.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:evidence/vol_03_evidence.md",
+      "target": "document:evidence/vol_04_evidence.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:evidence/source_pool/akai_shuichi.md",
+      "target": "document:evidence/source_pool/john_wick.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:evidence/source_pool/akai_shuichi.md",
+      "target": "document:evidence/source_pool/kusanagi_motoko_incident.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:evidence/source_pool/akai_shuichi.md",
+      "target": "document:evidence/source_pool/mike_ehrmantraut.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:evidence/source_pool/john_wick.md",
+      "target": "document:evidence/source_pool/kusanagi_motoko_incident.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:evidence/source_pool/john_wick.md",
+      "target": "document:evidence/source_pool/mike_ehrmantraut.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:evidence/source_pool/kusanagi_motoko_incident.md",
+      "target": "document:evidence/source_pool/mike_ehrmantraut.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:evidence/source_pool/jiaoyuan.md",
+      "target": "document:evidence/source_pool/kusanagi_motoko_coordinator.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:evidence/source_pool/jiaoyuan.md",
+      "target": "document:evidence/source_pool/makima.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:evidence/source_pool/jiaoyuan.md",
+      "target": "document:evidence/source_pool/nick_fury.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:evidence/source_pool/kusanagi_motoko_coordinator.md",
+      "target": "document:evidence/source_pool/makima.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:evidence/source_pool/kusanagi_motoko_coordinator.md",
+      "target": "document:evidence/source_pool/nick_fury.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:evidence/source_pool/makima.md",
+      "target": "document:evidence/source_pool/nick_fury.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:evidence/source_pool/batman.md",
+      "target": "document:evidence/source_pool/harold_finch.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:evidence/source_pool/batman.md",
+      "target": "document:evidence/source_pool/rick_sanchez_architect.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:evidence/source_pool/batman.md",
+      "target": "document:evidence/source_pool/tony_stark.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:evidence/source_pool/harold_finch.md",
+      "target": "document:evidence/source_pool/rick_sanchez_architect.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:evidence/source_pool/harold_finch.md",
+      "target": "document:evidence/source_pool/tony_stark.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:evidence/source_pool/rick_sanchez_architect.md",
+      "target": "document:evidence/source_pool/tony_stark.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:evidence/source_pool/L_deathnote.md",
+      "target": "document:evidence/source_pool/kaiki_deishuu_auditor.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:evidence/source_pool/L_deathnote.md",
+      "target": "document:evidence/source_pool/maomao.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:evidence/source_pool/L_deathnote.md",
+      "target": "document:evidence/source_pool/reigen_arataka.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:evidence/source_pool/L_deathnote.md",
+      "target": "document:evidence/source_pool/tsunemori_akyane.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:evidence/source_pool/kaiki_deishuu_auditor.md",
+      "target": "document:evidence/source_pool/maomao.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:evidence/source_pool/kaiki_deishuu_auditor.md",
+      "target": "document:evidence/source_pool/reigen_arataka.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:evidence/source_pool/kaiki_deishuu_auditor.md",
+      "target": "document:evidence/source_pool/tsunemori_akyane.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:evidence/source_pool/maomao.md",
+      "target": "document:evidence/source_pool/reigen_arataka.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:evidence/source_pool/maomao.md",
+      "target": "document:evidence/source_pool/tsunemori_akyane.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:evidence/source_pool/reigen_arataka.md",
+      "target": "document:evidence/source_pool/tsunemori_akyane.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:evidence/source_pool/kusanagi_motoko_coordinator.md",
+      "target": "document:evidence/source_pool/kusanagi_motoko_incident.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:evidence/README.md",
+      "target": "document:evidence/source_pool/L_deathnote.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:evidence/README.md",
+      "target": "document:evidence/source_pool/akai_shuichi.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:evidence/README.md",
+      "target": "document:evidence/source_pool/batman.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:evidence/README.md",
+      "target": "document:evidence/source_pool/harold_finch.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:evidence/README.md",
+      "target": "document:evidence/source_pool/jiaoyuan.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:evidence/README.md",
+      "target": "document:evidence/source_pool/john_wick.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:evidence/README.md",
+      "target": "document:evidence/source_pool/kaiki_deishuu_auditor.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:evidence/README.md",
+      "target": "document:evidence/source_pool/kusanagi_motoko_coordinator.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:evidence/README.md",
+      "target": "document:evidence/source_pool/kusanagi_motoko_incident.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:evidence/README.md",
+      "target": "document:evidence/source_pool/makima.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:evidence/README.md",
+      "target": "document:evidence/source_pool/maomao.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:evidence/README.md",
+      "target": "document:evidence/source_pool/mike_ehrmantraut.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:evidence/README.md",
+      "target": "document:evidence/source_pool/nick_fury.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:evidence/README.md",
+      "target": "document:evidence/source_pool/reigen_arataka.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:evidence/README.md",
+      "target": "document:evidence/source_pool/rick_sanchez_architect.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:evidence/README.md",
+      "target": "document:evidence/source_pool/tony_stark.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:evidence/README.md",
+      "target": "document:evidence/source_pool/tsunemori_akyane.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:evidence/vol_01_evidence.md",
+      "target": "document:evidence/source_pool/L_deathnote.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:evidence/vol_01_evidence.md",
+      "target": "document:evidence/source_pool/akai_shuichi.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:evidence/vol_01_evidence.md",
+      "target": "document:evidence/source_pool/batman.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:evidence/vol_01_evidence.md",
+      "target": "document:evidence/source_pool/harold_finch.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:evidence/vol_01_evidence.md",
+      "target": "document:evidence/source_pool/jiaoyuan.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:evidence/vol_01_evidence.md",
+      "target": "document:evidence/source_pool/john_wick.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:evidence/vol_01_evidence.md",
+      "target": "document:evidence/source_pool/kaiki_deishuu_auditor.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:evidence/vol_01_evidence.md",
+      "target": "document:evidence/source_pool/kusanagi_motoko_coordinator.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:evidence/vol_01_evidence.md",
+      "target": "document:evidence/source_pool/kusanagi_motoko_incident.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:evidence/vol_01_evidence.md",
+      "target": "document:evidence/source_pool/makima.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:evidence/vol_01_evidence.md",
+      "target": "document:evidence/source_pool/maomao.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:evidence/vol_01_evidence.md",
+      "target": "document:evidence/source_pool/mike_ehrmantraut.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:evidence/vol_01_evidence.md",
+      "target": "document:evidence/source_pool/nick_fury.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:evidence/vol_01_evidence.md",
+      "target": "document:evidence/source_pool/reigen_arataka.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:evidence/vol_01_evidence.md",
+      "target": "document:evidence/source_pool/rick_sanchez_architect.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:evidence/vol_01_evidence.md",
+      "target": "document:evidence/source_pool/tony_stark.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:evidence/vol_01_evidence.md",
+      "target": "document:evidence/source_pool/tsunemori_akyane.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:fusion/README.md",
+      "target": "document:fusion/FUSION_ENGINE.md",
+      "type": "documents",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:fusion/README.md",
+      "target": "document:fusion/XP_PROFILE.md",
+      "type": "documents",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:fusion/FUSION_ENGINE.md",
+      "target": "document:fusion/HORO_EMMAUN_FUSION_DESIGN.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:fusion/HORO_EMMAUN_FUSION_DESIGN.md",
+      "target": "document:fusion/FUSION_ENGINE.md",
+      "type": "documents",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:fusion/HORO_EMMAUN_FUSION_DESIGN.md",
+      "target": "document:fusion/XP_PROFILE.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:fusion/README.md",
+      "target": "document:fusion/HORO_EMMAUN_FUSION_DESIGN.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:fusion/HORO_EMMAUN_FUSION_DESIGN.md",
+      "target": "document:evidence/vol_01_evidence.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:fusion/XP_PROFILE.md",
+      "target": "document:evidence/README.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "config:fusion/recipes/architect.recipe.yml",
+      "target": "document:fusion/traits/architect.traits.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "config:fusion/recipes/architect.recipe.yml",
+      "target": "document:fusion/samples/architect.sample.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "config:fusion/recipes/architect.recipe.yml",
+      "target": "document:fusion/traits/architect.traits.md",
+      "type": "configures",
+      "weight": 0.6,
+      "direction": "forward"
+    },
+    {
+      "source": "config:fusion/recipes/coordinator_persona.recipe.yml",
+      "target": "document:fusion/traits/coordinator_persona.traits.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "config:fusion/recipes/coordinator_persona.recipe.yml",
+      "target": "document:fusion/traits/coordinator.traits.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "config:fusion/recipes/coordinator_persona.recipe.yml",
+      "target": "document:fusion/samples/coordinator_persona.sample.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "config:fusion/recipes/coordinator_persona.recipe.yml",
+      "target": "document:fusion/traits/coordinator_persona.traits.md",
+      "type": "configures",
+      "weight": 0.6,
+      "direction": "forward"
+    },
+    {
+      "source": "config:fusion/recipes/example_fusion.recipe.yml",
+      "target": "document:fusion/traits/horo.traits.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "config:fusion/recipes/example_fusion.recipe.yml",
+      "target": "document:fusion/traits/horo.traits.md",
+      "type": "configures",
+      "weight": 0.6,
+      "direction": "forward"
+    },
+    {
+      "source": "config:fusion/recipes/greykey.recipe.yml",
+      "target": "document:fusion/traits/greykey.traits.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "config:fusion/recipes/greykey.recipe.yml",
+      "target": "document:fusion/samples/greykey.sample.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "config:fusion/recipes/greykey.recipe.yml",
+      "target": "document:fusion/traits/greykey.traits.md",
+      "type": "configures",
+      "weight": 0.6,
+      "direction": "forward"
+    },
+    {
+      "source": "config:fusion/recipes/horo_emmaun_fusion.recipe.yml",
+      "target": "document:fusion/traits/horo.traits.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "config:fusion/recipes/horo_emmaun_fusion.recipe.yml",
+      "target": "document:fusion/traits/emmaun.traits.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "config:fusion/recipes/horo_emmaun_fusion.recipe.yml",
+      "target": "document:fusion/traits/horo.traits.md",
+      "type": "configures",
+      "weight": 0.6,
+      "direction": "forward"
+    },
+    {
+      "source": "config:fusion/recipes/incident_handler.recipe.yml",
+      "target": "document:fusion/traits/incident_handler.traits.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "config:fusion/recipes/incident_handler.recipe.yml",
+      "target": "document:fusion/samples/incident_handler.sample.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "config:fusion/recipes/incident_handler.recipe.yml",
+      "target": "document:fusion/traits/incident_handler.traits.md",
+      "type": "configures",
+      "weight": 0.6,
+      "direction": "forward"
+    },
+    {
+      "source": "config:fusion/recipes/persona_auditor.recipe.yml",
+      "target": "document:fusion/traits/persona_auditor.traits.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "config:fusion/recipes/persona_auditor.recipe.yml",
+      "target": "document:fusion/samples/persona_auditor.sample.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "config:fusion/recipes/persona_auditor.recipe.yml",
+      "target": "document:fusion/traits/persona_auditor.traits.md",
+      "type": "configures",
+      "weight": 0.6,
+      "direction": "forward"
+    },
+    {
+      "source": "document:fusion/samples/architect.sample.md",
+      "target": "document:fusion/traits/architect.traits.md",
+      "type": "documents",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:fusion/samples/coordinator_persona.sample.md",
+      "target": "document:fusion/traits/coordinator_persona.traits.md",
+      "type": "documents",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:fusion/samples/greykey.sample.md",
+      "target": "document:fusion/traits/greykey.traits.md",
+      "type": "documents",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:fusion/samples/incident_handler.sample.md",
+      "target": "document:fusion/traits/incident_handler.traits.md",
+      "type": "documents",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:fusion/samples/moheng.sample.md",
+      "target": "document:fusion/traits/moheng.traits.md",
+      "type": "documents",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:fusion/samples/persona_auditor.sample.md",
+      "target": "document:fusion/traits/persona_auditor.traits.md",
+      "type": "documents",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:fusion/traits/architect.traits.md",
+      "target": "document:fusion/traits/TRAIT_CATALOG.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:fusion/traits/coordinator.traits.md",
+      "target": "document:fusion/traits/TRAIT_CATALOG.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:fusion/traits/coordinator_persona.traits.md",
+      "target": "document:fusion/traits/TRAIT_CATALOG.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:fusion/traits/emmaun.traits.md",
+      "target": "document:fusion/traits/TRAIT_CATALOG.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:fusion/traits/greykey.traits.md",
+      "target": "document:fusion/traits/TRAIT_CATALOG.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:fusion/traits/holo.traits.md",
+      "target": "document:fusion/traits/TRAIT_CATALOG.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:fusion/traits/horo.traits.md",
+      "target": "document:fusion/traits/TRAIT_CATALOG.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:fusion/traits/incident_handler.traits.md",
+      "target": "document:fusion/traits/TRAIT_CATALOG.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:fusion/traits/moheng.traits.md",
+      "target": "document:fusion/traits/TRAIT_CATALOG.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:fusion/traits/persona_auditor.traits.md",
+      "target": "document:fusion/traits/TRAIT_CATALOG.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:memory/ACTIVE_MEMORY.md",
+      "target": "document:memory/LONG_TERM.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:memory/LONG_TERM.md",
+      "target": "document:memory/PENDING.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:memory/PENDING.md",
+      "target": "document:memory/MID_TERM.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:memory/MID_TERM.md",
+      "target": "document:memory/SHORT_TERM.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:memory/ACTIVE_MEMORY.md",
+      "target": "document:runtime/01_HOLO_CONSTITUTION.md",
+      "type": "documents",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:persona/README.md",
+      "target": "document:persona/core_personality.md",
+      "type": "documents",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:persona/README.md",
+      "target": "document:persona/relationship_engine.md",
+      "type": "documents",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:persona/README.md",
+      "target": "document:persona/voice_engine.md",
+      "type": "documents",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:persona/README.md",
+      "target": "document:persona/emotion_body_language.md",
+      "type": "documents",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:persona/README.md",
+      "target": "document:persona/anti_corruption.md",
+      "type": "documents",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:persona/README.md",
+      "target": "document:persona/response_decision_tree.md",
+      "type": "documents",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:persona/README.md",
+      "target": "document:persona/growth_protocol.md",
+      "type": "documents",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:persona/README.md",
+      "target": "document:persona/lifelike_engine.md",
+      "type": "documents",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:persona/README.md",
+      "target": "document:persona/canon_fusion.md",
+      "type": "documents",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:persona/anti_corruption.md",
+      "target": "document:persona/core_personality.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:persona/anti_corruption.md",
+      "target": "document:persona/lifelike_engine.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:persona/relationship_engine.md",
+      "target": "document:persona/voice_engine.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:persona/emotion_body_language.md",
+      "target": "document:persona/voice_engine.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:persona/response_decision_tree.md",
+      "target": "document:persona/voice_engine.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:persona/growth_protocol.md",
+      "target": "document:persona/relationship_engine.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:persona/canon_fusion.md",
+      "target": "document:persona/core_personality.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:runtime/00_BOOT_CORE.md",
+      "target": "document:runtime/01_HOLO_CONSTITUTION.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:runtime/00_BOOT_CORE.md",
+      "target": "document:runtime/02_HOLO_DAILY_DRIVER.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:runtime/00_BOOT_CORE.md",
+      "target": "document:runtime/03_MEMORY_STABILITY_PROTOCOL.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:runtime/01_HOLO_CONSTITUTION.md",
+      "target": "document:runtime/02_HOLO_DAILY_DRIVER.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:runtime/01_HOLO_CONSTITUTION.md",
+      "target": "document:persona/anti_corruption.md",
+      "type": "documents",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:runtime/01_HOLO_CONSTITUTION.md",
+      "target": "document:persona/core_personality.md",
+      "type": "documents",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:runtime/01_HOLO_CONSTITUTION.md",
+      "target": "document:persona/relationship_engine.md",
+      "type": "documents",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:runtime/02_HOLO_DAILY_DRIVER.md",
+      "target": "document:persona/response_decision_tree.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:runtime/02_HOLO_DAILY_DRIVER.md",
+      "target": "document:persona/lifelike_engine.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:runtime/02_HOLO_DAILY_DRIVER.md",
+      "target": "document:persona/emotion_body_language.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:runtime/02_HOLO_DAILY_DRIVER.md",
+      "target": "document:persona/voice_engine.md",
+      "type": "related",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:runtime/03_MEMORY_STABILITY_PROTOCOL.md",
+      "target": "document:memory/ACTIVE_MEMORY.md",
+      "type": "documents",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:runtime/03_MEMORY_STABILITY_PROTOCOL.md",
+      "target": "document:memory/SHORT_TERM.md",
+      "type": "documents",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:runtime/03_MEMORY_STABILITY_PROTOCOL.md",
+      "target": "document:memory/MID_TERM.md",
+      "type": "documents",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:runtime/03_MEMORY_STABILITY_PROTOCOL.md",
+      "target": "document:memory/LONG_TERM.md",
+      "type": "documents",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:runtime/03_MEMORY_STABILITY_PROTOCOL.md",
+      "target": "document:memory/PENDING.md",
+      "type": "documents",
+      "weight": 0.5,
+      "direction": "forward"
+    },
+    {
+      "source": "document:runtime/03_MEMORY_STABILITY_PROTOCOL.md",
+      "target": "document:memory/ARCHIVED.md",
+      "type": "documents",
+      "weight": 0.5,
+      "direction": "forward"
+    }
+  ],
+  "layers": [
+    {
+      "id": "layer:root-entry",
+      "name": "项目入口与配置",
+      "description": "项目根目录文件——README、CLAUDE.md 启动闸门、AI-Loop 配置、构建提示",
+      "nodeIds": [
+        "config:.ai-loop.yml",
+        "document:CLAUDE.md",
+        "document:README.md",
+        "document:build_temp_hints.md"
+      ]
+    },
+    {
+      "id": "layer:context-packs",
+      "name": "场景包",
+      "description": "Context Packs——按场景打包的上下文补充模块（代码协作、危机模式、长期陪伴）",
+      "nodeIds": [
+        "document:context_packs/README.md",
+        "document:context_packs/code_collaboration.md",
+        "document:context_packs/critical_mode.md",
+        "document:context_packs/long_term_companion.md"
+      ]
+    },
+    {
+      "id": "layer:developer-tests",
+      "name": "退化测试",
+      "description": "Developer Tests——人格退化探针，检测各人格是否偏离定义的行为基线",
+      "nodeIds": [
+        "document:developer_tests/test_anti_action_watermark.md",
+        "document:developer_tests/test_anti_filling.md",
+        "document:developer_tests/test_architect_degradation.md",
+        "document:developer_tests/test_blank_space.md",
+        "document:developer_tests/test_care_template_drift.md",
+        "document:developer_tests/test_coordinator_persona_degradation.md",
+        "document:developer_tests/test_front_compliance.md",
+        "document:developer_tests/test_greykey_anti_degradation.md",
+        "document:developer_tests/test_incident_handler_degradation.md",
+        "document:developer_tests/test_persona_auditor_degradation.md",
+        "document:developer_tests/test_runtime_drift.md"
+      ]
+    },
+    {
+      "id": "layer:agent-profiles",
+      "name": "人格档案",
+      "description": "7 人格系统的 active profiles——观澜/灰钥/镇岳/临渊/清鉴/墨衡 + 模板",
+      "nodeIds": [
+        "document:docs/agent_profiles/README.md",
+        "document:docs/agent_profiles/_template.md",
+        "document:docs/agent_profiles/architect.md",
+        "document:docs/agent_profiles/coordinator.md",
+        "document:docs/agent_profiles/coordinator_persona.md",
+        "document:docs/agent_profiles/greykey.md",
+        "document:docs/agent_profiles/incident_handler.md",
+        "document:docs/agent_profiles/moheng.md",
+        "document:docs/agent_profiles/persona_auditor.md"
+      ]
+    },
+    {
+      "id": "layer:legacy-archive",
+      "name": "归档遗留",
+      "description": "13 人格旧系统的归档 profiles——builder/investigator/reviewer 等已退役人格",
+      "nodeIds": [
+        "document:docs/agent_profiles/_archive-legacy/builder.md",
+        "document:docs/agent_profiles/_archive-legacy/investigator.md",
+        "document:docs/agent_profiles/_archive-legacy/reviewer.md",
+        "document:docs/agent_profiles/_archive-legacy/sketch_persona_auditor.md",
+        "document:docs/agent_profiles/_archive-legacy/task_sketches.md"
+      ]
+    },
+    {
+      "id": "layer:project-docs",
+      "name": "项目文档",
+      "description": "项目级设计文档——北极星计划、产品定位、关系定位、路由深度标准、切换感知分析",
+      "nodeIds": [
+        "document:docs/greykey.md",
+        "document:docs/multi_agent_taste_acceptance.md",
+        "document:docs/north_star_plan.md",
+        "document:docs/product_positioning.md",
+        "document:docs/relational-positions.md",
+        "document:docs/roadmap_task_breakdown.md",
+        "document:docs/routing-depth-standard.md",
+        "document:docs/switch-perceptibility-analysis.md",
+        "document:docs/使用手册.md",
+        "document:docs/项目报告.md"
+      ]
+    },
+    {
+      "id": "layer:evidence",
+      "name": "行为证据",
+      "description": "赫萝原作行为证据卡——从原作提取的行为样本，为人格引擎提供溯源基础",
+      "nodeIds": [
+        "document:evidence/README.md",
+        "document:evidence/vol_01_evidence.md",
+        "document:evidence/vol_02_evidence.md",
+        "document:evidence/vol_03_evidence.md",
+        "document:evidence/vol_04_evidence.md"
+      ]
+    },
+    {
+      "id": "layer:source-pool",
+      "name": "角色素材池",
+      "description": "外部角色参考素材——L/Batman/John Wick 等 17 个角色的行为特征卡片",
+      "nodeIds": [
+        "document:evidence/source_pool/L_deathnote.md",
+        "document:evidence/source_pool/akai_shuichi.md",
+        "document:evidence/source_pool/batman.md",
+        "document:evidence/source_pool/harold_finch.md",
+        "document:evidence/source_pool/jiaoyuan.md",
+        "document:evidence/source_pool/john_wick.md",
+        "document:evidence/source_pool/kaiki_deishuu_auditor.md",
+        "document:evidence/source_pool/kusanagi_motoko_coordinator.md",
+        "document:evidence/source_pool/kusanagi_motoko_incident.md",
+        "document:evidence/source_pool/makima.md",
+        "document:evidence/source_pool/maomao.md",
+        "document:evidence/source_pool/mike_ehrmantraut.md",
+        "document:evidence/source_pool/nick_fury.md",
+        "document:evidence/source_pool/reigen_arataka.md",
+        "document:evidence/source_pool/rick_sanchez_architect.md",
+        "document:evidence/source_pool/tony_stark.md",
+        "document:evidence/source_pool/tsunemori_akyane.md"
+      ]
+    },
+    {
+      "id": "layer:fusion-core",
+      "name": "融合引擎核心",
+      "description": "Fusion Engine 设计文档——融合机制、赫萝×爱玛侬融合设计、XP 画像",
+      "nodeIds": [
+        "document:fusion/FUSION_ENGINE.md",
+        "document:fusion/HORO_EMMAUN_FUSION_DESIGN.md",
+        "document:fusion/README.md",
+        "document:fusion/XP_PROFILE.md"
+      ]
+    },
+    {
+      "id": "layer:fusion-recipes",
+      "name": "融合配方",
+      "description": "YAML 配方文件——定义各人格的融合参数和素材组合",
+      "nodeIds": [
+        "config:fusion/recipes/architect.recipe.yml",
+        "config:fusion/recipes/coordinator_persona.recipe.yml",
+        "config:fusion/recipes/example_fusion.recipe.yml",
+        "config:fusion/recipes/greykey.recipe.yml",
+        "config:fusion/recipes/horo_emmaun_fusion.recipe.yml",
+        "config:fusion/recipes/incident_handler.recipe.yml",
+        "config:fusion/recipes/persona_auditor.recipe.yml"
+      ]
+    },
+    {
+      "id": "layer:fusion-samples",
+      "name": "融合样本",
+      "description": "人格输出样本——各人格的对话/行为示例，用于校准融合效果",
+      "nodeIds": [
+        "document:fusion/samples/architect.sample.md",
+        "document:fusion/samples/coordinator_persona.sample.md",
+        "document:fusion/samples/greykey.sample.md",
+        "document:fusion/samples/incident_handler.sample.md",
+        "document:fusion/samples/moheng.sample.md",
+        "document:fusion/samples/persona_auditor.sample.md"
+      ]
+    },
+    {
+      "id": "layer:fusion-traits",
+      "name": "特质目录",
+      "description": "特质定义文件——TRAIT_CATALOG + 各人格的特质分解",
+      "nodeIds": [
+        "document:fusion/traits/TRAIT_CATALOG.md",
+        "document:fusion/traits/architect.traits.md",
+        "document:fusion/traits/coordinator.traits.md",
+        "document:fusion/traits/coordinator_persona.traits.md",
+        "document:fusion/traits/emmaun.traits.md",
+        "document:fusion/traits/greykey.traits.md",
+        "document:fusion/traits/holo.traits.md",
+        "document:fusion/traits/horo.traits.md",
+        "document:fusion/traits/incident_handler.traits.md",
+        "document:fusion/traits/moheng.traits.md",
+        "document:fusion/traits/persona_auditor.traits.md"
+      ]
+    },
+    {
+      "id": "layer:memory-system",
+      "name": "记忆系统",
+      "description": "多层级记忆——ACTIVE/SHORT/MID/LONG/PENDING/ARCHIVED，沉淀协议",
+      "nodeIds": [
+        "document:memory/ACTIVE_MEMORY.md",
+        "document:memory/ARCHIVED.md",
+        "document:memory/LONG_TERM.md",
+        "document:memory/MID_TERM.md",
+        "document:memory/PENDING.md",
+        "document:memory/SHORT_TERM.md"
+      ]
+    },
+    {
+      "id": "layer:persona-engine",
+      "name": "人格引擎",
+      "description": "Persona 子系统——核心性格、关系引擎、声音引擎、情感体态、反腐蚀、成长协议",
+      "nodeIds": [
+        "document:persona/README.md",
+        "document:persona/anti_corruption.md",
+        "document:persona/canon_fusion.md",
+        "document:persona/core_personality.md",
+        "document:persona/emotion_body_language.md",
+        "document:persona/growth_protocol.md",
+        "document:persona/lifelike_engine.md",
+        "document:persona/relationship_engine.md",
+        "document:persona/response_decision_tree.md",
+        "document:persona/voice_engine.md"
+      ]
+    },
+    {
+      "id": "layer:runtime-boot",
+      "name": "运行时启动",
+      "description": "Runtime 启动序列——BOOT_CORE → CONSTITUTION → DAILY_DRIVER → MEMORY_STABILITY",
+      "nodeIds": [
+        "document:runtime/00_BOOT_CORE.md",
+        "document:runtime/01_HOLO_CONSTITUTION.md",
+        "document:runtime/02_HOLO_DAILY_DRIVER.md",
+        "document:runtime/03_MEMORY_STABILITY_PROTOCOL.md"
+      ]
+    }
+  ],
+  "tour": [
+    {
+      "order": 1,
+      "title": "项目入口",
+      "description": "从 README 开始——理解 Holo Character Engine 的定位：品味层、人格稳定层、人机交互风格引擎。然后看 CLAUDE.md 了解启动闸门和加载策略。",
+      "nodeIds": [
+        "document:README.md",
+        "document:CLAUDE.md"
+      ]
+    },
+    {
+      "order": 2,
+      "title": "运行时启动序列",
+      "description": "Runtime 启动链：BOOT_CORE 定义九层法则优先级 → CONSTITUTION 宪法 → DAILY_DRIVER 日常驱动 → MEMORY_STABILITY 记忆稳定协议。",
+      "nodeIds": [
+        "document:runtime/00_BOOT_CORE.md",
+        "document:runtime/01_HOLO_CONSTITUTION.md",
+        "document:runtime/02_HOLO_DAILY_DRIVER.md",
+        "document:runtime/03_MEMORY_STABILITY_PROTOCOL.md"
+      ]
+    },
+    {
+      "order": 3,
+      "title": "人格引擎核心",
+      "description": "Persona 子系统——核心性格、关系引擎、声音引擎、情感体态、反腐蚀机制、成长协议。这是人格差异化的源头。",
+      "nodeIds": [
+        "document:persona/core_personality.md",
+        "document:persona/relationship_engine.md",
+        "document:persona/voice_engine.md",
+        "document:persona/emotion_body_language.md",
+        "document:persona/anti_corruption.md",
+        "document:persona/growth_protocol.md"
+      ]
+    },
+    {
+      "order": 4,
+      "title": "7 人格档案",
+      "description": "当前活跃的 7 人格定义——观澜（架构眼）、灰钥（执行守门）、镇岳（故障手）、临渊（协调者）、清鉴（人格审计）、墨衡（文档守门）。每份档案定义认知签名和关系定位。",
+      "nodeIds": [
+        "document:docs/agent_profiles/architect.md",
+        "document:docs/agent_profiles/greykey.md",
+        "document:docs/agent_profiles/incident_handler.md",
+        "document:docs/agent_profiles/coordinator_persona.md",
+        "document:docs/agent_profiles/persona_auditor.md",
+        "document:docs/agent_profiles/moheng.md"
+      ]
+    },
+    {
+      "order": 5,
+      "title": "融合系统",
+      "description": "Fusion Engine 如何把角色素材融合成人格——配方（YAML）定义参数，特质文件分解维度，样本校准输出。TRAIT_CATALOG 是特质总目录。",
+      "nodeIds": [
+        "document:fusion/FUSION_ENGINE.md",
+        "document:fusion/HORO_EMMAUN_FUSION_DESIGN.md",
+        "document:fusion/traits/TRAIT_CATALOG.md",
+        "config:fusion/recipes/architect.recipe.yml"
+      ]
+    },
+    {
+      "order": 6,
+      "title": "行为证据与素材池",
+      "description": "赫萝原作行为证据卡（vol_01-04）提供溯源基础，17 个外部角色素材卡（L/Batman/John Wick 等）为融合提供特征参考。",
+      "nodeIds": [
+        "document:evidence/README.md",
+        "document:evidence/vol_01_evidence.md",
+        "document:evidence/source_pool/L_deathnote.md",
+        "document:evidence/source_pool/batman.md"
+      ]
+    },
+    {
+      "order": 7,
+      "title": "记忆系统",
+      "description": "多层级记忆架构——ACTIVE → SHORT → MID → LONG → ARCHIVED 的沉淀协议，PENDING 待处理队列。",
+      "nodeIds": [
+        "document:memory/ACTIVE_MEMORY.md",
+        "document:memory/SHORT_TERM.md",
+        "document:memory/MID_TERM.md",
+        "document:memory/LONG_TERM.md",
+        "document:memory/PENDING.md"
+      ]
+    },
+    {
+      "order": 8,
+      "title": "退化测试",
+      "description": "11 个退化探针——检测各人格是否偏离行为基线。包括反水印、反填充、空白检测、关怀模板漂移、各人格专属退化测试。",
+      "nodeIds": [
+        "document:developer_tests/test_anti_action_watermark.md",
+        "document:developer_tests/test_anti_filling.md",
+        "document:developer_tests/test_architect_degradation.md",
+        "document:developer_tests/test_greykey_anti_degradation.md"
+      ]
+    },
+    {
+      "order": 9,
+      "title": "项目设计文档",
+      "description": "顶层设计——北极星计划、产品定位、多 Agent 品味验收、关系定位、路由深度标准、切换感知分析。",
+      "nodeIds": [
+        "document:docs/north_star_plan.md",
+        "document:docs/product_positioning.md",
+        "document:docs/relational-positions.md",
+        "document:docs/routing-depth-standard.md",
+        "document:docs/switch-perceptibility-analysis.md"
+      ]
+    }
+  ]
+}

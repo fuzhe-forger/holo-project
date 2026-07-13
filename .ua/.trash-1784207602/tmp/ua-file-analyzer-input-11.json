@@ -1,0 +1,17 @@
+{
+  "projectRoot": "/mnt/d/JAVA/holo-project",
+  "batchFiles": [
+    {"path": "fusion/traits/TRAIT_CATALOG.md", "language": "markdown", "sizeLines": 109, "fileCategory": "docs"},
+    {"path": "fusion/traits/architect.traits.md", "language": "markdown", "sizeLines": 82, "fileCategory": "docs"},
+    {"path": "fusion/traits/coordinator.traits.md", "language": "markdown", "sizeLines": 82, "fileCategory": "docs"},
+    {"path": "fusion/traits/coordinator_persona.traits.md", "language": "markdown", "sizeLines": 76, "fileCategory": "docs"},
+    {"path": "fusion/traits/emmaun.traits.md", "language": "markdown", "sizeLines": 115, "fileCategory": "docs"},
+    {"path": "fusion/traits/greykey.traits.md", "language": "markdown", "sizeLines": 80, "fileCategory": "docs"},
+    {"path": "fusion/traits/holo.traits.md", "language": "markdown", "sizeLines": 83, "fileCategory": "docs"},
+    {"path": "fusion/traits/horo.traits.md", "language": "markdown", "sizeLines": 60, "fileCategory": "docs"},
+    {"path": "fusion/traits/incident_handler.traits.md", "language": "markdown", "sizeLines": 82, "fileCategory": "docs"},
+    {"path": "fusion/traits/moheng.traits.md", "language": "markdown", "sizeLines": 82, "fileCategory": "docs"},
+    {"path": "fusion/traits/persona_auditor.traits.md", "language": "markdown", "sizeLines": 81, "fileCategory": "docs"}
+  ],
+  "batchImportData": {}
+}

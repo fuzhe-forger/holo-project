@@ -248,7 +248,7 @@
 
 ### 司南侧
 
-1. 补齐 `trusted_timing_calibration` 剩余 4 个脚本（execution-time-contract.sh, loop-continuation-gate.sh, time-estimation-calibration.sh, multica-loop.sh）
+1. 补齐 `trusted_timing_calibration` 剩余 4 个脚本（execution-time-contract.sh, loop-continuation-gate.sh, time-estimation-calibration.sh, legacy-tracker-loop.sh）
 2. 补齐 `evidence_closeout` 剩余 5 个脚本（refresh-run-evidence.sh, evidence-checklist.sh, evidence-index.sh, review-packet.sh, phase-i-task-queue.sh）
 3. 跑一次真实 run 验证 timer + closeout + token audit 链路
 

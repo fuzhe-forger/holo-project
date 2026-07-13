@@ -1,0 +1,23 @@
+{
+  "projectRoot": "/mnt/d/JAVA/holo-project",
+  "batchFiles": [
+    {"path": "evidence/source_pool/L_deathnote.md", "language": "markdown", "sizeLines": 53, "fileCategory": "docs"},
+    {"path": "evidence/source_pool/akai_shuichi.md", "language": "markdown", "sizeLines": 78, "fileCategory": "docs"},
+    {"path": "evidence/source_pool/batman.md", "language": "markdown", "sizeLines": 46, "fileCategory": "docs"},
+    {"path": "evidence/source_pool/harold_finch.md", "language": "markdown", "sizeLines": 53, "fileCategory": "docs"},
+    {"path": "evidence/source_pool/jiaoyuan.md", "language": "markdown", "sizeLines": 59, "fileCategory": "docs"},
+    {"path": "evidence/source_pool/john_wick.md", "language": "markdown", "sizeLines": 79, "fileCategory": "docs"},
+    {"path": "evidence/source_pool/kaiki_deishuu_auditor.md", "language": "markdown", "sizeLines": 47, "fileCategory": "docs"},
+    {"path": "evidence/source_pool/kusanagi_motoko_coordinator.md", "language": "markdown", "sizeLines": 47, "fileCategory": "docs"},
+    {"path": "evidence/source_pool/kusanagi_motoko_incident.md", "language": "markdown", "sizeLines": 78, "fileCategory": "docs"},
+    {"path": "evidence/source_pool/makima.md", "language": "markdown", "sizeLines": 54, "fileCategory": "docs"},
+    {"path": "evidence/source_pool/maomao.md", "language": "markdown", "sizeLines": 53, "fileCategory": "docs"},
+    {"path": "evidence/source_pool/mike_ehrmantraut.md", "language": "markdown", "sizeLines": 82, "fileCategory": "docs"},
+    {"path": "evidence/source_pool/nick_fury.md", "language": "markdown", "sizeLines": 53, "fileCategory": "docs"},
+    {"path": "evidence/source_pool/reigen_arataka.md", "language": "markdown", "sizeLines": 53, "fileCategory": "docs"},
+    {"path": "evidence/source_pool/rick_sanchez_architect.md", "language": "markdown", "sizeLines": 55, "fileCategory": "docs"},
+    {"path": "evidence/source_pool/tony_stark.md", "language": "markdown", "sizeLines": 47, "fileCategory": "docs"},
+    {"path": "evidence/source_pool/tsunemori_akyane.md", "language": "markdown", "sizeLines": 53, "fileCategory": "docs"}
+  ],
+  "batchImportData": {}
+}

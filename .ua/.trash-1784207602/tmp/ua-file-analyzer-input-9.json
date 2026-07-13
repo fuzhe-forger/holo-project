@@ -1,0 +1,13 @@
+{
+  "projectRoot": "/mnt/d/JAVA/holo-project",
+  "batchFiles": [
+    {"path": "fusion/recipes/architect.recipe.yml", "language": "yaml", "sizeLines": 66, "fileCategory": "config"},
+    {"path": "fusion/recipes/coordinator_persona.recipe.yml", "language": "yaml", "sizeLines": 63, "fileCategory": "config"},
+    {"path": "fusion/recipes/example_fusion.recipe.yml", "language": "yaml", "sizeLines": 79, "fileCategory": "config"},
+    {"path": "fusion/recipes/greykey.recipe.yml", "language": "yaml", "sizeLines": 75, "fileCategory": "config"},
+    {"path": "fusion/recipes/horo_emmaun_fusion.recipe.yml", "language": "yaml", "sizeLines": 149, "fileCategory": "config"},
+    {"path": "fusion/recipes/incident_handler.recipe.yml", "language": "yaml", "sizeLines": 67, "fileCategory": "config"},
+    {"path": "fusion/recipes/persona_auditor.recipe.yml", "language": "yaml", "sizeLines": 67, "fileCategory": "config"}
+  ],
+  "batchImportData": {}
+}

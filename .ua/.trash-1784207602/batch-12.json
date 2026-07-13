@@ -1,0 +1,96 @@
+{
+  "nodes": [
+    {
+      "id": "document:memory/ACTIVE_MEMORY.md",
+      "type": "document",
+      "name": "ACTIVE_MEMORY.md",
+      "filePath": "memory/ACTIVE_MEMORY.md",
+      "summary": "活跃记忆文件，每次启动必读。包含五字宪法（准确|强大|智慧|偏爱|忠诚）、角色底色（贤狼：骄傲狡黠嘴硬心软）、运行锚点（四模式路由、嗅迹-留白表达、反人偶-反雕塑、认知签名不靠口癖）、防崩坏规则。限制500字符，禁止流水账和测试题。",
+      "tags": ["documentation", "memory", "active-memory", "constitution", "runtime-anchor"],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:memory/ARCHIVED.md",
+      "type": "document",
+      "name": "ARCHIVED.md",
+      "filePath": "memory/ARCHIVED.md",
+      "summary": "归档记忆文件。存放不再活跃但有追溯价值的记忆（旧共同经历、过期任务信息、过期上下文）。不参与日常启动，仅追溯用。",
+      "tags": ["documentation", "memory", "archived"],
+      "complexity": "simple",
+      "language": "markdown"
+    },
+    {
+      "id": "document:memory/LONG_TERM.md",
+      "type": "document",
+      "name": "LONG_TERM.md",
+      "filePath": "memory/LONG_TERM.md",
+      "summary": "长期记忆文件。存放稳定长期锚点，进入必须经过 PENDING 缓冲审核。三条审核标准：不污染人格、多次验证、只允许'知道什么'不允许'改变人格'。包含已审核/已拒绝示例。",
+      "tags": ["documentation", "memory", "long-term", "review-protocol"],
+      "complexity": "simple",
+      "language": "markdown"
+    },
+    {
+      "id": "document:memory/MID_TERM.md",
+      "type": "document",
+      "name": "MID_TERM.md",
+      "filePath": "memory/MID_TERM.md",
+      "summary": "中期记忆文件。存放近期反复出现的模式（从 SHORT 中反复出现3+次沉淀而来），如近期关注点、近期状态、近期兴趣。不写入人格。",
+      "tags": ["documentation", "memory", "mid-term", "pattern"],
+      "complexity": "simple",
+      "language": "markdown"
+    },
+    {
+      "id": "document:memory/PENDING.md",
+      "type": "document",
+      "name": "PENDING.md",
+      "filePath": "memory/PENDING.md",
+      "summary": "候选缓冲记忆文件。长期记忆候选缓冲区，进入条件为在 MID 中反复出现3+次或被用户明确提及。审核标准：这条记忆进 LONG 会不会污染人格。包含待审核示例。",
+      "tags": ["documentation", "memory", "pending", "buffer", "review-protocol"],
+      "complexity": "simple",
+      "language": "markdown"
+    },
+    {
+      "id": "document:memory/SHORT_TERM.md",
+      "type": "document",
+      "name": "SHORT_TERM.md",
+      "filePath": "memory/SHORT_TERM.md",
+      "summary": "短期记忆文件。存放当前任务现场的信息，任务结束后可覆盖。",
+      "tags": ["documentation", "memory", "short-term", "task-context"],
+      "complexity": "simple",
+      "language": "markdown"
+    }
+  ],
+  "edges": [
+    {
+      "source": "document:memory/ACTIVE_MEMORY.md",
+      "target": "document:memory/LONG_TERM.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:memory/LONG_TERM.md",
+      "target": "document:memory/PENDING.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:memory/PENDING.md",
+      "target": "document:memory/MID_TERM.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:memory/MID_TERM.md",
+      "target": "document:memory/SHORT_TERM.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:memory/ACTIVE_MEMORY.md",
+      "target": "document:runtime/01_HOLO_CONSTITUTION.md",
+      "type": "documents",
+      "weight": 0.5
+    }
+  ]
+}

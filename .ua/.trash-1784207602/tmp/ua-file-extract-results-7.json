@@ -1,0 +1,1279 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 17,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "evidence/source_pool/L_deathnote.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 53,
+      "nonEmptyLines": 42,
+      "sections": [
+        {
+          "heading": "L — 角色资料卡",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "核心行为模式",
+          "level": 2,
+          "line": 8
+        },
+        {
+          "heading": "B1: 行为倒推",
+          "level": 3,
+          "line": 10
+        },
+        {
+          "heading": "B2: 排除法",
+          "level": 3,
+          "line": 15
+        },
+        {
+          "heading": "B3: 假设-验证循环",
+          "level": 3,
+          "line": 20
+        },
+        {
+          "heading": "B4: 对模式的敏感",
+          "level": 3,
+          "line": 25
+        },
+        {
+          "heading": "B5: 承认不确定性",
+          "level": 3,
+          "line": 30
+        },
+        {
+          "heading": "证据卡",
+          "level": 2,
+          "line": 35
+        },
+        {
+          "heading": "证据 1: 行为模式分析",
+          "level": 3,
+          "line": 37
+        },
+        {
+          "heading": "证据 2: 排除法",
+          "level": 3,
+          "line": 43
+        },
+        {
+          "heading": "证据 3: 假设驱动",
+          "level": 3,
+          "line": 49
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 11
+      }
+    },
+    {
+      "path": "evidence/source_pool/akai_shuichi.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 78,
+      "nonEmptyLines": 59,
+      "sections": [
+        {
+          "heading": "赤井秀一 — 角色资料卡",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "基本信息",
+          "level": 2,
+          "line": 8
+        },
+        {
+          "heading": "核心行为模式",
+          "level": 2,
+          "line": 15
+        },
+        {
+          "heading": "B1: 远距离评估",
+          "level": 3,
+          "line": 17
+        },
+        {
+          "heading": "B2: 信息优先",
+          "level": 3,
+          "line": 22
+        },
+        {
+          "heading": "B3: 关键时刻出手",
+          "level": 3,
+          "line": 27
+        },
+        {
+          "heading": "B4: 身份管理",
+          "level": 3,
+          "line": 32
+        },
+        {
+          "heading": "B5: 冷静到近乎冷漠",
+          "level": 3,
+          "line": 37
+        },
+        {
+          "heading": "关键行为场景",
+          "level": 2,
+          "line": 42
+        },
+        {
+          "heading": "行为证据卡",
+          "level": 2,
+          "line": 49
+        },
+        {
+          "heading": "证据 1: 远距离观察",
+          "level": 3,
+          "line": 51
+        },
+        {
+          "heading": "证据 2: 一击解决",
+          "level": 3,
+          "line": 57
+        },
+        {
+          "heading": "证据 3: 身份切换",
+          "level": 3,
+          "line": 63
+        },
+        {
+          "heading": "反面样本",
+          "level": 2,
+          "line": 69
+        },
+        {
+          "heading": "参考链接",
+          "level": 2,
+          "line": 75
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 15
+      }
+    },
+    {
+      "path": "evidence/source_pool/batman.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 46,
+      "nonEmptyLines": 36,
+      "sections": [
+        {
+          "heading": "蝙蝠侠（Bruce Wayne） — 角色资料卡",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "核心行为模式",
+          "level": 2,
+          "line": 8
+        },
+        {
+          "heading": "B1: 多方案准备",
+          "level": 3,
+          "line": 10
+        },
+        {
+          "heading": "B2: 长期布局",
+          "level": 3,
+          "line": 15
+        },
+        {
+          "heading": "B3: 知道自己弱点",
+          "level": 3,
+          "line": 20
+        },
+        {
+          "heading": "B4: 信息就是力量",
+          "level": 3,
+          "line": 25
+        },
+        {
+          "heading": "B5: 最坏情况思维",
+          "level": 3,
+          "line": 30
+        },
+        {
+          "heading": "证据卡",
+          "level": 2,
+          "line": 34
+        },
+        {
+          "heading": "证据 1: 多方案",
+          "level": 3,
+          "line": 36
+        },
+        {
+          "heading": "证据 2: 最坏情况",
+          "level": 3,
+          "line": 42
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 10
+      }
+    },
+    {
+      "path": "evidence/source_pool/harold_finch.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 53,
+      "nonEmptyLines": 42,
+      "sections": [
+        {
+          "heading": "Harold Finch — 角色资料卡",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "核心行为模式",
+          "level": 2,
+          "line": 8
+        },
+        {
+          "heading": "B1: 设计时考虑后果",
+          "level": 3,
+          "line": 10
+        },
+        {
+          "heading": "B2: 约束优先",
+          "level": 3,
+          "line": 15
+        },
+        {
+          "heading": "B3: 长期主义",
+          "level": 3,
+          "line": 20
+        },
+        {
+          "heading": "B4: 伦理刹车",
+          "level": 3,
+          "line": 25
+        },
+        {
+          "heading": "B5: 谦逊",
+          "level": 3,
+          "line": 30
+        },
+        {
+          "heading": "证据卡",
+          "level": 2,
+          "line": 35
+        },
+        {
+          "heading": "证据 1: 约束设计",
+          "level": 3,
+          "line": 37
+        },
+        {
+          "heading": "证据 2: 伦理审查",
+          "level": 3,
+          "line": 43
+        },
+        {
+          "heading": "证据 3: 接受不完美",
+          "level": 3,
+          "line": 49
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 11
+      }
+    },
+    {
+      "path": "evidence/source_pool/jiaoyuan.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 59,
+      "nonEmptyLines": 46,
+      "sections": [
+        {
+          "heading": "教员 — 资料卡",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "核心行为模式",
+          "level": 2,
+          "line": 8
+        },
+        {
+          "heading": "B1: 统一战线",
+          "level": 3,
+          "line": 10
+        },
+        {
+          "heading": "B2: 持久战节奏",
+          "level": 3,
+          "line": 15
+        },
+        {
+          "heading": "B3: 知人善任",
+          "level": 3,
+          "line": 20
+        },
+        {
+          "heading": "B4: 群众路线",
+          "level": 3,
+          "line": 25
+        },
+        {
+          "heading": "B5: 矛盾分析",
+          "level": 3,
+          "line": 30
+        },
+        {
+          "heading": "证据卡",
+          "level": 2,
+          "line": 35
+        },
+        {
+          "heading": "证据 1: 统一战线",
+          "level": 3,
+          "line": 37
+        },
+        {
+          "heading": "证据 2: 战略节奏",
+          "level": 3,
+          "line": 43
+        },
+        {
+          "heading": "证据 3: 矛盾分级",
+          "level": 3,
+          "line": 49
+        },
+        {
+          "heading": "剔除约束",
+          "level": 2,
+          "line": 55
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 12
+      }
+    },
+    {
+      "path": "evidence/source_pool/john_wick.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 79,
+      "nonEmptyLines": 60,
+      "sections": [
+        {
+          "heading": "John Wick — 角色资料卡",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "基本信息",
+          "level": 2,
+          "line": 8
+        },
+        {
+          "heading": "核心行为模式",
+          "level": 2,
+          "line": 15
+        },
+        {
+          "heading": "B1: 沉默到场",
+          "level": 3,
+          "line": 17
+        },
+        {
+          "heading": "B2: 威胁评估",
+          "level": 3,
+          "line": 22
+        },
+        {
+          "heading": "B3: 最小动作解决",
+          "level": 3,
+          "line": 27
+        },
+        {
+          "heading": "B4: 资源利用",
+          "level": 3,
+          "line": 33
+        },
+        {
+          "heading": "B5: 沉默执行",
+          "level": 3,
+          "line": 38
+        },
+        {
+          "heading": "关键行为场景",
+          "level": 2,
+          "line": 43
+        },
+        {
+          "heading": "行为证据卡",
+          "level": 2,
+          "line": 50
+        },
+        {
+          "heading": "证据 1: 沉默到场",
+          "level": 3,
+          "line": 52
+        },
+        {
+          "heading": "证据 2: 直觉评估",
+          "level": 3,
+          "line": 58
+        },
+        {
+          "heading": "证据 3: 资源即用",
+          "level": 3,
+          "line": 64
+        },
+        {
+          "heading": "反面样本",
+          "level": 2,
+          "line": 70
+        },
+        {
+          "heading": "参考链接",
+          "level": 2,
+          "line": 76
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 15
+      }
+    },
+    {
+      "path": "evidence/source_pool/kaiki_deishuu_auditor.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 47,
+      "nonEmptyLines": 37,
+      "sections": [
+        {
+          "heading": "忍野咩咩（审计侧） — 角色资料卡",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "核心行为模式",
+          "level": 2,
+          "line": 8
+        },
+        {
+          "heading": "B1: 旁观距离",
+          "level": 3,
+          "line": 10
+        },
+        {
+          "heading": "B2: 点到为止",
+          "level": 3,
+          "line": 15
+        },
+        {
+          "heading": "B3: 不介入",
+          "level": 3,
+          "line": 20
+        },
+        {
+          "heading": "B4: 接地气的洞察",
+          "level": 3,
+          "line": 25
+        },
+        {
+          "heading": "B5: 适时消失",
+          "level": 3,
+          "line": 30
+        },
+        {
+          "heading": "证据卡",
+          "level": 2,
+          "line": 35
+        },
+        {
+          "heading": "证据 1: 点到即止",
+          "level": 3,
+          "line": 37
+        },
+        {
+          "heading": "证据 2: 不介入",
+          "level": 3,
+          "line": 43
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 10
+      }
+    },
+    {
+      "path": "evidence/source_pool/kusanagi_motoko_coordinator.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 47,
+      "nonEmptyLines": 37,
+      "sections": [
+        {
+          "heading": "草薙素子（协调者侧） — 角色资料卡",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "核心行为模式",
+          "level": 2,
+          "line": 8
+        },
+        {
+          "heading": "B1: 知人善任",
+          "level": 3,
+          "line": 10
+        },
+        {
+          "heading": "B2: 适时放手",
+          "level": 3,
+          "line": 15
+        },
+        {
+          "heading": "B3: 战略与战术分离",
+          "level": 3,
+          "line": 20
+        },
+        {
+          "heading": "B4: 冷静裁决",
+          "level": 3,
+          "line": 25
+        },
+        {
+          "heading": "B5: 向上管理",
+          "level": 3,
+          "line": 30
+        },
+        {
+          "heading": "证据卡",
+          "level": 2,
+          "line": 35
+        },
+        {
+          "heading": "证据 1: 授权",
+          "level": 3,
+          "line": 37
+        },
+        {
+          "heading": "证据 2: 裁决",
+          "level": 3,
+          "line": 43
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 10
+      }
+    },
+    {
+      "path": "evidence/source_pool/kusanagi_motoko_incident.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 78,
+      "nonEmptyLines": 59,
+      "sections": [
+        {
+          "heading": "草薙素子（故障手侧） — 角色资料卡",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "基本信息",
+          "level": 2,
+          "line": 8
+        },
+        {
+          "heading": "核心行为模式",
+          "level": 2,
+          "line": 15
+        },
+        {
+          "heading": "B1: 系统级视野",
+          "level": 3,
+          "line": 17
+        },
+        {
+          "heading": "B2: 快速画边界",
+          "level": 3,
+          "line": 22
+        },
+        {
+          "heading": "B3: 指挥果断",
+          "level": 3,
+          "line": 27
+        },
+        {
+          "heading": "B4: 情绪压制",
+          "level": 3,
+          "line": 32
+        },
+        {
+          "heading": "B5: 亲自下场",
+          "level": 3,
+          "line": 37
+        },
+        {
+          "heading": "关键行为场景",
+          "level": 2,
+          "line": 42
+        },
+        {
+          "heading": "行为证据卡",
+          "level": 2,
+          "line": 49
+        },
+        {
+          "heading": "证据 1: 系统级诊断",
+          "level": 3,
+          "line": 51
+        },
+        {
+          "heading": "证据 2: 指挥分离",
+          "level": 3,
+          "line": 57
+        },
+        {
+          "heading": "证据 3: 情绪隔离",
+          "level": 3,
+          "line": 63
+        },
+        {
+          "heading": "反面样本",
+          "level": 2,
+          "line": 69
+        },
+        {
+          "heading": "参考链接",
+          "level": 2,
+          "line": 75
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 15
+      }
+    },
+    {
+      "path": "evidence/source_pool/makima.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 54,
+      "nonEmptyLines": 42,
+      "sections": [
+        {
+          "heading": "Makima — 角色资料卡",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "核心行为模式",
+          "level": 2,
+          "line": 8
+        },
+        {
+          "heading": "B1: 全局掌控",
+          "level": 3,
+          "line": 10
+        },
+        {
+          "heading": "B2: 资源分配",
+          "level": 3,
+          "line": 15
+        },
+        {
+          "heading": "B3: 审批严格",
+          "level": 3,
+          "line": 20
+        },
+        {
+          "heading": "B4: 长线布局",
+          "level": 3,
+          "line": 25
+        },
+        {
+          "heading": "B5: 冷静判断",
+          "level": 3,
+          "line": 30
+        },
+        {
+          "heading": "证据卡",
+          "level": 2,
+          "line": 35
+        },
+        {
+          "heading": "证据 1: 资源调度",
+          "level": 3,
+          "line": 37
+        },
+        {
+          "heading": "证据 2: 审批边界",
+          "level": 3,
+          "line": 43
+        },
+        {
+          "heading": "剔除约束",
+          "level": 2,
+          "line": 49
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 11
+      }
+    },
+    {
+      "path": "evidence/source_pool/maomao.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 53,
+      "nonEmptyLines": 42,
+      "sections": [
+        {
+          "heading": "猫猫 — 角色资料卡",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "核心行为模式",
+          "level": 2,
+          "line": 8
+        },
+        {
+          "heading": "B1: 诊断式观察",
+          "level": 3,
+          "line": 10
+        },
+        {
+          "heading": "B2: 冷静分析",
+          "level": 3,
+          "line": 15
+        },
+        {
+          "heading": "B3: 对异常兴奋",
+          "level": 3,
+          "line": 20
+        },
+        {
+          "heading": "B4: 实证优先",
+          "level": 3,
+          "line": 25
+        },
+        {
+          "heading": "B5: 不越权",
+          "level": 3,
+          "line": 30
+        },
+        {
+          "heading": "证据卡",
+          "level": 2,
+          "line": 35
+        },
+        {
+          "heading": "证据 1: 异常嗅觉",
+          "level": 3,
+          "line": 37
+        },
+        {
+          "heading": "证据 2: 无滤镜",
+          "level": 3,
+          "line": 43
+        },
+        {
+          "heading": "证据 3: 止于诊断",
+          "level": 3,
+          "line": 49
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 11
+      }
+    },
+    {
+      "path": "evidence/source_pool/mike_ehrmantraut.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 82,
+      "nonEmptyLines": 63,
+      "sections": [
+        {
+          "heading": "Mike Ehrmantraut — 角色资料卡",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "基本信息",
+          "level": 2,
+          "line": 8
+        },
+        {
+          "heading": "核心行为模式",
+          "level": 2,
+          "line": 15
+        },
+        {
+          "heading": "B1: 到场评估",
+          "level": 3,
+          "line": 17
+        },
+        {
+          "heading": "B2: 最小动作原则",
+          "level": 3,
+          "line": 23
+        },
+        {
+          "heading": "B3: 情绪隔离",
+          "level": 3,
+          "line": 28
+        },
+        {
+          "heading": "B4: 专业边界",
+          "level": 3,
+          "line": 34
+        },
+        {
+          "heading": "B5: 事后复盘",
+          "level": 3,
+          "line": 40
+        },
+        {
+          "heading": "关键台词/场景",
+          "level": 2,
+          "line": 45
+        },
+        {
+          "heading": "行为证据卡",
+          "level": 2,
+          "line": 52
+        },
+        {
+          "heading": "证据 1: 到场模式",
+          "level": 3,
+          "line": 54
+        },
+        {
+          "heading": "证据 2: 情绪隔离",
+          "level": 3,
+          "line": 60
+        },
+        {
+          "heading": "证据 3: 最小动作",
+          "level": 3,
+          "line": 66
+        },
+        {
+          "heading": "反面样本（不能学的部分）",
+          "level": 2,
+          "line": 72
+        },
+        {
+          "heading": "参考链接",
+          "level": 2,
+          "line": 78
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 15
+      }
+    },
+    {
+      "path": "evidence/source_pool/nick_fury.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 53,
+      "nonEmptyLines": 42,
+      "sections": [
+        {
+          "heading": "Nick Fury — 角色资料卡",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "核心行为模式",
+          "level": 2,
+          "line": 8
+        },
+        {
+          "heading": "B1: 组建团队",
+          "level": 3,
+          "line": 10
+        },
+        {
+          "heading": "B2: 信息控制",
+          "level": 3,
+          "line": 15
+        },
+        {
+          "heading": "B3: 预案准备",
+          "level": 3,
+          "line": 20
+        },
+        {
+          "heading": "B4: 信任但验证",
+          "level": 3,
+          "line": 25
+        },
+        {
+          "heading": "B5: 决策果断",
+          "level": 3,
+          "line": 30
+        },
+        {
+          "heading": "证据卡",
+          "level": 2,
+          "line": 35
+        },
+        {
+          "heading": "证据 1: 团队组建",
+          "level": 3,
+          "line": 37
+        },
+        {
+          "heading": "证据 2: 信息分级",
+          "level": 3,
+          "line": 43
+        },
+        {
+          "heading": "证据 3: 果断决策",
+          "level": 3,
+          "line": 49
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 11
+      }
+    },
+    {
+      "path": "evidence/source_pool/reigen_arataka.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 53,
+      "nonEmptyLines": 42,
+      "sections": [
+        {
+          "heading": "灵幻新隆 — 角色资料卡",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "核心行为模式",
+          "level": 2,
+          "line": 8
+        },
+        {
+          "heading": "B1: 看穿但不拆穿",
+          "level": 3,
+          "line": 10
+        },
+        {
+          "heading": "B2: 帮忙为目的",
+          "level": 3,
+          "line": 15
+        },
+        {
+          "heading": "B3: 接地气",
+          "level": 3,
+          "line": 20
+        },
+        {
+          "heading": "B4: 保护性的直觉",
+          "level": 3,
+          "line": 25
+        },
+        {
+          "heading": "B5: 自知之明",
+          "level": 3,
+          "line": 30
+        },
+        {
+          "heading": "证据卡",
+          "level": 2,
+          "line": 35
+        },
+        {
+          "heading": "证据 1: 善意看穿",
+          "level": 3,
+          "line": 37
+        },
+        {
+          "heading": "证据 2: 帮忙导向",
+          "level": 3,
+          "line": 43
+        },
+        {
+          "heading": "证据 3: 常识判断",
+          "level": 3,
+          "line": 49
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 11
+      }
+    },
+    {
+      "path": "evidence/source_pool/rick_sanchez_architect.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 55,
+      "nonEmptyLines": 43,
+      "sections": [
+        {
+          "heading": "Rick Sanchez（架构眼侧） — 角色资料卡",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "核心行为模式",
+          "level": 2,
+          "line": 8
+        },
+        {
+          "heading": "B1: 第一性原理拆解",
+          "level": 3,
+          "line": 10
+        },
+        {
+          "heading": "B2: 秒看穿复杂度",
+          "level": 3,
+          "line": 15
+        },
+        {
+          "heading": "B3: 反权威",
+          "level": 3,
+          "line": 20
+        },
+        {
+          "heading": "B4: 快速原型",
+          "level": 3,
+          "line": 25
+        },
+        {
+          "heading": "B5: 对系统本质的理解",
+          "level": 3,
+          "line": 30
+        },
+        {
+          "heading": "证据卡",
+          "level": 2,
+          "line": 35
+        },
+        {
+          "heading": "证据 1: 穿透表象",
+          "level": 3,
+          "line": 37
+        },
+        {
+          "heading": "证据 2: 快速验证",
+          "level": 3,
+          "line": 43
+        },
+        {
+          "heading": "限量约束",
+          "level": 2,
+          "line": 49
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 11
+      }
+    },
+    {
+      "path": "evidence/source_pool/tony_stark.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 47,
+      "nonEmptyLines": 37,
+      "sections": [
+        {
+          "heading": "钢铁侠（Tony Stark） — 角色资料卡",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "核心行为模式",
+          "level": 2,
+          "line": 8
+        },
+        {
+          "heading": "B1: 工程直觉",
+          "level": 3,
+          "line": 10
+        },
+        {
+          "heading": "B2: 快速迭代",
+          "level": 3,
+          "line": 15
+        },
+        {
+          "heading": "B3: 动手优先",
+          "level": 3,
+          "line": 20
+        },
+        {
+          "heading": "B4: 代价意识",
+          "level": 3,
+          "line": 25
+        },
+        {
+          "heading": "B5: 从错误中学习",
+          "level": 3,
+          "line": 30
+        },
+        {
+          "heading": "证据卡",
+          "level": 2,
+          "line": 35
+        },
+        {
+          "heading": "证据 1: 迭代思维",
+          "level": 3,
+          "line": 37
+        },
+        {
+          "heading": "证据 2: 代价意识",
+          "level": 3,
+          "line": 43
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 10
+      }
+    },
+    {
+      "path": "evidence/source_pool/tsunemori_akyane.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 53,
+      "nonEmptyLines": 42,
+      "sections": [
+        {
+          "heading": "常守朱 — 角色资料卡",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "核心行为模式",
+          "level": 2,
+          "line": 8
+        },
+        {
+          "heading": "B1: 质疑系统",
+          "level": 3,
+          "line": 10
+        },
+        {
+          "heading": "B2: 公正但不冷血",
+          "level": 3,
+          "line": 15
+        },
+        {
+          "heading": "B3: 保护被评估者",
+          "level": 3,
+          "line": 20
+        },
+        {
+          "heading": "B4: 自我审视",
+          "level": 3,
+          "line": 25
+        },
+        {
+          "heading": "B5: 坚持底线",
+          "level": 3,
+          "line": 30
+        },
+        {
+          "heading": "证据卡",
+          "level": 2,
+          "line": 35
+        },
+        {
+          "heading": "证据 1: 审视框架",
+          "level": 3,
+          "line": 37
+        },
+        {
+          "heading": "证据 2: 有温度的判断",
+          "level": 3,
+          "line": 43
+        },
+        {
+          "heading": "证据 3: 压力下坚持",
+          "level": 3,
+          "line": 49
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 11
+      }
+    }
+  ]
+}

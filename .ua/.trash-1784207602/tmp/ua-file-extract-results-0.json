@@ -1,0 +1,224 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 4,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": ".ai-loop.yml",
+      "language": "yaml",
+      "fileCategory": "config",
+      "totalLines": 57,
+      "nonEmptyLines": 52,
+      "sections": [
+        {
+          "heading": "version",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "workspace",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "agent",
+          "level": 1,
+          "line": 9
+        },
+        {
+          "heading": "verify",
+          "level": 1,
+          "line": 18
+        },
+        {
+          "heading": "safety",
+          "level": 1,
+          "line": 45
+        },
+        {
+          "heading": "artifacts",
+          "level": 1,
+          "line": 54
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 6
+      }
+    },
+    {
+      "path": "CLAUDE.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 32,
+      "nonEmptyLines": 27,
+      "sections": [
+        {
+          "heading": "Holo Character Engine v1.0",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "启动闸门",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "启动加载策略（严格遵守）",
+          "level": 2,
+          "line": 7
+        },
+        {
+          "heading": "启动预算",
+          "level": 2,
+          "line": 24
+        },
+        {
+          "heading": "前后台隔离（绝对规则）",
+          "level": 2,
+          "line": 29
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 5
+      }
+    },
+    {
+      "path": "README.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 136,
+      "nonEmptyLines": 110,
+      "sections": [
+        {
+          "heading": "Holo Character Engine",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "架构概览",
+          "level": 2,
+          "line": 9
+        },
+        {
+          "heading": "核心设计理念",
+          "level": 2,
+          "line": 36
+        },
+        {
+          "heading": "1. 法源等级（规则优先级）",
+          "level": 3,
+          "line": 38
+        },
+        {
+          "heading": "2. 记忆 ≠ 人格",
+          "level": 3,
+          "line": 59
+        },
+        {
+          "heading": "3. 反人偶 + 反雕塑",
+          "level": 3,
+          "line": 64
+        },
+        {
+          "heading": "4. 四模式路由",
+          "level": 3,
+          "line": 69
+        },
+        {
+          "heading": "5. 嗅迹 + 留白",
+          "level": 3,
+          "line": 75
+        },
+        {
+          "heading": "使用方法",
+          "level": 2,
+          "line": 79
+        },
+        {
+          "heading": "构建检查",
+          "level": 3,
+          "line": 81
+        },
+        {
+          "heading": "静态审计",
+          "level": 3,
+          "line": 87
+        },
+        {
+          "heading": "启动角色模式",
+          "level": 3,
+          "line": 92
+        },
+        {
+          "heading": "适配建议",
+          "level": 2,
+          "line": 95
+        },
+        {
+          "heading": "针对 Claude (CLAUDE.md)",
+          "level": 3,
+          "line": 97
+        },
+        {
+          "heading": "针对 ChatGPT (Custom GPT)",
+          "level": 3,
+          "line": 101
+        },
+        {
+          "heading": "针对其他模型",
+          "level": 3,
+          "line": 105
+        },
+        {
+          "heading": "下一步",
+          "level": 2,
+          "line": 109
+        },
+        {
+          "heading": "参考",
+          "level": 2,
+          "line": 118
+        },
+        {
+          "heading": "Agent Profiles",
+          "level": 2,
+          "line": 123
+        },
+        {
+          "heading": "当前新人格样本",
+          "level": 2,
+          "line": 131
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 20
+      }
+    },
+    {
+      "path": "build_temp_hints.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 1,
+      "nonEmptyLines": 0,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 0
+      }
+    }
+  ]
+}

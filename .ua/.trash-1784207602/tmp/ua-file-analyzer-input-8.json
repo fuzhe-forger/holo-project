@@ -1,0 +1,10 @@
+{
+  "projectRoot": "/mnt/d/JAVA/holo-project",
+  "batchFiles": [
+    {"path": "fusion/FUSION_ENGINE.md", "language": "markdown", "sizeLines": 207, "fileCategory": "docs"},
+    {"path": "fusion/HORO_EMMAUN_FUSION_DESIGN.md", "language": "markdown", "sizeLines": 187, "fileCategory": "docs"},
+    {"path": "fusion/README.md", "language": "markdown", "sizeLines": 73, "fileCategory": "docs"},
+    {"path": "fusion/XP_PROFILE.md", "language": "markdown", "sizeLines": 132, "fileCategory": "docs"}
+  ],
+  "batchImportData": {}
+}

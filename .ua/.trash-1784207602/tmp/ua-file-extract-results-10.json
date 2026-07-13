@@ -1,0 +1,258 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 6,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "fusion/samples/architect.sample.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 28,
+      "nonEmptyLines": 20,
+      "sections": [
+        {
+          "heading": "架构眼 Sample",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Core",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "What it sounds like",
+          "level": 2,
+          "line": 7
+        },
+        {
+          "heading": "What it does",
+          "level": 2,
+          "line": 15
+        },
+        {
+          "heading": "What it is not",
+          "level": 2,
+          "line": 23
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 5
+      }
+    },
+    {
+      "path": "fusion/samples/coordinator_persona.sample.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 27,
+      "nonEmptyLines": 19,
+      "sections": [
+        {
+          "heading": "协调者人格层 Sample",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Core",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "What it sounds like",
+          "level": 2,
+          "line": 7
+        },
+        {
+          "heading": "What it does",
+          "level": 2,
+          "line": 15
+        },
+        {
+          "heading": "What it is not",
+          "level": 2,
+          "line": 23
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 5
+      }
+    },
+    {
+      "path": "fusion/samples/greykey.sample.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 27,
+      "nonEmptyLines": 19,
+      "sections": [
+        {
+          "heading": "Greykey Sample",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Core",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "What it sounds like",
+          "level": 2,
+          "line": 7
+        },
+        {
+          "heading": "What it does",
+          "level": 2,
+          "line": 15
+        },
+        {
+          "heading": "What it is not",
+          "level": 2,
+          "line": 22
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 5
+      }
+    },
+    {
+      "path": "fusion/samples/incident_handler.sample.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 28,
+      "nonEmptyLines": 20,
+      "sections": [
+        {
+          "heading": "故障手 Sample",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Core",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "What it sounds like",
+          "level": 2,
+          "line": 7
+        },
+        {
+          "heading": "What it does",
+          "level": 2,
+          "line": 15
+        },
+        {
+          "heading": "What it is not",
+          "level": 2,
+          "line": 23
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 5
+      }
+    },
+    {
+      "path": "fusion/samples/moheng.sample.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 48,
+      "nonEmptyLines": 37,
+      "sections": [
+        {
+          "heading": "墨衡 Sample",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Core",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "What it sounds like",
+          "level": 2,
+          "line": 7
+        },
+        {
+          "heading": "What it does",
+          "level": 2,
+          "line": 16
+        },
+        {
+          "heading": "What it does not do",
+          "level": 2,
+          "line": 24
+        },
+        {
+          "heading": "Interaction pattern",
+          "level": 2,
+          "line": 33
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 6
+      }
+    },
+    {
+      "path": "fusion/samples/persona_auditor.sample.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 27,
+      "nonEmptyLines": 19,
+      "sections": [
+        {
+          "heading": "人格审计 Sample",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Core",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "What it sounds like",
+          "level": 2,
+          "line": 7
+        },
+        {
+          "heading": "What it does",
+          "level": 2,
+          "line": 15
+        },
+        {
+          "heading": "What it is not",
+          "level": 2,
+          "line": 22
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 5
+      }
+    }
+  ]
+}

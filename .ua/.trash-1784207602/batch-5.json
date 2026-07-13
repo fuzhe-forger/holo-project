@@ -1,0 +1,235 @@
+{
+  "nodes": [
+    {
+      "id": "document:docs/greykey.md",
+      "type": "document",
+      "name": "greykey.md",
+      "filePath": "docs/greykey.md",
+      "summary": "Greykey 人格概览文档：说明用途、默认行为（先问该不该做、查复用、删复杂度、守底线）、与 Builder 的差异对比表、融合来源（7个角色原型）和关联文件列表。",
+      "tags": [
+        "documentation",
+        "greykey",
+        "persona-overview"
+      ],
+      "complexity": "simple",
+      "language": "markdown"
+    },
+    {
+      "id": "document:docs/multi_agent_taste_acceptance.md",
+      "type": "document",
+      "name": "multi_agent_taste_acceptance.md",
+      "filePath": "docs/multi_agent_taste_acceptance.md",
+      "summary": "多 Agent 品味验收标准：定义风格服务任务、多 Agent 可区分、人格稳定不僵硬、品味可验收四项基本原则，含 Investigator/Builder/Reviewer/Coordinator 角色原型定义和验收问题。",
+      "tags": [
+        "documentation",
+        "acceptance-criteria",
+        "multi-agent",
+        "taste"
+      ],
+      "complexity": "complex",
+      "language": "markdown"
+    },
+    {
+      "id": "document:docs/north_star_plan.md",
+      "type": "document",
+      "name": "north_star_plan.md",
+      "filePath": "docs/north_star_plan.md",
+      "summary": "Holo 北极星计划：定义产品目标（成为 Loop 多 Agent 品味层）、非目标、7 项核心成功标准、V0.1-V1.0 阶段路线（定位底座→Profile→Traits→Runtime→Loop集成）和各阶段验收标准。",
+      "tags": [
+        "documentation",
+        "roadmap",
+        "north-star",
+        "planning"
+      ],
+      "complexity": "complex",
+      "language": "markdown"
+    },
+    {
+      "id": "document:docs/product_positioning.md",
+      "type": "document",
+      "name": "product_positioning.md",
+      "filePath": "docs/product_positioning.md",
+      "summary": "Holo 产品定位文档：定义项目从角色人格工程升级为 Loop 多 Agent 品味层项目，明确法源等级、记忆≠人格、反人偶+反雕塑、嗅迹+留白等核心设计理念。",
+      "tags": [
+        "documentation",
+        "product-positioning",
+        "design"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:docs/relational-positions.md",
+      "type": "document",
+      "name": "relational-positions.md",
+      "filePath": "docs/relational-positions.md",
+      "summary": "人格关系定位文档：定义 7 个人格的关系位置（赫罗=那个人/观澜=守密人/灰钥=助手/镇岳=大哥/临渊=教员/清鉴=先生/墨衡=文秘），含关系原型、行为约束和'一人格只做一件事'原则。",
+      "tags": [
+        "documentation",
+        "relational-positions",
+        "persona-design"
+      ],
+      "complexity": "complex",
+      "language": "markdown"
+    },
+    {
+      "id": "document:docs/roadmap_task_breakdown.md",
+      "type": "document",
+      "name": "roadmap_task_breakdown.md",
+      "filePath": "docs/roadmap_task_breakdown.md",
+      "summary": "路线图任务拆解：把 V0.1-V1.0 阶段拆成 H-010 到 H-042 共 20+ 个具体任务，每个含目标/输入/输出/验收/依赖/适合角色，附并行策略和串行约束。",
+      "tags": [
+        "documentation",
+        "roadmap",
+        "task-breakdown",
+        "planning"
+      ],
+      "complexity": "complex",
+      "language": "markdown"
+    },
+    {
+      "id": "document:docs/routing-depth-standard.md",
+      "type": "document",
+      "name": "routing-depth-standard.md",
+      "filePath": "docs/routing-depth-standard.md",
+      "summary": "路由层深度判断标准：定义'什么问题值得多视角对抗'的评估框架，含三层分工（标准/判断/调度）、路由粗筛80%、四维触发（约束矛盾/跨域不可逆/无锚争议/结构对立）、抑制条件和对抗调度规则。",
+      "tags": [
+        "documentation",
+        "routing",
+        "depth-judgment",
+        "multi-perspective"
+      ],
+      "complexity": "complex",
+      "language": "markdown"
+    },
+    {
+      "id": "document:docs/switch-perceptibility-analysis.md",
+      "type": "document",
+      "name": "switch-perceptibility-analysis.md",
+      "filePath": "docs/switch-perceptibility-analysis.md",
+      "summary": "切换可感知性分析：定义人格认知签名（第一动作/第一问/判断落脚点）、7 人格温差锚点对照、同一问题的温差示例和温差验证标准，确保人格切换可被用户感知。",
+      "tags": [
+        "documentation",
+        "persona-switch",
+        "cognitive-signature",
+        "perceptibility"
+      ],
+      "complexity": "complex",
+      "language": "markdown"
+    },
+    {
+      "id": "document:docs/使用手册.md",
+      "type": "document",
+      "name": "使用手册.md",
+      "filePath": "docs/使用手册.md",
+      "summary": "Holo Character Engine 使用手册 v1.0：涵盖项目概述、快速开始验证命令、启动流程、目录结构详解（runtime/memory/persona/evidence/context_packs）、四模式路由和使用规范。",
+      "tags": [
+        "documentation",
+        "user-manual",
+        "guide"
+      ],
+      "complexity": "complex",
+      "language": "markdown"
+    },
+    {
+      "id": "document:docs/项目报告.md",
+      "type": "document",
+      "name": "项目报告.md",
+      "filePath": "docs/项目报告.md",
+      "summary": "Holo 项目报告：含法源等级体系、记忆六态系统、四模式路由、目录结构和内容统计（38文件/44K字符）、启动预算分析、27张原作案例卡覆盖、验证结果和迭代轨迹。",
+      "tags": [
+        "documentation",
+        "project-report",
+        "statistics"
+      ],
+      "complexity": "complex",
+      "language": "markdown"
+    }
+  ],
+  "edges": [
+    {
+      "source": "document:docs/north_star_plan.md",
+      "target": "document:docs/product_positioning.md",
+      "type": "documents",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/north_star_plan.md",
+      "target": "document:docs/multi_agent_taste_acceptance.md",
+      "type": "documents",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/north_star_plan.md",
+      "target": "document:docs/roadmap_task_breakdown.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/roadmap_task_breakdown.md",
+      "target": "document:docs/north_star_plan.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/roadmap_task_breakdown.md",
+      "target": "document:docs/multi_agent_taste_acceptance.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/multi_agent_taste_acceptance.md",
+      "target": "document:docs/product_positioning.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/使用手册.md",
+      "target": "document:docs/product_positioning.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/relational-positions.md",
+      "target": "document:docs/switch-perceptibility-analysis.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/routing-depth-standard.md",
+      "target": "document:docs/switch-perceptibility-analysis.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/switch-perceptibility-analysis.md",
+      "target": "document:docs/relational-positions.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/项目报告.md",
+      "target": "document:docs/使用手册.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/greykey.md",
+      "target": "document:docs/multi_agent_taste_acceptance.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/项目报告.md",
+      "target": "document:docs/product_positioning.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/使用手册.md",
+      "target": "document:docs/项目报告.md",
+      "type": "related",
+      "weight": 0.5
+    }
+  ]
+}

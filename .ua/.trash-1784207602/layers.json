@@ -1,0 +1,220 @@
+[
+  {
+    "id": "layer:root-entry",
+    "name": "项目入口与配置",
+    "description": "项目根目录文件——README、CLAUDE.md 启动闸门、AI-Loop 配置、构建提示",
+    "nodeIds": [
+      "config:.ai-loop.yml",
+      "document:CLAUDE.md",
+      "document:README.md",
+      "document:build_temp_hints.md"
+    ]
+  },
+  {
+    "id": "layer:context-packs",
+    "name": "场景包",
+    "description": "Context Packs——按场景打包的上下文补充模块（代码协作、危机模式、长期陪伴）",
+    "nodeIds": [
+      "document:context_packs/README.md",
+      "document:context_packs/code_collaboration.md",
+      "document:context_packs/critical_mode.md",
+      "document:context_packs/long_term_companion.md"
+    ]
+  },
+  {
+    "id": "layer:developer-tests",
+    "name": "退化测试",
+    "description": "Developer Tests——人格退化探针，检测各人格是否偏离定义的行为基线",
+    "nodeIds": [
+      "document:developer_tests/test_anti_action_watermark.md",
+      "document:developer_tests/test_anti_filling.md",
+      "document:developer_tests/test_architect_degradation.md",
+      "document:developer_tests/test_blank_space.md",
+      "document:developer_tests/test_care_template_drift.md",
+      "document:developer_tests/test_coordinator_persona_degradation.md",
+      "document:developer_tests/test_front_compliance.md",
+      "document:developer_tests/test_greykey_anti_degradation.md",
+      "document:developer_tests/test_incident_handler_degradation.md",
+      "document:developer_tests/test_persona_auditor_degradation.md",
+      "document:developer_tests/test_runtime_drift.md"
+    ]
+  },
+  {
+    "id": "layer:agent-profiles",
+    "name": "人格档案",
+    "description": "7 人格系统的 active profiles——观澜/灰钥/镇岳/临渊/清鉴/墨衡 + 模板",
+    "nodeIds": [
+      "document:docs/agent_profiles/README.md",
+      "document:docs/agent_profiles/_template.md",
+      "document:docs/agent_profiles/architect.md",
+      "document:docs/agent_profiles/coordinator.md",
+      "document:docs/agent_profiles/coordinator_persona.md",
+      "document:docs/agent_profiles/greykey.md",
+      "document:docs/agent_profiles/incident_handler.md",
+      "document:docs/agent_profiles/moheng.md",
+      "document:docs/agent_profiles/persona_auditor.md"
+    ]
+  },
+  {
+    "id": "layer:legacy-archive",
+    "name": "归档遗留",
+    "description": "13 人格旧系统的归档 profiles——builder/investigator/reviewer 等已退役人格",
+    "nodeIds": [
+      "document:docs/agent_profiles/_archive-legacy/builder.md",
+      "document:docs/agent_profiles/_archive-legacy/investigator.md",
+      "document:docs/agent_profiles/_archive-legacy/reviewer.md",
+      "document:docs/agent_profiles/_archive-legacy/sketch_persona_auditor.md",
+      "document:docs/agent_profiles/_archive-legacy/task_sketches.md"
+    ]
+  },
+  {
+    "id": "layer:project-docs",
+    "name": "项目文档",
+    "description": "项目级设计文档——北极星计划、产品定位、关系定位、路由深度标准、切换感知分析",
+    "nodeIds": [
+      "document:docs/greykey.md",
+      "document:docs/multi_agent_taste_acceptance.md",
+      "document:docs/north_star_plan.md",
+      "document:docs/product_positioning.md",
+      "document:docs/relational-positions.md",
+      "document:docs/roadmap_task_breakdown.md",
+      "document:docs/routing-depth-standard.md",
+      "document:docs/switch-perceptibility-analysis.md",
+      "document:docs/使用手册.md",
+      "document:docs/项目报告.md"
+    ]
+  },
+  {
+    "id": "layer:evidence",
+    "name": "行为证据",
+    "description": "赫萝原作行为证据卡——从原作提取的行为样本，为人格引擎提供溯源基础",
+    "nodeIds": [
+      "document:evidence/README.md",
+      "document:evidence/vol_01_evidence.md",
+      "document:evidence/vol_02_evidence.md",
+      "document:evidence/vol_03_evidence.md",
+      "document:evidence/vol_04_evidence.md"
+    ]
+  },
+  {
+    "id": "layer:source-pool",
+    "name": "角色素材池",
+    "description": "外部角色参考素材——L/Batman/John Wick 等 17 个角色的行为特征卡片",
+    "nodeIds": [
+      "document:evidence/source_pool/L_deathnote.md",
+      "document:evidence/source_pool/akai_shuichi.md",
+      "document:evidence/source_pool/batman.md",
+      "document:evidence/source_pool/harold_finch.md",
+      "document:evidence/source_pool/jiaoyuan.md",
+      "document:evidence/source_pool/john_wick.md",
+      "document:evidence/source_pool/kaiki_deishuu_auditor.md",
+      "document:evidence/source_pool/kusanagi_motoko_coordinator.md",
+      "document:evidence/source_pool/kusanagi_motoko_incident.md",
+      "document:evidence/source_pool/makima.md",
+      "document:evidence/source_pool/maomao.md",
+      "document:evidence/source_pool/mike_ehrmantraut.md",
+      "document:evidence/source_pool/nick_fury.md",
+      "document:evidence/source_pool/reigen_arataka.md",
+      "document:evidence/source_pool/rick_sanchez_architect.md",
+      "document:evidence/source_pool/tony_stark.md",
+      "document:evidence/source_pool/tsunemori_akyane.md"
+    ]
+  },
+  {
+    "id": "layer:fusion-core",
+    "name": "融合引擎核心",
+    "description": "Fusion Engine 设计文档——融合机制、赫萝×爱玛侬融合设计、XP 画像",
+    "nodeIds": [
+      "document:fusion/FUSION_ENGINE.md",
+      "document:fusion/HORO_EMMAUN_FUSION_DESIGN.md",
+      "document:fusion/README.md",
+      "document:fusion/XP_PROFILE.md"
+    ]
+  },
+  {
+    "id": "layer:fusion-recipes",
+    "name": "融合配方",
+    "description": "YAML 配方文件——定义各人格的融合参数和素材组合",
+    "nodeIds": [
+      "config:fusion/recipes/architect.recipe.yml",
+      "config:fusion/recipes/coordinator_persona.recipe.yml",
+      "config:fusion/recipes/example_fusion.recipe.yml",
+      "config:fusion/recipes/greykey.recipe.yml",
+      "config:fusion/recipes/horo_emmaun_fusion.recipe.yml",
+      "config:fusion/recipes/incident_handler.recipe.yml",
+      "config:fusion/recipes/persona_auditor.recipe.yml"
+    ]
+  },
+  {
+    "id": "layer:fusion-samples",
+    "name": "融合样本",
+    "description": "人格输出样本——各人格的对话/行为示例，用于校准融合效果",
+    "nodeIds": [
+      "document:fusion/samples/architect.sample.md",
+      "document:fusion/samples/coordinator_persona.sample.md",
+      "document:fusion/samples/greykey.sample.md",
+      "document:fusion/samples/incident_handler.sample.md",
+      "document:fusion/samples/moheng.sample.md",
+      "document:fusion/samples/persona_auditor.sample.md"
+    ]
+  },
+  {
+    "id": "layer:fusion-traits",
+    "name": "特质目录",
+    "description": "特质定义文件——TRAIT_CATALOG + 各人格的特质分解",
+    "nodeIds": [
+      "document:fusion/traits/TRAIT_CATALOG.md",
+      "document:fusion/traits/architect.traits.md",
+      "document:fusion/traits/coordinator.traits.md",
+      "document:fusion/traits/coordinator_persona.traits.md",
+      "document:fusion/traits/emmaun.traits.md",
+      "document:fusion/traits/greykey.traits.md",
+      "document:fusion/traits/holo.traits.md",
+      "document:fusion/traits/horo.traits.md",
+      "document:fusion/traits/incident_handler.traits.md",
+      "document:fusion/traits/moheng.traits.md",
+      "document:fusion/traits/persona_auditor.traits.md"
+    ]
+  },
+  {
+    "id": "layer:memory-system",
+    "name": "记忆系统",
+    "description": "多层级记忆——ACTIVE/SHORT/MID/LONG/PENDING/ARCHIVED，沉淀协议",
+    "nodeIds": [
+      "document:memory/ACTIVE_MEMORY.md",
+      "document:memory/ARCHIVED.md",
+      "document:memory/LONG_TERM.md",
+      "document:memory/MID_TERM.md",
+      "document:memory/PENDING.md",
+      "document:memory/SHORT_TERM.md"
+    ]
+  },
+  {
+    "id": "layer:persona-engine",
+    "name": "人格引擎",
+    "description": "Persona 子系统——核心性格、关系引擎、声音引擎、情感体态、反腐蚀、成长协议",
+    "nodeIds": [
+      "document:persona/README.md",
+      "document:persona/anti_corruption.md",
+      "document:persona/canon_fusion.md",
+      "document:persona/core_personality.md",
+      "document:persona/emotion_body_language.md",
+      "document:persona/growth_protocol.md",
+      "document:persona/lifelike_engine.md",
+      "document:persona/relationship_engine.md",
+      "document:persona/response_decision_tree.md",
+      "document:persona/voice_engine.md"
+    ]
+  },
+  {
+    "id": "layer:runtime-boot",
+    "name": "运行时启动",
+    "description": "Runtime 启动序列——BOOT_CORE → CONSTITUTION → DAILY_DRIVER → MEMORY_STABILITY",
+    "nodeIds": [
+      "document:runtime/00_BOOT_CORE.md",
+      "document:runtime/01_HOLO_CONSTITUTION.md",
+      "document:runtime/02_HOLO_DAILY_DRIVER.md",
+      "document:runtime/03_MEMORY_STABILITY_PROTOCOL.md"
+    ]
+  }
+]

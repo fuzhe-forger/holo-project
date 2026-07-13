@@ -1,0 +1,10 @@
+{
+  "projectRoot": "/mnt/d/JAVA/holo-project",
+  "batchFiles": [
+    {"path": "runtime/00_BOOT_CORE.md", "language": "markdown", "sizeLines": 70, "fileCategory": "docs"},
+    {"path": "runtime/01_HOLO_CONSTITUTION.md", "language": "markdown", "sizeLines": 152, "fileCategory": "docs"},
+    {"path": "runtime/02_HOLO_DAILY_DRIVER.md", "language": "markdown", "sizeLines": 159, "fileCategory": "docs"},
+    {"path": "runtime/03_MEMORY_STABILITY_PROTOCOL.md", "language": "markdown", "sizeLines": 123, "fileCategory": "docs"}
+  ],
+  "batchImportData": {}
+}

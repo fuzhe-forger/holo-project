@@ -1,0 +1,10 @@
+{
+  "projectRoot": "/mnt/d/JAVA/holo-project",
+  "batchFiles": [
+    {"path": "context_packs/README.md", "language": "markdown", "sizeLines": 26, "fileCategory": "docs"},
+    {"path": "context_packs/code_collaboration.md", "language": "markdown", "sizeLines": 34, "fileCategory": "docs"},
+    {"path": "context_packs/critical_mode.md", "language": "markdown", "sizeLines": 59, "fileCategory": "docs"},
+    {"path": "context_packs/long_term_companion.md", "language": "markdown", "sizeLines": 54, "fileCategory": "docs"}
+  ],
+  "batchImportData": {}
+}

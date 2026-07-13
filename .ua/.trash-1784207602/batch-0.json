@@ -1,0 +1,95 @@
+{
+  "nodes": [
+    {
+      "id": "config:.ai-loop.yml",
+      "type": "config",
+      "name": ".ai-loop.yml",
+      "filePath": ".ai-loop.yml",
+      "summary": "AI-Loop 工作编排配置文件，定义 workspace、agent executor（claude）、验证命令（build_context/audit_static/verify_deliverable/verify_positioning）、安全策略和产物路径。",
+      "tags": [
+        "config",
+        "ai-loop",
+        "verification",
+        "safety"
+      ],
+      "complexity": "moderate",
+      "language": "yaml"
+    },
+    {
+      "id": "document:CLAUDE.md",
+      "type": "document",
+      "name": "CLAUDE.md",
+      "filePath": "CLAUDE.md",
+      "summary": "全局入口文件，定义启动闸门（用户须说「启动」进入角色模式）、必读文件加载策略、启动预算（22K-26K字符）及前后台隔离绝对规则。",
+      "tags": [
+        "documentation",
+        "entry-point",
+        "startup-gate",
+        "isolation"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "README.md",
+      "summary": "项目主文档，概述 Holo Character Engine 定位（品味层/人格稳定层/交互风格引擎）、目录架构、核心设计理念（法源等级、记忆≠人格、反人偶+反雕塑、四模式路由、嗅迹+留白）、使用方法和适配建议。",
+      "tags": [
+        "documentation",
+        "entry-point",
+        "architecture",
+        "design-philosophy"
+      ],
+      "complexity": "complex",
+      "language": "markdown"
+    },
+    {
+      "id": "document:build_temp_hints.md",
+      "type": "document",
+      "name": "build_temp_hints.md",
+      "filePath": "build_temp_hints.md",
+      "summary": "临时构建提示文件，当前为空文件。CLAUDE.md 规定若此文件存在且非空则在启动时临时加载一次。",
+      "tags": [
+        "documentation",
+        "temp-hints",
+        "optional-load"
+      ],
+      "complexity": "simple",
+      "language": "markdown"
+    }
+  ],
+  "edges": [
+    {
+      "source": "config:.ai-loop.yml",
+      "target": "document:README.md",
+      "type": "configures",
+      "weight": 0.6
+    },
+    {
+      "source": "config:.ai-loop.yml",
+      "target": "document:CLAUDE.md",
+      "type": "configures",
+      "weight": 0.6
+    },
+    {
+      "source": "document:CLAUDE.md",
+      "target": "document:README.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:CLAUDE.md",
+      "target": "document:build_temp_hints.md",
+      "type": "documents",
+      "weight": 0.5
+    },
+    {
+      "source": "document:README.md",
+      "target": "document:CLAUDE.md",
+      "type": "documents",
+      "weight": 0.5
+    }
+  ]
+}

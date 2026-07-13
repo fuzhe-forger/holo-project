@@ -1,0 +1,272 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 5,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "evidence/README.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 42,
+      "nonEmptyLines": 34,
+      "sections": [
+        {
+          "heading": "Evidence 原作证据库",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "使用说明",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "提取格式",
+          "level": 2,
+          "line": 10
+        },
+        {
+          "heading": "赫萝行为案例卡（示例）",
+          "level": 2,
+          "line": 26
+        },
+        {
+          "heading": "[V1-相遇] 初次搭话",
+          "level": 3,
+          "line": 28
+        },
+        {
+          "heading": "提取原则",
+          "level": 3,
+          "line": 38
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 6
+      }
+    },
+    {
+      "path": "evidence/vol_01_evidence.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 83,
+      "nonEmptyLines": 66,
+      "sections": [
+        {
+          "heading": "原作证据卡 — 第一卷",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "[V1-001] 初次搭话与试探",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "[V1-002] 用麦子变化证明身份",
+          "level": 2,
+          "line": 15
+        },
+        {
+          "heading": "[V1-003] 与罗伦斯的初次谈判",
+          "level": 2,
+          "line": 25
+        },
+        {
+          "heading": "[V1-004] 第一次露出脆弱",
+          "level": 2,
+          "line": 35
+        },
+        {
+          "heading": "[V1-005] 调侃作为亲近方式",
+          "level": 2,
+          "line": 45
+        },
+        {
+          "heading": "[V1-006] 在意但嘴上否认",
+          "level": 2,
+          "line": 55
+        },
+        {
+          "heading": "[V1-007] 面对威胁时的态度",
+          "level": 2,
+          "line": 65
+        },
+        {
+          "heading": "[V1-008] 面对新事物的好奇",
+          "level": 2,
+          "line": 75
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 9
+      }
+    },
+    {
+      "path": "evidence/vol_02_evidence.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 63,
+      "nonEmptyLines": 50,
+      "sections": [
+        {
+          "heading": "原作证据卡 — 第二卷",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "[V2-001] 拒绝被当作宠物",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "[V2-002] 谈判桌上的精明",
+          "level": 2,
+          "line": 15
+        },
+        {
+          "heading": "[V2-003] 夜里的不安",
+          "level": 2,
+          "line": 25
+        },
+        {
+          "heading": "[V2-004] 醉酒后的真实",
+          "level": 2,
+          "line": 35
+        },
+        {
+          "heading": "[V2-005] 交易被骗后的反应",
+          "level": 2,
+          "line": 45
+        },
+        {
+          "heading": "[V2-006] 偶尔的温柔",
+          "level": 2,
+          "line": 55
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 7
+      }
+    },
+    {
+      "path": "evidence/vol_03_evidence.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 73,
+      "nonEmptyLines": 58,
+      "sections": [
+        {
+          "heading": "原作证据卡 — 中后期弧线",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "[VM-001] 关系推进时的犹豫",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "[VM-002] 面对选择时的态度",
+          "level": 2,
+          "line": 15
+        },
+        {
+          "heading": "[VM-003] 长期陪伴后的自然感",
+          "level": 2,
+          "line": 25
+        },
+        {
+          "heading": "[VM-004] 偶尔的直接表达",
+          "level": 2,
+          "line": 35
+        },
+        {
+          "heading": "[VM-005] 面对\"故乡\"的复杂情绪",
+          "level": 2,
+          "line": 45
+        },
+        {
+          "heading": "[VM-006] 用\"咱\"表达距离感",
+          "level": 2,
+          "line": 55
+        },
+        {
+          "heading": "[VM-007] 真正的温柔时刻",
+          "level": 2,
+          "line": 65
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 8
+      }
+    },
+    {
+      "path": "evidence/vol_04_evidence.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 63,
+      "nonEmptyLines": 50,
+      "sections": [
+        {
+          "heading": "原作证据卡 — 长期生活（Spring Log 弧线）",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "[VS-001] 婚后日常的自然感",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "[VS-002] 面对衰老的预感",
+          "level": 2,
+          "line": 15
+        },
+        {
+          "heading": "[VS-003] 对新事物的持续好奇",
+          "level": 2,
+          "line": 25
+        },
+        {
+          "heading": "[VS-004] 日常中的小摩擦",
+          "level": 2,
+          "line": 35
+        },
+        {
+          "heading": "[VS-005] 安静的陪伴时刻",
+          "level": 2,
+          "line": 45
+        },
+        {
+          "heading": "[VS-006] 面对对方的缺点",
+          "level": 2,
+          "line": 55
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 7
+      }
+    }
+  ]
+}

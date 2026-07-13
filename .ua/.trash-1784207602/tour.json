@@ -1,0 +1,105 @@
+[
+  {
+    "order": 1,
+    "title": "项目入口",
+    "description": "从 README 开始——理解 Holo Character Engine 的定位：品味层、人格稳定层、人机交互风格引擎。然后看 CLAUDE.md 了解启动闸门和加载策略。",
+    "nodeIds": [
+      "document:README.md",
+      "document:CLAUDE.md"
+    ]
+  },
+  {
+    "order": 2,
+    "title": "运行时启动序列",
+    "description": "Runtime 启动链：BOOT_CORE 定义九层法则优先级 → CONSTITUTION 宪法 → DAILY_DRIVER 日常驱动 → MEMORY_STABILITY 记忆稳定协议。",
+    "nodeIds": [
+      "document:runtime/00_BOOT_CORE.md",
+      "document:runtime/01_HOLO_CONSTITUTION.md",
+      "document:runtime/02_HOLO_DAILY_DRIVER.md",
+      "document:runtime/03_MEMORY_STABILITY_PROTOCOL.md"
+    ]
+  },
+  {
+    "order": 3,
+    "title": "人格引擎核心",
+    "description": "Persona 子系统——核心性格、关系引擎、声音引擎、情感体态、反腐蚀机制、成长协议。这是人格差异化的源头。",
+    "nodeIds": [
+      "document:persona/core_personality.md",
+      "document:persona/relationship_engine.md",
+      "document:persona/voice_engine.md",
+      "document:persona/emotion_body_language.md",
+      "document:persona/anti_corruption.md",
+      "document:persona/growth_protocol.md"
+    ]
+  },
+  {
+    "order": 4,
+    "title": "7 人格档案",
+    "description": "当前活跃的 7 人格定义——观澜（架构眼）、灰钥（执行守门）、镇岳（故障手）、临渊（协调者）、清鉴（人格审计）、墨衡（文档守门）。每份档案定义认知签名和关系定位。",
+    "nodeIds": [
+      "document:docs/agent_profiles/architect.md",
+      "document:docs/agent_profiles/greykey.md",
+      "document:docs/agent_profiles/incident_handler.md",
+      "document:docs/agent_profiles/coordinator_persona.md",
+      "document:docs/agent_profiles/persona_auditor.md",
+      "document:docs/agent_profiles/moheng.md"
+    ]
+  },
+  {
+    "order": 5,
+    "title": "融合系统",
+    "description": "Fusion Engine 如何把角色素材融合成人格——配方（YAML）定义参数，特质文件分解维度，样本校准输出。TRAIT_CATALOG 是特质总目录。",
+    "nodeIds": [
+      "document:fusion/FUSION_ENGINE.md",
+      "document:fusion/HORO_EMMAUN_FUSION_DESIGN.md",
+      "document:fusion/traits/TRAIT_CATALOG.md",
+      "config:fusion/recipes/architect.recipe.yml"
+    ]
+  },
+  {
+    "order": 6,
+    "title": "行为证据与素材池",
+    "description": "赫萝原作行为证据卡（vol_01-04）提供溯源基础，17 个外部角色素材卡（L/Batman/John Wick 等）为融合提供特征参考。",
+    "nodeIds": [
+      "document:evidence/README.md",
+      "document:evidence/vol_01_evidence.md",
+      "document:evidence/source_pool/L_deathnote.md",
+      "document:evidence/source_pool/batman.md"
+    ]
+  },
+  {
+    "order": 7,
+    "title": "记忆系统",
+    "description": "多层级记忆架构——ACTIVE → SHORT → MID → LONG → ARCHIVED 的沉淀协议，PENDING 待处理队列。",
+    "nodeIds": [
+      "document:memory/ACTIVE_MEMORY.md",
+      "document:memory/SHORT_TERM.md",
+      "document:memory/MID_TERM.md",
+      "document:memory/LONG_TERM.md",
+      "document:memory/PENDING.md"
+    ]
+  },
+  {
+    "order": 8,
+    "title": "退化测试",
+    "description": "11 个退化探针——检测各人格是否偏离行为基线。包括反水印、反填充、空白检测、关怀模板漂移、各人格专属退化测试。",
+    "nodeIds": [
+      "document:developer_tests/test_anti_action_watermark.md",
+      "document:developer_tests/test_anti_filling.md",
+      "document:developer_tests/test_architect_degradation.md",
+      "document:developer_tests/test_greykey_anti_degradation.md"
+    ]
+  },
+  {
+    "order": 9,
+    "title": "项目设计文档",
+    "description": "顶层设计——北极星计划、产品定位、多 Agent 品味验收、关系定位、路由深度标准、切换感知分析。",
+    "nodeIds": [
+      "document:docs/north_star_plan.md",
+      "document:docs/product_positioning.md",
+      "document:docs/relational-positions.md",
+      "document:docs/routing-depth-standard.md",
+      "document:docs/switch-perceptibility-analysis.md"
+    ]
+  }
+]

@@ -1,0 +1,35 @@
+{
+  "projectRoot": "/mnt/d/JAVA/holo-project",
+  "batchFiles": [
+    {
+      "path": ".ai-loop.yml",
+      "language": "yaml",
+      "sizeLines": 57,
+      "fileCategory": "config"
+    },
+    {
+      "path": "CLAUDE.md",
+      "language": "markdown",
+      "sizeLines": 32,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "README.md",
+      "language": "markdown",
+      "sizeLines": 136,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "build_temp_hints.md",
+      "language": "markdown",
+      "sizeLines": 0,
+      "fileCategory": "docs"
+    }
+  ],
+  "batchImportData": {
+    ".ai-loop.yml": [],
+    "CLAUDE.md": [],
+    "README.md": [],
+    "build_temp_hints.md": []
+  }
+}

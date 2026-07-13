@@ -1,0 +1,208 @@
+[
+  {
+    "batchIndex": 6,
+    "files": [
+      {
+        "path": "evidence/README.md",
+        "language": "markdown",
+        "sizeLines": 42,
+        "fileCategory": "docs"
+      },
+      {
+        "path": "evidence/vol_01_evidence.md",
+        "language": "markdown",
+        "sizeLines": 83,
+        "fileCategory": "docs"
+      },
+      {
+        "path": "evidence/vol_02_evidence.md",
+        "language": "markdown",
+        "sizeLines": 63,
+        "fileCategory": "docs"
+      },
+      {
+        "path": "evidence/vol_03_evidence.md",
+        "language": "markdown",
+        "sizeLines": 73,
+        "fileCategory": "docs"
+      },
+      {
+        "path": "evidence/vol_04_evidence.md",
+        "language": "markdown",
+        "sizeLines": 63,
+        "fileCategory": "docs"
+      }
+    ],
+    "batchImportData": {
+      "evidence/README.md": [],
+      "evidence/vol_01_evidence.md": [],
+      "evidence/vol_02_evidence.md": [],
+      "evidence/vol_03_evidence.md": [],
+      "evidence/vol_04_evidence.md": []
+    },
+    "neighborMap": {}
+  },
+  {
+    "batchIndex": 7,
+    "files": [
+      {
+        "path": "evidence/source_pool/L_deathnote.md",
+        "language": "markdown",
+        "sizeLines": 53,
+        "fileCategory": "docs"
+      },
+      {
+        "path": "evidence/source_pool/akai_shuichi.md",
+        "language": "markdown",
+        "sizeLines": 78,
+        "fileCategory": "docs"
+      },
+      {
+        "path": "evidence/source_pool/batman.md",
+        "language": "markdown",
+        "sizeLines": 46,
+        "fileCategory": "docs"
+      },
+      {
+        "path": "evidence/source_pool/harold_finch.md",
+        "language": "markdown",
+        "sizeLines": 53,
+        "fileCategory": "docs"
+      },
+      {
+        "path": "evidence/source_pool/jiaoyuan.md",
+        "language": "markdown",
+        "sizeLines": 59,
+        "fileCategory": "docs"
+      },
+      {
+        "path": "evidence/source_pool/john_wick.md",
+        "language": "markdown",
+        "sizeLines": 79,
+        "fileCategory": "docs"
+      },
+      {
+        "path": "evidence/source_pool/kaiki_deishuu_auditor.md",
+        "language": "markdown",
+        "sizeLines": 47,
+        "fileCategory": "docs"
+      },
+      {
+        "path": "evidence/source_pool/kusanagi_motoko_coordinator.md",
+        "language": "markdown",
+        "sizeLines": 47,
+        "fileCategory": "docs"
+      },
+      {
+        "path": "evidence/source_pool/kusanagi_motoko_incident.md",
+        "language": "markdown",
+        "sizeLines": 78,
+        "fileCategory": "docs"
+      },
+      {
+        "path": "evidence/source_pool/makima.md",
+        "language": "markdown",
+        "sizeLines": 54,
+        "fileCategory": "docs"
+      },
+      {
+        "path": "evidence/source_pool/maomao.md",
+        "language": "markdown",
+        "sizeLines": 53,
+        "fileCategory": "docs"
+      },
+      {
+        "path": "evidence/source_pool/mike_ehrmantraut.md",
+        "language": "markdown",
+        "sizeLines": 82,
+        "fileCategory": "docs"
+      },
+      {
+        "path": "evidence/source_pool/nick_fury.md",
+        "language": "markdown",
+        "sizeLines": 53,
+        "fileCategory": "docs"
+      },
+      {
+        "path": "evidence/source_pool/reigen_arataka.md",
+        "language": "markdown",
+        "sizeLines": 53,
+        "fileCategory": "docs"
+      },
+      {
+        "path": "evidence/source_pool/rick_sanchez_architect.md",
+        "language": "markdown",
+        "sizeLines": 55,
+        "fileCategory": "docs"
+      },
+      {
+        "path": "evidence/source_pool/tony_stark.md",
+        "language": "markdown",
+        "sizeLines": 47,
+        "fileCategory": "docs"
+      },
+      {
+        "path": "evidence/source_pool/tsunemori_akyane.md",
+        "language": "markdown",
+        "sizeLines": 53,
+        "fileCategory": "docs"
+      }
+    ],
+    "batchImportData": {
+      "evidence/source_pool/L_deathnote.md": [],
+      "evidence/source_pool/akai_shuichi.md": [],
+      "evidence/source_pool/batman.md": [],
+      "evidence/source_pool/harold_finch.md": [],
+      "evidence/source_pool/jiaoyuan.md": [],
+      "evidence/source_pool/john_wick.md": [],
+      "evidence/source_pool/kaiki_deishuu_auditor.md": [],
+      "evidence/source_pool/kusanagi_motoko_coordinator.md": [],
+      "evidence/source_pool/kusanagi_motoko_incident.md": [],
+      "evidence/source_pool/makima.md": [],
+      "evidence/source_pool/maomao.md": [],
+      "evidence/source_pool/mike_ehrmantraut.md": [],
+      "evidence/source_pool/nick_fury.md": [],
+      "evidence/source_pool/reigen_arataka.md": [],
+      "evidence/source_pool/rick_sanchez_architect.md": [],
+      "evidence/source_pool/tony_stark.md": [],
+      "evidence/source_pool/tsunemori_akyane.md": []
+    },
+    "neighborMap": {}
+  },
+  {
+    "batchIndex": 8,
+    "files": [
+      {
+        "path": "fusion/FUSION_ENGINE.md",
+        "language": "markdown",
+        "sizeLines": 207,
+        "fileCategory": "docs"
+      },
+      {
+        "path": "fusion/HORO_EMMAUN_FUSION_DESIGN.md",
+        "language": "markdown",
+        "sizeLines": 187,
+        "fileCategory": "docs"
+      },
+      {
+        "path": "fusion/README.md",
+        "language": "markdown",
+        "sizeLines": 73,
+        "fileCategory": "docs"
+      },
+      {
+        "path": "fusion/XP_PROFILE.md",
+        "language": "markdown",
+        "sizeLines": 132,
+        "fileCategory": "docs"
+      }
+    ],
+    "batchImportData": {
+      "fusion/FUSION_ENGINE.md": [],
+      "fusion/HORO_EMMAUN_FUSION_DESIGN.md": [],
+      "fusion/README.md": [],
+      "fusion/XP_PROFILE.md": []
+    },
+    "neighborMap": {}
+  }
+]

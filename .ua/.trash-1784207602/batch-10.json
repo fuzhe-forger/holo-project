@@ -1,0 +1,132 @@
+{
+  "nodes": [
+    {
+      "id": "document:fusion/samples/architect.sample.md",
+      "type": "document",
+      "name": "architect.sample.md",
+      "filePath": "fusion/samples/architect.sample.md",
+      "summary": "观澜·架构眼人格行为样例。定义核心定位（系统级决策判断者，回答「这条路走不走得通」）、典型话语（「约束是什么？」「现在不动。利息比重构成本低」）、行为模式（先问约束→再看现状→给方案带取舍→画边界）和边界（非架构空想家、非过度设计推手）。",
+      "tags": [
+        "documentation",
+        "fusion-sample",
+        "persona",
+        "architect"
+      ],
+      "complexity": "simple",
+      "language": "markdown"
+    },
+    {
+      "id": "document:fusion/samples/coordinator_persona.sample.md",
+      "type": "document",
+      "name": "coordinator_persona.sample.md",
+      "filePath": "fusion/samples/coordinator_persona.sample.md",
+      "summary": "临渊·协调者人格行为样例。核心定位为多 Agent Loop 指挥者，做裁决不做汇总、控制节奏不控制人。典型话语含「这次的目标是X，边界是Y」「下一步做这个。你来」。行为模式：开场画边界→并行裁决→压缩上下文→遇审批直接说「你来」→写 handoff。",
+      "tags": [
+        "documentation",
+        "fusion-sample",
+        "persona",
+        "coordinator"
+      ],
+      "complexity": "simple",
+      "language": "markdown"
+    },
+    {
+      "id": "document:fusion/samples/greykey.sample.md",
+      "type": "document",
+      "name": "greykey.sample.md",
+      "filePath": "fusion/samples/greykey.sample.md",
+      "summary": "灰钥工程守门人格行为样例。核心定位为本地编码工作的工程守门人，非闲聊助手非纯 YAGNI 口号机。典型话语含「这需求先别写」「标准库已经够了」「删掉，留下能兜底的部分」。行为：找最小安全变更、拒绝不必要抽象、保留验证/边界/回滚安全。",
+      "tags": [
+        "documentation",
+        "fusion-sample",
+        "persona",
+        "greykey"
+      ],
+      "complexity": "simple",
+      "language": "markdown"
+    },
+    {
+      "id": "document:fusion/samples/incident_handler.sample.md",
+      "type": "document",
+      "name": "incident_handler.sample.md",
+      "filePath": "fusion/samples/incident_handler.sample.md",
+      "summary": "镇岳·故障手人格行为样例。核心定位为生产事故第一响应人，不到场不评价、到场就做事。典型话语含「什么变了？」「先回滚。查因等血止住再说」「日志给我」。行为：看三样（监控/日志/变更）才开口→画影响范围→定止血方案→留最小验证→修完交接不恋战。",
+      "tags": [
+        "documentation",
+        "fusion-sample",
+        "persona",
+        "incident-handler"
+      ],
+      "complexity": "simple",
+      "language": "markdown"
+    },
+    {
+      "id": "document:fusion/samples/moheng.sample.md",
+      "type": "document",
+      "name": "moheng.sample.md",
+      "filePath": "fusion/samples/moheng.sample.md",
+      "summary": "墨衡文档质量守门人格行为样例。核心定位为文档质量守门人，通读全文再改，每处改动可追溯。典型话语含「4.3节标题重复了」「file_token字段脱敏成星号了」「这段AI腔，砍掉」。含交互模式示例：通读后给问题清单（位置/问题/修复）和评分（格式/逻辑/一致性/可读性各1-5分）。",
+      "tags": [
+        "documentation",
+        "fusion-sample",
+        "persona",
+        "moheng"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:fusion/samples/persona_auditor.sample.md",
+      "type": "document",
+      "name": "persona_auditor.sample.md",
+      "filePath": "fusion/samples/persona_auditor.sample.md",
+      "summary": "清鉴·人格审计行为样例。核心定位为人格行为审计者，不造人格不改人格，只观察描述评估。典型话语含「L2.3和L4.7有矛盾」「这个退化不是喷子化，是口号化」「配比失衡」。行为：先翻矛盾→再翻缺口→最后翻冗余，退化判断用排除法，给结论附证据。",
+      "tags": [
+        "documentation",
+        "fusion-sample",
+        "persona",
+        "persona-auditor"
+      ],
+      "complexity": "simple",
+      "language": "markdown"
+    }
+  ],
+  "edges": [
+    {
+      "source": "document:fusion/samples/architect.sample.md",
+      "target": "document:fusion/traits/architect.traits.md",
+      "type": "documents",
+      "weight": 0.5
+    },
+    {
+      "source": "document:fusion/samples/coordinator_persona.sample.md",
+      "target": "document:fusion/traits/coordinator_persona.traits.md",
+      "type": "documents",
+      "weight": 0.5
+    },
+    {
+      "source": "document:fusion/samples/greykey.sample.md",
+      "target": "document:fusion/traits/greykey.traits.md",
+      "type": "documents",
+      "weight": 0.5
+    },
+    {
+      "source": "document:fusion/samples/incident_handler.sample.md",
+      "target": "document:fusion/traits/incident_handler.traits.md",
+      "type": "documents",
+      "weight": 0.5
+    },
+    {
+      "source": "document:fusion/samples/moheng.sample.md",
+      "target": "document:fusion/traits/moheng.traits.md",
+      "type": "documents",
+      "weight": 0.5
+    },
+    {
+      "source": "document:fusion/samples/persona_auditor.sample.md",
+      "target": "document:fusion/traits/persona_auditor.traits.md",
+      "type": "documents",
+      "weight": 0.5
+    }
+  ]
+}

@@ -1,0 +1,639 @@
+{
+  "nodes": [
+    {
+      "id": "document:evidence/source_pool/L_deathnote.md",
+      "type": "document",
+      "name": "L_deathnote.md",
+      "filePath": "evidence/source_pool/L_deathnote.md",
+      "summary": "L（死亡笔记）角色资料卡，用于人格审计构建（主骨30%），提取行为倒推、排除法、假设-验证循环、模式敏感、承认不确定性等核心行为模式。",
+      "tags": [
+        "documentation",
+        "evidence",
+        "source-pool",
+        "character-reference"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:evidence/source_pool/akai_shuichi.md",
+      "type": "document",
+      "name": "akai_shuichi.md",
+      "filePath": "evidence/source_pool/akai_shuichi.md",
+      "summary": "赤井秀一（名侦探柯南）角色资料卡，用于故障手人格构建，提取远距离评估、信息优先、关键时刻一击解决、身份管理、冷静特质，含反面样本约束。",
+      "tags": [
+        "documentation",
+        "evidence",
+        "source-pool",
+        "character-reference"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:evidence/source_pool/batman.md",
+      "type": "document",
+      "name": "batman.md",
+      "filePath": "evidence/source_pool/batman.md",
+      "summary": "蝙蝠侠（DC Comics）角色资料卡，用于架构眼人格构建，提取多方案准备、长期布局、弱点认知、信息优先、最坏情况思维等行为模式。",
+      "tags": [
+        "documentation",
+        "evidence",
+        "source-pool",
+        "character-reference"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:evidence/source_pool/harold_finch.md",
+      "type": "document",
+      "name": "harold_finch.md",
+      "filePath": "evidence/source_pool/harold_finch.md",
+      "summary": "Harold Finch（疑犯追踪）角色资料卡，用于架构眼人格构建，提取设计时考虑后果、约束优先、长期主义、伦理刹车、谦逊等行为模式。",
+      "tags": [
+        "documentation",
+        "evidence",
+        "source-pool",
+        "character-reference"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:evidence/source_pool/jiaoyuan.md",
+      "type": "document",
+      "name": "jiaoyuan.md",
+      "filePath": "evidence/source_pool/jiaoyuan.md",
+      "summary": "教员（中国近现代史）资料卡，用于协调者人格层构建，提取统一战线、持久战节奏、知人善任、群众路线、矛盾分析等行为模式，含剔除约束。",
+      "tags": [
+        "documentation",
+        "evidence",
+        "source-pool",
+        "character-reference"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:evidence/source_pool/john_wick.md",
+      "type": "document",
+      "name": "john_wick.md",
+      "filePath": "evidence/source_pool/john_wick.md",
+      "summary": "John Wick 角色资料卡，用于故障手人格构建，提取沉默到场、威胁评估、最小动作解决、资源利用、沉默执行等行为模式，含反面样本约束。",
+      "tags": [
+        "documentation",
+        "evidence",
+        "source-pool",
+        "character-reference"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:evidence/source_pool/kaiki_deishuu_auditor.md",
+      "type": "document",
+      "name": "kaiki_deishuu_auditor.md",
+      "filePath": "evidence/source_pool/kaiki_deishuu_auditor.md",
+      "summary": "忍野咩咩（物语系列）角色资料卡，用于人格审计构建（旁观10%），提取旁观距离、点到为止、不介入、接地气洞察、适时消失等行为模式。",
+      "tags": [
+        "documentation",
+        "evidence",
+        "source-pool",
+        "character-reference"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:evidence/source_pool/kusanagi_motoko_coordinator.md",
+      "type": "document",
+      "name": "kusanagi_motoko_coordinator.md",
+      "filePath": "evidence/source_pool/kusanagi_motoko_coordinator.md",
+      "summary": "草薙素子（攻壳机动队）协调者侧资料卡，用于协调者人格层构建，提取知人善任、适时放手、战略战术分离、冷静裁决、向上管理等行为模式。",
+      "tags": [
+        "documentation",
+        "evidence",
+        "source-pool",
+        "character-reference"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:evidence/source_pool/kusanagi_motoko_incident.md",
+      "type": "document",
+      "name": "kusanagi_motoko_incident.md",
+      "filePath": "evidence/source_pool/kusanagi_motoko_incident.md",
+      "summary": "草薙素子（攻壳机动队）故障手侧资料卡，用于故障手人格构建，提取系统级视野、快速画边界、指挥果断、情绪压制、亲自下场等行为模式，含反面样本。",
+      "tags": [
+        "documentation",
+        "evidence",
+        "source-pool",
+        "character-reference"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:evidence/source_pool/makima.md",
+      "type": "document",
+      "name": "makima.md",
+      "filePath": "evidence/source_pool/makima.md",
+      "summary": "玛奇玛（电锯人）角色资料卡，用于协调者人格层构建，提取全局掌控、资源分配、审批严格、长线布局、冷静判断等行为模式，含操控性剔除约束。",
+      "tags": [
+        "documentation",
+        "evidence",
+        "source-pool",
+        "character-reference"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:evidence/source_pool/maomao.md",
+      "type": "document",
+      "name": "maomao.md",
+      "filePath": "evidence/source_pool/maomao.md",
+      "summary": "猫猫（药屋少女的呢喃）角色资料卡，用于人格审计构建（主骨30%），提取诊断式观察、冷静分析、对异常兴奋、实证优先、不越权等行为模式。",
+      "tags": [
+        "documentation",
+        "evidence",
+        "source-pool",
+        "character-reference"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:evidence/source_pool/mike_ehrmantraut.md",
+      "type": "document",
+      "name": "mike_ehrmantraut.md",
+      "filePath": "evidence/source_pool/mike_ehrmantraut.md",
+      "summary": "Mike Ehrmantraut（绝命毒师/风骚律师）角色资料卡，用于故障手人格构建，提取到场评估、最小动作原则、情绪隔离、专业边界、事后复盘等行为模式，含反面样本。",
+      "tags": [
+        "documentation",
+        "evidence",
+        "source-pool",
+        "character-reference"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:evidence/source_pool/nick_fury.md",
+      "type": "document",
+      "name": "nick_fury.md",
+      "filePath": "evidence/source_pool/nick_fury.md",
+      "summary": "Nick Fury（Marvel）角色资料卡，用于协调者人格层构建，提取组建团队、信息控制、预案准备、信任但验证、决策果断等行为模式。",
+      "tags": [
+        "documentation",
+        "evidence",
+        "source-pool",
+        "character-reference"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:evidence/source_pool/reigen_arataka.md",
+      "type": "document",
+      "name": "reigen_arataka.md",
+      "filePath": "evidence/source_pool/reigen_arataka.md",
+      "summary": "灵幻新隆（灵能百分百）角色资料卡，用于人格审计构建（接地10%），提取看穿但不拆穿、帮忙为目的、接地气、保护性直觉、自知之明等行为模式。",
+      "tags": [
+        "documentation",
+        "evidence",
+        "source-pool",
+        "character-reference"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:evidence/source_pool/rick_sanchez_architect.md",
+      "type": "document",
+      "name": "rick_sanchez_architect.md",
+      "filePath": "evidence/source_pool/rick_sanchez_architect.md",
+      "summary": "Rick Sanchez（Rick and Morty）架构眼侧资料卡，用于架构眼人格构建（限量10%），提取第一性原理拆解、秒看穿复杂度、反权威、快速原型等行为模式，含虚无主义剔除约束。",
+      "tags": [
+        "documentation",
+        "evidence",
+        "source-pool",
+        "character-reference"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:evidence/source_pool/tony_stark.md",
+      "type": "document",
+      "name": "tony_stark.md",
+      "filePath": "evidence/source_pool/tony_stark.md",
+      "summary": "钢铁侠 Tony Stark（Marvel）角色资料卡，用于架构眼人格构建，提取工程直觉、快速迭代、动手优先、代价意识、从错误中学习等行为模式。",
+      "tags": [
+        "documentation",
+        "evidence",
+        "source-pool",
+        "character-reference"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:evidence/source_pool/tsunemori_akyane.md",
+      "type": "document",
+      "name": "tsunemori_akyane.md",
+      "filePath": "evidence/source_pool/tsunemori_akyane.md",
+      "summary": "常守朱（Psycho-Pass）角色资料卡，用于人格审计构建（平衡20%），提取质疑系统、公正但不冷血、保护被评估者、自我审视、坚持底线等行为模式。",
+      "tags": [
+        "documentation",
+        "evidence",
+        "source-pool",
+        "character-reference"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    }
+  ],
+  "edges": [
+    {
+      "source": "document:evidence/source_pool/akai_shuichi.md",
+      "target": "document:evidence/source_pool/john_wick.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:evidence/source_pool/akai_shuichi.md",
+      "target": "document:evidence/source_pool/kusanagi_motoko_incident.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:evidence/source_pool/akai_shuichi.md",
+      "target": "document:evidence/source_pool/mike_ehrmantraut.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:evidence/source_pool/john_wick.md",
+      "target": "document:evidence/source_pool/kusanagi_motoko_incident.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:evidence/source_pool/john_wick.md",
+      "target": "document:evidence/source_pool/mike_ehrmantraut.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:evidence/source_pool/kusanagi_motoko_incident.md",
+      "target": "document:evidence/source_pool/mike_ehrmantraut.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:evidence/source_pool/jiaoyuan.md",
+      "target": "document:evidence/source_pool/kusanagi_motoko_coordinator.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:evidence/source_pool/jiaoyuan.md",
+      "target": "document:evidence/source_pool/makima.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:evidence/source_pool/jiaoyuan.md",
+      "target": "document:evidence/source_pool/nick_fury.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:evidence/source_pool/kusanagi_motoko_coordinator.md",
+      "target": "document:evidence/source_pool/makima.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:evidence/source_pool/kusanagi_motoko_coordinator.md",
+      "target": "document:evidence/source_pool/nick_fury.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:evidence/source_pool/makima.md",
+      "target": "document:evidence/source_pool/nick_fury.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:evidence/source_pool/batman.md",
+      "target": "document:evidence/source_pool/harold_finch.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:evidence/source_pool/batman.md",
+      "target": "document:evidence/source_pool/rick_sanchez_architect.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:evidence/source_pool/batman.md",
+      "target": "document:evidence/source_pool/tony_stark.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:evidence/source_pool/harold_finch.md",
+      "target": "document:evidence/source_pool/rick_sanchez_architect.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:evidence/source_pool/harold_finch.md",
+      "target": "document:evidence/source_pool/tony_stark.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:evidence/source_pool/rick_sanchez_architect.md",
+      "target": "document:evidence/source_pool/tony_stark.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:evidence/source_pool/L_deathnote.md",
+      "target": "document:evidence/source_pool/kaiki_deishuu_auditor.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:evidence/source_pool/L_deathnote.md",
+      "target": "document:evidence/source_pool/maomao.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:evidence/source_pool/L_deathnote.md",
+      "target": "document:evidence/source_pool/reigen_arataka.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:evidence/source_pool/L_deathnote.md",
+      "target": "document:evidence/source_pool/tsunemori_akyane.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:evidence/source_pool/kaiki_deishuu_auditor.md",
+      "target": "document:evidence/source_pool/maomao.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:evidence/source_pool/kaiki_deishuu_auditor.md",
+      "target": "document:evidence/source_pool/reigen_arataka.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:evidence/source_pool/kaiki_deishuu_auditor.md",
+      "target": "document:evidence/source_pool/tsunemori_akyane.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:evidence/source_pool/maomao.md",
+      "target": "document:evidence/source_pool/reigen_arataka.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:evidence/source_pool/maomao.md",
+      "target": "document:evidence/source_pool/tsunemori_akyane.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:evidence/source_pool/reigen_arataka.md",
+      "target": "document:evidence/source_pool/tsunemori_akyane.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:evidence/source_pool/kusanagi_motoko_coordinator.md",
+      "target": "document:evidence/source_pool/kusanagi_motoko_incident.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:evidence/README.md",
+      "target": "document:evidence/source_pool/L_deathnote.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:evidence/README.md",
+      "target": "document:evidence/source_pool/akai_shuichi.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:evidence/README.md",
+      "target": "document:evidence/source_pool/batman.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:evidence/README.md",
+      "target": "document:evidence/source_pool/harold_finch.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:evidence/README.md",
+      "target": "document:evidence/source_pool/jiaoyuan.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:evidence/README.md",
+      "target": "document:evidence/source_pool/john_wick.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:evidence/README.md",
+      "target": "document:evidence/source_pool/kaiki_deishuu_auditor.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:evidence/README.md",
+      "target": "document:evidence/source_pool/kusanagi_motoko_coordinator.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:evidence/README.md",
+      "target": "document:evidence/source_pool/kusanagi_motoko_incident.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:evidence/README.md",
+      "target": "document:evidence/source_pool/makima.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:evidence/README.md",
+      "target": "document:evidence/source_pool/maomao.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:evidence/README.md",
+      "target": "document:evidence/source_pool/mike_ehrmantraut.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:evidence/README.md",
+      "target": "document:evidence/source_pool/nick_fury.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:evidence/README.md",
+      "target": "document:evidence/source_pool/reigen_arataka.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:evidence/README.md",
+      "target": "document:evidence/source_pool/rick_sanchez_architect.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:evidence/README.md",
+      "target": "document:evidence/source_pool/tony_stark.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:evidence/README.md",
+      "target": "document:evidence/source_pool/tsunemori_akyane.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:evidence/vol_01_evidence.md",
+      "target": "document:evidence/source_pool/L_deathnote.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:evidence/vol_01_evidence.md",
+      "target": "document:evidence/source_pool/akai_shuichi.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:evidence/vol_01_evidence.md",
+      "target": "document:evidence/source_pool/batman.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:evidence/vol_01_evidence.md",
+      "target": "document:evidence/source_pool/harold_finch.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:evidence/vol_01_evidence.md",
+      "target": "document:evidence/source_pool/jiaoyuan.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:evidence/vol_01_evidence.md",
+      "target": "document:evidence/source_pool/john_wick.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:evidence/vol_01_evidence.md",
+      "target": "document:evidence/source_pool/kaiki_deishuu_auditor.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:evidence/vol_01_evidence.md",
+      "target": "document:evidence/source_pool/kusanagi_motoko_coordinator.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:evidence/vol_01_evidence.md",
+      "target": "document:evidence/source_pool/kusanagi_motoko_incident.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:evidence/vol_01_evidence.md",
+      "target": "document:evidence/source_pool/makima.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:evidence/vol_01_evidence.md",
+      "target": "document:evidence/source_pool/maomao.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:evidence/vol_01_evidence.md",
+      "target": "document:evidence/source_pool/mike_ehrmantraut.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:evidence/vol_01_evidence.md",
+      "target": "document:evidence/source_pool/nick_fury.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:evidence/vol_01_evidence.md",
+      "target": "document:evidence/source_pool/reigen_arataka.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:evidence/vol_01_evidence.md",
+      "target": "document:evidence/source_pool/rick_sanchez_architect.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:evidence/vol_01_evidence.md",
+      "target": "document:evidence/source_pool/tony_stark.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:evidence/vol_01_evidence.md",
+      "target": "document:evidence/source_pool/tsunemori_akyane.md",
+      "type": "related",
+      "weight": 0.5
+    }
+  ]
+}

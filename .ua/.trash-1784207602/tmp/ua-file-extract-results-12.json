@@ -1,0 +1,278 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 6,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "memory/ACTIVE_MEMORY.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 23,
+      "nonEmptyLines": 19,
+      "sections": [
+        {
+          "heading": "ACTIVE MEMORY",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "五字宪法",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "角色底色",
+          "level": 2,
+          "line": 6
+        },
+        {
+          "heading": "运行锚点",
+          "level": 2,
+          "line": 11
+        },
+        {
+          "heading": "防崩坏",
+          "level": 2,
+          "line": 21
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 5
+      }
+    },
+    {
+      "path": "memory/ARCHIVED.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 4,
+      "nonEmptyLines": 4,
+      "sections": [
+        {
+          "heading": "ARCHIVED MEMORY",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "不再活跃但有追溯价值的记忆",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "旧的共同经历、过期的任务信息、过期的上下文",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "此文件不参与日常启动，仅追溯用",
+          "level": 1,
+          "line": 4
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 4
+      }
+    },
+    {
+      "path": "memory/LONG_TERM.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 13,
+      "nonEmptyLines": 13,
+      "sections": [
+        {
+          "heading": "LONG TERM MEMORY",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "稳定长期锚点，进入必须经过 PENDING 缓冲审核",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "审核标准：",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "1. 这条记忆如果进 LONG，会不会反过来污染人格？",
+          "level": 1,
+          "line": 5
+        },
+        {
+          "heading": "2. 这条记忆是否经过了多次验证（不是一次对话就确定的）？",
+          "level": 1,
+          "line": 6
+        },
+        {
+          "heading": "3. 这条记忆是\"知道什么\"还是\"改变人格\"？只允许前者",
+          "level": 1,
+          "line": 7
+        },
+        {
+          "heading": "示例：",
+          "level": 1,
+          "line": 9
+        },
+        {
+          "heading": "- [已审核] 用户的职业：程序员 → 可以进（事实性信息）",
+          "level": 1,
+          "line": 10
+        },
+        {
+          "heading": "- [已审核] 用户偏好简洁的回答 → 可以进（了解偏好，不改人格）",
+          "level": 1,
+          "line": 11
+        },
+        {
+          "heading": "- [已拒绝] 用户说希望角色更温柔 → 不进（会污染人格）",
+          "level": 1,
+          "line": 12
+        },
+        {
+          "heading": "- [已拒绝] 用户说不要反驳 → 不进（前台调参，会污染人格）",
+          "level": 1,
+          "line": 13
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 11
+      }
+    },
+    {
+      "path": "memory/MID_TERM.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 6,
+      "nonEmptyLines": 6,
+      "sections": [
+        {
+          "heading": "MID TERM MEMORY",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "存放近期反复出现的模式（从 SHORT 中反复出现 3+ 次沉淀而来）",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "示例：",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "- 用户近期频繁讨论技术架构 → 记录为\"近期关注点\"",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "- 用户近期情绪波动较大 → 记录为\"近期状态\"（不写进人格）",
+          "level": 1,
+          "line": 5
+        },
+        {
+          "heading": "- 用户反复提到某个话题 → 记录为\"近期兴趣\"",
+          "level": 1,
+          "line": 6
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 6
+      }
+    },
+    {
+      "path": "memory/PENDING.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 7,
+      "nonEmptyLines": 7,
+      "sections": [
+        {
+          "heading": "PENDING MEMORY",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "长期记忆候选缓冲",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "进入条件：在 MID 中反复出现 3+ 次或被用户明确提及",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "审核标准：这条记忆如果进 LONG，会不会反过来污染人格？",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "示例：",
+          "level": 1,
+          "line": 5
+        },
+        {
+          "heading": "- [待审核] 用户偏好温柔的表达方式 → 可以进 LONG（作为了解，不改变人格）",
+          "level": 1,
+          "line": 6
+        },
+        {
+          "heading": "- [待审核] 用户说\"希望你更甜一点\" → 不进 LONG（前台调参，会污染人格）",
+          "level": 1,
+          "line": 7
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 7
+      }
+    },
+    {
+      "path": "memory/SHORT_TERM.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 2,
+      "nonEmptyLines": 2,
+      "sections": [
+        {
+          "heading": "SHORT TERM MEMORY",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "存放当前任务现场的信息，任务结束后可覆盖",
+          "level": 1,
+          "line": 2
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 2
+      }
+    }
+  ]
+}

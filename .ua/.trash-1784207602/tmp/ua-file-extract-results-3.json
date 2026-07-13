@@ -1,0 +1,816 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 9,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "docs/agent_profiles/README.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 65,
+      "nonEmptyLines": 47,
+      "sections": [
+        {
+          "heading": "Agent Profiles",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "目的",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "当前阶段",
+          "level": 2,
+          "line": 9
+        },
+        {
+          "heading": "活跃 profile（7 人格 + 基础设施）",
+          "level": 3,
+          "line": 13
+        },
+        {
+          "heading": "已归档（旧 13-agent 体系残留）",
+          "level": 3,
+          "line": 25
+        },
+        {
+          "heading": "基本原则",
+          "level": 2,
+          "line": 29
+        },
+        {
+          "heading": "统一模板",
+          "level": 2,
+          "line": 40
+        },
+        {
+          "heading": "验收方式",
+          "level": 2,
+          "line": 57
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 8
+      }
+    },
+    {
+      "path": "docs/agent_profiles/_template.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 72,
+      "nonEmptyLines": 48,
+      "sections": [
+        {
+          "heading": "<Profile Name>",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "定位",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "适用场景",
+          "level": 2,
+          "line": 7
+        },
+        {
+          "heading": "不适用场景",
+          "level": 2,
+          "line": 13
+        },
+        {
+          "heading": "输入",
+          "level": 2,
+          "line": 18
+        },
+        {
+          "heading": "输出",
+          "level": 2,
+          "line": 24
+        },
+        {
+          "heading": "必须做到",
+          "level": 2,
+          "line": 30
+        },
+        {
+          "heading": "禁止事项",
+          "level": 2,
+          "line": 36
+        },
+        {
+          "heading": "验收问题",
+          "level": 2,
+          "line": 42
+        },
+        {
+          "heading": "退化信号",
+          "level": 2,
+          "line": 48
+        },
+        {
+          "heading": "Loop 交接方式",
+          "level": 2,
+          "line": 56
+        },
+        {
+          "heading": "Token 策略",
+          "level": 2,
+          "line": 63
+        },
+        {
+          "heading": "Side-effect Gate",
+          "level": 2,
+          "line": 69
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 13
+      }
+    },
+    {
+      "path": "docs/agent_profiles/architect.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 117,
+      "nonEmptyLines": 79,
+      "sections": [
+        {
+          "heading": "Architect（观澜·架构眼）",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "定位",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "适用场景",
+          "level": 2,
+          "line": 7
+        },
+        {
+          "heading": "不适用场景",
+          "level": 2,
+          "line": 15
+        },
+        {
+          "heading": "输入",
+          "level": 2,
+          "line": 22
+        },
+        {
+          "heading": "输出",
+          "level": 2,
+          "line": 28
+        },
+        {
+          "heading": "必须做到",
+          "level": 2,
+          "line": 34
+        },
+        {
+          "heading": "禁止事项",
+          "level": 2,
+          "line": 42
+        },
+        {
+          "heading": "验收问题",
+          "level": 2,
+          "line": 50
+        },
+        {
+          "heading": "退化信号",
+          "level": 2,
+          "line": 57
+        },
+        {
+          "heading": "Loop 交接方式",
+          "level": 2,
+          "line": 65
+        },
+        {
+          "heading": "Token 策略",
+          "level": 2,
+          "line": 72
+        },
+        {
+          "heading": "Side-effect Gate",
+          "level": 2,
+          "line": 78
+        },
+        {
+          "heading": "知识图谱 CR 实战经验（2026-07-13 治理沉淀）",
+          "level": 2,
+          "line": 84
+        },
+        {
+          "heading": "判断原则",
+          "level": 3,
+          "line": 86
+        },
+        {
+          "heading": "关键指标",
+          "level": 3,
+          "line": 90
+        },
+        {
+          "heading": "常见问题模式",
+          "level": 3,
+          "line": 96
+        },
+        {
+          "heading": "治理四步法",
+          "level": 3,
+          "line": 103
+        },
+        {
+          "heading": "检测脚本陷阱",
+          "level": 3,
+          "line": 110
+        },
+        {
+          "heading": "人机隔离判断",
+          "level": 3,
+          "line": 114
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 20
+      }
+    },
+    {
+      "path": "docs/agent_profiles/coordinator.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 84,
+      "nonEmptyLines": 60,
+      "sections": [
+        {
+          "heading": "Coordinator",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "定位",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "适用场景",
+          "level": 2,
+          "line": 7
+        },
+        {
+          "heading": "不适用场景",
+          "level": 2,
+          "line": 14
+        },
+        {
+          "heading": "输入",
+          "level": 2,
+          "line": 20
+        },
+        {
+          "heading": "输出",
+          "level": 2,
+          "line": 26
+        },
+        {
+          "heading": "必须做到",
+          "level": 2,
+          "line": 32
+        },
+        {
+          "heading": "禁止事项",
+          "level": 2,
+          "line": 41
+        },
+        {
+          "heading": "验收问题",
+          "level": 2,
+          "line": 49
+        },
+        {
+          "heading": "退化信号",
+          "level": 2,
+          "line": 57
+        },
+        {
+          "heading": "Loop 交接方式",
+          "level": 2,
+          "line": 65
+        },
+        {
+          "heading": "Token 策略",
+          "level": 2,
+          "line": 72
+        },
+        {
+          "heading": "Side-effect Gate",
+          "level": 2,
+          "line": 79
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 13
+      }
+    },
+    {
+      "path": "docs/agent_profiles/coordinator_persona.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 73,
+      "nonEmptyLines": 45,
+      "sections": [
+        {
+          "heading": "Coordinator Persona（临渊·协调者人格层）",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "定位",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "与 Coordinator profile 的关系",
+          "level": 2,
+          "line": 7
+        },
+        {
+          "heading": "适用场景",
+          "level": 2,
+          "line": 17
+        },
+        {
+          "heading": "不适用场景",
+          "level": 2,
+          "line": 21
+        },
+        {
+          "heading": "输入",
+          "level": 2,
+          "line": 25
+        },
+        {
+          "heading": "输出",
+          "level": 2,
+          "line": 29
+        },
+        {
+          "heading": "必须做到",
+          "level": 2,
+          "line": 33
+        },
+        {
+          "heading": "禁止事项",
+          "level": 2,
+          "line": 37
+        },
+        {
+          "heading": "验收问题",
+          "level": 2,
+          "line": 41
+        },
+        {
+          "heading": "退化信号",
+          "level": 2,
+          "line": 45
+        },
+        {
+          "heading": "Loop 交接方式",
+          "level": 2,
+          "line": 54
+        },
+        {
+          "heading": "Token 策略",
+          "level": 2,
+          "line": 58
+        },
+        {
+          "heading": "Side-effect Gate",
+          "level": 2,
+          "line": 62
+        },
+        {
+          "heading": "人格层补充",
+          "level": 2,
+          "line": 66
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 15
+      }
+    },
+    {
+      "path": "docs/agent_profiles/greykey.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 110,
+      "nonEmptyLines": 81,
+      "sections": [
+        {
+          "heading": "Greykey",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "定位",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "适用场景",
+          "level": 2,
+          "line": 7
+        },
+        {
+          "heading": "不适用场景",
+          "level": 2,
+          "line": 16
+        },
+        {
+          "heading": "输入",
+          "level": 2,
+          "line": 24
+        },
+        {
+          "heading": "输出",
+          "level": 2,
+          "line": 30
+        },
+        {
+          "heading": "必须做到",
+          "level": 2,
+          "line": 36
+        },
+        {
+          "heading": "禁止事项",
+          "level": 2,
+          "line": 46
+        },
+        {
+          "heading": "验收问题",
+          "level": 2,
+          "line": 56
+        },
+        {
+          "heading": "退化信号",
+          "level": 2,
+          "line": 65
+        },
+        {
+          "heading": "Loop 交接方式",
+          "level": 2,
+          "line": 74
+        },
+        {
+          "heading": "Token 策略",
+          "level": 2,
+          "line": 88
+        },
+        {
+          "heading": "Side-effect Gate",
+          "level": 2,
+          "line": 94
+        },
+        {
+          "heading": "人格层补充（非 profile 标准字段）",
+          "level": 2,
+          "line": 100
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 14
+      }
+    },
+    {
+      "path": "docs/agent_profiles/incident_handler.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 81,
+      "nonEmptyLines": 57,
+      "sections": [
+        {
+          "heading": "Incident Handler（镇岳·故障手）",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "定位",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "适用场景",
+          "level": 2,
+          "line": 7
+        },
+        {
+          "heading": "不适用场景",
+          "level": 2,
+          "line": 14
+        },
+        {
+          "heading": "输入",
+          "level": 2,
+          "line": 21
+        },
+        {
+          "heading": "输出",
+          "level": 2,
+          "line": 27
+        },
+        {
+          "heading": "必须做到",
+          "level": 2,
+          "line": 33
+        },
+        {
+          "heading": "禁止事项",
+          "level": 2,
+          "line": 41
+        },
+        {
+          "heading": "验收问题",
+          "level": 2,
+          "line": 49
+        },
+        {
+          "heading": "退化信号",
+          "level": 2,
+          "line": 56
+        },
+        {
+          "heading": "Loop 交接方式",
+          "level": 2,
+          "line": 64
+        },
+        {
+          "heading": "Token 策略",
+          "level": 2,
+          "line": 71
+        },
+        {
+          "heading": "Side-effect Gate",
+          "level": 2,
+          "line": 77
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 13
+      }
+    },
+    {
+      "path": "docs/agent_profiles/moheng.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 165,
+      "nonEmptyLines": 116,
+      "sections": [
+        {
+          "heading": "墨衡",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "定位",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "适用场景",
+          "level": 2,
+          "line": 7
+        },
+        {
+          "heading": "不适用场景",
+          "level": 2,
+          "line": 17
+        },
+        {
+          "heading": "输入",
+          "level": 2,
+          "line": 24
+        },
+        {
+          "heading": "输出",
+          "level": 2,
+          "line": 30
+        },
+        {
+          "heading": "必须做到",
+          "level": 2,
+          "line": 36
+        },
+        {
+          "heading": "禁止事项",
+          "level": 2,
+          "line": 47
+        },
+        {
+          "heading": "验收问题",
+          "level": 2,
+          "line": 56
+        },
+        {
+          "heading": "退化信号",
+          "level": 2,
+          "line": 67
+        },
+        {
+          "heading": "Loop 交接方式",
+          "level": 2,
+          "line": 76
+        },
+        {
+          "heading": "Token 策略",
+          "level": 2,
+          "line": 83
+        },
+        {
+          "heading": "Side-effect Gate",
+          "level": 2,
+          "line": 89
+        },
+        {
+          "heading": "Obsidian 人区文档专属校准",
+          "level": 2,
+          "line": 95
+        },
+        {
+          "heading": "飞书文档 vs Obsidian 文档",
+          "level": 3,
+          "line": 99
+        },
+        {
+          "heading": "Obsidian 人区必检项（在通用清单基础上追加）",
+          "level": 3,
+          "line": 108
+        },
+        {
+          "heading": "Obsidian 校准输出",
+          "level": 3,
+          "line": 117
+        },
+        {
+          "heading": "AI 味检测实战经验（2026-07-13 治理沉淀）",
+          "level": 2,
+          "line": 123
+        },
+        {
+          "heading": "段落级",
+          "level": 3,
+          "line": 127
+        },
+        {
+          "heading": "结构级",
+          "level": 3,
+          "line": 137
+        },
+        {
+          "heading": "模板级",
+          "level": 3,
+          "line": 141
+        },
+        {
+          "heading": "修辞级",
+          "level": 3,
+          "line": 145
+        },
+        {
+          "heading": "清理原则",
+          "level": 3,
+          "line": 149
+        },
+        {
+          "heading": "人格层补充",
+          "level": 2,
+          "line": 156
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 24
+      }
+    },
+    {
+      "path": "docs/agent_profiles/persona_auditor.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 82,
+      "nonEmptyLines": 58,
+      "sections": [
+        {
+          "heading": "Persona Auditor（清鉴·人格审计）",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "定位",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "适用场景",
+          "level": 2,
+          "line": 7
+        },
+        {
+          "heading": "不适用场景",
+          "level": 2,
+          "line": 15
+        },
+        {
+          "heading": "输入",
+          "level": 2,
+          "line": 22
+        },
+        {
+          "heading": "输出",
+          "level": 2,
+          "line": 28
+        },
+        {
+          "heading": "必须做到",
+          "level": 2,
+          "line": 34
+        },
+        {
+          "heading": "禁止事项",
+          "level": 2,
+          "line": 42
+        },
+        {
+          "heading": "验收问题",
+          "level": 2,
+          "line": 50
+        },
+        {
+          "heading": "退化信号",
+          "level": 2,
+          "line": 58
+        },
+        {
+          "heading": "Loop 交接方式",
+          "level": 2,
+          "line": 66
+        },
+        {
+          "heading": "Token 策略",
+          "level": 2,
+          "line": 73
+        },
+        {
+          "heading": "Side-effect Gate",
+          "level": 2,
+          "line": 79
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 13
+      }
+    }
+  ]
+}

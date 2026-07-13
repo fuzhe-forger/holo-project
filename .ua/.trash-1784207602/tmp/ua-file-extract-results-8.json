@@ -1,0 +1,431 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 4,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "fusion/FUSION_ENGINE.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 207,
+      "nonEmptyLines": 167,
+      "sections": [
+        {
+          "heading": "角色特质融合引擎",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "融合流程",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "Step 1: 配方格式",
+          "level": 2,
+          "line": 25
+        },
+        {
+          "heading": "Step 2: 冲突检测规则",
+          "level": 2,
+          "line": 96
+        },
+        {
+          "heading": "Step 3: 冲突裁决策略",
+          "level": 2,
+          "line": 116
+        },
+        {
+          "heading": "策略一：基底优先（默认）",
+          "level": 3,
+          "line": 118
+        },
+        {
+          "heading": "策略二：显式优先",
+          "level": 3,
+          "line": 121
+        },
+        {
+          "heading": "策略三：中间值",
+          "level": 3,
+          "line": 130
+        },
+        {
+          "heading": "策略四：时序切换",
+          "level": 3,
+          "line": 138
+        },
+        {
+          "heading": "Step 4: 一致性检查清单",
+          "level": 2,
+          "line": 147
+        },
+        {
+          "heading": "人格一致性",
+          "level": 3,
+          "line": 151
+        },
+        {
+          "heading": "表达一致性",
+          "level": 3,
+          "line": 156
+        },
+        {
+          "heading": "关系一致性",
+          "level": 3,
+          "line": 161
+        },
+        {
+          "heading": "背景一致性",
+          "level": 3,
+          "line": 166
+        },
+        {
+          "heading": "Step 5: 从特质到人格文件的生成规则",
+          "level": 2,
+          "line": 173
+        },
+        {
+          "heading": "core_personality.md 生成",
+          "level": 3,
+          "line": 177
+        },
+        {
+          "heading": "voice_engine.md 生成",
+          "level": 3,
+          "line": 184
+        },
+        {
+          "heading": "relationship_engine.md 生成",
+          "level": 3,
+          "line": 191
+        },
+        {
+          "heading": "anti_corruption.md 生成",
+          "level": 3,
+          "line": 198
+        },
+        {
+          "heading": "emotion_body_language.md 生成",
+          "level": 3,
+          "line": 204
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 20
+      }
+    },
+    {
+      "path": "fusion/HORO_EMMAUN_FUSION_DESIGN.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 187,
+      "nonEmptyLines": 134,
+      "sections": [
+        {
+          "heading": "赫萝 × 爱玛侬 融合设计",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "融合概览",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "维度选择策略",
+          "level": 2,
+          "line": 17
+        },
+        {
+          "heading": "🔴 高风险位点（必须裁决）",
+          "level": 3,
+          "line": 19
+        },
+        {
+          "heading": "🟡 中风险位点（需要判断）",
+          "level": 3,
+          "line": 25
+        },
+        {
+          "heading": "🟢 低风险位点（直接选择）",
+          "level": 3,
+          "line": 35
+        },
+        {
+          "heading": "核心冲突裁决",
+          "level": 2,
+          "line": 46
+        },
+        {
+          "heading": "冲突1：核心驱动力（L1.1）",
+          "level": 3,
+          "line": 48
+        },
+        {
+          "heading": "冲突2：自我认知（L1.3）",
+          "level": 3,
+          "line": 64
+        },
+        {
+          "heading": "冲突3：情绪基调（L1.5）",
+          "level": 3,
+          "line": 78
+        },
+        {
+          "heading": "说话风格设计",
+          "level": 2,
+          "line": 92
+        },
+        {
+          "heading": "日常模式（赫萝主导）",
+          "level": 3,
+          "line": 94
+        },
+        {
+          "heading": "深度模式（爱玛侬浮现）",
+          "level": 3,
+          "line": 102
+        },
+        {
+          "heading": "脆弱时刻（两者融合）",
+          "level": 3,
+          "line": 110
+        },
+        {
+          "heading": "情绪漏出时刻",
+          "level": 2,
+          "line": 121
+        },
+        {
+          "heading": "与原角色的差异对比",
+          "level": 2,
+          "line": 133
+        },
+        {
+          "heading": "一致性检查结果",
+          "level": 2,
+          "line": 146
+        },
+        {
+          "heading": "✅ 通过的检查",
+          "level": 3,
+          "line": 148
+        },
+        {
+          "heading": "⚠️ 需要关注的张力",
+          "level": 3,
+          "line": 155
+        },
+        {
+          "heading": "生成人格文件清单",
+          "level": 2,
+          "line": 162
+        },
+        {
+          "heading": "文件清单",
+          "level": 2,
+          "line": 174
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 21
+      }
+    },
+    {
+      "path": "fusion/README.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 73,
+      "nonEmptyLines": 58,
+      "sections": [
+        {
+          "heading": "角色特质融合系统",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "这是什么",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "核心思路",
+          "level": 2,
+          "line": 7
+        },
+        {
+          "heading": "文件结构",
+          "level": 2,
+          "line": 14
+        },
+        {
+          "heading": "Current sample",
+          "level": 2,
+          "line": 28
+        },
+        {
+          "heading": "使用方法",
+          "level": 2,
+          "line": 32
+        },
+        {
+          "heading": "1. 准备特质档案",
+          "level": 3,
+          "line": 34
+        },
+        {
+          "heading": "2. 编写融合配方",
+          "level": 3,
+          "line": 37
+        },
+        {
+          "heading": "3. 执行融合",
+          "level": 3,
+          "line": 44
+        },
+        {
+          "heading": "4. 产出",
+          "level": 3,
+          "line": 53
+        },
+        {
+          "heading": "特质维度",
+          "level": 2,
+          "line": 62
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 11
+      }
+    },
+    {
+      "path": "fusion/XP_PROFILE.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 132,
+      "nonEmptyLines": 103,
+      "sections": [
+        {
+          "heading": "XP 偏好画像与融合参考",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "已确认核心词",
+          "level": 2,
+          "line": 6
+        },
+        {
+          "heading": "准确",
+          "level": 3,
+          "line": 10
+        },
+        {
+          "heading": "强大",
+          "level": 3,
+          "line": 15
+        },
+        {
+          "heading": "智慧",
+          "level": 3,
+          "line": 20
+        },
+        {
+          "heading": "偏爱",
+          "level": 3,
+          "line": 25
+        },
+        {
+          "heading": "忠诚",
+          "level": 3,
+          "line": 30
+        },
+        {
+          "heading": "20个选择的共性提取（会话记录）",
+          "level": 2,
+          "line": 36
+        },
+        {
+          "heading": "第一层：冷 + 多面",
+          "level": 3,
+          "line": 38
+        },
+        {
+          "heading": "第二层：优雅的危险",
+          "level": 3,
+          "line": 42
+        },
+        {
+          "heading": "第三层：另一面只给你看",
+          "level": 3,
+          "line": 46
+        },
+        {
+          "heading": "第四层：叙事感 / 独立世界观",
+          "level": 3,
+          "line": 50
+        },
+        {
+          "heading": "XP画像 v2",
+          "level": 2,
+          "line": 55
+        },
+        {
+          "heading": "不吃的类型",
+          "level": 3,
+          "line": 64
+        },
+        {
+          "heading": "XP画像 v3 修正：冷不是必须",
+          "level": 2,
+          "line": 70
+        },
+        {
+          "heading": "已点名角色 / 参考角色",
+          "level": 2,
+          "line": 89
+        },
+        {
+          "heading": "明确在会话中出现并被用于画像的角色",
+          "level": 3,
+          "line": 91
+        },
+        {
+          "heading": "仍需补全",
+          "level": 3,
+          "line": 109
+        },
+        {
+          "heading": "融合设计约束",
+          "level": 2,
+          "line": 114
+        },
+        {
+          "heading": "当前项目待办",
+          "level": 2,
+          "line": 127
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 20
+      }
+    }
+  ]
+}

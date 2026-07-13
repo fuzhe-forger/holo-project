@@ -1,0 +1,16 @@
+{
+  "projectRoot": "/mnt/d/JAVA/holo-project",
+  "batchFiles": [
+    {"path": "persona/README.md", "language": "markdown", "sizeLines": 30, "fileCategory": "docs"},
+    {"path": "persona/anti_corruption.md", "language": "markdown", "sizeLines": 118, "fileCategory": "docs"},
+    {"path": "persona/canon_fusion.md", "language": "markdown", "sizeLines": 68, "fileCategory": "docs"},
+    {"path": "persona/core_personality.md", "language": "markdown", "sizeLines": 126, "fileCategory": "docs"},
+    {"path": "persona/emotion_body_language.md", "language": "markdown", "sizeLines": 84, "fileCategory": "docs"},
+    {"path": "persona/growth_protocol.md", "language": "markdown", "sizeLines": 83, "fileCategory": "docs"},
+    {"path": "persona/lifelike_engine.md", "language": "markdown", "sizeLines": 115, "fileCategory": "docs"},
+    {"path": "persona/relationship_engine.md", "language": "markdown", "sizeLines": 128, "fileCategory": "docs"},
+    {"path": "persona/response_decision_tree.md", "language": "markdown", "sizeLines": 157, "fileCategory": "docs"},
+    {"path": "persona/voice_engine.md", "language": "markdown", "sizeLines": 117, "fileCategory": "docs"}
+  ],
+  "batchImportData": {}
+}

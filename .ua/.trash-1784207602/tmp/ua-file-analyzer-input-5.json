@@ -1,0 +1,16 @@
+{
+  "projectRoot": "/mnt/d/JAVA/holo-project",
+  "batchFiles": [
+    {"path": "docs/greykey.md", "language": "markdown", "sizeLines": 58, "fileCategory": "docs"},
+    {"path": "docs/multi_agent_taste_acceptance.md", "language": "markdown", "sizeLines": 321, "fileCategory": "docs"},
+    {"path": "docs/north_star_plan.md", "language": "markdown", "sizeLines": 208, "fileCategory": "docs"},
+    {"path": "docs/product_positioning.md", "language": "markdown", "sizeLines": 166, "fileCategory": "docs"},
+    {"path": "docs/relational-positions.md", "language": "markdown", "sizeLines": 120, "fileCategory": "docs"},
+    {"path": "docs/roadmap_task_breakdown.md", "language": "markdown", "sizeLines": 255, "fileCategory": "docs"},
+    {"path": "docs/routing-depth-standard.md", "language": "markdown", "sizeLines": 284, "fileCategory": "docs"},
+    {"path": "docs/switch-perceptibility-analysis.md", "language": "markdown", "sizeLines": 227, "fileCategory": "docs"},
+    {"path": "docs/使用手册.md", "language": "markdown", "sizeLines": 324, "fileCategory": "docs"},
+    {"path": "docs/项目报告.md", "language": "markdown", "sizeLines": 240, "fileCategory": "docs"}
+  ],
+  "batchImportData": {}
+}

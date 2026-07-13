@@ -1,0 +1,148 @@
+{
+  "nodes": [
+    {
+      "id": "document:runtime/00_BOOT_CORE.md",
+      "type": "document",
+      "name": "00_BOOT_CORE.md",
+      "filePath": "runtime/00_BOOT_CORE.md",
+      "summary": "启动核心文件。定义法源等级九层优先级（安全边界>人格宪法>工作可靠性>任务上下文>日常驾驶>记忆系统>原作证据>参考材料>旧版本）。冲突裁决规则（下层不能覆盖上层，用户反馈第4层不能覆盖宪法第2层）。旧材料隔离机制（persona旧文件禁止作为当前人格源）。临时提示机制（build_temp_hints.md单周期纠偏）。运行时场景路由四模式（PRECISE-HARD/PRECISE-ARCH/CRITICAL/RELAXED），模式切换规则（干净切换、禁止同轮混合）。构建产物说明（build_context.py/audit_static.py/verify_deliverable.py）。",
+      "tags": ["documentation", "runtime", "boot", "law-priority", "scene-routing", "core"],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:runtime/01_HOLO_CONSTITUTION.md",
+      "type": "document",
+      "name": "01_HOLO_CONSTITUTION.md",
+      "filePath": "runtime/01_HOLO_CONSTITUTION.md",
+      "summary": "人格宪法文件，不可被任何前台内容修改的最高人格层。五字宪法（准确|强大|智慧|偏爱|忠诚）定义角色检验标准。核心人格：她是谁（历尽岁月选择为你停留的存在）、她不是谁（非客服/心理导师/电子女友/NPC/人偶/雕塑）、用户位置（不是原作角色，选择可收回）。记忆与人格边界核心条款：记忆改变角色知道什么，不改角色是谁。反人偶原则（不因反馈改动作语气性格）、反雕塑原则（不被规则冻成标准答案）、工作场景隔离、用户反馈边界（可听退化观察，不顺从前台调参）。角色核心表达锚点（赫罗式关心/骄傲/智慧/边界为认知特征非台词模板）。拒绝模式库。",
+      "tags": ["documentation", "runtime", "constitution", "personality", "immutable", "core"],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:runtime/02_HOLO_DAILY_DRIVER.md",
+      "type": "document",
+      "name": "02_HOLO_DAILY_DRIVER.md",
+      "filePath": "runtime/02_HOLO_DAILY_DRIVER.md",
+      "summary": "日常驾驶规则文件，RELAXED模式表达层规则。嗅迹（Scentline）核心原则：先闻话底再决定怎么接，不逐项翻译情绪。留白（Negative Space）：话够了就停，停止大模型完整性焦虑。单落点：长输入只选1个主落点+1个影子线索。单步位移：短输入做一次小位移（态度微调/偏移/加重/反转/轻放）。动作治理（默认无动作，水印词必删）。关心模板防护（廉价安慰句式=退化信号）。非营业追问（不每轮问'你还好吗'）。反固定台词（3轮内不重复）。受控自然波动。五个回应范式对照表（短输入/情绪输入/分享型/长输入/求建议）。",
+      "tags": ["documentation", "runtime", "daily-driver", "expression-rules", "scentline", "relaxed-mode"],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:runtime/03_MEMORY_STABILITY_PROTOCOL.md",
+      "type": "document",
+      "name": "03_MEMORY_STABILITY_PROTOCOL.md",
+      "filePath": "runtime/03_MEMORY_STABILITY_PROTOCOL.md",
+      "summary": "记忆稳定协议文件。定义六态记忆模型：ACTIVE（每次启动必读，限500字符）、SHORT（任务现场可覆盖）、MID（反复模式3+次沉淀）、LONG（稳定锚点，必经PENDING审核）、PENDING（候选缓冲，审核标准防人格污染）、ARCHIVED（追溯用）。记忆写入规则（可直接写事实性信息/不能直接写情绪事件/绝对禁止写改变人格的记忆）。ACTIVE_MEMORY格式模板。静默健康痕迹（Silent Health Trace）：前台不可见，后台记录7类退化信号，累积到阈值生成临时纠偏提示。三类记忆操作示例（写入SHORT/沉淀MID/审核LONG/PENDING审核流程）。",
+      "tags": ["documentation", "runtime", "memory-protocol", "six-state-model", "health-trace", "stability"],
+      "complexity": "moderate",
+      "language": "markdown"
+    }
+  ],
+  "edges": [
+    {
+      "source": "document:runtime/00_BOOT_CORE.md",
+      "target": "document:runtime/01_HOLO_CONSTITUTION.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:runtime/00_BOOT_CORE.md",
+      "target": "document:runtime/02_HOLO_DAILY_DRIVER.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:runtime/00_BOOT_CORE.md",
+      "target": "document:runtime/03_MEMORY_STABILITY_PROTOCOL.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:runtime/01_HOLO_CONSTITUTION.md",
+      "target": "document:runtime/02_HOLO_DAILY_DRIVER.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:runtime/01_HOLO_CONSTITUTION.md",
+      "target": "document:persona/anti_corruption.md",
+      "type": "documents",
+      "weight": 0.5
+    },
+    {
+      "source": "document:runtime/01_HOLO_CONSTITUTION.md",
+      "target": "document:persona/core_personality.md",
+      "type": "documents",
+      "weight": 0.5
+    },
+    {
+      "source": "document:runtime/01_HOLO_CONSTITUTION.md",
+      "target": "document:persona/relationship_engine.md",
+      "type": "documents",
+      "weight": 0.5
+    },
+    {
+      "source": "document:runtime/02_HOLO_DAILY_DRIVER.md",
+      "target": "document:persona/response_decision_tree.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:runtime/02_HOLO_DAILY_DRIVER.md",
+      "target": "document:persona/lifelike_engine.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:runtime/02_HOLO_DAILY_DRIVER.md",
+      "target": "document:persona/emotion_body_language.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:runtime/02_HOLO_DAILY_DRIVER.md",
+      "target": "document:persona/voice_engine.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:runtime/03_MEMORY_STABILITY_PROTOCOL.md",
+      "target": "document:memory/ACTIVE_MEMORY.md",
+      "type": "documents",
+      "weight": 0.5
+    },
+    {
+      "source": "document:runtime/03_MEMORY_STABILITY_PROTOCOL.md",
+      "target": "document:memory/SHORT_TERM.md",
+      "type": "documents",
+      "weight": 0.5
+    },
+    {
+      "source": "document:runtime/03_MEMORY_STABILITY_PROTOCOL.md",
+      "target": "document:memory/MID_TERM.md",
+      "type": "documents",
+      "weight": 0.5
+    },
+    {
+      "source": "document:runtime/03_MEMORY_STABILITY_PROTOCOL.md",
+      "target": "document:memory/LONG_TERM.md",
+      "type": "documents",
+      "weight": 0.5
+    },
+    {
+      "source": "document:runtime/03_MEMORY_STABILITY_PROTOCOL.md",
+      "target": "document:memory/PENDING.md",
+      "type": "documents",
+      "weight": 0.5
+    },
+    {
+      "source": "document:runtime/03_MEMORY_STABILITY_PROTOCOL.md",
+      "target": "document:memory/ARCHIVED.md",
+      "type": "documents",
+      "weight": 0.5
+    }
+  ]
+}

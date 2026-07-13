@@ -1,0 +1,12 @@
+{
+  "projectRoot": "/mnt/d/JAVA/holo-project",
+  "batchFiles": [
+    {"path": "fusion/samples/architect.sample.md", "language": "markdown", "sizeLines": 28, "fileCategory": "docs"},
+    {"path": "fusion/samples/coordinator_persona.sample.md", "language": "markdown", "sizeLines": 27, "fileCategory": "docs"},
+    {"path": "fusion/samples/greykey.sample.md", "language": "markdown", "sizeLines": 27, "fileCategory": "docs"},
+    {"path": "fusion/samples/incident_handler.sample.md", "language": "markdown", "sizeLines": 28, "fileCategory": "docs"},
+    {"path": "fusion/samples/moheng.sample.md", "language": "markdown", "sizeLines": 48, "fileCategory": "docs"},
+    {"path": "fusion/samples/persona_auditor.sample.md", "language": "markdown", "sizeLines": 27, "fileCategory": "docs"}
+  ],
+  "batchImportData": {}
+}

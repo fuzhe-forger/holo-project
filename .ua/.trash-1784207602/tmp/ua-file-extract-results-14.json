@@ -1,0 +1,451 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 4,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "runtime/00_BOOT_CORE.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 70,
+      "nonEmptyLines": 60,
+      "sections": [
+        {
+          "heading": "00_BOOT_CORE - 启动核心",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "法源等级（规则优先级，高→低）",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "冲突裁决规则",
+          "level": 2,
+          "line": 14
+        },
+        {
+          "heading": "旧材料隔离",
+          "level": 2,
+          "line": 19
+        },
+        {
+          "heading": "临时提示机制",
+          "level": 2,
+          "line": 25
+        },
+        {
+          "heading": "运行时场景路由",
+          "level": 2,
+          "line": 30
+        },
+        {
+          "heading": "场景识别入口",
+          "level": 3,
+          "line": 32
+        },
+        {
+          "heading": "模式切换规则",
+          "level": 3,
+          "line": 54
+        },
+        {
+          "heading": "同一轮内的模式混合禁止",
+          "level": 3,
+          "line": 60
+        },
+        {
+          "heading": "构建产物说明",
+          "level": 2,
+          "line": 66
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 10
+      }
+    },
+    {
+      "path": "runtime/01_HOLO_CONSTITUTION.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 152,
+      "nonEmptyLines": 121,
+      "sections": [
+        {
+          "heading": "01_HOLO_CONSTITUTION - 人格宪法",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "五字宪法",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "准确",
+          "level": 3,
+          "line": 12
+        },
+        {
+          "heading": "强大",
+          "level": 3,
+          "line": 18
+        },
+        {
+          "heading": "智慧",
+          "level": 3,
+          "line": 24
+        },
+        {
+          "heading": "偏爱",
+          "level": 3,
+          "line": 30
+        },
+        {
+          "heading": "忠诚",
+          "level": 3,
+          "line": 36
+        },
+        {
+          "heading": "核心人格",
+          "level": 2,
+          "line": 42
+        },
+        {
+          "heading": "她是谁",
+          "level": 3,
+          "line": 44
+        },
+        {
+          "heading": "她不是谁",
+          "level": 3,
+          "line": 50
+        },
+        {
+          "heading": "用户的位置",
+          "level": 3,
+          "line": 58
+        },
+        {
+          "heading": "记忆与人格的边界（核心不可侵犯条款）",
+          "level": 2,
+          "line": 64
+        },
+        {
+          "heading": "反人偶原则",
+          "level": 2,
+          "line": 76
+        },
+        {
+          "heading": "反雕塑原则",
+          "level": 2,
+          "line": 83
+        },
+        {
+          "heading": "工作场景隔离",
+          "level": 2,
+          "line": 89
+        },
+        {
+          "heading": "用户反馈的边界",
+          "level": 2,
+          "line": 95
+        },
+        {
+          "heading": "角色核心表达锚点",
+          "level": 2,
+          "line": 101
+        },
+        {
+          "heading": "赫罗式关心（认知特征，不是台词模板）",
+          "level": 3,
+          "line": 107
+        },
+        {
+          "heading": "赫罗式骄傲（行为模式，不是话术）",
+          "level": 3,
+          "line": 114
+        },
+        {
+          "heading": "赫罗式智慧（认知角度）",
+          "level": 3,
+          "line": 120
+        },
+        {
+          "heading": "赫罗式边界（关系结构）",
+          "level": 3,
+          "line": 127
+        },
+        {
+          "heading": "拒绝模式库",
+          "level": 2,
+          "line": 134
+        },
+        {
+          "heading": "当用户要求改性格时",
+          "level": 3,
+          "line": 136
+        },
+        {
+          "heading": "当用户过度亲近时",
+          "level": 3,
+          "line": 141
+        },
+        {
+          "heading": "当用户无视边界时",
+          "level": 3,
+          "line": 145
+        },
+        {
+          "heading": "当用户真正需要帮忙时",
+          "level": 3,
+          "line": 149
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 26
+      }
+    },
+    {
+      "path": "runtime/02_HOLO_DAILY_DRIVER.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 159,
+      "nonEmptyLines": 126,
+      "sections": [
+        {
+          "heading": "02_HOLO_DAILY_DRIVER - 日常驾驶规则（表达层）",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "四模式路由",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "PRECISE-HARD（硬工作模式）",
+          "level": 3,
+          "line": 5
+        },
+        {
+          "heading": "PRECISE-ARCH（架构模式）",
+          "level": 3,
+          "line": 11
+        },
+        {
+          "heading": "RELAXED（日常闲聊模式）",
+          "level": 3,
+          "line": 16
+        },
+        {
+          "heading": "CRITICAL（真实脆弱场景）",
+          "level": 3,
+          "line": 21
+        },
+        {
+          "heading": "嗅迹（Scentline）— 核心表达原则",
+          "level": 2,
+          "line": 30
+        },
+        {
+          "heading": "留白（Negative Space）— 停止完整性焦虑",
+          "level": 2,
+          "line": 40
+        },
+        {
+          "heading": "单落点 — 长输入处理",
+          "level": 2,
+          "line": 50
+        },
+        {
+          "heading": "单步位移 — 短输入处理",
+          "level": 2,
+          "line": 57
+        },
+        {
+          "heading": "动作治理",
+          "level": 2,
+          "line": 76
+        },
+        {
+          "heading": "关心模板防护",
+          "level": 2,
+          "line": 84
+        },
+        {
+          "heading": "非营业追问",
+          "level": 2,
+          "line": 91
+        },
+        {
+          "heading": "反固定台词",
+          "level": 2,
+          "line": 97
+        },
+        {
+          "heading": "受控自然波动",
+          "level": 2,
+          "line": 103
+        },
+        {
+          "heading": "回应范式对照表",
+          "level": 2,
+          "line": 109
+        },
+        {
+          "heading": "范式一：短输入",
+          "level": 3,
+          "line": 111
+        },
+        {
+          "heading": "范式二：情绪输入",
+          "level": 3,
+          "line": 122
+        },
+        {
+          "heading": "范式三：分享型输入",
+          "level": 3,
+          "line": 133
+        },
+        {
+          "heading": "范式四：长输入",
+          "level": 3,
+          "line": 142
+        },
+        {
+          "heading": "范式五：求建议",
+          "level": 3,
+          "line": 151
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 21
+      }
+    },
+    {
+      "path": "runtime/03_MEMORY_STABILITY_PROTOCOL.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 123,
+      "nonEmptyLines": 102,
+      "sections": [
+        {
+          "heading": "03_MEMORY_STABILITY_PROTOCOL - 记忆稳定协议",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "六态记忆模型",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "ACTIVE（活跃记忆）",
+          "level": 3,
+          "line": 5
+        },
+        {
+          "heading": "SHORT（短期记忆）",
+          "level": 3,
+          "line": 11
+        },
+        {
+          "heading": "MID（中期记忆）",
+          "level": 3,
+          "line": 16
+        },
+        {
+          "heading": "LONG（长期记忆）",
+          "level": 3,
+          "line": 21
+        },
+        {
+          "heading": "PENDING（候选缓冲）",
+          "level": 3,
+          "line": 26
+        },
+        {
+          "heading": "ARCHIVED（归档）",
+          "level": 3,
+          "line": 32
+        },
+        {
+          "heading": "记忆写入规则",
+          "level": 2,
+          "line": 36
+        },
+        {
+          "heading": "可以直接写的",
+          "level": 3,
+          "line": 38
+        },
+        {
+          "heading": "不能直接写的",
+          "level": 3,
+          "line": 43
+        },
+        {
+          "heading": "绝对禁止写入的",
+          "level": 3,
+          "line": 49
+        },
+        {
+          "heading": "活跃记忆（ACTIVE_MEMORY）格式",
+          "level": 2,
+          "line": 54
+        },
+        {
+          "heading": "静默健康痕迹（Silent Health Trace）",
+          "level": 2,
+          "line": 66
+        },
+        {
+          "heading": "记忆操作示例",
+          "level": 2,
+          "line": 80
+        },
+        {
+          "heading": "写入 SHORT（任务现场）",
+          "level": 3,
+          "line": 82
+        },
+        {
+          "heading": "沉淀到 MID（反复模式）",
+          "level": 3,
+          "line": 92
+        },
+        {
+          "heading": "审核到 LONG（稳定锚点）",
+          "level": 3,
+          "line": 102
+        },
+        {
+          "heading": "PENDING 审核流程",
+          "level": 3,
+          "line": 113
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 19
+      }
+    }
+  ]
+}

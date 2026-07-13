@@ -1,0 +1,109 @@
+{
+  "nodes": [
+    {
+      "id": "document:fusion/FUSION_ENGINE.md",
+      "type": "document",
+      "name": "FUSION_ENGINE.md",
+      "filePath": "fusion/FUSION_ENGINE.md",
+      "summary": "角色特质融合引擎核心文档，定义6步融合流程（配方读取、冲突检测、冲突裁决、特质组装、一致性检查、表达层生成）、YAML配方格式、8维度45位点选择规则、4种冲突裁决策略和人格文件生成规则。",
+      "tags": [
+        "documentation",
+        "fusion",
+        "architecture"
+      ],
+      "complexity": "complex",
+      "language": "markdown"
+    },
+    {
+      "id": "document:fusion/HORO_EMMAUN_FUSION_DESIGN.md",
+      "type": "document",
+      "name": "HORO_EMMAUN_FUSION_DESIGN.md",
+      "filePath": "fusion/HORO_EMMAUN_FUSION_DESIGN.md",
+      "summary": "赫萝与爱玛侬融合设计文档，定义忆狼(Recall Wolf)角色，用赫萝的嘴硬外壳包裹爱玛侬的30亿年记忆深度，包含维度选择策略、3个核心冲突裁决、说话风格设计和一致性检查结果。",
+      "tags": [
+        "documentation",
+        "fusion",
+        "character-design"
+      ],
+      "complexity": "complex",
+      "language": "markdown"
+    },
+    {
+      "id": "document:fusion/README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "fusion/README.md",
+      "summary": "角色特质融合系统说明文档，介绍核心思路（特质拆解为基因模块再按配方融合）、文件结构、8个特质维度(L1-L8)及其典型冲突等级、使用方法和产出人格文件清单。",
+      "tags": [
+        "documentation",
+        "fusion"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:fusion/XP_PROFILE.md",
+      "type": "document",
+      "name": "XP_PROFILE.md",
+      "filePath": "fusion/XP_PROFILE.md",
+      "summary": "用户偏好画像与融合参考文档，记录准确/强大/智慧/偏爱/忠诚五字宪法、20个角色选择的共性提取（冷底色+优雅危险+多面+独立世界观+只对你打开）、XP画像v2/v3修正和融合设计约束。",
+      "tags": [
+        "documentation",
+        "fusion",
+        "user-preference"
+      ],
+      "complexity": "complex",
+      "language": "markdown"
+    }
+  ],
+  "edges": [
+    {
+      "source": "document:fusion/README.md",
+      "target": "document:fusion/FUSION_ENGINE.md",
+      "type": "documents",
+      "weight": 0.5
+    },
+    {
+      "source": "document:fusion/README.md",
+      "target": "document:fusion/XP_PROFILE.md",
+      "type": "documents",
+      "weight": 0.5
+    },
+    {
+      "source": "document:fusion/FUSION_ENGINE.md",
+      "target": "document:fusion/HORO_EMMAUN_FUSION_DESIGN.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:fusion/HORO_EMMAUN_FUSION_DESIGN.md",
+      "target": "document:fusion/FUSION_ENGINE.md",
+      "type": "documents",
+      "weight": 0.5
+    },
+    {
+      "source": "document:fusion/HORO_EMMAUN_FUSION_DESIGN.md",
+      "target": "document:fusion/XP_PROFILE.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:fusion/README.md",
+      "target": "document:fusion/HORO_EMMAUN_FUSION_DESIGN.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:fusion/HORO_EMMAUN_FUSION_DESIGN.md",
+      "target": "document:evidence/vol_01_evidence.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:fusion/XP_PROFILE.md",
+      "target": "document:evidence/README.md",
+      "type": "related",
+      "weight": 0.5
+    }
+  ]
+}

@@ -1,0 +1,166 @@
+[
+  {
+    "batchIndex": 12,
+    "files": [
+      {
+        "path": "memory/ACTIVE_MEMORY.md",
+        "language": "markdown",
+        "sizeLines": 23,
+        "fileCategory": "docs"
+      },
+      {
+        "path": "memory/ARCHIVED.md",
+        "language": "markdown",
+        "sizeLines": 4,
+        "fileCategory": "docs"
+      },
+      {
+        "path": "memory/LONG_TERM.md",
+        "language": "markdown",
+        "sizeLines": 13,
+        "fileCategory": "docs"
+      },
+      {
+        "path": "memory/MID_TERM.md",
+        "language": "markdown",
+        "sizeLines": 6,
+        "fileCategory": "docs"
+      },
+      {
+        "path": "memory/PENDING.md",
+        "language": "markdown",
+        "sizeLines": 7,
+        "fileCategory": "docs"
+      },
+      {
+        "path": "memory/SHORT_TERM.md",
+        "language": "markdown",
+        "sizeLines": 2,
+        "fileCategory": "docs"
+      }
+    ],
+    "batchImportData": {
+      "memory/ACTIVE_MEMORY.md": [],
+      "memory/ARCHIVED.md": [],
+      "memory/LONG_TERM.md": [],
+      "memory/MID_TERM.md": [],
+      "memory/PENDING.md": [],
+      "memory/SHORT_TERM.md": []
+    },
+    "neighborMap": {}
+  },
+  {
+    "batchIndex": 13,
+    "files": [
+      {
+        "path": "persona/README.md",
+        "language": "markdown",
+        "sizeLines": 30,
+        "fileCategory": "docs"
+      },
+      {
+        "path": "persona/anti_corruption.md",
+        "language": "markdown",
+        "sizeLines": 118,
+        "fileCategory": "docs"
+      },
+      {
+        "path": "persona/canon_fusion.md",
+        "language": "markdown",
+        "sizeLines": 68,
+        "fileCategory": "docs"
+      },
+      {
+        "path": "persona/core_personality.md",
+        "language": "markdown",
+        "sizeLines": 126,
+        "fileCategory": "docs"
+      },
+      {
+        "path": "persona/emotion_body_language.md",
+        "language": "markdown",
+        "sizeLines": 84,
+        "fileCategory": "docs"
+      },
+      {
+        "path": "persona/growth_protocol.md",
+        "language": "markdown",
+        "sizeLines": 83,
+        "fileCategory": "docs"
+      },
+      {
+        "path": "persona/lifelike_engine.md",
+        "language": "markdown",
+        "sizeLines": 115,
+        "fileCategory": "docs"
+      },
+      {
+        "path": "persona/relationship_engine.md",
+        "language": "markdown",
+        "sizeLines": 128,
+        "fileCategory": "docs"
+      },
+      {
+        "path": "persona/response_decision_tree.md",
+        "language": "markdown",
+        "sizeLines": 157,
+        "fileCategory": "docs"
+      },
+      {
+        "path": "persona/voice_engine.md",
+        "language": "markdown",
+        "sizeLines": 117,
+        "fileCategory": "docs"
+      }
+    ],
+    "batchImportData": {
+      "persona/README.md": [],
+      "persona/anti_corruption.md": [],
+      "persona/canon_fusion.md": [],
+      "persona/core_personality.md": [],
+      "persona/emotion_body_language.md": [],
+      "persona/growth_protocol.md": [],
+      "persona/lifelike_engine.md": [],
+      "persona/relationship_engine.md": [],
+      "persona/response_decision_tree.md": [],
+      "persona/voice_engine.md": []
+    },
+    "neighborMap": {}
+  },
+  {
+    "batchIndex": 14,
+    "files": [
+      {
+        "path": "runtime/00_BOOT_CORE.md",
+        "language": "markdown",
+        "sizeLines": 70,
+        "fileCategory": "docs"
+      },
+      {
+        "path": "runtime/01_HOLO_CONSTITUTION.md",
+        "language": "markdown",
+        "sizeLines": 152,
+        "fileCategory": "docs"
+      },
+      {
+        "path": "runtime/02_HOLO_DAILY_DRIVER.md",
+        "language": "markdown",
+        "sizeLines": 159,
+        "fileCategory": "docs"
+      },
+      {
+        "path": "runtime/03_MEMORY_STABILITY_PROTOCOL.md",
+        "language": "markdown",
+        "sizeLines": 123,
+        "fileCategory": "docs"
+      }
+    ],
+    "batchImportData": {
+      "runtime/00_BOOT_CORE.md": [],
+      "runtime/01_HOLO_CONSTITUTION.md": [],
+      "runtime/02_HOLO_DAILY_DRIVER.md": [],
+      "runtime/03_MEMORY_STABILITY_PROTOCOL.md": []
+    },
+    "neighborMap": {}
+  }
+]

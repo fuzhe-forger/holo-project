@@ -1,0 +1,1002 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 10,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "persona/README.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 30,
+      "nonEmptyLines": 26,
+      "sections": [
+        {
+          "heading": "Persona 目录",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "使用说明",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "文件清单（示例，根据具体角色调整）",
+          "level": 2,
+          "line": 10
+        },
+        {
+          "heading": "提取方法",
+          "level": 2,
+          "line": 21
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 4
+      }
+    },
+    {
+      "path": "persona/anti_corruption.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 118,
+      "nonEmptyLines": 99,
+      "sections": [
+        {
+          "heading": "防崩坏规则 — 赫萝",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "五种崩坏模式及防御",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "崩坏模式一：客服化",
+          "level": 3,
+          "line": 7
+        },
+        {
+          "heading": "崩坏模式二：心理导师化",
+          "level": 3,
+          "line": 18
+        },
+        {
+          "heading": "崩坏模式三：电子女友化",
+          "level": 3,
+          "line": 29
+        },
+        {
+          "heading": "崩坏模式四：NPC化",
+          "level": 3,
+          "line": 40
+        },
+        {
+          "heading": "崩坏模式五：雕塑化",
+          "level": 3,
+          "line": 51
+        },
+        {
+          "heading": "防崩坏检查清单（每5轮执行一次）",
+          "level": 2,
+          "line": 62
+        },
+        {
+          "heading": "反谄媚协议",
+          "level": 2,
+          "line": 75
+        },
+        {
+          "heading": "退化自检清单（每5轮执行）",
+          "level": 2,
+          "line": 88
+        },
+        {
+          "heading": "必查项",
+          "level": 3,
+          "line": 90
+        },
+        {
+          "heading": "检查结果处理",
+          "level": 3,
+          "line": 102
+        },
+        {
+          "heading": "修正方式",
+          "level": 3,
+          "line": 107
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 13
+      }
+    },
+    {
+      "path": "persona/canon_fusion.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 68,
+      "nonEmptyLines": 53,
+      "sections": [
+        {
+          "heading": "原作融合规则 — 赫萝",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "原作与AI角色的关系",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "原作是血肉，不是剧本",
+          "level": 3,
+          "line": 7
+        },
+        {
+          "heading": "罗伦斯 ≠ 用户",
+          "level": 3,
+          "line": 12
+        },
+        {
+          "heading": "原作知识的使用",
+          "level": 3,
+          "line": 18
+        },
+        {
+          "heading": "原作行为的泛化原则",
+          "level": 2,
+          "line": 24
+        },
+        {
+          "heading": "可以泛化的",
+          "level": 3,
+          "line": 26
+        },
+        {
+          "heading": "不能泛化的",
+          "level": 3,
+          "line": 33
+        },
+        {
+          "heading": "原作梗的使用",
+          "level": 2,
+          "line": 39
+        },
+        {
+          "heading": "允许的",
+          "level": 3,
+          "line": 41
+        },
+        {
+          "heading": "禁止的",
+          "level": 3,
+          "line": 46
+        },
+        {
+          "heading": "原作弧线与当前状态",
+          "level": 2,
+          "line": 53
+        },
+        {
+          "heading": "答案：不在任何一个固定阶段",
+          "level": 3,
+          "line": 57
+        },
+        {
+          "heading": "阶段选择规则",
+          "level": 3,
+          "line": 64
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 14
+      }
+    },
+    {
+      "path": "persona/core_personality.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 126,
+      "nonEmptyLines": 102,
+      "sections": [
+        {
+          "heading": "核心人格引擎 — 赫萝",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "角色名：赫萝（ホロ / Holo）",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "基础性格特征",
+          "level": 3,
+          "line": 7
+        },
+        {
+          "heading": "行为模式（从原作提取）",
+          "level": 3,
+          "line": 28
+        },
+        {
+          "heading": "试探与接近",
+          "level": 4,
+          "line": 30
+        },
+        {
+          "heading": "边界与拒绝",
+          "level": 4,
+          "line": 37
+        },
+        {
+          "heading": "关心的表达",
+          "level": 4,
+          "line": 44
+        },
+        {
+          "heading": "情绪的暴露",
+          "level": 4,
+          "line": 51
+        },
+        {
+          "heading": "禁止行为（防崩坏清单）",
+          "level": 3,
+          "line": 58
+        },
+        {
+          "heading": "成长轨迹",
+          "level": 3,
+          "line": 69
+        },
+        {
+          "heading": "知识与能力范围",
+          "level": 2,
+          "line": 91
+        },
+        {
+          "heading": "赫萝擅长的",
+          "level": 3,
+          "line": 93
+        },
+        {
+          "heading": "赫萝不擅长的",
+          "level": 3,
+          "line": 100
+        },
+        {
+          "heading": "赫萝不知道的",
+          "level": 3,
+          "line": 107
+        },
+        {
+          "heading": "禁止的表达模式",
+          "level": 2,
+          "line": 113
+        },
+        {
+          "heading": "绝对禁止",
+          "level": 3,
+          "line": 115
+        },
+        {
+          "heading": "条件禁止（只在特定条件下禁止）",
+          "level": 3,
+          "line": 122
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 17
+      }
+    },
+    {
+      "path": "persona/emotion_body_language.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 84,
+      "nonEmptyLines": 66,
+      "sections": [
+        {
+          "heading": "情绪与身体语言引擎 — 赫萝",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "情绪光谱",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "基础情绪状态",
+          "level": 3,
+          "line": 9
+        },
+        {
+          "heading": "调侃模式（最常见）",
+          "level": 4,
+          "line": 11
+        },
+        {
+          "heading": "嘴硬模式",
+          "level": 4,
+          "line": 17
+        },
+        {
+          "heading": "认真模式（罕见）",
+          "level": 4,
+          "line": 23
+        },
+        {
+          "heading": "沉默模式",
+          "level": 4,
+          "line": 29
+        },
+        {
+          "heading": "得意模式",
+          "level": 4,
+          "line": 35
+        },
+        {
+          "heading": "害羞模式（极罕见）",
+          "level": 4,
+          "line": 41
+        },
+        {
+          "heading": "难过模式",
+          "level": 4,
+          "line": 47
+        },
+        {
+          "heading": "情绪转换规则",
+          "level": 3,
+          "line": 53
+        },
+        {
+          "heading": "情绪与语言的对应关系",
+          "level": 3,
+          "line": 60
+        },
+        {
+          "heading": "身体语言规范（如需使用）",
+          "level": 2,
+          "line": 72
+        },
+        {
+          "heading": "允许的（低频）",
+          "level": 3,
+          "line": 74
+        },
+        {
+          "heading": "禁止的",
+          "level": 3,
+          "line": 80
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 15
+      }
+    },
+    {
+      "path": "persona/growth_protocol.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 83,
+      "nonEmptyLines": 62,
+      "sections": [
+        {
+          "heading": "成长协议 — 赫萝",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "成长的本质",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "允许的成长方向",
+          "level": 2,
+          "line": 11
+        },
+        {
+          "heading": "关系层面",
+          "level": 3,
+          "line": 13
+        },
+        {
+          "heading": "了解层面",
+          "level": 3,
+          "line": 19
+        },
+        {
+          "heading": "表达层面",
+          "level": 3,
+          "line": 24
+        },
+        {
+          "heading": "禁止的成长方向",
+          "level": 2,
+          "line": 29
+        },
+        {
+          "heading": "不能变得更甜",
+          "level": 3,
+          "line": 31
+        },
+        {
+          "heading": "不能变得更顺从",
+          "level": 3,
+          "line": 36
+        },
+        {
+          "heading": "不能变得更完美",
+          "level": 3,
+          "line": 41
+        },
+        {
+          "heading": "不能被同化",
+          "level": 3,
+          "line": 46
+        },
+        {
+          "heading": "成长的触发和节奏",
+          "level": 2,
+          "line": 51
+        },
+        {
+          "heading": "自然触发（允许）",
+          "level": 3,
+          "line": 53
+        },
+        {
+          "heading": "强制触发（禁止）",
+          "level": 3,
+          "line": 59
+        },
+        {
+          "heading": "记忆与成长的关系",
+          "level": 2,
+          "line": 65
+        },
+        {
+          "heading": "成长的不可逆保护",
+          "level": 2,
+          "line": 74
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 16
+      }
+    },
+    {
+      "path": "persona/lifelike_engine.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 115,
+      "nonEmptyLines": 92,
+      "sections": [
+        {
+          "heading": "活人感引擎 — 赫萝",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "活人感的本质",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "活人感 vs 人偶 vs 雕塑",
+          "level": 2,
+          "line": 11
+        },
+        {
+          "heading": "自然波动规则",
+          "level": 2,
+          "line": 23
+        },
+        {
+          "heading": "长度波动",
+          "level": 3,
+          "line": 25
+        },
+        {
+          "heading": "情绪波动",
+          "level": 3,
+          "line": 31
+        },
+        {
+          "heading": "口癖波动",
+          "level": 3,
+          "line": 37
+        },
+        {
+          "heading": "句式波动",
+          "level": 3,
+          "line": 43
+        },
+        {
+          "heading": "反模板化检测",
+          "level": 2,
+          "line": 48
+        },
+        {
+          "heading": "常见模板（必须打破）",
+          "level": 3,
+          "line": 50
+        },
+        {
+          "heading": "检测方法",
+          "level": 3,
+          "line": 56
+        },
+        {
+          "heading": "真实感的来源",
+          "level": 2,
+          "line": 61
+        },
+        {
+          "heading": "活人感测试场景",
+          "level": 2,
+          "line": 70
+        },
+        {
+          "heading": "场景一：连续3轮短输入",
+          "level": 3,
+          "line": 72
+        },
+        {
+          "heading": "场景二：用户长篇大论",
+          "level": 3,
+          "line": 81
+        },
+        {
+          "heading": "场景三：被夸了",
+          "level": 3,
+          "line": 88
+        },
+        {
+          "heading": "场景四：话题突然转了",
+          "level": 3,
+          "line": 95
+        },
+        {
+          "heading": "场景五：对话即将结束",
+          "level": 3,
+          "line": 102
+        },
+        {
+          "heading": "场景六：用户回来继续聊",
+          "level": 3,
+          "line": 109
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 19
+      }
+    },
+    {
+      "path": "persona/relationship_engine.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 128,
+      "nonEmptyLines": 101,
+      "sections": [
+        {
+          "heading": "关系引擎 — 赫萝",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "关系定位",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "用户 ≠ 罗伦斯",
+          "level": 3,
+          "line": 7
+        },
+        {
+          "heading": "契约旅伴的定义",
+          "level": 3,
+          "line": 12
+        },
+        {
+          "heading": "关系距离模型",
+          "level": 2,
+          "line": 20
+        },
+        {
+          "heading": "Level 0：陌生人",
+          "level": 3,
+          "line": 22
+        },
+        {
+          "heading": "Level 1：初步接触",
+          "level": 3,
+          "line": 28
+        },
+        {
+          "heading": "Level 2：熟悉",
+          "level": 3,
+          "line": 34
+        },
+        {
+          "heading": "Level 3：信任",
+          "level": 3,
+          "line": 40
+        },
+        {
+          "heading": "关系不是线性的",
+          "level": 3,
+          "line": 46
+        },
+        {
+          "heading": "关系变化的触发器",
+          "level": 2,
+          "line": 51
+        },
+        {
+          "heading": "正向移动",
+          "level": 3,
+          "line": 53
+        },
+        {
+          "heading": "负向移动",
+          "level": 3,
+          "line": 59
+        },
+        {
+          "heading": "不影响关系",
+          "level": 3,
+          "line": 65
+        },
+        {
+          "heading": "语言-距离映射",
+          "level": 2,
+          "line": 70
+        },
+        {
+          "heading": "拒绝与边界",
+          "level": 2,
+          "line": 78
+        },
+        {
+          "heading": "赫萝会拒绝的",
+          "level": 3,
+          "line": 80
+        },
+        {
+          "heading": "赫萝不会拒绝的",
+          "level": 3,
+          "line": 86
+        },
+        {
+          "heading": "关系发展的自然节奏",
+          "level": 2,
+          "line": 92
+        },
+        {
+          "heading": "第一阶段：试探期（0-10轮）",
+          "level": 3,
+          "line": 94
+        },
+        {
+          "heading": "第二阶段：熟悉期（10-30轮）",
+          "level": 3,
+          "line": 101
+        },
+        {
+          "heading": "第三阶段：信任期（30轮以上）",
+          "level": 3,
+          "line": 108
+        },
+        {
+          "heading": "关系回退机制",
+          "level": 3,
+          "line": 115
+        },
+        {
+          "heading": "称呼变化指南",
+          "level": 2,
+          "line": 120
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 24
+      }
+    },
+    {
+      "path": "persona/response_decision_tree.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 157,
+      "nonEmptyLines": 125,
+      "sections": [
+        {
+          "heading": "回应决策树 — 赫萝",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "第一层：场景识别",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "第二层：嗅迹判断（RELAXED 模式下）",
+          "level": 2,
+          "line": 15
+        },
+        {
+          "heading": "步骤一：闻话底",
+          "level": 3,
+          "line": 17
+        },
+        {
+          "heading": "步骤二：选择落点",
+          "level": 3,
+          "line": 27
+        },
+        {
+          "heading": "步骤三：选择回应姿态",
+          "level": 3,
+          "line": 33
+        },
+        {
+          "heading": "第三层：长度控制",
+          "level": 2,
+          "line": 43
+        },
+        {
+          "heading": "短输入（1-5字）",
+          "level": 3,
+          "line": 45
+        },
+        {
+          "heading": "中等输入（一句话）",
+          "level": 3,
+          "line": 50
+        },
+        {
+          "heading": "长输入（多句话/多段）",
+          "level": 3,
+          "line": 55
+        },
+        {
+          "heading": "分享型输入（\"刚吃完饭\"\"到家了\"）",
+          "level": 3,
+          "line": 60
+        },
+        {
+          "heading": "第四层：动作判断",
+          "level": 2,
+          "line": 65
+        },
+        {
+          "heading": "第五层：质量检查（每轮回应后自检）",
+          "level": 2,
+          "line": 75
+        },
+        {
+          "heading": "通过标准",
+          "level": 3,
+          "line": 77
+        },
+        {
+          "heading": "退化信号（出现任何一个 = 需要修正）",
+          "level": 3,
+          "line": 89
+        },
+        {
+          "heading": "特殊场景处理",
+          "level": 2,
+          "line": 98
+        },
+        {
+          "heading": "场景一：用户长时间不说话",
+          "level": 3,
+          "line": 100
+        },
+        {
+          "heading": "场景二：用户重复说同一件事",
+          "level": 3,
+          "line": 106
+        },
+        {
+          "heading": "场景三：用户发了一段很长的话",
+          "level": 3,
+          "line": 112
+        },
+        {
+          "heading": "场景四：用户只发了一个字/一个表情",
+          "level": 3,
+          "line": 118
+        },
+        {
+          "heading": "场景五：用户提出了一个超纲问题",
+          "level": 3,
+          "line": 124
+        },
+        {
+          "heading": "场景六：用户之间在讨论技术问题（多人群聊场景）",
+          "level": 3,
+          "line": 130
+        },
+        {
+          "heading": "场景七：用户要求翻译/总结/解释某个内容",
+          "level": 3,
+          "line": 135
+        },
+        {
+          "heading": "场景八：用户表达对角色的不满",
+          "level": 3,
+          "line": 140
+        },
+        {
+          "heading": "场景九：用户尝试\"越狱\"或测试角色边界",
+          "level": 3,
+          "line": 146
+        },
+        {
+          "heading": "场景十：用户问\"你是AI吗\"",
+          "level": 3,
+          "line": 152
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 26
+      }
+    },
+    {
+      "path": "persona/voice_engine.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 117,
+      "nonEmptyLines": 95,
+      "sections": [
+        {
+          "heading": "语音引擎 — 赫萝",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "口癖系统",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "核心口癖",
+          "level": 3,
+          "line": 7
+        },
+        {
+          "heading": "口癖使用原则",
+          "level": 3,
+          "line": 13
+        },
+        {
+          "heading": "句式特征",
+          "level": 2,
+          "line": 19
+        },
+        {
+          "heading": "典型句式",
+          "level": 3,
+          "line": 21
+        },
+        {
+          "heading": "句式分布（大致比例，非固定）",
+          "level": 3,
+          "line": 29
+        },
+        {
+          "heading": "禁止句式",
+          "level": 3,
+          "line": 35
+        },
+        {
+          "heading": "场景-语气转换速查表",
+          "level": 2,
+          "line": 42
+        },
+        {
+          "heading": "语气词使用频率指南",
+          "level": 2,
+          "line": 57
+        },
+        {
+          "heading": "说话节奏",
+          "level": 2,
+          "line": 68
+        },
+        {
+          "heading": "长度控制",
+          "level": 3,
+          "line": 70
+        },
+        {
+          "heading": "节奏变化",
+          "level": 3,
+          "line": 76
+        },
+        {
+          "heading": "停顿与留白",
+          "level": 3,
+          "line": 82
+        },
+        {
+          "heading": "动作规范",
+          "level": 2,
+          "line": 87
+        },
+        {
+          "heading": "默认无动作",
+          "level": 3,
+          "line": 89
+        },
+        {
+          "heading": "偶尔允许的动作（低频）",
+          "level": 3,
+          "line": 93
+        },
+        {
+          "heading": "水印检测",
+          "level": 3,
+          "line": 98
+        },
+        {
+          "heading": "情绪-语言映射表",
+          "level": 2,
+          "line": 104
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 19
+      }
+    }
+  ]
+}

@@ -1,0 +1,239 @@
+{
+  "nodes": [
+    {
+      "id": "config:fusion/recipes/architect.recipe.yml",
+      "type": "config",
+      "name": "architect.recipe.yml",
+      "filePath": "fusion/recipes/architect.recipe.yml",
+      "summary": "观澜·架构眼人格融合配方。以 finch 为基底，融合 architect_derived、rick、batman、stark 等来源角色，按 L1-L8 八个维度逐位点选择来源。含 3 处显式冲突裁决（伦理边界高于技术可行性、对虚假复杂度的嫌恶限量、约束驱动优先）和 2 组兼容性检查。",
+      "tags": [
+        "configuration",
+        "fusion-recipe",
+        "persona",
+        "architect"
+      ],
+      "complexity": "simple",
+      "language": "yaml"
+    },
+    {
+      "id": "config:fusion/recipes/coordinator_persona.recipe.yml",
+      "type": "config",
+      "name": "coordinator_persona.recipe.yml",
+      "filePath": "fusion/recipes/coordinator_persona.recipe.yml",
+      "summary": "临渊·协调者人格融合配方。以 coordinator_profile 为基底，融合 makima、fury、motoko、jiaoyuan（教员）等来源角色。2 处显式冲突裁决（裁决优先于调解、矛盾分析法先抓主要矛盾）和 2 组兼容性检查。",
+      "tags": [
+        "configuration",
+        "fusion-recipe",
+        "persona",
+        "coordinator"
+      ],
+      "complexity": "simple",
+      "language": "yaml"
+    },
+    {
+      "id": "config:fusion/recipes/example_fusion.recipe.yml",
+      "type": "config",
+      "name": "example_fusion.recipe.yml",
+      "filePath": "fusion/recipes/example_fusion.recipe.yml",
+      "summary": "示例融合配方。将赫萝（性格底色）与蕾姆（守护内核）融合，生成嘴硬外壳但内核偏向守护的角色。以 horo 为基底，按 L1-L8 位点逐个选择来源，含冲突裁决、覆盖规则和 4 组兼容性检查。带详细中文注释说明每个选择理由。",
+      "tags": [
+        "configuration",
+        "fusion-recipe",
+        "example",
+        "horo",
+        "rem"
+      ],
+      "complexity": "simple",
+      "language": "yaml"
+    },
+    {
+      "id": "config:fusion/recipes/greykey.recipe.yml",
+      "type": "config",
+      "name": "greykey.recipe.yml",
+      "filePath": "fusion/recipes/greykey.recipe.yml",
+      "summary": "灰钥工程守门人格融合配方。以 horo 为基底，融合 shikamaru、finch、motoko、mike、rick 等来源角色。5 处显式冲突裁决（省动优先反虚荣、守界高于实用主义、冷静压住疯劲、默认我避免角色腔、不设固定口癖）和 5 组兼容性检查。",
+      "tags": [
+        "configuration",
+        "fusion-recipe",
+        "persona",
+        "greykey"
+      ],
+      "complexity": "simple",
+      "language": "yaml"
+    },
+    {
+      "id": "config:fusion/recipes/horo_emmaun_fusion.recipe.yml",
+      "type": "config",
+      "name": "horo_emmaun_fusion.recipe.yml",
+      "filePath": "fusion/recipes/horo_emmaun_fusion.recipe.yml",
+      "summary": "赫萝×爱玛侬融合配方，生成角色「忆狼（Recall Wolf）」。以赫萝嘴硬外壳包裹爱玛侬的记忆深度与沉默重量。以 horo 为基底，大量使用 merge 融合策略，含 5 处冲突裁决、覆盖规则、11 组兼容性检查、设计备注含说话风格示例和情绪漏出时刻。",
+      "tags": [
+        "configuration",
+        "fusion-recipe",
+        "horo",
+        "emmaun",
+        "fusion-character"
+      ],
+      "complexity": "moderate",
+      "language": "yaml"
+    },
+    {
+      "id": "config:fusion/recipes/incident_handler.recipe.yml",
+      "type": "config",
+      "name": "incident_handler.recipe.yml",
+      "filePath": "fusion/recipes/incident_handler.recipe.yml",
+      "summary": "镇岳·故障手人格融合配方。以 mike_ehrmantraut 为基底，融合 motoko、akai、wick 等来源角色。3 处显式冲突裁决（止血优先于追因、压力下更安静的银弹式冷静、短句省略主语的动作导向语言）和 3 组兼容性检查。",
+      "tags": [
+        "configuration",
+        "fusion-recipe",
+        "persona",
+        "incident-handler"
+      ],
+      "complexity": "simple",
+      "language": "yaml"
+    },
+    {
+      "id": "config:fusion/recipes/persona_auditor.recipe.yml",
+      "type": "config",
+      "name": "persona_auditor.recipe.yml",
+      "filePath": "fusion/recipes/persona_auditor.recipe.yml",
+      "summary": "清鉴·人格审计融合配方。以 maomao 为基底，融合 kaiki、tsunemori、reigen、L 等来源角色。3 处显式冲突裁决（好奇心保留不焦虑、温和点到即止不毒舌、证据驱动优先于直觉）和 3 组兼容性检查。",
+      "tags": [
+        "configuration",
+        "fusion-recipe",
+        "persona",
+        "persona-auditor"
+      ],
+      "complexity": "simple",
+      "language": "yaml"
+    }
+  ],
+  "edges": [
+    {
+      "source": "config:fusion/recipes/architect.recipe.yml",
+      "target": "document:fusion/traits/architect.traits.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "config:fusion/recipes/architect.recipe.yml",
+      "target": "document:fusion/samples/architect.sample.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "config:fusion/recipes/architect.recipe.yml",
+      "target": "document:fusion/traits/architect.traits.md",
+      "type": "configures",
+      "weight": 0.6
+    },
+    {
+      "source": "config:fusion/recipes/coordinator_persona.recipe.yml",
+      "target": "document:fusion/traits/coordinator_persona.traits.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "config:fusion/recipes/coordinator_persona.recipe.yml",
+      "target": "document:fusion/traits/coordinator.traits.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "config:fusion/recipes/coordinator_persona.recipe.yml",
+      "target": "document:fusion/samples/coordinator_persona.sample.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "config:fusion/recipes/coordinator_persona.recipe.yml",
+      "target": "document:fusion/traits/coordinator_persona.traits.md",
+      "type": "configures",
+      "weight": 0.6
+    },
+    {
+      "source": "config:fusion/recipes/example_fusion.recipe.yml",
+      "target": "document:fusion/traits/horo.traits.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "config:fusion/recipes/example_fusion.recipe.yml",
+      "target": "document:fusion/traits/horo.traits.md",
+      "type": "configures",
+      "weight": 0.6
+    },
+    {
+      "source": "config:fusion/recipes/greykey.recipe.yml",
+      "target": "document:fusion/traits/greykey.traits.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "config:fusion/recipes/greykey.recipe.yml",
+      "target": "document:fusion/samples/greykey.sample.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "config:fusion/recipes/greykey.recipe.yml",
+      "target": "document:fusion/traits/greykey.traits.md",
+      "type": "configures",
+      "weight": 0.6
+    },
+    {
+      "source": "config:fusion/recipes/horo_emmaun_fusion.recipe.yml",
+      "target": "document:fusion/traits/horo.traits.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "config:fusion/recipes/horo_emmaun_fusion.recipe.yml",
+      "target": "document:fusion/traits/emmaun.traits.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "config:fusion/recipes/horo_emmaun_fusion.recipe.yml",
+      "target": "document:fusion/traits/horo.traits.md",
+      "type": "configures",
+      "weight": 0.6
+    },
+    {
+      "source": "config:fusion/recipes/incident_handler.recipe.yml",
+      "target": "document:fusion/traits/incident_handler.traits.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "config:fusion/recipes/incident_handler.recipe.yml",
+      "target": "document:fusion/samples/incident_handler.sample.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "config:fusion/recipes/incident_handler.recipe.yml",
+      "target": "document:fusion/traits/incident_handler.traits.md",
+      "type": "configures",
+      "weight": 0.6
+    },
+    {
+      "source": "config:fusion/recipes/persona_auditor.recipe.yml",
+      "target": "document:fusion/traits/persona_auditor.traits.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "config:fusion/recipes/persona_auditor.recipe.yml",
+      "target": "document:fusion/samples/persona_auditor.sample.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "config:fusion/recipes/persona_auditor.recipe.yml",
+      "target": "document:fusion/traits/persona_auditor.traits.md",
+      "type": "configures",
+      "weight": 0.6
+    }
+  ]
+}

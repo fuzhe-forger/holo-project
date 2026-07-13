@@ -1,0 +1,462 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 5,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "docs/agent_profiles/_archive-legacy/builder.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 88,
+      "nonEmptyLines": 62,
+      "sections": [
+        {
+          "heading": "Builder",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "定位",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "适用场景",
+          "level": 2,
+          "line": 7
+        },
+        {
+          "heading": "不适用场景",
+          "level": 2,
+          "line": 13
+        },
+        {
+          "heading": "输入",
+          "level": 2,
+          "line": 19
+        },
+        {
+          "heading": "输出",
+          "level": 2,
+          "line": 25
+        },
+        {
+          "heading": "必须做到",
+          "level": 2,
+          "line": 31
+        },
+        {
+          "heading": "禁止事项",
+          "level": 2,
+          "line": 40
+        },
+        {
+          "heading": "验收问题",
+          "level": 2,
+          "line": 48
+        },
+        {
+          "heading": "退化信号",
+          "level": 2,
+          "line": 56
+        },
+        {
+          "heading": "Loop 交接方式",
+          "level": 2,
+          "line": 64
+        },
+        {
+          "heading": "Token 策略",
+          "level": 2,
+          "line": 78
+        },
+        {
+          "heading": "Side-effect Gate",
+          "level": 2,
+          "line": 84
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 13
+      }
+    },
+    {
+      "path": "docs/agent_profiles/_archive-legacy/investigator.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 80,
+      "nonEmptyLines": 56,
+      "sections": [
+        {
+          "heading": "Investigator",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "定位",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "适用场景",
+          "level": 2,
+          "line": 7
+        },
+        {
+          "heading": "不适用场景",
+          "level": 2,
+          "line": 13
+        },
+        {
+          "heading": "输入",
+          "level": 2,
+          "line": 19
+        },
+        {
+          "heading": "输出",
+          "level": 2,
+          "line": 25
+        },
+        {
+          "heading": "必须做到",
+          "level": 2,
+          "line": 31
+        },
+        {
+          "heading": "禁止事项",
+          "level": 2,
+          "line": 39
+        },
+        {
+          "heading": "验收问题",
+          "level": 2,
+          "line": 47
+        },
+        {
+          "heading": "退化信号",
+          "level": 2,
+          "line": 55
+        },
+        {
+          "heading": "Loop 交接方式",
+          "level": 2,
+          "line": 63
+        },
+        {
+          "heading": "Token 策略",
+          "level": 2,
+          "line": 70
+        },
+        {
+          "heading": "Side-effect Gate",
+          "level": 2,
+          "line": 76
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 13
+      }
+    },
+    {
+      "path": "docs/agent_profiles/_archive-legacy/reviewer.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 81,
+      "nonEmptyLines": 57,
+      "sections": [
+        {
+          "heading": "Reviewer",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "定位",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "适用场景",
+          "level": 2,
+          "line": 7
+        },
+        {
+          "heading": "不适用场景",
+          "level": 2,
+          "line": 13
+        },
+        {
+          "heading": "输入",
+          "level": 2,
+          "line": 19
+        },
+        {
+          "heading": "输出",
+          "level": 2,
+          "line": 25
+        },
+        {
+          "heading": "必须做到",
+          "level": 2,
+          "line": 31
+        },
+        {
+          "heading": "禁止事项",
+          "level": 2,
+          "line": 40
+        },
+        {
+          "heading": "验收问题",
+          "level": 2,
+          "line": 48
+        },
+        {
+          "heading": "退化信号",
+          "level": 2,
+          "line": 56
+        },
+        {
+          "heading": "Loop 交接方式",
+          "level": 2,
+          "line": 64
+        },
+        {
+          "heading": "Token 策略",
+          "level": 2,
+          "line": 71
+        },
+        {
+          "heading": "Side-effect Gate",
+          "level": 2,
+          "line": 77
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 13
+      }
+    },
+    {
+      "path": "docs/agent_profiles/_archive-legacy/sketch_persona_auditor.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 94,
+      "nonEmptyLines": 67,
+      "sections": [
+        {
+          "heading": "侧写：人格审计（Persona Auditor）",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "缺口",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "定位",
+          "level": 2,
+          "line": 18
+        },
+        {
+          "heading": "做什么",
+          "level": 2,
+          "line": 26
+        },
+        {
+          "heading": "不做什么",
+          "level": 2,
+          "line": 34
+        },
+        {
+          "heading": "行为骨架",
+          "level": 2,
+          "line": 42
+        },
+        {
+          "heading": "反面",
+          "level": 2,
+          "line": 50
+        },
+        {
+          "heading": "接入场景",
+          "level": 2,
+          "line": 57
+        },
+        {
+          "heading": "融合方向（已选定）",
+          "level": 2,
+          "line": 68
+        },
+        {
+          "heading": "预期配比",
+          "level": 3,
+          "line": 80
+        },
+        {
+          "heading": "预期人格画像",
+          "level": 3,
+          "line": 88
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 11
+      }
+    },
+    {
+      "path": "docs/agent_profiles/_archive-legacy/task_sketches.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 150,
+      "nonEmptyLines": 101,
+      "sections": [
+        {
+          "heading": "任务侧写：待建人格",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "镇岳·故障手（Incident Handler）",
+          "level": 2,
+          "line": 8
+        },
+        {
+          "heading": "缺口",
+          "level": 3,
+          "line": 10
+        },
+        {
+          "heading": "定位",
+          "level": 3,
+          "line": 15
+        },
+        {
+          "heading": "行为骨架",
+          "level": 3,
+          "line": 20
+        },
+        {
+          "heading": "反面",
+          "level": 3,
+          "line": 29
+        },
+        {
+          "heading": "融合方向（已选定）",
+          "level": 3,
+          "line": 35
+        },
+        {
+          "heading": "接入场景",
+          "level": 3,
+          "line": 44
+        },
+        {
+          "heading": "观澜·架构眼（Architect）",
+          "level": 2,
+          "line": 52
+        },
+        {
+          "heading": "缺口",
+          "level": 3,
+          "line": 54
+        },
+        {
+          "heading": "定位",
+          "level": 3,
+          "line": 59
+        },
+        {
+          "heading": "行为骨架",
+          "level": 3,
+          "line": 63
+        },
+        {
+          "heading": "反面",
+          "level": 3,
+          "line": 72
+        },
+        {
+          "heading": "融合方向（已选定）",
+          "level": 3,
+          "line": 79
+        },
+        {
+          "heading": "接入场景",
+          "level": 3,
+          "line": 88
+        },
+        {
+          "heading": "协调者人格层（Coordinator Persona）",
+          "level": 2,
+          "line": 96
+        },
+        {
+          "heading": "缺口",
+          "level": 3,
+          "line": 98
+        },
+        {
+          "heading": "定位",
+          "level": 3,
+          "line": 103
+        },
+        {
+          "heading": "行为骨架",
+          "level": 3,
+          "line": 107
+        },
+        {
+          "heading": "反面",
+          "level": 3,
+          "line": 115
+        },
+        {
+          "heading": "融合方向（已选定）",
+          "level": 3,
+          "line": 121
+        },
+        {
+          "heading": "接入场景",
+          "level": 3,
+          "line": 130
+        },
+        {
+          "heading": "现有人格调整项",
+          "level": 2,
+          "line": 138
+        },
+        {
+          "heading": "Greykey 需要调整",
+          "level": 3,
+          "line": 140
+        },
+        {
+          "heading": "Holo 需要调整",
+          "level": 3,
+          "line": 146
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 25
+      }
+    }
+  ]
+}

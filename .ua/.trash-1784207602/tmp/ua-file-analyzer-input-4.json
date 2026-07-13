@@ -1,0 +1,11 @@
+{
+  "projectRoot": "/mnt/d/JAVA/holo-project",
+  "batchFiles": [
+    {"path": "docs/agent_profiles/_archive-legacy/builder.md", "language": "markdown", "sizeLines": 88, "fileCategory": "docs"},
+    {"path": "docs/agent_profiles/_archive-legacy/investigator.md", "language": "markdown", "sizeLines": 80, "fileCategory": "docs"},
+    {"path": "docs/agent_profiles/_archive-legacy/reviewer.md", "language": "markdown", "sizeLines": 81, "fileCategory": "docs"},
+    {"path": "docs/agent_profiles/_archive-legacy/sketch_persona_auditor.md", "language": "markdown", "sizeLines": 94, "fileCategory": "docs"},
+    {"path": "docs/agent_profiles/_archive-legacy/task_sketches.md", "language": "markdown", "sizeLines": 150, "fileCategory": "docs"}
+  ],
+  "batchImportData": {}
+}

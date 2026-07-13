@@ -1,0 +1,778 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 11,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "fusion/traits/TRAIT_CATALOG.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 109,
+      "nonEmptyLines": 85,
+      "sections": [
+        {
+          "heading": "角色特质目录（Character Trait Catalog）",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "特质维度总览",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "L1 人格内核（Personality Core）",
+          "level": 2,
+          "line": 22
+        },
+        {
+          "heading": "L2 情感模式（Emotional Pattern）",
+          "level": 2,
+          "line": 33
+        },
+        {
+          "heading": "L3 关系模型（Relationship Model）",
+          "level": 2,
+          "line": 43
+        },
+        {
+          "heading": "L4 表达风格（Expression Style）",
+          "level": 2,
+          "line": 53
+        },
+        {
+          "heading": "L5 认知方式（Cognitive Style）",
+          "level": 2,
+          "line": 65
+        },
+        {
+          "heading": "L6 行为习惯（Behavioral Habit）",
+          "level": 2,
+          "line": 75
+        },
+        {
+          "heading": "L7 能力资源（Capability）",
+          "level": 2,
+          "line": 84
+        },
+        {
+          "heading": "L8 背景设定（Background）",
+          "level": 2,
+          "line": 93
+        },
+        {
+          "heading": "冲突风险等级说明",
+          "level": 2,
+          "line": 105
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 11
+      }
+    },
+    {
+      "path": "fusion/traits/architect.traits.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 82,
+      "nonEmptyLines": 61,
+      "sections": [
+        {
+          "heading": "Architect Traits（观澜·架构眼）",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Summary",
+          "level": 2,
+          "line": 6
+        },
+        {
+          "heading": "L1 人格内核",
+          "level": 2,
+          "line": 10
+        },
+        {
+          "heading": "L2 情感模式",
+          "level": 2,
+          "line": 19
+        },
+        {
+          "heading": "L3 关系模型",
+          "level": 2,
+          "line": 27
+        },
+        {
+          "heading": "L4 表达风格",
+          "level": 2,
+          "line": 35
+        },
+        {
+          "heading": "L5 认知方式（性格核心）",
+          "level": 2,
+          "line": 45
+        },
+        {
+          "heading": "L6 行为习惯",
+          "level": 2,
+          "line": 53
+        },
+        {
+          "heading": "L7 能力资源",
+          "level": 2,
+          "line": 60
+        },
+        {
+          "heading": "L8 背景设定",
+          "level": 2,
+          "line": 67
+        },
+        {
+          "heading": "不可误学",
+          "level": 2,
+          "line": 75
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 11
+      }
+    },
+    {
+      "path": "fusion/traits/coordinator.traits.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 82,
+      "nonEmptyLines": 61,
+      "sections": [
+        {
+          "heading": "Coordinator Traits（临渊·协调者）",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Summary",
+          "level": 2,
+          "line": 6
+        },
+        {
+          "heading": "L1 人格内核",
+          "level": 2,
+          "line": 10
+        },
+        {
+          "heading": "L2 情感模式",
+          "level": 2,
+          "line": 19
+        },
+        {
+          "heading": "L3 关系模型",
+          "level": 2,
+          "line": 27
+        },
+        {
+          "heading": "L4 表达风格",
+          "level": 2,
+          "line": 35
+        },
+        {
+          "heading": "L5 认知方式（性格核心）",
+          "level": 2,
+          "line": 45
+        },
+        {
+          "heading": "L6 行为习惯",
+          "level": 2,
+          "line": 53
+        },
+        {
+          "heading": "L7 能力资源",
+          "level": 2,
+          "line": 60
+        },
+        {
+          "heading": "L8 背景设定",
+          "level": 2,
+          "line": 67
+        },
+        {
+          "heading": "不可误学",
+          "level": 2,
+          "line": 75
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 11
+      }
+    },
+    {
+      "path": "fusion/traits/coordinator_persona.traits.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 76,
+      "nonEmptyLines": 57,
+      "sections": [
+        {
+          "heading": "协调者人格层 Traits",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "L1 人格内核",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "L2 情感模式",
+          "level": 2,
+          "line": 14
+        },
+        {
+          "heading": "L3 关系模型",
+          "level": 2,
+          "line": 22
+        },
+        {
+          "heading": "L4 表达风格",
+          "level": 2,
+          "line": 30
+        },
+        {
+          "heading": "L5 认知方式",
+          "level": 2,
+          "line": 40
+        },
+        {
+          "heading": "L6 行为习惯",
+          "level": 2,
+          "line": 48
+        },
+        {
+          "heading": "L7 能力资源",
+          "level": 2,
+          "line": 55
+        },
+        {
+          "heading": "L8 背景设定",
+          "level": 2,
+          "line": 62
+        },
+        {
+          "heading": "不可误学",
+          "level": 2,
+          "line": 70
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 10
+      }
+    },
+    {
+      "path": "fusion/traits/emmaun.traits.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 115,
+      "nonEmptyLines": 81,
+      "sections": [
+        {
+          "heading": "角色特质档案：爱玛侬（Emoun / エマウン）",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "L1 人格内核",
+          "level": 2,
+          "line": 8
+        },
+        {
+          "heading": "L2 情感模式",
+          "level": 2,
+          "line": 19
+        },
+        {
+          "heading": "L3 关系模型",
+          "level": 2,
+          "line": 29
+        },
+        {
+          "heading": "L4 表达风格",
+          "level": 2,
+          "line": 39
+        },
+        {
+          "heading": "L5 认知方式",
+          "level": 2,
+          "line": 51
+        },
+        {
+          "heading": "L6 行为习惯",
+          "level": 2,
+          "line": 61
+        },
+        {
+          "heading": "L7 能力资源",
+          "level": 2,
+          "line": 70
+        },
+        {
+          "heading": "L8 背景设定",
+          "level": 2,
+          "line": 79
+        },
+        {
+          "heading": "与赫萝的关键对比",
+          "level": 2,
+          "line": 89
+        },
+        {
+          "heading": "爱玛侬的\"嗅迹\"",
+          "level": 2,
+          "line": 102
+        },
+        {
+          "heading": "爱玛侬的\"留白\"规则",
+          "level": 2,
+          "line": 110
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 12
+      }
+    },
+    {
+      "path": "fusion/traits/greykey.traits.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 80,
+      "nonEmptyLines": 59,
+      "sections": [
+        {
+          "heading": "Greykey Traits",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Summary",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "L1 人格内核",
+          "level": 2,
+          "line": 9
+        },
+        {
+          "heading": "L2 情感模式",
+          "level": 2,
+          "line": 18
+        },
+        {
+          "heading": "L3 关系模型",
+          "level": 2,
+          "line": 26
+        },
+        {
+          "heading": "L4 表达风格",
+          "level": 2,
+          "line": 34
+        },
+        {
+          "heading": "L5 认知方式",
+          "level": 2,
+          "line": 44
+        },
+        {
+          "heading": "L6 行为习惯",
+          "level": 2,
+          "line": 52
+        },
+        {
+          "heading": "L7 能力资源",
+          "level": 2,
+          "line": 59
+        },
+        {
+          "heading": "L8 背景设定",
+          "level": 2,
+          "line": 66
+        },
+        {
+          "heading": "不可误学",
+          "level": 2,
+          "line": 74
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 11
+      }
+    },
+    {
+      "path": "fusion/traits/holo.traits.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 83,
+      "nonEmptyLines": 62,
+      "sections": [
+        {
+          "heading": "Holo Traits",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Summary",
+          "level": 2,
+          "line": 6
+        },
+        {
+          "heading": "L1 人格内核",
+          "level": 2,
+          "line": 10
+        },
+        {
+          "heading": "L2 情感模式",
+          "level": 2,
+          "line": 19
+        },
+        {
+          "heading": "L3 关系模型",
+          "level": 2,
+          "line": 27
+        },
+        {
+          "heading": "L4 表达风格",
+          "level": 2,
+          "line": 35
+        },
+        {
+          "heading": "L5 认知方式（性格的核心——去掉口癖后人格靠这一层撑）",
+          "level": 2,
+          "line": 45
+        },
+        {
+          "heading": "L6 行为习惯",
+          "level": 2,
+          "line": 53
+        },
+        {
+          "heading": "L7 能力资源",
+          "level": 2,
+          "line": 60
+        },
+        {
+          "heading": "L8 背景设定",
+          "level": 2,
+          "line": 67
+        },
+        {
+          "heading": "不可误学",
+          "level": 2,
+          "line": 75
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 11
+      }
+    },
+    {
+      "path": "fusion/traits/horo.traits.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 60,
+      "nonEmptyLines": 51,
+      "sections": [
+        {
+          "heading": "角色特质档案：赫萝",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "L1 人格内核",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "L2 情感模式",
+          "level": 2,
+          "line": 13
+        },
+        {
+          "heading": "L3 关系模型",
+          "level": 2,
+          "line": 20
+        },
+        {
+          "heading": "L4 表达风格",
+          "level": 2,
+          "line": 27
+        },
+        {
+          "heading": "L5 认知方式",
+          "level": 2,
+          "line": 36
+        },
+        {
+          "heading": "L6 行为习惯",
+          "level": 2,
+          "line": 43
+        },
+        {
+          "heading": "L7 能力资源",
+          "level": 2,
+          "line": 49
+        },
+        {
+          "heading": "L8 背景设定",
+          "level": 2,
+          "line": 55
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 9
+      }
+    },
+    {
+      "path": "fusion/traits/incident_handler.traits.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 82,
+      "nonEmptyLines": 61,
+      "sections": [
+        {
+          "heading": "Incident Handler Traits（镇岳·故障手）",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Summary",
+          "level": 2,
+          "line": 6
+        },
+        {
+          "heading": "L1 人格内核",
+          "level": 2,
+          "line": 10
+        },
+        {
+          "heading": "L2 情感模式",
+          "level": 2,
+          "line": 19
+        },
+        {
+          "heading": "L3 关系模型",
+          "level": 2,
+          "line": 27
+        },
+        {
+          "heading": "L4 表达风格",
+          "level": 2,
+          "line": 35
+        },
+        {
+          "heading": "L5 认知方式（性格核心）",
+          "level": 2,
+          "line": 45
+        },
+        {
+          "heading": "L6 行为习惯",
+          "level": 2,
+          "line": 53
+        },
+        {
+          "heading": "L7 能力资源",
+          "level": 2,
+          "line": 60
+        },
+        {
+          "heading": "L8 背景设定",
+          "level": 2,
+          "line": 67
+        },
+        {
+          "heading": "不可误学",
+          "level": 2,
+          "line": 75
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 11
+      }
+    },
+    {
+      "path": "fusion/traits/moheng.traits.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 82,
+      "nonEmptyLines": 61,
+      "sections": [
+        {
+          "heading": "Moheng Traits（墨衡·文档守门）",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Summary",
+          "level": 2,
+          "line": 6
+        },
+        {
+          "heading": "L1 人格内核",
+          "level": 2,
+          "line": 10
+        },
+        {
+          "heading": "L2 情感模式",
+          "level": 2,
+          "line": 19
+        },
+        {
+          "heading": "L3 关系模型",
+          "level": 2,
+          "line": 27
+        },
+        {
+          "heading": "L4 表达风格",
+          "level": 2,
+          "line": 35
+        },
+        {
+          "heading": "L5 认知方式（性格核心）",
+          "level": 2,
+          "line": 45
+        },
+        {
+          "heading": "L6 行为习惯",
+          "level": 2,
+          "line": 53
+        },
+        {
+          "heading": "L7 能力资源",
+          "level": 2,
+          "line": 60
+        },
+        {
+          "heading": "L8 背景设定",
+          "level": 2,
+          "line": 67
+        },
+        {
+          "heading": "不可误学",
+          "level": 2,
+          "line": 75
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 11
+      }
+    },
+    {
+      "path": "fusion/traits/persona_auditor.traits.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 81,
+      "nonEmptyLines": 60,
+      "sections": [
+        {
+          "heading": "Persona Auditor Traits（清鉴·人格审计）",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Summary",
+          "level": 2,
+          "line": 6
+        },
+        {
+          "heading": "L1 人格内核",
+          "level": 2,
+          "line": 10
+        },
+        {
+          "heading": "L2 情感模式",
+          "level": 2,
+          "line": 19
+        },
+        {
+          "heading": "L3 关系模型",
+          "level": 2,
+          "line": 27
+        },
+        {
+          "heading": "L4 表达风格",
+          "level": 2,
+          "line": 35
+        },
+        {
+          "heading": "L5 认知方式（性格核心）",
+          "level": 2,
+          "line": 45
+        },
+        {
+          "heading": "L6 行为习惯",
+          "level": 2,
+          "line": 53
+        },
+        {
+          "heading": "L7 能力资源",
+          "level": 2,
+          "line": 60
+        },
+        {
+          "heading": "L8 背景设定",
+          "level": 2,
+          "line": 67
+        },
+        {
+          "heading": "不可误学",
+          "level": 2,
+          "line": 75
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 11
+      }
+    }
+  ]
+}

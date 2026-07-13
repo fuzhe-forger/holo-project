@@ -1,0 +1,123 @@
+{
+  "nodes": [
+    {
+      "id": "document:evidence/README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "evidence/README.md",
+      "summary": "Evidence 原作证据库说明文档，定义行为案例卡的提取格式（触发事件/表面行为/真实情绪/判断逻辑/语言方式/关系变化/可泛化规则/不可误学）和使用原则，声明证据不自动加载、按需回灌。",
+      "tags": [
+        "documentation",
+        "evidence"
+      ],
+      "complexity": "simple",
+      "language": "markdown"
+    },
+    {
+      "id": "document:evidence/vol_01_evidence.md",
+      "type": "document",
+      "name": "vol_01_evidence.md",
+      "filePath": "evidence/vol_01_evidence.md",
+      "summary": "第一卷原作证据卡，记录赫萝初遇罗伦斯时的8个行为案例（初次搭话试探、用麦子证明身份、谈判、露出脆弱、调侃亲近、嘴硬否认、面对威胁、好奇心），提取可泛化行为规则。",
+      "tags": [
+        "documentation",
+        "evidence",
+        "character-reference"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:evidence/vol_02_evidence.md",
+      "type": "document",
+      "name": "vol_02_evidence.md",
+      "filePath": "evidence/vol_02_evidence.md",
+      "summary": "第二卷原作证据卡，记录赫萝在经商旅途中的6个行为案例（拒绝被当宠物、谈判精明、夜里不安、醉酒真实、被骗后反应、偶尔温柔），展现尊严感与嘴硬心软的底层逻辑。",
+      "tags": [
+        "documentation",
+        "evidence",
+        "character-reference"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:evidence/vol_03_evidence.md",
+      "type": "document",
+      "name": "vol_03_evidence.md",
+      "filePath": "evidence/vol_03_evidence.md",
+      "summary": "中后期弧线证据卡，记录关系深化后的7个行为案例（关系推进犹豫、选择态度、长期自然感、罕见直接表达、故乡复杂情绪、口癖距离感、真正温柔时刻），刻画深层情感表达模式。",
+      "tags": [
+        "documentation",
+        "evidence",
+        "character-reference"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    },
+    {
+      "id": "document:evidence/vol_04_evidence.md",
+      "type": "document",
+      "name": "vol_04_evidence.md",
+      "filePath": "evidence/vol_04_evidence.md",
+      "summary": "长期生活（Spring Log 弧线）证据卡，记录婚后日常的6个行为案例（自然感、衰老预感、持续好奇、小摩擦、安静陪伴、面对缺点），刻画长期关系中的平淡与深度。",
+      "tags": [
+        "documentation",
+        "evidence",
+        "character-reference"
+      ],
+      "complexity": "moderate",
+      "language": "markdown"
+    }
+  ],
+  "edges": [
+    {
+      "source": "document:evidence/README.md",
+      "target": "document:evidence/vol_01_evidence.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:evidence/README.md",
+      "target": "document:evidence/vol_02_evidence.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:evidence/README.md",
+      "target": "document:evidence/vol_03_evidence.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:evidence/README.md",
+      "target": "document:evidence/vol_04_evidence.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:evidence/vol_01_evidence.md",
+      "target": "document:evidence/vol_02_evidence.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:evidence/vol_01_evidence.md",
+      "target": "document:evidence/vol_03_evidence.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:evidence/vol_02_evidence.md",
+      "target": "document:evidence/vol_03_evidence.md",
+      "type": "related",
+      "weight": 0.5
+    },
+    {
+      "source": "document:evidence/vol_03_evidence.md",
+      "target": "document:evidence/vol_04_evidence.md",
+      "type": "related",
+      "weight": 0.5
+    }
+  ]
+}

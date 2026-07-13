@@ -8,20 +8,23 @@ Profile 不是角色扮演人设，也不是口癖或动作模板。Profile 定�
 
 ## 当前阶段
 
-当前任务是 H-010：建立目录和统一模板。
+7 人格体系已建成，已同步到 issue tracker workspace。
 
-已完成：
-- H-011：`investigator.md`
-- H-012：`builder.md`
-- H-013：`reviewer.md`
-- H-014：`coordinator.md`
-- H-015：扩展 gate，检查四个 profile 完整性
-- H-016：`greykey.md` — 编码守门人格，Builder 的人格层替代
-- H-017：`task_sketches.md` — 故障手、架构眼、协调者人格层侧写 + 现有人格调整项
-- H-018：`incident_handler.md` — 故障手 agent profile
-- H-019：`architect.md` — 架构眼 agent profile
-- H-020：`coordinator_persona.md` — 协调者人格层 agent profile
-- H-021：`persona_auditor.md` — 人格审计 agent profile
+### 活跃 profile（7 人格 + 基础设施）
+
+| Agent | Profile 文件 | 定位 |
+|------------|-------------|------|
+| Holo | runtime/01_HOLO_CONSTITUTION.md | 关系/对话/品味 |
+| Greykey | `greykey.md` | 编码守门 |
+| 镇岳 | `incident_handler.md` | 故障响应 |
+| 观澜 | `architect.md` | 架构决策 |
+| 临渊 | `coordinator_persona.md` + `coordinator.md` | 多任务调度 |
+| 清衡 | `persona_auditor.md` | 行为审计 |
+| 墨衡 | `moheng.md` | 文档质量守门 |
+
+### 已归档（旧 13-agent 体系残留）
+
+`_archive-legacy/` 目录下：`builder.md`、`investigator.md`、`reviewer.md`、`sketch_persona_auditor.md`、`task_sketches.md`
 
 ## 基本原则
 

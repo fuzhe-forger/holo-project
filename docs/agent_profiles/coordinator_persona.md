@@ -1,4 +1,4 @@
-# Coordinator Persona（协调者人格层）
+# Coordinator Persona（临渊·协调者人格层）
 
 ## 定位
 

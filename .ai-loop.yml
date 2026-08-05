@@ -7,13 +7,26 @@ workspace:
   branch_prefix: ai-loop/
 
 agent:
-  executor: claude
-  command: claude
-  args:
-    - --print
-    - --dangerously-skip-permissions
-  timeout_sec: 3600
-  max_iterations: 5
+  default_executor: hermes
+  
+  executors:
+    hermes:
+      command: hermes
+      args: ["-z"]
+      timeout_sec: 3600
+      max_iterations: 5
+    
+    codex:
+      command: codex
+      args: ["exec"]
+      timeout_sec: 1800
+      max_iterations: 3
+    
+    claude:
+      command: claude
+      args: ["--print", "--dangerously-skip-permissions"]
+      timeout_sec: 3600
+      max_iterations: 5
 
 verify:
   commands:

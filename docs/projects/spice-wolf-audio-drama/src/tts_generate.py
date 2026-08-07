@@ -1,80 +1,49 @@
 #!/usr/bin/env python3
-"""TTS generation wrapper: annotated script -> audio files.
+"""TTS generation: annotated script -> audio files.
 
-Supports multiple TTS backends:
-  - cosyvoice: CosyVoice 3.0 (local GPU, recommended)
-  - gptsovits: GPT-SoVITS (local GPU, alternative)
-  - api: Remote API (Fish Audio etc, if configured)
+Supports:
+  - gptsovits: GPT-SoVITS API (local Mac, port 9880)
+  - cosyvoice: CosyVoice API (local, port 50000)
+  - dry-run: params only, no audio generation
 
 Usage:
-  python3 tts_generate.py script.json -o output/ --backend cosyvoice
-  python3 tts_generate.py script.json -o output/ --backend cosyvoice --dry-run
+  python3 tts_generate.py script.json -o output/audio --backend gptsovits
+  python3 tts_generate.py script.json -o output/audio --dry-run
 """
-import sys, os, json, argparse, subprocess, time
+import sys, os, json, argparse, time, urllib.request, urllib.error
 
-# Add parent dir to path for voice_params
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from voice_params import annotate_script, get_tts_params
+from voice_params import annotate_script
 
-def generate_cosyvoice(text, params, output_path, model_dir="pretrained_models/Fun-CosyVoice3-0.5B"):
-    """Generate audio using CosyVoice 3.0.
+def generate_gptsovits(text, params, output_path, api_url="http://127.0.0.1:9880"):
+    """Generate audio via GPT-SoVITS API v2.
     
-    Requires CosyVoice installed on a GPU machine.
-    This function constructs the Python call; actual execution needs the model.
+    Requires GPT-SoVITS running in API mode:
+      python3 api_v2.py --host 127.0.0.1 --port 9880
     """
     ref_audio = params.get("ref_audio")
-    instruct = params.get("instruct", "")
-    speed = params.get("speed", 1.0)
     
-    # CosyVoice instruct mode call
-    code = f"""
-import sys
-sys.path.insert(0, 'CosyVoice')
-from cosyvoice.cli.cosyvoice import CosyVoice2
-from cosyvoice.cli.frontend import CosyVoiceFrontend
-
-model = CosyVoice2('{model_dir}')
-frontend = CosyVoiceFrontend('{model_dir}')
-
-# Instruct mode for emotion control
-instruct_text = "{instruct}"
-ref_audio_path = "{ref_audio or ''}"
-
-for chunk in model.inference_instruct2(
-    text="{text}",
-    instruct_text=instruct_text,
-    prompt_speech_16k=ref_audio_path,
-    speed={speed},
-):
-    # Save the last chunk
-    pass
-
-# Save audio
-import torchaudio
-# (chunk contains tensor in actual implementation)
-"""
-    # In dry-run mode, just show the command
-    return code
-
-
-def generate_gptsovits(text, params, output_path, api_url="http://localhost:9880"):
-    """Generate audio using GPT-SoVITS API.
+    # Resolve ref audio path relative to project
+    project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    if ref_audio and not os.path.isabs(ref_audio):
+        ref_audio = os.path.join(project_root, "data", ref_audio)
     
-    GPT-SoVITS WebUI has an API mode at :9880.
-    """
-    ref_audio = params.get("ref_audio")
     if not ref_audio or not os.path.exists(ref_audio):
-        raise FileNotFoundError(f"Reference audio not found: {ref_audio}")
+        raise FileNotFoundError(
+            f"Reference audio not found: {ref_audio}\n"
+            f"Put reference audio in data/ref-voices/ and update voice_params.py"
+        )
     
-    # GPT-SoVITS API call
-    import urllib.request
+    # GPT-SoVITS API v2 payload
     payload = json.dumps({
         "text": text,
         "text_lang": "zh",
         "ref_audio_path": ref_audio,
-        "prompt_text": "",  # Could extract from ref audio
+        "prompt_text": "",
         "prompt_lang": "zh",
         "speed": params.get("speed", 1.0),
+        "media_type": "wav",
+        "streaming_mode": False,
     }).encode()
     
     req = urllib.request.Request(
@@ -83,43 +52,90 @@ def generate_gptsovits(text, params, output_path, api_url="http://localhost:9880
         headers={"Content-Type": "application/json"},
     )
     
-    resp = urllib.request.urlopen(req, timeout=120)
-    # Response is audio data
-    with open(output_path, "wb") as f:
-        f.write(resp.read())
+    try:
+        resp = urllib.request.urlopen(req, timeout=120)
+        audio_data = resp.read()
+        with open(output_path, "wb") as f:
+            f.write(audio_data)
+        return output_path
+    except urllib.error.HTTPError as e:
+        body = e.read().decode()[:200] if e.read else ""
+        raise RuntimeError(f"GPT-SoVITS API error {e.code}: {body}")
+    except urllib.error.URLError as e:
+        raise ConnectionError(
+            f"Cannot reach GPT-SoVITS API at {api_url}. "
+            f"Start it with: python3 api_v2.py --host 127.0.0.1 --port 9880"
+        )
+
+def generate_cosyvoice(text, params, output_path, api_url="http://127.0.0.1:50000"):
+    """Generate audio via CosyVoice API.
     
-    return output_path
+    Requires CosyVoice webui running with API enabled.
+    Uses instruct mode for emotion control.
+    """
+    ref_audio = params.get("ref_audio")
+    project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    if ref_audio and not os.path.isabs(ref_audio):
+        ref_audio = os.path.join(project_root, "data", ref_audio)
+    
+    instruct = params.get("instruct", "")
+    speed = params.get("speed", 1.0)
+    
+    # CosyVoice API call (POST to /api/inference)
+    payload = json.dumps({
+        "text": text,
+        "ref_audio_path": ref_audio or "",
+        "instruct": instruct,
+        "speed": speed,
+        "mode": "instruct" if instruct else "zero_shot",
+    }).encode()
+    
+    req = urllib.request.Request(
+        f"{api_url}/api/inference",
+        data=payload,
+        headers={"Content-Type": "application/json"},
+    )
+    
+    try:
+        resp = urllib.request.urlopen(req, timeout=120)
+        audio_data = resp.read()
+        with open(output_path, "wb") as f:
+            f.write(audio_data)
+        return output_path
+    except urllib.error.HTTPError as e:
+        raise RuntimeError(f"CosyVoice API error {e.code}")
+    except urllib.error.URLError:
+        raise ConnectionError(
+            f"Cannot reach CosyVoice at {api_url}. "
+            f"Start: python3 webui.py --port 50000"
+        )
 
-
-def generate_segment(text, params, output_path, backend="cosyvoice", dry_run=False):
+def generate_segment(text, params, output_path, backend="gptsovits", dry_run=False):
     """Generate one audio segment."""
     if dry_run:
         print(f"    [DRY-RUN] {text[:50]}...")
-        print(f"    params: speed={params['speed']} emotion={params['emotion']} instruct={params.get('instruct','')[:30]}")
-        # Create a placeholder file
+        print(f"    speed={params['speed']} emotion={params['emotion']} instruct={params.get('instruct','')[:40]}")
         with open(output_path, "w") as f:
-            f.write(f"DRY-RUN placeholder for: {text[:50]}")
+            f.write(f"DRY-RUN: {text[:50]}")
         return output_path
     
     if backend == "gptsovits":
         return generate_gptsovits(text, params, output_path)
     elif backend == "cosyvoice":
-        code = generate_cosyvoice(text, params, output_path)
-        # Would execute on GPU machine
-        print(f"    [CosyVoice code generated, needs GPU execution]")
-        return code
+        return generate_cosyvoice(text, params, output_path)
     else:
         raise ValueError(f"Unknown backend: {backend}")
 
-
 def main():
     parser = argparse.ArgumentParser(description="Generate TTS audio from annotated script")
-    parser.add_argument("script", help="Annotated script JSON file")
-    parser.add_argument("-o", "--output", required=True, help="Output directory for audio files")
-    parser.add_argument("--backend", default="cosyvoice", choices=["cosyvoice", "gptsovits", "api"])
-    parser.add_argument("--dry-run", action="store_true", help="Show params without generating audio")
-    parser.add_argument("--start", type=int, default=0, help="Start segment index")
-    parser.add_argument("--end", type=int, default=None, help="End segment index (exclusive)")
+    parser.add_argument("script", help="Annotated script JSON")
+    parser.add_argument("-o", "--output", required=True, help="Output directory")
+    parser.add_argument("--backend", default="gptsovits", choices=["gptsovits", "cosyvoice"])
+    parser.add_argument("--api-url", default=None, help="Override API URL")
+    parser.add_argument("--dry-run", action="store_true")
+    parser.add_argument("--start", type=int, default=0)
+    parser.add_argument("--end", type=int, default=None)
+    parser.add_argument("--retry", type=int, default=2, help="Retry count for failed segments")
     args = parser.parse_args()
 
     os.makedirs(args.output, exist_ok=True)
@@ -127,12 +143,14 @@ def main():
     with open(args.script, encoding="utf-8") as f:
         segments = json.load(f)
 
-    # Add TTS params to segments
     segments = annotate_script(segments)
+    segments = segments[args.start:(args.end or len(segments))]
 
-    start = args.start
-    end = args.end or len(segments)
-    segments = segments[start:end]
+    # Default API URLs
+    api_urls = {
+        "gptsovits": args.api_url or "http://127.0.0.1:9880",
+        "cosyvoice": args.api_url or "http://127.0.0.1:50000",
+    }
 
     print(f"Generating {len(segments)} segments ({args.backend}, dry_run={args.dry_run})")
     
@@ -143,35 +161,46 @@ def main():
         speaker = params["speaker"]
         emotion = params["emotion"]
         
-        out_name = f"{start+i:04d}_{speaker}_{emotion}.wav"
+        out_name = f"{args.start+i:04d}_{speaker}_{emotion}.wav"
         out_path = os.path.join(args.output, out_name)
         
-        print(f"  [{i+1}/{len(segments)}] {speaker} ({emotion}): {text[:40]}...")
+        print(f"  [{i+1}/{len(segments)}] {speaker} ({emotion}): {text[:40]}...", end="", flush=True)
         
-        try:
-            if seg.get("type") == "sound_effect":
-                # Skip TTS for sound effects, just log
-                print(f"    [SFX] {seg.get('sfx_cue', 'unknown')}")
-                results.append({"index": start+i, "file": None, "type": "sfx", "cue": seg.get("sfx_cue")})
-                continue
-            
-            result = generate_segment(text, params, out_path, args.backend, args.dry_run)
-            results.append({"index": start+i, "file": out_name, "type": seg.get("type"), "speaker": speaker, "emotion": emotion})
-        except Exception as e:
-            print(f"    FAILED: {e}", file=sys.stderr)
-            results.append({"index": start+i, "file": None, "error": str(e)})
+        if seg.get("type") == "sound_effect":
+            print(f" [SFX: {seg.get('sfx_cue', '?')}]")
+            results.append({"index": args.start+i, "file": None, "type": "sfx", "cue": seg.get("sfx_cue")})
+            continue
+        
+        success = False
+        for attempt in range(args.retry + 1):
+            try:
+                generate_segment(text, params, out_path, args.backend, args.dry_run)
+                print(" OK")
+                results.append({"index": args.start+i, "file": out_name, "type": seg.get("type"),
+                                "speaker": speaker, "emotion": emotion})
+                success = True
+                break
+            except Exception as e:
+                if attempt < args.retry:
+                    print(f" retry{attempt+1}", end="", flush=True)
+                    time.sleep(3)
+                else:
+                    print(f" FAILED: {e}")
+                    results.append({"index": args.start+i, "file": None, "error": str(e)})
+        
+        # Rate limit: be nice to local TTS
+        if not args.dry_run and success:
+            time.sleep(1)
 
-    # Save manifest
     manifest_path = os.path.join(args.output, "manifest.json")
     with open(manifest_path, "w", encoding="utf-8") as f:
         json.dump(results, f, ensure_ascii=False, indent=2)
     
-    success = sum(1 for r in results if r.get("file"))
-    failed = sum(1 for r in results if r.get("error"))
-    sfx = sum(1 for r in results if r.get("type") == "sfx")
-    print(f"\nDone: {success} generated, {sfx} SFX, {failed} failed")
+    success_count = sum(1 for r in results if r.get("file"))
+    failed_count = sum(1 for r in results if r.get("error"))
+    sfx_count = sum(1 for r in results if r.get("type") == "sfx")
+    print(f"\nDone: {success_count} generated, {sfx_count} SFX, {failed_count} failed")
     print(f"Manifest: {manifest_path}")
-
 
 if __name__ == "__main__":
     main()

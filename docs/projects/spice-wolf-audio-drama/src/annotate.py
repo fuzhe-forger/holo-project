@@ -2,8 +2,13 @@
 """Text annotation pipeline: novel text -> structured script JSON.
 
 Uses LLM (Mify Gateway) to identify speakers, emotions, scenes, and SFX cues.
+Splits narration from dialogue — narration is speaker=null, type="narration".
+
+Usage:
+  python3 annotate.py input.txt -o output.json
+  python3 annotate.py input.txt -o output.json --model zhipuai/glm-4.5
 """
-import sys, os, json, argparse, time
+import sys, os, json, argparse
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from llm_client import chat
@@ -11,6 +16,16 @@ from llm_client import chat
 DEFAULT_MODEL = "zhipuai/glm-4.5"
 
 PROMPT_SYSTEM = """You are a script supervisor for an audio drama production. Given a passage of Chinese novel text, break it into segments and annotate each one.
+
+CRITICAL RULE — Narration vs Dialogue separation:
+- Narration (description, action, environment, internal thought attributed to narrator) MUST be type="narration", speaker=null.
+- Only text that is ACTUALLY SPOKEN ALOUD by a character is type="dialogue" or "monologue".
+- A paragraph that mixes narration and dialogue MUST be split into separate segments.
+- Example: '罗伦斯叹了口气。"又怎么了？"他说。' -> TWO segments:
+  1. {"text": "罗伦斯叹了口气。", "type": "narration", "speaker": null, ...}
+  2. {"text": "又怎么了？", "type": "dialogue", "speaker": "罗伦斯", ...}
+  3. {"text": "他说。", "type": "narration", "speaker": null, ...}
+- Dialogue markers: quotes (""), 「」, or obvious spoken text. Everything else is narration.
 
 Output format: a JSON array. Each element:
 {
@@ -26,11 +41,10 @@ Output format: a JSON array. Each element:
 Rules:
 - Keep text verbatim. Do NOT rewrite, translate, or summarize.
 - Split at natural boundaries: speaker changes, narration to dialogue, scene shifts.
-- Each segment should be 50-500 characters.
+- Each segment should be 20-500 characters.
 - Identify the speaker from context. If unclear, use "unknown".
-- Narration has speaker=null, type="narration".
 - Sound effects in text (e.g. "*snap*") become type="sound_effect".
-- Emotion must match the text content and speaker state.
+- Emotion for narration reflects the mood of the scene, not a character's emotion.
 - Scene: "market", "forest_night", "tavern", "travel_road", etc.
 - Output ONLY the JSON array, no explanation, no markdown fences.
 """
@@ -90,14 +104,17 @@ def main():
     with open(args.output, "w", encoding="utf-8") as f:
         json.dump(all_segments, f, ensure_ascii=False, indent=2)
 
-    speakers, emotions = {}, {}
+    speakers, emotions, types = {}, {}, {}
     for seg in all_segments:
         sp = seg.get("speaker") or "narrator"
         speakers[sp] = speakers.get(sp, 0) + 1
         em = seg.get("emotion", "unknown")
         emotions[em] = emotions.get(em, 0) + 1
+        ty = seg.get("type", "unknown")
+        types[ty] = types.get(ty, 0) + 1
 
     print(f"\nTotal: {len(all_segments)} segments")
+    print(f"Types: {dict(sorted(types.items(), key=lambda x: -x[1]))}")
     print(f"Speakers: {dict(sorted(speakers.items(), key=lambda x: -x[1]))}")
     print(f"Emotions: {dict(sorted(emotions.items(), key=lambda x: -x[1]))}")
 

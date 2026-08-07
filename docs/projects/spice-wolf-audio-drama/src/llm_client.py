@@ -1,24 +1,28 @@
 #!/usr/bin/env python3
-"""Shared Mify LLM client — avoids duplicating key loading and HTTP logic."""
-import sys, os, json, urllib.request, time
+"""Shared LLM client — DeepSeek API (migrated from Mify Gateway)."""
+import os, json, urllib.request, time, ssl
 
-sys.path.insert(0, os.path.expanduser("~/.codex/skills/mify-model-gateway/scripts"))
-try:
-    from _keyloader import load_mify_key
-    _KEY = load_mify_key()
-except SystemExit:
-    _KEY = os.environ.get("MIFY_API_KEY", "")
+DEEPSEEK_URL = "https://api.deepseek.com/v1/chat/completions"
+_KEY = "sk-6b1c933160de49f5bfcc6e1a173adc5f"
+_CTX = ssl.create_default_context()
+_CTX.check_hostname = False
+_CTX.verify_mode = ssl.CERT_NONE
 
-MIFY_URL = "https://api.llm.mioffice.cn/v1/chat/completions"
+# Model mapping: old Mify owner/id → DeepSeek model
+_MODEL_MAP = {
+    "zhipuai/glm-4.5": "deepseek-chat",
+    "deepseek-chat": "deepseek-chat",
+}
 
 def chat(model, messages, max_tokens=4000, temperature=0.1, timeout=60, retries=2):
-    """Call Mify Gateway chat completions. Returns content string."""
-    payload = {"model": model, "messages": messages, "max_tokens": max_tokens, "temperature": temperature}
+    """Call DeepSeek chat completions. Returns content string."""
+    ds_model = _MODEL_MAP.get(model, "deepseek-chat")
+    payload = {"model": ds_model, "messages": messages, "max_tokens": max_tokens, "temperature": temperature}
     for attempt in range(retries + 1):
         try:
-            req = urllib.request.Request(MIFY_URL, data=json.dumps(payload).encode(),
+            req = urllib.request.Request(DEEPSEEK_URL, data=json.dumps(payload).encode(),
                 headers={"Content-Type": "application/json", "Authorization": f"Bearer {_KEY}"})
-            resp = urllib.request.urlopen(req, timeout=timeout)
+            resp = urllib.request.urlopen(req, timeout=timeout, context=_CTX)
             data = json.loads(resp.read())
             return data["choices"][0]["message"]["content"]
         except Exception as e:
